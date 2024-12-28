@@ -19,3 +19,5 @@ INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.2/dat
 reset_project
 update_compile_order -fileset sources_1
 reset_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 29 01:25:05 2024...
