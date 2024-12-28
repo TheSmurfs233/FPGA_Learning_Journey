@@ -1,0 +1,11 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+D:/FPGA_Learning_Journey/Pro/UART/project/project.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/UART/src/uart_rx.v,1735404114,verilog,,D:/FPGA_Learning_Journey/Pro/UART/src/uart_top.v,,uart_rx,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/UART/src/uart_rx_tb.v,1735404289,verilog,,,,uart_rx_tb,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/UART/src/uart_top.v,1735405091,verilog,,D:/FPGA_Learning_Journey/Pro/UART/src/uart_tx.v,,uart_top,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/UART/src/uart_top_tb.v,1735405148,verilog,,,,uart_top_tb,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/UART/src/uart_tx.v,1735384468,verilog,,D:/FPGA_Learning_Journey/Pro/UART/src/uart_top_tb.v,,uart_tx,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/UART/src/uart_tx_tb.v,1735384474,verilog,,,,uart_tx_tb,,,,,,,,

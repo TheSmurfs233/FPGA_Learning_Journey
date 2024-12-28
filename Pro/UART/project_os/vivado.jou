@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Dec 29 01:20:16 2024
+# Process ID: 21108
+# Current directory: D:/FPGA_Learning_Journey/Pro/UART/project_os
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17520 D:\FPGA_Learning_Journey\Pro\UART\project_os\uart_os.xpr
+# Log file: D:/FPGA_Learning_Journey/Pro/UART/project_os/vivado.log
+# Journal file: D:/FPGA_Learning_Journey/Pro/UART/project_os\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA_Learning_Journey/Pro/UART/project_os/uart_os.xpr
+update_compile_order -fileset sources_1
+reset_project
