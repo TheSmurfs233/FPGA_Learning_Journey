@@ -1,0 +1,2 @@
+Pro/UART/project/project.sim/sim_1/behav/xsim/uart_tx_tb_behav.wdb filter=lfs diff=lfs merge=lfs -text
+*.wdb filter=lfs diff=lfs merge=lfs -text
