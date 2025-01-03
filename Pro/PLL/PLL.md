@@ -1,4 +1,4 @@
-# FPGA实现串口通信
+# FPGA 锁相环实验
 
 PLL（锁相环）是一种在数字电路中广泛应用的技术，尤其在 FPGA 开发中，它用于实现时钟的倍频、分频、相位偏移和可编程占空比等功能。
 
@@ -63,359 +63,152 @@ PLL 的基本工作原理是利用外部输入的参考信号来控制环路内�
 
 ### 4.实验任务
 
-![image-20241228160424143](asset/image-20241228152834257.png)
+本节实验的任务是使用开发板输出 4 个不同频率或相位的时钟，四个时钟分别为一个倍频时钟 （100MHz），一个倍频后相位偏移 180 度的时钟（100MHz），一个与系统时钟相同的时钟（50MHz）和 一个分频时钟（25MHz），并在 Vivado 中进行仿真以验证结果，最后生成比特流文件并下载到开发板 上，使用示波器来测量时钟的频率是否正确。
 
-### 5.程序设计
+### 5.实验内容
 
-##### 5.1 总体模块设计
+根据EBAZ 4205的原理图可知，外部50MHz的晶振连接到**`XC7Z010-1CLG400I`**芯片的`N18`引脚上。总体实验步骤是在Vivado中新建工程，然后添加PLL IP核，生成顶层模块并连接 PLL 输出，最后生成比特流文件并下载到 FPGA 开发板进行结果验证。
 
-从实验目标可知，我们需要通过串口来接收上位机发出的数据，所以我们需要一个**串口接收模块（uart_rx）** ，该模块用于将串口接收端口（**uart_rxd**）上的**串行数据解析成并行数据**， 并将解析完成的并行数据（**uart_rx_data**）作为模块的输出信号来供其它模块使用。
-有了串口接收模块模块后，我们还需要一个能将数据发给上位机的**串口发送模块（uart_tx）**，该模块用于将 **uart_rx** 模块解析完成的并行数据数据（uart_rx_data） 转成串行数据，并通过串口发送端口（**uart_txd**）发回上位机， 所以我们需要将 **uart_rx_data** 数据传递给 **uart_tx** 模块， 即 **uart_tx** 模块需要一个用于接收 **uart_rx_data** 数据的输入端口，这里我们将该端口命名为 **uart_tx_data**，且位宽与 **uart_rx_data** 相等。
+##### 5.1 建立工程
 
-综上需要实现下面3个模块,分别是
+打开vivado软件，选择创建项目，项目名为**PLL_IPCoreFreqTransform**，芯片选择**XC7Z010-1CLG400I**。
 
-- ##### UART接收模块
+##### 5.2 添加 PLL IP 核
 
-- ##### UART发送模块
+1. **打开 IP Catalog（IP 目录）**
 
-- ##### 顶层模块
+   - 在 Vivado 主界面左侧的 “Flow Navigator”（流程导航器）中，点击 “IP Catalog”。
+     ![image-20250103203354024](asset/image-20250103203230197.png)
 
-整体系统框图如图
+2. **查找 PLL IP 核**
 
-![image-20241229010548695](asset/image-20241229010548695.png)
+   - 在 IP Catalog 中，通过搜索框查找 “Clocking Wizard”（时钟向导）IP 核，这是 Xilinx 提供的用于时钟管理包括 PLL 功能的 IP，如下图所示。
+     ![image-20250103203457984](asset/image-20250103203457984.png)
 
-##### 5.2 发送模块设计
+3. **配置 PLL IP 核**
 
-- **模块接口框图**
-  输入信号有系统**时钟信号**，**复位信号**，**发送使能信号**，和**待发送数据**。
-  输出信号有**发送忙状态标志**和**串口发送端口**
-  接口框图如下：
-  ![image-20241228153846968](asset/image-20241228153846968.png)
+   - **双击 “Clocking Wizard” IP 核来启动配置向导。弹出的界面如下，这个界面用于配置 FPGA 中的时钟管理模块，实现诸如时钟倍频、分频等功能。**
+     ![image-20250103204502391](asset/image-20250103204502391.png)
 
-- **接口与功能描述**
-  ![image-20241228155315399](asset/image-20241228155315399.png)
+   - **在 “Clocking Options”（时钟选项）中，设置输入时钟频率（原频率），这个频率应该是 FPGA 开发板提供的基础时钟频率，50MHz。**
+     ![image-20250103215355598](asset/image-20250103205244153.png)
 
-- **波形图绘制**
-  串口发送模块实际上实现的是一个并转串的功能，需要一个16位的系统时钟计数器(**baud_cnt**)和4位发送数据计数器(**tx_cnt**)，当串口发送模块接收到串口接收模块发送过来的高电平发送使能（**uart_tx_en**）时，拉高发送忙状态标志（**uart_tx_busy**）同时寄存待发送的数据（**tx_data_t**）。 在整个发送过程中发送忙状态标志保持高电平，**tx_cnt** 对串口数据进行计数，同时 **tx_data_t** 的各个数据位依次通过串口发送端 **uart_txd** 发送出去。当 **tx_cnt** 计数到 9 时，串口数据发送完成，开始发送停止位。在一个波特率周期的停止位发送完成后，串口发送过程结束， **uart_tx_busy** 信号拉低，表明串口发送模块进入空闲状态。
+     第一列“Input Clock（输入时钟）”中 Primary（主要，即主时钟）是必要的，Secondary（次要，即副 时钟）是可选是否使用的，若使用了副时钟则会引入一个时钟选择信号（clk_in_sel），需要注意的是主副时 钟不是同时生效的，我们可以通过控制 clk_in_sel 的高低电平来选择使用哪一个时钟，当 clk_in_sel 为 1 时 选择主时钟，当 clk_in_sel 为 0 时选择副时钟。这里我们只需要用到一个输入时钟，所以保持默认不启用副时钟。
+     第二列“Port Name（端口名称）”可以对输入时钟的端口进行命名，这里我们可以保持默认的命名。
+     第三列“lnput Frequency(输入频率)”可以设置输入信号的时钟频率，单位为 MHz，主时钟可配置的输入时钟范围（19MHz~800MHz）可以在其后面的方块中进行查看；
+     第四列“Jitter Options（抖动选项）”有 UI(百分比)和 PS（皮秒）两种表示单位可选。
+     第五列“lnput Jitter（输入抖动）”为设置时钟上升沿和下降沿的时间，例如输入时钟为 50MHz，Jitter Options 选择 UI，lnput Jitter 输入 0.01，择上升沿和下降沿的时间不超过 0.2ns（20ns*1%），若此时将 UI 改 为 PS，则 0.01 会自动变成 200（0.2ns=200ps）。
+     第六列“Source（来源）”中有四种选项：
 
-  ![1](asset/1.bmp)
+     1、“Single ended clock capable pin（支持单端时钟引脚）”，当输入的时钟来自于单端时钟引脚时，需要选择这个。如果系统时钟就是由晶振产生并通过单端时钟引脚接入的，就选择 “Single ended clock capable pin”。
 
-- **代码**
+     2、“Differential clock capable pin（支持差分时钟引脚）”，当输入的时钟来自于差分时钟引脚时，需要选择这个。因为本次实验的系统时钟就是由差分晶振产生的，所以这里我们选择 “Differential clock capable pin”。差分晶振有两个输出信号，这两个信号是相位相反的,通常用于高速数据传输和对电磁干扰（EMI）要求较高的场合，此开发板上焊接的晶振虽然有四个引脚，但只有一个引脚接入芯片。
 
-  ```
-  module uart_tx(
-      input clk,  //50MHz
-      input rst_n,
-      input uart_tx_en,
-      input [7:0] uart_tx_data,
-      output reg uart_tx_busy,
-      output reg uart_tx_d
-  );
-  //参数定义
-  parameter CLK_FREQ = 50_000_000;    
-  parameter UART_BAUD =115200;
-  localparam BAUD_CNT_MAX=CLK_FREQ/UART_BAUD;
-  
-  //寄存器定义
-  reg [7:0] tx_data_t;//发送数据寄存器
-  reg [3:0] tx_cnt;//发送数据计数器
-  reg [15:0] baud_cnt;//波特率计数器
-  
-  always @(posedge clk)begin
-      //如果复位信号有效，那么清除发送数据寄存器，拉低标志位
-      if(rst_n==0)begin
-          tx_data_t<=8'd10;
-          uart_tx_busy<=1'b0;
-      end
-      //发送使能
-      else if(uart_tx_en)begin
-          tx_data_t<=uart_tx_data;
-          uart_tx_busy<=1'b1;
-      end
-      //如果计数到停止位，那么拉低标志位，清空数据寄存器
-      else if(tx_cnt==4'd9&&baud_cnt==BAUD_CNT_MAX-BAUD_CNT_MAX/16)begin
-          tx_data_t<=8'd10;
-          uart_tx_busy<=1'b0;
-      end
-      else begin
-          tx_data_t<=tx_data_t;
-          uart_tx_busy<=uart_tx_busy;
-      end
-  end
-  
-  //波特率计数器
-  always @(posedge clk)begin
-      if(rst_n==0)begin
-          baud_cnt<=16'd0;
-      end
-      //当处于发送状态时，波特率计数器进行计数
-      else if(uart_tx_busy)begin
-          if(baud_cnt < BAUD_CNT_MAX - 1'b1)
-              baud_cnt <= baud_cnt + 16'b1;
-          else
-              baud_cnt <=16'd0;
-      end
-      else
-          baud_cnt <=16'd0;
-  end
-  
-  //发送数据计数
-  always @(posedge clk)begin
-      if(rst_n==0)
-          tx_cnt<=4'd0;
-      else if(uart_tx_busy)begin
-          if (baud_cnt==BAUD_CNT_MAX - 1'b1)
-              tx_cnt<=tx_cnt+1'b1;
-          else
-              tx_cnt<=tx_cnt;
-      end
-      else
-          tx_cnt<=4'd0;
-  end
-  
-  //根据发送计数器对发送端口赋值
-  always @(posedge clk)begin
-      if(rst_n==0)
-          uart_tx_d=1'b1;
-      else if(uart_tx_busy)begin 
-          case(tx_cnt)
-              4'd0 : uart_tx_d <= 1'b0        ; //起始位
-              4'd1 : uart_tx_d <= tx_data_t[0]; //数据位最低位
-              4'd2 : uart_tx_d <= tx_data_t[1];
-              4'd3 : uart_tx_d <= tx_data_t[2];
-              4'd4 : uart_tx_d <= tx_data_t[3];
-              4'd5 : uart_tx_d <= tx_data_t[4];
-              4'd6 : uart_tx_d <= tx_data_t[5];
-              4'd7 : uart_tx_d <= tx_data_t[6];
-              4'd8 : uart_tx_d <= tx_data_t[7]; //数据位最高位
-              4'd9 : uart_tx_d <= 1'b1        ; //停止位
-              default : uart_tx_d <= 1'b1;
-          endcase
-      end
-      else
-          uart_tx_d=1'b1;
-  end
-  
-  endmodule
-  
-  ```
+     3、“Global buffer（全局缓冲器）”，输入时钟只要在全局时钟网络上，就需要选择这个。例如前一个 PLL IP 核的输出时钟接到后一个 PLL IP 核的输入时，只要前一个 PLL 输出的时钟不是“No buffer”类型即可。
 
-- **仿真结果**
+     4、“No buffer（无缓冲器）”，输入时钟必须经过全局时钟缓冲器（BUFG），才可以选择这个。例如 前一个 PLL IP 核的输出时钟接到后一个 PLL IP 核的输入时，前一个 PLL 输出的时钟必须为 BUFG 或者 BUFGCE 类型才可以。
 
-  ![image-20241228210452154](asset/image-20241228210452154.png)
+   - **在 “Output Clocks”（输出时钟）选项卡中，配置输出时钟路数、相位和频率，如下图。**
+     ![image-20250103214957780](asset/image-202501032045023911.png)
 
-  
+   - 第一列“Output Clock”为设置输出时钟的路数，因为我们需要输出四路时钟，所以勾选前 4 个时钟。
 
-##### 5.3 接收模块设计
+     第二列“Port Name”为设置时钟的名字，这里我们可以保持默认的命名。
 
-- **模块接口框图**
+     第三列“Output Freq(MHz)”为设置输出时钟的频率，这里我们要对“Requested（即理想值）”进行设 置，我们将四路时钟的输出频率分别设为 100、100、50 和 25，设置完理想值后，我们就可以在“Actual” 下看到其对应的实际输出频率。需要注意的是 PLLIP 核的时钟输出范围为 6.25MHz~800MHz，但这个范围 是一个整体范围，根据驱动器类型的选择不同，其所支持的最大输出频率也会有所差异。
 
-  输入信号有系统**时钟信号**，**复位信号**，和**待接收数据**。
-  输出信号有**接收状态标志位**和**接收数据**
-  接口框图如下：
-  ![image-20241228232334291](asset/image-20241228232334291.png)
+     第四列“Phase (degrees)”为设置时钟的相位偏移，同样的我们只需要设置理想值，这里我们将第二路 100MHz 的时钟输出信号的相位偏移设置为 180，其余三路信号不做相位偏移处理。
 
-- **接口与功能描述**
-  ![image-20241228234131743](asset/image-20241228234131743.png)
+     第五列“Duty cycle”为占空比，正常情况下如果没有特殊要求的话，占空比一般都是设置为 50%，所 以这里我们保持默认的设置即可。
 
-- **波形图绘制**
-  串口接收模块实质上是实现一个串行数据转并行输出的功能，115200波特率下每个数据位的持续时间是434个系统时钟周期，我们需要一个至少9位的波特率计数器（**baud_cnt**）来计数，这里为了提高模块通用性，使用16位的波特率计数器，串口接收数据还需要一个4位接收数据计数器（**rx_cnt**）来对接收数据进行计数，需要一个8位的接收数据寄存器（**rx_data_t**）存储接收数据
+     第六列“Drives”为驱动器类型，有五种驱动器类型可选： BUFG 是全局缓冲器，如果时钟信号要走全局时钟网络，必须通过 BUFG 来驱动，BUFG 可以驱动所有的 CLB，RAM，IOB。本次实验我们保持默认选项 BUFG。
 
-- **代码**
+     BUFH 是区域水平缓冲器，BUFH 可以驱动其水平区域内的所有 CLB，RAM，IOB。 BUFGCE 是带有时钟使能端的全局缓冲器，它有一个输入端 I、一个使能端 CE 和一个输出端 O。只有当 BUFGCE 的使能端 CE 有效(高电平)时，BUFGCE 才有输出。
 
-  ```
-  module uart_rx(
-      input clk,  //50MHz
-      input rst_n,
-      input uart_rx_d,
-      output reg uart_rx_done,
-      output reg [7:0] uart_rx_data
-  );
-  //参数定义
-  parameter CLK_FREQ = 50_000_000;    
-  parameter UART_BAUD =115200;
-  localparam BAUD_CNT_MAX=CLK_FREQ/UART_BAUD;
-  
-  //寄存器定义
-  reg  uart_rx_d0;
-  reg  uart_rx_d1;
-  reg  uart_rx_d2;
-  reg  rx_flag;   //接收数据标志位
-  reg [7:0] rx_data_t;//接收数据寄存器
-  reg [3:0] rx_cnt;//接收数据计数器
-  reg [15:0] baud_cnt;//波特率计数器
-  
-  //线网定义
-  wire start_en;
-  
-  //捕获接收端口下降沿(起始位)，得到一个时钟周期的脉冲信号
-  assign start_en=uart_rx_d2&(~uart_rx_d1)&(~rx_flag);
-  
-  //针对异步信号的同步处理
-  always @(posedge clk) begin
-      if(rst_n==0)begin
-          uart_rx_d0<=0;
-          uart_rx_d1<=0;
-          uart_rx_d2<=0;
-      end
-      else begin
-          uart_rx_d0<=uart_rx_d;
-          uart_rx_d1<=uart_rx_d0;
-          uart_rx_d2<=uart_rx_d1;
-      end
-  end
-  
-  //接收标志位赋值
-  always @(posedge clk) begin
-      if(rst_n==0)
-          rx_flag<=1'b0;
-      else if(start_en)
-          rx_flag<=1'b1;  //检测到起始信号，标志位置1
-      else if (rx_cnt==4'd9 && baud_cnt==BAUD_CNT_MAX/2-1'b1)begin//接收结束，标志位置0 
-          rx_flag<=1'b0;
-      end
-      else
-          rx_flag<=rx_flag;
-  end
-  
-  
-  
-  //波特率计数器
-  always @(posedge clk)begin
-      if(rst_n==0)begin
-          baud_cnt<=16'd0;
-      end
-      //当处于接收状态时，波特率计数器进行计数
-      else if(rx_flag)begin
-          if(baud_cnt < BAUD_CNT_MAX - 1'b1)
-              baud_cnt <= baud_cnt + 16'b1;
-          else
-              baud_cnt <=16'd0;
-      end
-      else
-          baud_cnt <=16'd0;
-  end
-  
-  //接收数据计数
-  always @(posedge clk)begin
-      if(rst_n==0)
-          rx_cnt<=4'd0;
-      else if(rx_flag)begin
-          if (baud_cnt==BAUD_CNT_MAX - 1'b1)
-              rx_cnt<=rx_cnt+1'b1;
-          else
-              rx_cnt<=rx_cnt;
-      end
-      else
-          rx_cnt<=4'd0;
-  end
-  
-  //根据发送计数器对接收数据寄存器进行赋值
-  always @(posedge clk)begin
-      if(rst_n==0)
-          rx_data_t=8'd0;
-      else if(rx_flag)begin //判断是否处于接收状态
-          if(baud_cnt==BAUD_CNT_MAX/2 - 1'b1)begin//判断是否计数到中间
-              case(rx_cnt)
-                  4'd1 : rx_data_t[0] <= uart_rx_d2;   //寄存数据的最低位
-                  4'd2 : rx_data_t[1] <= uart_rx_d2;
-                  4'd3 : rx_data_t[2] <= uart_rx_d2;
-                  4'd4 : rx_data_t[3] <= uart_rx_d2;
-                  4'd5 : rx_data_t[4] <= uart_rx_d2;
-                  4'd6 : rx_data_t[5] <= uart_rx_d2;
-                  4'd7 : rx_data_t[6] <= uart_rx_d2;
-                  4'd8 : rx_data_t[7] <= uart_rx_d2;   //寄存数据的高低位
-                 default : ;
-              endcase
-          end
-          else
-              rx_data_t<=rx_data_t;
-      end
-      else
-          rx_data_t=8'd0;
-  end
-  
-  //给接收完成信号和接收到的数据赋值
-  always @(posedge clk) begin
-      if(rst_n==0) begin
-          uart_rx_done <= 1'b0;
-          uart_rx_data <= 8'b0;
-      end
-      //当接收数据计数器计数到停止位，且baud_cnt计数到停止位的中间时
-      else if(rx_cnt == 4'd9 && baud_cnt == BAUD_CNT_MAX/2 - 1'b1) begin
-          uart_rx_done <= 1'b1     ;  //拉高接收完成信号
-          uart_rx_data <= rx_data_t;  //并对UART接收到的数据进行赋值
-      end    
-      else begin
-          uart_rx_done <= 1'b0;
-          uart_rx_data <= uart_rx_data;
-      end
-  end
-  
-  endmodule
-  
-  ```
+     BUFHCE 是带有时钟使能端的区域水平缓冲器，用法与 BUFGCE 类似。
 
-- **仿真结果**
-  ![image-20241229004411813](asset/image-20241229004411813.png)
+     No buffer 即无缓冲器，当输出时钟无需挂在全局时钟网络上时，可以选择无缓冲区。
 
-##### **5.3 顶层模块设计**
+     第七列“Max Freq of buffer”为缓冲器的最大频率，例如我们选取的 BUFG 缓冲器支持的最大输出频率 为 464.037MHz。
 
-在顶层模块中对发送模块和接收模块进行例化。
+   - **接着是Port Renaming选项卡，主要是对一些控制信号（复位信号以外的信号）的重命名。在上一个选项卡 中我们启用了锁定信号 locked，因此这里我们只看到了 locked 这一个可以重命名的信号，因为默认的名称 已经可以让我们一眼看出该信号的含义，所以无需重命名，保持默认即可。**
 
-- 代码编写
+   -  **“PLLE2 Setting” 选项卡展示了对整个 PLL 的最终配置参数，这些参数都是由 Vivado 根据之前用户 输入的时钟需求来自动配置的，Vivado 已经对参数进行了最优的配置，在绝大多数情况下都不需要用户对它们进行更改，也不建议更改，所以这一步保持默认即可，如下图所示**。
 
-  ```
-  module uart_loopback(
-      input            sys_clk  ,   //外部50MHz时钟
-      input            sys_rst_n,   //系外部复位信号，低有效
-      
-      //UART端口    
-      input            uart_rx_d ,   //UART接收端口
-      output           uart_tx_d     //UART发送端口
-      );
-  //参数定义
-  parameter CLK_FREQ = 50000000;    //定义系统时钟频率
-  parameter UART_BPS = 115200  ;    //定义串口波特率
-  
-  //线网定义
-  wire         uart_rx_done;    //UART接收完成信号
-  wire  [7:0]  uart_rx_data;    //UART接收数据
-  
-  //串口接收模块
-  uart_rx #(
-      .CLK_FREQ  (CLK_FREQ),
-      .UART_BPS  (UART_BPS)
-      )    
-      u_uart_rx(
-      .clk           (sys_clk     ),
-      .rst_n         (sys_rst_n   ),
-      .uart_rx_d     (uart_rx_d    ),
-      .uart_rx_done  (uart_rx_done),
-      .uart_rx_data  (uart_rx_data)
-      );
-  
-  //串口发送模块
-  uart_tx #(
-      .CLK_FREQ  (CLK_FREQ),
-      .UART_BPS  (UART_BPS)
-      )    
-      u_uart_tx(
-      .clk          (sys_clk     ),
-      .rst_n        (sys_rst_n   ),
-      .uart_tx_en   (uart_rx_done),
-      .uart_tx_data (uart_rx_data),
-      .uart_tx_d    (uart_tx_d    ),
-      .uart_tx_busy (            )
-      );
-  
-  endmodule
-  ```
+     ![image-20250103211402430](asset/image-20250103211402430.png)
 
-- **仿真结果**
-  ![image-20241229010023351](asset/image-20241229010023351.png)
+   - **最后的“Summary”选项卡是对前面所有配置的一个总结，在检查没问题后我们点击“OK”按钮，如 下图所示：**![image-20250103211547331](asset/image-20250103211547331.png)
 
+4. **接着在弹出的“Generate Output Products”窗口，直接点击“Generate”，之后我们就可以在“Design Runs”窗口的“Out-of-Context Module Runs”一栏中看到该 IP 核对应的 run“clk_wiz_0_synth_1”，其综合过程独立于顶层设计的综合，综合完成后，如下图所示：**
+   ![image-20250103212011213](asset/image-20250103212011213.png)
 
+##### 5.3 **生成顶层模块并连接 PLL 输出**
+
+1. **顶层模块设计**
+
+   - **模块接口框图**
+     本实验目的是通过PLL IP和输出四路不同频率或相位的时钟信号，顶层模块名为`pll_top`，输入信号有系统时钟`locked`，`sys_clk`，复位信号`rst_n`，输出信号为`clk_100m`，`clk_100m_180p`，`clk_50m`，`clk_25m`，接口框图如下。![image-20250103221912145](asset/image-20250103213327092.png)
+   - **接口与功能描述**
+     ![image-20250103221957961](asset/image-20250103213812328.png)
+
+2. **代码编写**
+
+   在顶层模块中实例化之前配置好的 PLL IP 核，连接 PLL 的输入时钟，将 PLL 的倍频和分频后的输出时钟信号连接到顶层模块的输出端口。
+
+   ```
+   module pll_top (
+       input sys_clk,
+       input rst_n,
+       output locked,
+       output clk_100m,
+       output clk_100m_180p,
+       output clk_50m,
+       output clk_25m
+   );
+       clk_wiz_0 clk_wiz_0_ins(
+           .clk_in1(sys_clk),
+           .resetn(rst_n),
+           .locked(locked),
+           .clk_out1(clk_100m),
+           .clk_out2(clk_100m_180p),
+           .clk_out3(clk_50m),
+           .clk_out4(clk_25m)
+       );
+   endmodule 
+   ```
+
+   编写测试用例，在vivado中进行仿真
+
+   ```
+   `timescale 1ns/1ps
+   module pll_top_tb ();
+       reg sys_clk,rst_n;
+       wire locked,clk_100m,clk_100m_180p,clk_50m,clk_25m;
+       pll_top uut(
+           .sys_clk(sys_clk),
+           .rst_n(rst_n),
+           .locked(locked),
+           .clk_100m(clk_100m),
+           .clk_100m_180p(clk_100m_180p),
+           .clk_50m(clk_50m),
+           .clk_25m(clk_25m)
+       );
+       // 产生时钟信号
+       always #10 sys_clk = ~sys_clk;  // 50MHz时钟，周期为20ns
+       // 测试过程
+       initial begin
+           // 初始化信号
+           rst_n=0;
+           sys_clk=0;
+           #50;
+           rst_n=1;
+       end
+   endmodule 
+   ```
+
+3. **仿真结果**	![image-20250103222700483](asset/image-20250103222700483.png)
+
+   如图所示，在复位信号拉高后并没有立即就输出四个期望的时钟信号，因为锁相环需要时间锁定输入频率，经过一段时间才会输出我们想要的4路时钟输出。当locked信号被拉高后，才是稳定的时钟信号输出。`clk_100m`频率为100MHz，`clk_100m_180p`频率为100MHz，但相位滞后180度，`clk_50m`信号与系统时钟频率相位一致，`clk_25m`频率为25MHz。
 
 ### 6.实验结果
 
