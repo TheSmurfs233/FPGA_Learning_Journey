@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>FPGA &#x9501;&#x76f8;&#x73af;&#x5b9e;&#x9a8c;</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="fpga-锁相环实验">FPGA 锁相环实验</h1>
+<p>PLL（锁相环）是一种在数字电路中广泛应用的技术，尤其在 FPGA 开发中，它用于实现时钟的倍频、分频、相位偏移和可编程占空比等功能。</p>
+<h3 id="1实验目标">1.实验目标</h3>
+<p>本实验基于EBAZ 4205开发板，通过调用IP核，实现输出4个不同频率或相位的时钟信号，在vivado中进行仿真验证，最后生成比特流文件下载到开发板上使用示波器或逻辑分析仪观测信号频率。在实验过程中掌握以下要点：</p>
+<ul>
+<li>学习 Xilinx MMCM/PLL IP 核的使用方法。</li>
+<li>掌握 PLL 的时钟倍频、分频、相位偏移等功能的实现。</li>
+<li>熟悉 Vivado 软件的 IP 核配置、仿真器使用以及下载验证流程。</li>
+</ul>
+<h3 id="2实验环境">2.实验环境</h3>
+<ol>
+<li><strong>ZYNQ 7010 开发板</strong>：确保开发板各功能模块正常，已焊接50MHz的时钟源作为输入时钟。</li>
+<li><strong>开发软件</strong>：vivado 2019.2。</li>
+<li><strong>测试设备</strong>：示波器(没有示波器，只能使用逻辑分析仪观测信号频率)。</li>
+</ol>
+<h3 id="3理论知识">3.理论知识</h3>
+<h5 id="31-pll介绍">3.1 PLL介绍</h5>
+<p>锁相环（Phase-Locked Loop，PLL）是一种利用反馈控制原理实现控制信号频率及相位同步的技术。
+PLL 的基本工作原理是利用外部输入的参考信号来控制环路内部振荡信号的频率和相位，实现输出信号频率对输入信号频率的自动跟踪。它通过检测输入参考信号与反馈信号之间的相位差，然后根据这个相位差来调整内部振荡器的频率和相位，使得反馈信号与输入参考信号在频率和相位上达到一致，即实现 “锁定” 状态。当环路锁定后，输出信号的频率和相位就与输入参考信号保持同步</p>
+<ul>
+<li>
+<p><strong>为什么需要锁相环？</strong></p>
+<ul>
+<li>
+<p>很多电子设备都需要一个稳定的 “节拍” 来工作，这个 “节拍” 就是时钟信号。就像乐队需要一个稳定的节拍器一样。锁相环可以把一个不太稳定或者不合适的时钟信号，变成一个稳定的、符合设备要求的时钟信号。比如电脑的 CPU、内存等组件都需要在稳定的时钟节拍下工作，锁相环就能保证它们不会因为时钟信号不稳定而出现错误或者性能下降。</p>
+</li>
+<li>
+<p>想象一下，在一个复杂的电子产品里，就像一个繁忙的工厂，有很多不同的 “车间”（电路模块），每个 “车间” 都需要按照自己特定的节奏（频率）来工作。但是这些节奏需要协调一致，不然就会乱套。锁相环就像是一个 “频率协调员”。例如，在手机里，信号接收部分、信号处理部分、屏幕显示部分等都有自己需要的工作频率。锁相环可以把一个基础的频率（比如从手机基站接收到的信号频率），变成各个部分需要的频率，让它们都能好好工作。</p>
+</li>
+<li>
+<p>拿电脑CPU来说，CPU的主频动辄几个GHz，频率的大小由晶振的大小决定，虽然CPU主频可以达到几个G赫兹，但是也没有真么高频率的晶振啊，那么谁来提供真么高频率的时钟呢？这就需要中间有这样一个玩意，能够把晶振的频率加倍再给CPU，这个玩意就是锁相环PLL。以我现在使用的CPU 锐龙7500F为例，打开CPU-Z，如下图可以看到，此时主频接近4600Mhz，是在100MHz的基础上经过锁相环46倍频得到。</p>
+<p><img src="file:///d:\FPGA_Learning_Journey\Pro\PLL\asset\image-20250102184158624.png" alt="image-20250102184158624"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="32-pll工作原理"><strong>3.2 PLL工作原理</strong></h5>
+<p>最基础的PLL锁相环构成如下图所示</p>
+<p><img src="file:///d:\FPGA_Learning_Journey\Pro\PLL\asset\image-20250102185333182.png" alt="image-20250102185333182"></p>
+<p>由三部分组成，分别是鉴相器，低通滤波器和压控振荡器，f1是输入频率，来自于外部晶振，f2为输出频率。</p>
+<ul>
+<li><strong>鉴相器（Phase Detector）</strong>
+鉴相器的主要功能是比较输入信号（f1）和压控振荡器（VCO）输出信号（f2）的相位差。它会产生一个与相位差成正比的电压信号。这个电压信号将被送入下一级的低通滤波器。</li>
+<li><strong>低通滤波器（Low - Pass Filter）</strong>
+低通滤波器的作用是对鉴相器输出的电压信号进行滤波。它会滤除信号中的高频成分，只允许低频成分通过。这样可以确保只有反映相位差的直流或低频信号被送到压控振荡器，从而避免高频噪声对压控振荡器的干扰。</li>
+<li><strong>压控振荡器（Voltage - Controlled Oscillator, VCO）</strong>
+压控振荡器根据输入的控制电压来改变其振荡频率。从低通滤波器送来的电压信号会控制 VCO 的振荡频率，使其输出信号（f2）的频率和相位逐渐与输入信号（f1）匹配。当环路锁定时，输入信号和 VCO 输出信号的频率和相位将保持一致。</li>
+</ul>
+<h5 id="33-pll倍频的原理"><strong>3.3 PLL倍频的原理</strong></h5>
+<p><img src="file:///d:\FPGA_Learning_Journey\Pro\PLL\asset\image-20250102200621815.png" alt="image-20250102200621815"></p>
+<ul>
+<li>在图中所示的 PLL 电路中，增加了一个分频器（÷N）。</li>
+<li>输入信号频率为100MHz，VCO 输出信号频率为1600MHz，分频器的分频系数N=16。</li>
+<li>工作过程如下：
+<ul>
+<li>输入信号100MHz进入鉴相器。</li>
+<li>VCO 输出信号1600MHz经过 16 分频器后，频率变为100MHz。</li>
+<li>这个100MHz的信号反馈到鉴相器，与输入的100MHz信号进行比较。</li>
+<li>鉴相器比较这两个信号的相位差，产生误差电压。误差电压经过低通滤波器滤波后，送到 VCO。</li>
+<li>VCO 根据误差电压调整其振荡频率，直到反馈信号与输入信号相位锁定，此时 VCO 输出信号稳定在1600MHz。</li>
+</ul>
+</li>
+</ul>
+<h3 id="4实验任务">4.实验任务</h3>
+<p>本节实验的任务是使用开发板输出 4 个不同频率或相位的时钟，四个时钟分别为一个倍频时钟 （100MHz），一个倍频后相位偏移 180 度的时钟（100MHz），一个与系统时钟相同的时钟（50MHz）和 一个分频时钟（25MHz），并在 Vivado 中进行仿真以验证结果，最后生成比特流文件并下载到开发板 上，使用示波器来测量时钟的频率是否正确。</p>
+<h3 id="5实验内容">5.实验内容</h3>
+<p>根据EBAZ 4205的原理图可知，外部50MHz的晶振连接到**<code>XC7Z010-1CLG400I</code>**芯片的<code>N18</code>引脚上。总体实验步骤是在Vivado中新建工程，然后添加PLL IP核，生成顶层模块并连接 PLL 输出，最后生成比特流文件并下载到 FPGA 开发板进行结果验证。</p>
+<h5 id="51-建立工程">5.1 建立工程</h5>
+<p>打开vivado软件，选择创建项目，项目名为<strong>PLL_IPCoreFreqTransform</strong>，芯片选择<strong>XC7Z010-1CLG400I</strong>。</p>
+<h5 id="52-添加-pll-ip-核">5.2 添加 PLL IP 核</h5>
+<ol>
+<li>
+<p><strong>打开 IP Catalog（IP 目录）</strong></p>
+<ul>
+<li>在 Vivado 主界面左侧的 “Flow Navigator”（流程导航器）中，点击 “IP Catalog”。
+<img src="file:///d:\FPGA_Learning_Journey\Pro\PLL\asset\image-20250103203230197.png" alt="image-20250103203354024"></li>
+</ul>
+</li>
+<li>
+<p><strong>查找 PLL IP 核</strong></p>
+<ul>
+<li>在 IP Catalog 中，通过搜索框查找 “Clocking Wizard”（时钟向导）IP 核，这是 Xilinx 提供的用于时钟管理包括 PLL 功能的 IP，如下图所示。
+<img src="file:///d:\FPGA_Learning_Journey\Pro\PLL\asset\image-20250103203457984.png" alt="image-20250103203457984"></li>
+</ul>
+</li>
+<li>
+<p><strong>配置 PLL IP 核</strong></p>
+<ul>
+<li>
+<p><strong>双击 “Clocking Wizard” IP 核来启动配置向导。弹出的界面如下，这个界面用于配置 FPGA 中的时钟管理模块，实现诸如时钟倍频、分频等功能。</strong>
+<img src="file:///d:\FPGA_Learning_Journey\Pro\PLL\asset\image-20250103204502391.png" alt="image-20250103204502391"></p>
+</li>
+<li>
+<p><strong>在 “Clocking Options”（时钟选项）中，设置输入时钟频率（原频率），这个频率应该是 FPGA 开发板提供的基础时钟频率，50MHz。</strong>
+<img src="file:///d:\FPGA_Learning_Journey\Pro\PLL\asset\image-20250103205244153.png" alt="image-20250103215355598"></p>
+<p>第一列“Input Clock（输入时钟）”中 Primary（主要，即主时钟）是必要的，Secondary（次要，即副 时钟）是可选是否使用的，若使用了副时钟则会引入一个时钟选择信号（clk_in_sel），需要注意的是主副时 钟不是同时生效的，我们可以通过控制 clk_in_sel 的高低电平来选择使用哪一个时钟，当 clk_in_sel 为 1 时 选择主时钟，当 clk_in_sel 为 0 时选择副时钟。这里我们只需要用到一个输入时钟，所以保持默认不启用副时钟。
+第二列“Port Name（端口名称）”可以对输入时钟的端口进行命名，这里我们可以保持默认的命名。
+第三列“lnput Frequency(输入频率)”可以设置输入信号的时钟频率，单位为 MHz，主时钟可配置的输入时钟范围（19MHz~800MHz）可以在其后面的方块中进行查看；
+第四列“Jitter Options（抖动选项）”有 UI(百分比)和 PS（皮秒）两种表示单位可选。
+第五列“lnput Jitter（输入抖动）”为设置时钟上升沿和下降沿的时间，例如输入时钟为 50MHz，Jitter Options 选择 UI，lnput Jitter 输入 0.01，择上升沿和下降沿的时间不超过 0.2ns（20ns*1%），若此时将 UI 改 为 PS，则 0.01 会自动变成 200（0.2ns=200ps）。
+第六列“Source（来源）”中有四种选项：</p>
+<p>1、“Single ended clock capable pin（支持单端时钟引脚）”，当输入的时钟来自于单端时钟引脚时，需要选择这个。如果系统时钟就是由晶振产生并通过单端时钟引脚接入的，就选择 “Single ended clock capable pin”。</p>
+<p>2、“Differential clock capable pin（支持差分时钟引脚）”，当输入的时钟来自于差分时钟引脚时，需要选择这个。因为本次实验的系统时钟就是由差分晶振产生的，所以这里我们选择 “Differential clock capable pin”。差分晶振有两个输出信号，这两个信号是相位相反的,通常用于高速数据传输和对电磁干扰（EMI）要求较高的场合，此开发板上焊接的晶振虽然有四个引脚，但只有一个引脚接入芯片。</p>
+<p>3、“Global buffer（全局缓冲器）”，输入时钟只要在全局时钟网络上，就需要选择这个。例如前一个 PLL IP 核的输出时钟接到后一个 PLL IP 核的输入时，只要前一个 PLL 输出的时钟不是“No buffer”类型即可。</p>
+<p>4、“No buffer（无缓冲器）”，输入时钟必须经过全局时钟缓冲器（BUFG），才可以选择这个。例如 前一个 PLL IP 核的输出时钟接到后一个 PLL IP 核的输入时，前一个 PLL 输出的时钟必须为 BUFG 或者 BUFGCE 类型才可以。</p>
+</li>
+<li>
+<p><strong>在 “Output Clocks”（输出时钟）选项卡中，配置输出时钟路数、相位和频率，如下图。</strong>
+<img src="file:///d:\FPGA_Learning_Journey\Pro\PLL\asset\image-202501032045023911.png" alt="image-20250103214957780"></p>
+</li>
+<li>
+<p>第一列“Output Clock”为设置输出时钟的路数，因为我们需要输出四路时钟，所以勾选前 4 个时钟。</p>
+<p>第二列“Port Name”为设置时钟的名字，这里我们可以保持默认的命名。</p>
+<p>第三列“Output Freq(MHz)”为设置输出时钟的频率，这里我们要对“Requested（即理想值）”进行设 置，我们将四路时钟的输出频率分别设为 100、100、50 和 25，设置完理想值后，我们就可以在“Actual” 下看到其对应的实际输出频率。需要注意的是 PLLIP 核的时钟输出范围为 6.25MHz~800MHz，但这个范围 是一个整体范围，根据驱动器类型的选择不同，其所支持的最大输出频率也会有所差异。</p>
+<p>第四列“Phase (degrees)”为设置时钟的相位偏移，同样的我们只需要设置理想值，这里我们将第二路 100MHz 的时钟输出信号的相位偏移设置为 180，其余三路信号不做相位偏移处理。</p>
+<p>第五列“Duty cycle”为占空比，正常情况下如果没有特殊要求的话，占空比一般都是设置为 50%，所 以这里我们保持默认的设置即可。</p>
+<p>第六列“Drives”为驱动器类型，有五种驱动器类型可选： BUFG 是全局缓冲器，如果时钟信号要走全局时钟网络，必须通过 BUFG 来驱动，BUFG 可以驱动所有的 CLB，RAM，IOB。本次实验我们保持默认选项 BUFG。</p>
+<p>BUFH 是区域水平缓冲器，BUFH 可以驱动其水平区域内的所有 CLB，RAM，IOB。 BUFGCE 是带有时钟使能端的全局缓冲器，它有一个输入端 I、一个使能端 CE 和一个输出端 O。只有当 BUFGCE 的使能端 CE 有效(高电平)时，BUFGCE 才有输出。</p>
+<p>BUFHCE 是带有时钟使能端的区域水平缓冲器，用法与 BUFGCE 类似。</p>
+<p>No buffer 即无缓冲器，当输出时钟无需挂在全局时钟网络上时，可以选择无缓冲区。</p>
+<p>第七列“Max Freq of buffer”为缓冲器的最大频率，例如我们选取的 BUFG 缓冲器支持的最大输出频率 为 464.037MHz。</p>
+</li>
+<li>
+<p><strong>接着是Port Renaming选项卡，主要是对一些控制信号（复位信号以外的信号）的重命名。在上一个选项卡 中我们启用了锁定信号 locked，因此这里我们只看到了 locked 这一个可以重命名的信号，因为默认的名称 已经可以让我们一眼看出该信号的含义，所以无需重命名，保持默认即可。</strong></p>
+</li>
+<li>
+<p><strong>“PLLE2 Setting” 选项卡展示了对整个 PLL 的最终配置参数，这些参数都是由 Vivado 根据之前用户 输入的时钟需求来自动配置的，Vivado 已经对参数进行了最优的配置，在绝大多数情况下都不需要用户对它们进行更改，也不建议更改，所以这一步保持默认即可，如下图所示</strong>。</p>
+</li>
+</ul>
+<p><img src="file:///d:\FPGA_Learning_Journey\Pro\PLL\asset\image-20250103211402430.png" alt="image-20250103211402430"></p>
+<ul>
+<li><strong>最后的“Summary”选项卡是对前面所有配置的一个总结，在检查没问题后我们点击“OK”按钮，如 下图所示：</strong><img src="file:///d:\FPGA_Learning_Journey\Pro\PLL\asset\image-20250103211547331.png" alt="image-20250103211547331"></li>
+</ul>
+</li>
+<li>
+<p><strong>接着在弹出的“Generate Output Products”窗口，直接点击“Generate”，之后我们就可以在“Design Runs”窗口的“Out-of-Context Module Runs”一栏中看到该 IP 核对应的 run“clk_wiz_0_synth_1”，其综合过程独立于顶层设计的综合，综合完成后，如下图所示：</strong>
+<img src="file:///d:\FPGA_Learning_Journey\Pro\PLL\asset\image-20250103212011213.png" alt="image-20250103212011213"></p>
+</li>
+</ol>
+<h5 id="53-生成顶层模块并连接-pll-输出">5.3 <strong>生成顶层模块并连接 PLL 输出</strong></h5>
+<ol>
+<li>
+<p><strong>顶层模块设计</strong></p>
+<ul>
+<li><strong>模块接口框图</strong>
+本实验目的是通过PLL IP和输出四路不同频率或相位的时钟信号，顶层模块名为<code>pll_top</code>，输入信号有系统时钟<code>locked</code>，<code>sys_clk</code>，复位信号<code>rst_n</code>，输出信号为<code>clk_100m</code>，<code>clk_100m_180p</code>，<code>clk_50m</code>，<code>clk_25m</code>，接口框图如下。<img src="file:///d:\FPGA_Learning_Journey\Pro\PLL\asset\image-20250103213327092.png" alt="image-20250103221912145"></li>
+<li><strong>接口与功能描述</strong>
+<img src="file:///d:\FPGA_Learning_Journey\Pro\PLL\asset\image-20250103213812328.png" alt="image-20250103221957961"></li>
+</ul>
+</li>
+<li>
+<p><strong>代码编写</strong></p>
+<p>在顶层模块中实例化之前配置好的 PLL IP 核，连接 PLL 的输入时钟，将 PLL 的倍频和分频后的输出时钟信号连接到顶层模块的输出端口。</p>
+<pre><code>module pll_top (
+    input sys_clk,
+    input rst_n,
+    output locked,
+    output clk_100m,
+    output clk_100m_180p,
+    output clk_50m,
+    output clk_25m
+);
+    clk_wiz_0 clk_wiz_0_ins(
+        .clk_in1(sys_clk),
+        .resetn(rst_n),
+        .locked(locked),
+        .clk_out1(clk_100m),
+        .clk_out2(clk_100m_180p),
+        .clk_out3(clk_50m),
+        .clk_out4(clk_25m)
+    );
+endmodule 
+</code></pre>
+<p>编写测试用例，在vivado中进行仿真</p>
+<pre><code>`timescale 1ns/1ps
+module pll_top_tb ();
+    reg sys_clk,rst_n;
+    wire locked,clk_100m,clk_100m_180p,clk_50m,clk_25m;
+    pll_top uut(
+        .sys_clk(sys_clk),
+        .rst_n(rst_n),
+        .locked(locked),
+        .clk_100m(clk_100m),
+        .clk_100m_180p(clk_100m_180p),
+        .clk_50m(clk_50m),
+        .clk_25m(clk_25m)
+    );
+    // 产生时钟信号
+    always #10 sys_clk = ~sys_clk;  // 50MHz时钟，周期为20ns
+    // 测试过程
+    initial begin
+        // 初始化信号
+        rst_n=0;
+        sys_clk=0;
+        #50;
+        rst_n=1;
+    end
+endmodule 
+</code></pre>
+</li>
+<li>
+<p><strong>仿真结果</strong>	<img src="file:///d:\FPGA_Learning_Journey\Pro\PLL\asset\image-20250103222700483.png" alt="image-20250103222700483"></p>
+<p>如图所示，在复位信号拉高后并没有立即就输出四个期望的时钟信号，因为锁相环需要时间锁定输入频率，经过一段时间才会输出我们想要的4路时钟输出。当locked信号被拉高后，才是稳定的时钟信号输出。<code>clk_100m</code>频率为100MHz，<code>clk_100m_180p</code>频率为100MHz，但相位滞后180度，<code>clk_50m</code>信号与系统时钟频率相位一致，<code>clk_25m</code>频率为25MHz。</p>
+</li>
+</ol>
+<h3 id="6实验结果">6.实验结果</h3>
+
+            
+            
+        </body>
+        </html>
