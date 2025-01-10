@@ -1,239 +1,420 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.4 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.4">
   <diagram name="第 1 页" id="fd4EhWadq59LHY81k3FC">
-    <mxGraphModel dx="893" dy="519" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1095" dy="627" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="CQehMLbI-TvT4RRxddDj-187" value="pll_top" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="220" y="813" width="110" height="110" as="geometry" />
+        <mxCell id="CQehMLbI-TvT4RRxddDj-187" value="spi_drive" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="200" y="693" width="120" height="207" as="geometry" />
         </mxCell>
         <mxCell id="CQehMLbI-TvT4RRxddDj-188" value="sys_clk" style="endArrow=classic;html=1;rounded=0;entryX=0.001;entryY=0.183;entryDx=0;entryDy=0;entryPerimeter=0;verticalAlign=bottom;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="130" y="832.6600000000001" as="sourcePoint" />
-            <mxPoint x="219.9999999999999" y="832.6600000000001" as="targetPoint" />
+            <mxPoint x="110" y="712.6600000000001" as="sourcePoint" />
+            <mxPoint x="199.9999999999999" y="712.6600000000001" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CQehMLbI-TvT4RRxddDj-189" value="rst_n" style="endArrow=classic;html=1;rounded=0;entryX=0.001;entryY=0.183;entryDx=0;entryDy=0;entryPerimeter=0;verticalAlign=bottom;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="130" y="873" as="sourcePoint" />
-            <mxPoint x="220" y="873" as="targetPoint" />
+            <mxPoint x="110" y="730" as="sourcePoint" />
+            <mxPoint x="200" y="730" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQehMLbI-TvT4RRxddDj-192" value="clk_100m" style="endArrow=classic;html=1;rounded=0;verticalAlign=bottom;" parent="1" edge="1">
+        <mxCell id="CQehMLbI-TvT4RRxddDj-192" value="rec_done" style="endArrow=classic;html=1;rounded=0;verticalAlign=bottom;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="330" y="843" as="sourcePoint" />
-            <mxPoint x="430" y="843" as="targetPoint" />
+            <mxPoint x="320" y="730" as="sourcePoint" />
+            <mxPoint x="420" y="730" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQehMLbI-TvT4RRxddDj-193" value="clk_100m_180p" style="endArrow=classic;html=1;rounded=0;verticalAlign=bottom;" parent="1" edge="1">
+        <mxCell id="CQehMLbI-TvT4RRxddDj-193" value="data_rec[7:0]" style="endArrow=classic;html=1;rounded=0;verticalAlign=bottom;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="330" y="863" as="sourcePoint" />
-            <mxPoint x="430" y="863" as="targetPoint" />
+            <mxPoint x="320" y="750" as="sourcePoint" />
+            <mxPoint x="420" y="750" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="C8HlrMilD8jxbRCgvtTR-1" value="clk_50m" style="endArrow=classic;html=1;rounded=0;verticalAlign=bottom;" parent="1" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="330" y="883" as="sourcePoint" />
-            <mxPoint x="430" y="883" as="targetPoint" />
+        <mxCell id="C8HlrMilD8jxbRCgvtTR-1" value="spi_sck" style="endArrow=classic;html=1;rounded=0;verticalAlign=bottom;" parent="1" edge="1">
+          <mxGeometry x="0.0057" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="790" as="sourcePoint" />
+            <mxPoint x="420" y="790" as="targetPoint" />
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="C8HlrMilD8jxbRCgvtTR-2" value="clk_25m" style="endArrow=classic;html=1;rounded=0;verticalAlign=bottom;" parent="1" edge="1">
+        <mxCell id="C8HlrMilD8jxbRCgvtTR-2" value="spi_cs" style="endArrow=classic;html=1;rounded=0;verticalAlign=bottom;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="330" y="903" as="sourcePoint" />
-            <mxPoint x="430" y="903" as="targetPoint" />
+            <mxPoint x="320" y="810" as="sourcePoint" />
+            <mxPoint x="420" y="810" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CQehMLbI-TvT4RRxddDj-194" value="Assets" style="childLayout=tableLayout;recursiveResize=0;strokeColor=#98bf21;fillColor=#A7C942;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="510" y="670" width="400" height="253" as="geometry" />
+          <mxGeometry x="510" y="670" width="560" height="406" as="geometry" />
         </mxCell>
         <mxCell id="CQehMLbI-TvT4RRxddDj-195" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=0;strokeColor=inherit;fillColor=#ffffff;" parent="CQehMLbI-TvT4RRxddDj-194" vertex="1">
-          <mxGeometry width="400" height="33" as="geometry" />
+          <mxGeometry width="560" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-124" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=#A7C942;align=center;fontStyle=1;fontColor=#FFFFFF;html=1;" vertex="1" parent="CQehMLbI-TvT4RRxddDj-195">
+          <mxGeometry width="93" height="33" as="geometry">
+            <mxRectangle width="93" height="33" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="CQehMLbI-TvT4RRxddDj-196" value="信号名" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=#A7C942;align=center;fontStyle=1;fontColor=#FFFFFF;html=1;" parent="CQehMLbI-TvT4RRxddDj-195" vertex="1">
-          <mxGeometry width="93" height="33" as="geometry">
+          <mxGeometry x="93" width="93" height="33" as="geometry">
             <mxRectangle width="93" height="33" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CQehMLbI-TvT4RRxddDj-197" value="位宽" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=#A7C942;align=center;fontStyle=1;fontColor=#FFFFFF;html=1;" parent="CQehMLbI-TvT4RRxddDj-195" vertex="1">
-          <mxGeometry x="93" width="93" height="33" as="geometry">
+          <mxGeometry x="186" width="93" height="33" as="geometry">
             <mxRectangle width="93" height="33" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CQehMLbI-TvT4RRxddDj-198" value="方向" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=#A7C942;align=center;fontStyle=1;fontColor=#FFFFFF;html=1;" parent="CQehMLbI-TvT4RRxddDj-195" vertex="1">
-          <mxGeometry x="186" width="94" height="33" as="geometry">
+          <mxGeometry x="279" width="94" height="33" as="geometry">
             <mxRectangle width="94" height="33" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CQehMLbI-TvT4RRxddDj-199" value="端口说明" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=#A7C942;align=center;fontStyle=1;fontColor=#FFFFFF;html=1;" parent="CQehMLbI-TvT4RRxddDj-195" vertex="1">
-          <mxGeometry x="280" width="120" height="33" as="geometry">
-            <mxRectangle width="120" height="33" as="alternateBounds" />
+          <mxGeometry x="373" width="187" height="33" as="geometry">
+            <mxRectangle width="187" height="33" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CQehMLbI-TvT4RRxddDj-200" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=0;strokeColor=inherit;fillColor=#ffffff;" parent="CQehMLbI-TvT4RRxddDj-194" vertex="1">
-          <mxGeometry y="33" width="400" height="32" as="geometry" />
+          <mxGeometry y="33" width="560" height="32" as="geometry" />
         </mxCell>
-        <mxCell id="CQehMLbI-TvT4RRxddDj-201" value="sys_clk" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;align=center;whiteSpace=wrap;html=1;" parent="CQehMLbI-TvT4RRxddDj-200" vertex="1">
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-125" value="&lt;span&gt;系统接口&lt;/span&gt;" style="connectable=1;recursiveResize=0;align=center;html=1;verticalAlign=middle;whiteSpace=wrap;fillColor=none;strokeColor=inherit;fillStyle=auto;gradientColor=none;shadow=0;strokeWidth=1;imageAspect=1;fillOpacity=100;strokeOpacity=100;editable=1;movable=1;resizable=1;rotatable=1;deletable=1;locked=0;" vertex="1" parent="CQehMLbI-TvT4RRxddDj-200">
           <mxGeometry width="93" height="32" as="geometry">
             <mxRectangle width="93" height="32" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQehMLbI-TvT4RRxddDj-202" value="1" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;align=center;whiteSpace=wrap;html=1;" parent="CQehMLbI-TvT4RRxddDj-200" vertex="1">
+        <mxCell id="CQehMLbI-TvT4RRxddDj-201" value="sys_clk" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;align=center;whiteSpace=wrap;html=1;" parent="CQehMLbI-TvT4RRxddDj-200" vertex="1">
           <mxGeometry x="93" width="93" height="32" as="geometry">
             <mxRectangle width="93" height="32" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="CQehMLbI-TvT4RRxddDj-202" value="1" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;align=center;whiteSpace=wrap;html=1;" parent="CQehMLbI-TvT4RRxddDj-200" vertex="1">
+          <mxGeometry x="186" width="93" height="32" as="geometry">
+            <mxRectangle width="93" height="32" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="CQehMLbI-TvT4RRxddDj-203" value="输入" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;align=center;whiteSpace=wrap;html=1;" parent="CQehMLbI-TvT4RRxddDj-200" vertex="1">
-          <mxGeometry x="186" width="94" height="32" as="geometry">
+          <mxGeometry x="279" width="94" height="32" as="geometry">
             <mxRectangle width="94" height="32" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CQehMLbI-TvT4RRxddDj-204" value="系统时钟 50MHz" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;align=center;whiteSpace=wrap;html=1;" parent="CQehMLbI-TvT4RRxddDj-200" vertex="1">
-          <mxGeometry x="280" width="120" height="32" as="geometry">
-            <mxRectangle width="120" height="32" as="alternateBounds" />
+          <mxGeometry x="373" width="187" height="32" as="geometry">
+            <mxRectangle width="187" height="32" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="-UpipHxd_0CRtgNWQj3M-2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=1;strokeColor=inherit;fillColor=#EAF2D3;" parent="CQehMLbI-TvT4RRxddDj-194" vertex="1">
-          <mxGeometry y="65" width="400" height="31" as="geometry" />
+          <mxGeometry y="65" width="560" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-126" value="系统接口" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=inherit;" vertex="1" parent="-UpipHxd_0CRtgNWQj3M-2">
+          <mxGeometry width="93" height="31" as="geometry">
+            <mxRectangle width="93" height="31" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="-UpipHxd_0CRtgNWQj3M-3" value="rst_n" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="-UpipHxd_0CRtgNWQj3M-2" vertex="1">
-          <mxGeometry width="93" height="31" as="geometry">
+          <mxGeometry x="93" width="93" height="31" as="geometry">
             <mxRectangle width="93" height="31" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="-UpipHxd_0CRtgNWQj3M-4" value="1" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="-UpipHxd_0CRtgNWQj3M-2" vertex="1">
-          <mxGeometry x="93" width="93" height="31" as="geometry">
+          <mxGeometry x="186" width="93" height="31" as="geometry">
             <mxRectangle width="93" height="31" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="-UpipHxd_0CRtgNWQj3M-5" value="输入" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="-UpipHxd_0CRtgNWQj3M-2" vertex="1">
-          <mxGeometry x="186" width="94" height="31" as="geometry">
+          <mxGeometry x="279" width="94" height="31" as="geometry">
             <mxRectangle width="94" height="31" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="-UpipHxd_0CRtgNWQj3M-6" value="复位，低电平有效" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="-UpipHxd_0CRtgNWQj3M-2" vertex="1">
-          <mxGeometry x="280" width="120" height="31" as="geometry">
-            <mxRectangle width="120" height="31" as="alternateBounds" />
+          <mxGeometry x="373" width="187" height="31" as="geometry">
+            <mxRectangle width="187" height="31" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CQehMLbI-TvT4RRxddDj-205" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=1;strokeColor=inherit;fillColor=#EAF2D3;" parent="CQehMLbI-TvT4RRxddDj-194" vertex="1">
-          <mxGeometry y="96" width="400" height="31" as="geometry" />
+          <mxGeometry y="96" width="560" height="31" as="geometry" />
         </mxCell>
-        <mxCell id="CQehMLbI-TvT4RRxddDj-206" value="locked" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="CQehMLbI-TvT4RRxddDj-205" vertex="1">
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-127" value="用户接口" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;strokeColor=inherit;fillColor=default;" vertex="1" parent="CQehMLbI-TvT4RRxddDj-205">
           <mxGeometry width="93" height="31" as="geometry">
             <mxRectangle width="93" height="31" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQehMLbI-TvT4RRxddDj-207" value="1" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="CQehMLbI-TvT4RRxddDj-205" vertex="1">
+        <mxCell id="CQehMLbI-TvT4RRxddDj-206" value="&lt;span style=&quot;font-size: 11px; text-wrap: nowrap;&quot;&gt;spi_start&lt;/span&gt;" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;strokeColor=inherit;" parent="CQehMLbI-TvT4RRxddDj-205" vertex="1">
           <mxGeometry x="93" width="93" height="31" as="geometry">
             <mxRectangle width="93" height="31" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQehMLbI-TvT4RRxddDj-208" value="输出" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="CQehMLbI-TvT4RRxddDj-205" vertex="1">
-          <mxGeometry x="186" width="94" height="31" as="geometry">
+        <mxCell id="CQehMLbI-TvT4RRxddDj-207" value="1" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;strokeColor=inherit;" parent="CQehMLbI-TvT4RRxddDj-205" vertex="1">
+          <mxGeometry x="186" width="93" height="31" as="geometry">
+            <mxRectangle width="93" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CQehMLbI-TvT4RRxddDj-208" value="输入" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;strokeColor=inherit;" parent="CQehMLbI-TvT4RRxddDj-205" vertex="1">
+          <mxGeometry x="279" width="94" height="31" as="geometry">
             <mxRectangle width="94" height="31" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQehMLbI-TvT4RRxddDj-209" value="PLL完成锁定，已达到稳态信号" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="CQehMLbI-TvT4RRxddDj-205" vertex="1">
-          <mxGeometry x="280" width="120" height="31" as="geometry">
-            <mxRectangle width="120" height="31" as="alternateBounds" />
+        <mxCell id="CQehMLbI-TvT4RRxddDj-209" value="发送开始信号，一个高电平" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;strokeColor=inherit;" parent="CQehMLbI-TvT4RRxddDj-205" vertex="1">
+          <mxGeometry x="373" width="187" height="31" as="geometry">
+            <mxRectangle width="187" height="31" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQehMLbI-TvT4RRxddDj-210" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=0;strokeColor=inherit;fillColor=#ffffff;" parent="CQehMLbI-TvT4RRxddDj-194" vertex="1">
-          <mxGeometry y="127" width="400" height="33" as="geometry" />
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-190" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=1;strokeColor=inherit;fillColor=#EAF2D3;" vertex="1" parent="CQehMLbI-TvT4RRxddDj-194">
+          <mxGeometry y="127" width="560" height="31" as="geometry" />
         </mxCell>
-        <mxCell id="CQehMLbI-TvT4RRxddDj-211" value="&lt;span style=&quot;font-size: 11px; text-wrap: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;clk_100m&lt;/span&gt;" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;fontStyle=0;align=center;whiteSpace=wrap;html=1;" parent="CQehMLbI-TvT4RRxddDj-210" vertex="1">
-          <mxGeometry width="93" height="33" as="geometry">
-            <mxRectangle width="93" height="33" as="alternateBounds" />
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-191" value="用户接口" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;strokeColor=inherit;fillColor=none;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-190">
+          <mxGeometry width="93" height="31" as="geometry">
+            <mxRectangle width="93" height="31" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQehMLbI-TvT4RRxddDj-212" value="1" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;fontStyle=0;align=center;whiteSpace=wrap;html=1;" parent="CQehMLbI-TvT4RRxddDj-210" vertex="1">
-          <mxGeometry x="93" width="93" height="33" as="geometry">
-            <mxRectangle width="93" height="33" as="alternateBounds" />
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-192" value="spi_end" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;strokeColor=inherit;fillColor=none;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-190">
+          <mxGeometry x="93" width="93" height="31" as="geometry">
+            <mxRectangle width="93" height="31" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQehMLbI-TvT4RRxddDj-213" value="输出" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;fontStyle=0;align=center;whiteSpace=wrap;html=1;" parent="CQehMLbI-TvT4RRxddDj-210" vertex="1">
-          <mxGeometry x="186" width="94" height="33" as="geometry">
-            <mxRectangle width="94" height="33" as="alternateBounds" />
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-193" value="1" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;strokeColor=inherit;fillColor=none;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-190">
+          <mxGeometry x="186" width="93" height="31" as="geometry">
+            <mxRectangle width="93" height="31" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQehMLbI-TvT4RRxddDj-214" value="输出时钟100Mhz" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;fontStyle=0;align=center;whiteSpace=wrap;html=1;" parent="CQehMLbI-TvT4RRxddDj-210" vertex="1">
-          <mxGeometry x="280" width="120" height="33" as="geometry">
-            <mxRectangle width="120" height="33" as="alternateBounds" />
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-194" value="输入" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;strokeColor=inherit;fillColor=none;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-190">
+          <mxGeometry x="279" width="94" height="31" as="geometry">
+            <mxRectangle width="94" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-195" value="发送结束信号，一个高电平" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;strokeColor=inherit;fillColor=none;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-190">
+          <mxGeometry x="373" width="187" height="31" as="geometry">
+            <mxRectangle width="187" height="31" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="C8HlrMilD8jxbRCgvtTR-33" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=1;strokeColor=inherit;fillColor=#EAF2D3;" parent="CQehMLbI-TvT4RRxddDj-194" vertex="1">
-          <mxGeometry y="160" width="400" height="31" as="geometry" />
+          <mxGeometry y="158" width="560" height="31" as="geometry" />
         </mxCell>
-        <mxCell id="C8HlrMilD8jxbRCgvtTR-34" value="clk_100m_180p" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="C8HlrMilD8jxbRCgvtTR-33" vertex="1">
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-129" value="用户接口" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;strokeColor=inherit;" vertex="1" parent="C8HlrMilD8jxbRCgvtTR-33">
           <mxGeometry width="93" height="31" as="geometry">
             <mxRectangle width="93" height="31" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="C8HlrMilD8jxbRCgvtTR-35" value="1" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="C8HlrMilD8jxbRCgvtTR-33" vertex="1">
+        <mxCell id="C8HlrMilD8jxbRCgvtTR-34" value="data_send" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;strokeColor=inherit;" parent="C8HlrMilD8jxbRCgvtTR-33" vertex="1">
           <mxGeometry x="93" width="93" height="31" as="geometry">
             <mxRectangle width="93" height="31" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="C8HlrMilD8jxbRCgvtTR-36" value="输出" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="C8HlrMilD8jxbRCgvtTR-33" vertex="1">
-          <mxGeometry x="186" width="94" height="31" as="geometry">
+        <mxCell id="C8HlrMilD8jxbRCgvtTR-35" value="8" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;strokeColor=inherit;" parent="C8HlrMilD8jxbRCgvtTR-33" vertex="1">
+          <mxGeometry x="186" width="93" height="31" as="geometry">
+            <mxRectangle width="93" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C8HlrMilD8jxbRCgvtTR-36" value="输入" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;strokeColor=inherit;" parent="C8HlrMilD8jxbRCgvtTR-33" vertex="1">
+          <mxGeometry x="279" width="94" height="31" as="geometry">
             <mxRectangle width="94" height="31" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="C8HlrMilD8jxbRCgvtTR-37" value="输出时钟100MHz，相位偏移180度" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="C8HlrMilD8jxbRCgvtTR-33" vertex="1">
-          <mxGeometry x="280" width="120" height="31" as="geometry">
-            <mxRectangle width="120" height="31" as="alternateBounds" />
+        <mxCell id="C8HlrMilD8jxbRCgvtTR-37" value="要发送的数据" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;strokeColor=inherit;" parent="C8HlrMilD8jxbRCgvtTR-33" vertex="1">
+          <mxGeometry x="373" width="187" height="31" as="geometry">
+            <mxRectangle width="187" height="31" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQehMLbI-TvT4RRxddDj-215" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=1;strokeColor=inherit;fillColor=#EAF2D3;" parent="CQehMLbI-TvT4RRxddDj-194" vertex="1">
-          <mxGeometry y="191" width="400" height="31" as="geometry" />
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-132" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=1;strokeColor=inherit;fillColor=#EAF2D3;" vertex="1" parent="CQehMLbI-TvT4RRxddDj-194">
+          <mxGeometry y="189" width="560" height="31" as="geometry" />
         </mxCell>
-        <mxCell id="CQehMLbI-TvT4RRxddDj-216" value="clk_50m" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="CQehMLbI-TvT4RRxddDj-215" vertex="1">
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-133" value="用户接口" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-132">
           <mxGeometry width="93" height="31" as="geometry">
             <mxRectangle width="93" height="31" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQehMLbI-TvT4RRxddDj-217" value="1" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="CQehMLbI-TvT4RRxddDj-215" vertex="1">
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-134" value="send_done" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-132">
           <mxGeometry x="93" width="93" height="31" as="geometry">
             <mxRectangle width="93" height="31" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQehMLbI-TvT4RRxddDj-218" value="输出" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="CQehMLbI-TvT4RRxddDj-215" vertex="1">
-          <mxGeometry x="186" width="94" height="31" as="geometry">
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-135" value="1" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-132">
+          <mxGeometry x="186" width="93" height="31" as="geometry">
+            <mxRectangle width="93" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-136" value="输出" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-132">
+          <mxGeometry x="279" width="94" height="31" as="geometry">
             <mxRectangle width="94" height="31" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQehMLbI-TvT4RRxddDj-219" value="输出时钟50MHz" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="CQehMLbI-TvT4RRxddDj-215" vertex="1">
-          <mxGeometry x="280" width="120" height="31" as="geometry">
-            <mxRectangle width="120" height="31" as="alternateBounds" />
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-137" value="发送一个字节完成标志位" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-132">
+          <mxGeometry x="373" width="187" height="31" as="geometry">
+            <mxRectangle width="187" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-138" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=1;strokeColor=inherit;fillColor=#EAF2D3;" vertex="1" parent="CQehMLbI-TvT4RRxddDj-194">
+          <mxGeometry y="220" width="560" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-139" value="用户接口" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;strokeColor=inherit;fillColor=default;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-138">
+          <mxGeometry width="93" height="31" as="geometry">
+            <mxRectangle width="93" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-140" value="rec_done" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;strokeColor=inherit;fillColor=default;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-138">
+          <mxGeometry x="93" width="93" height="31" as="geometry">
+            <mxRectangle width="93" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-141" value="1" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;strokeColor=inherit;fillColor=default;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-138">
+          <mxGeometry x="186" width="93" height="31" as="geometry">
+            <mxRectangle width="93" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-142" value="输出" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;strokeColor=inherit;fillColor=default;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-138">
+          <mxGeometry x="279" width="94" height="31" as="geometry">
+            <mxRectangle width="94" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-143" value="接收一个字节完成标志位" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;strokeColor=inherit;fillColor=default;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-138">
+          <mxGeometry x="373" width="187" height="31" as="geometry">
+            <mxRectangle width="187" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-144" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=1;strokeColor=inherit;fillColor=#EAF2D3;" vertex="1" parent="CQehMLbI-TvT4RRxddDj-194">
+          <mxGeometry y="251" width="560" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-145" value="用户接口" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-144">
+          <mxGeometry width="93" height="31" as="geometry">
+            <mxRectangle width="93" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-146" value="data_rec" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-144">
+          <mxGeometry x="93" width="93" height="31" as="geometry">
+            <mxRectangle width="93" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-147" value="8" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-144">
+          <mxGeometry x="186" width="93" height="31" as="geometry">
+            <mxRectangle width="93" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-148" value="输出" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-144">
+          <mxGeometry x="279" width="94" height="31" as="geometry">
+            <mxRectangle width="94" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-149" value="接收到的数据" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-144">
+          <mxGeometry x="373" width="187" height="31" as="geometry">
+            <mxRectangle width="187" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-150" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=1;strokeColor=inherit;fillColor=#EAF2D3;" vertex="1" parent="CQehMLbI-TvT4RRxddDj-194">
+          <mxGeometry y="282" width="560" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-151" value="SPI物理接口" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;fillColor=default;strokeColor=inherit;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-150">
+          <mxGeometry width="93" height="31" as="geometry">
+            <mxRectangle width="93" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-152" value="spi_sck" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;fillColor=default;strokeColor=inherit;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-150">
+          <mxGeometry x="93" width="93" height="31" as="geometry">
+            <mxRectangle width="93" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-153" value="1" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;fillColor=default;strokeColor=inherit;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-150">
+          <mxGeometry x="186" width="93" height="31" as="geometry">
+            <mxRectangle width="93" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-154" value="输出" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;fillColor=default;strokeColor=inherit;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-150">
+          <mxGeometry x="279" width="94" height="31" as="geometry">
+            <mxRectangle width="94" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-155" value="SPI传输时钟信号" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;fillColor=default;strokeColor=inherit;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-150">
+          <mxGeometry x="373" width="187" height="31" as="geometry">
+            <mxRectangle width="187" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-156" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=1;strokeColor=inherit;fillColor=#EAF2D3;" vertex="1" parent="CQehMLbI-TvT4RRxddDj-194">
+          <mxGeometry y="313" width="560" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-157" value="SPI物理接口" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-156">
+          <mxGeometry width="93" height="31" as="geometry">
+            <mxRectangle width="93" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-158" value="spi_cs" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-156">
+          <mxGeometry x="93" width="93" height="31" as="geometry">
+            <mxRectangle width="93" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-159" value="1" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-156">
+          <mxGeometry x="186" width="93" height="31" as="geometry">
+            <mxRectangle width="93" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-160" value="输出" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-156">
+          <mxGeometry x="279" width="94" height="31" as="geometry">
+            <mxRectangle width="94" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-161" value="SPI片选信号，低电平有效" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-156">
+          <mxGeometry x="373" width="187" height="31" as="geometry">
+            <mxRectangle width="187" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-174" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=1;strokeColor=inherit;fillColor=#EAF2D3;" vertex="1" parent="CQehMLbI-TvT4RRxddDj-194">
+          <mxGeometry y="344" width="560" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-175" value="SPI物理接口" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;strokeColor=inherit;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-174">
+          <mxGeometry width="93" height="31" as="geometry">
+            <mxRectangle width="93" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-176" value="spi_mosi" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;strokeColor=inherit;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-174">
+          <mxGeometry x="93" width="93" height="31" as="geometry">
+            <mxRectangle width="93" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-177" value="1" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;strokeColor=inherit;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-174">
+          <mxGeometry x="186" width="93" height="31" as="geometry">
+            <mxRectangle width="93" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-178" value="输出" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;strokeColor=inherit;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-174">
+          <mxGeometry x="279" width="94" height="31" as="geometry">
+            <mxRectangle width="94" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-179" value="主机发送从机接收" style="connectable=0;recursiveResize=0;whiteSpace=wrap;html=1;strokeColor=inherit;" vertex="1" parent="6rrwSWFg2y9wVFzmrVbn-174">
+          <mxGeometry x="373" width="187" height="31" as="geometry">
+            <mxRectangle width="187" height="31" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CQehMLbI-TvT4RRxddDj-220" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=1;strokeColor=inherit;fillColor=#EAF2D3;" parent="CQehMLbI-TvT4RRxddDj-194" vertex="1">
-          <mxGeometry y="222" width="400" height="31" as="geometry" />
+          <mxGeometry y="375" width="560" height="31" as="geometry" />
         </mxCell>
-        <mxCell id="CQehMLbI-TvT4RRxddDj-221" value="clk_25m" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="CQehMLbI-TvT4RRxddDj-220" vertex="1">
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-131" value="SPI物理接口" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" vertex="1" parent="CQehMLbI-TvT4RRxddDj-220">
           <mxGeometry width="93" height="31" as="geometry">
+            <mxRectangle width="93" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CQehMLbI-TvT4RRxddDj-221" value="spi_miso" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="CQehMLbI-TvT4RRxddDj-220" vertex="1">
+          <mxGeometry x="93" width="93" height="31" as="geometry">
             <mxRectangle width="93" height="31" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CQehMLbI-TvT4RRxddDj-222" value="1" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="CQehMLbI-TvT4RRxddDj-220" vertex="1">
-          <mxGeometry x="93" width="93" height="31" as="geometry">
+          <mxGeometry x="186" width="93" height="31" as="geometry">
             <mxRectangle width="93" height="31" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQehMLbI-TvT4RRxddDj-223" value="输出" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="CQehMLbI-TvT4RRxddDj-220" vertex="1">
-          <mxGeometry x="186" width="94" height="31" as="geometry">
+        <mxCell id="CQehMLbI-TvT4RRxddDj-223" value="输入" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="CQehMLbI-TvT4RRxddDj-220" vertex="1">
+          <mxGeometry x="279" width="94" height="31" as="geometry">
             <mxRectangle width="94" height="31" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CQehMLbI-TvT4RRxddDj-224" value="输出时钟25MHz" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="CQehMLbI-TvT4RRxddDj-220" vertex="1">
-          <mxGeometry x="280" width="120" height="31" as="geometry">
-            <mxRectangle width="120" height="31" as="alternateBounds" />
+        <mxCell id="CQehMLbI-TvT4RRxddDj-224" value="主机接收从机发送" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="CQehMLbI-TvT4RRxddDj-220" vertex="1">
+          <mxGeometry x="373" width="187" height="31" as="geometry">
+            <mxRectangle width="187" height="31" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="-UpipHxd_0CRtgNWQj3M-1" value="locked" style="endArrow=classic;html=1;rounded=0;verticalAlign=bottom;" parent="1" edge="1">
+        <mxCell id="-UpipHxd_0CRtgNWQj3M-1" value="send_done" style="endArrow=classic;html=1;rounded=0;verticalAlign=bottom;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="330" y="823" as="sourcePoint" />
-            <mxPoint x="430" y="823" as="targetPoint" />
+            <mxPoint x="320" y="710" as="sourcePoint" />
+            <mxPoint x="420" y="710" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="6rrwSWFg2y9wVFzmrVbn-3" value="" style="group" vertex="1" connectable="0" parent="1">
@@ -473,6 +654,40 @@
         </mxCell>
         <mxCell id="6rrwSWFg2y9wVFzmrVbn-115" value="&lt;div style=&quot;&quot;&gt;FPGA时钟频率：&lt;font color=&quot;#ff0000&quot;&gt;50,000,000&lt;/font&gt;Hz&lt;/div&gt;&lt;div style=&quot;&quot;&gt;串口通信波特率：115200 baud&lt;/div&gt;&lt;div style=&quot;&quot;&gt;每一个bit传输需要时钟周期数：50,000,000/115,200≈434&lt;/div&gt;&lt;div style=&quot;&quot;&gt;0.5个bit传输需要时钟周期数：434/2=217&lt;/div&gt;" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;align=center;" vertex="1" parent="1">
           <mxGeometry x="100" y="560" width="380" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-119" value="spi_start" style="endArrow=classic;html=1;rounded=0;entryX=0.001;entryY=0.183;entryDx=0;entryDy=0;entryPerimeter=0;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry x="0.0032" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="780" as="sourcePoint" />
+            <mxPoint x="200" y="780" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-120" value="spi_end" style="endArrow=classic;html=1;rounded=0;entryX=0.001;entryY=0.183;entryDx=0;entryDy=0;entryPerimeter=0;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry x="0.0032" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="803" as="sourcePoint" />
+            <mxPoint x="200" y="803" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-121" value="data_send[7:0]" style="endArrow=classic;html=1;rounded=0;entryX=0.001;entryY=0.183;entryDx=0;entryDy=0;entryPerimeter=0;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry x="0.0032" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="830" as="sourcePoint" />
+            <mxPoint x="200" y="830" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-122" value="spi_miso" style="endArrow=classic;html=1;rounded=0;entryX=0.001;entryY=0.183;entryDx=0;entryDy=0;entryPerimeter=0;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry x="0.0032" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="880" as="sourcePoint" />
+            <mxPoint x="200" y="880" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6rrwSWFg2y9wVFzmrVbn-123" value="spi_mosi" style="endArrow=classic;html=1;rounded=0;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="830" as="sourcePoint" />
+            <mxPoint x="420" y="830" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
