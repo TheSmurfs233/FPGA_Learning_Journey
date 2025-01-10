@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/SPI/src/spi_drive.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_drive
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/SPI/src/spi_dirve_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_drive_tb
