@@ -1,7 +1,10 @@
 `timescale 1ns / 1ps
 
 module spi_drive_tb();
-
+    //initial begin
+    //    $dumpfile("wave.vcd");        //生成的vcd文件名称
+    //    $dumpvars(0, spi_drive_tb);    //tb模块名称
+    //end
     // 定义输入输出信号，与被测试模块的端口对应
     reg sys_clk;
     reg rst_n;
@@ -18,19 +21,19 @@ module spi_drive_tb();
 
     // 实例化被测试的SPI驱动模块
     spi_drive uut (
-      .sys_clk(sys_clk),
-      .rst_n(rst_n),
-      .spi_start(spi_start),
-      .spi_end(spi_end),
-      .data_send(data_send),
-      .data_rec(data_rec),
-      .send_done(send_done),
-      .rec_done(rec_done),
-      .spi_miso(spi_miso),
-      .spi_csk(spi_csk),
-      .spi_cs(spi_cs),
-      .spi_mosi(spi_mosi)
-    );
+                  .sys_clk(sys_clk),
+                  .rst_n(rst_n),
+                  .spi_start(spi_start),
+                  .spi_end(spi_end),
+                  .data_send(data_send),
+                  .data_rec(data_rec),
+                  .send_done(send_done),
+                  .rec_done(rec_done),
+                  .spi_miso(spi_miso),
+                  .spi_csk(spi_csk),
+                  .spi_cs(spi_cs),
+                  .spi_mosi(spi_mosi)
+              );
 
     // 产生时钟信号，频率可以根据实际需求调整，这里假设为50MHz
     always #10 sys_clk = ~sys_clk;

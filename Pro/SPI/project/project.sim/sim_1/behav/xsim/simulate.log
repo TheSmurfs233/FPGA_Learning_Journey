@@ -1,4 +1,3 @@
 Vivado Simulator 2019.2
 Time resolution is 1 ps
-$finish called at time : 8450 ns : File "D:/FPGA_Learning_Journey/Pro/SPI/src/spi_dirve_tb.v" Line 69
-$finish called at time : 8450 ns : File "D:/FPGA_Learning_Journey/Pro/SPI/src/spi_dirve_tb.v" Line 69
+$finish called at time : 8450 ns : File "D:/FPGA_Learning_Journey/Pro/SPI/src/spi_drive_tb.v" Line 72

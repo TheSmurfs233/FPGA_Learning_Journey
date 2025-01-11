@@ -1,7 +1,7 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
 "../../../../../src/spi_drive.v" \
-"../../../../../src/spi_dirve_tb.v" \
+"../../../../../src/spi_drive_tb.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"
