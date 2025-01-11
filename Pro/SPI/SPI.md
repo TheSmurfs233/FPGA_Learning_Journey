@@ -131,11 +131,11 @@ SPI总线传输中一般包含四根线：
 
 ### 6.程序设计
 
-##### 5.1 总体模块设计
+##### 6.1 总体模块设计
 
 从实验任务可知，我们需要使用FPGA实现SPI通信协议驱动OLED模块，总体模块设计分为**SPI驱动模块**和**OLED显示模块**。
 
-##### 5.2 SPI驱动模块设计
+##### 6.2 SPI驱动模块设计
 
 - **模块接口框图**
   输入信号有**系统时钟信号**，**复位信号**，**发送开始信号**，**发送结束信号**，**待发送数据**，**SPI_MISO**。
@@ -154,148 +154,180 @@ SPI总线传输中一般包含四根线：
 
 - **波形图绘制**
 
+  ![image-20250111173619538](asset/image-20250111173619538.png)
+
+- **代码**
+
+  ```
+  module spi_drive (
+      //系统接口
+      input sys_clk,
+      input rst_n,
+      //用户接口
+      input spi_start,
+      input spi_end,
+      input [7:0] data_send,
+      output reg [7:0] data_rec,
+      output reg send_done,
+      output reg rec_done,  
+      //物理接口
+      input spi_miso,
+      output reg spi_csk,
+      output reg spi_cs,
+      output reg spi_mosi
+    );
+    parameter SYS_CLK_FREQ = 50_000_000;
+    parameter SPI_CSK_FREQ = 1_000_000;//SPI时钟频率
+    parameter SCK_CNT_MAX = SYS_CLK_FREQ/SPI_CSK_FREQ; //50
+    parameter SCK_CNT_MAX_1_2 = SCK_CNT_MAX/2;
   
+    reg [15:0] sck_cnt;   //spi时钟计数器
+    reg [7:0]  send_cnt;  //发送数据计数器
+    reg [7:0] data_send_r; //发送数据寄存器
+    reg [7:0] data_rec_r; //接收数据寄存器
+    reg spi_busy;//spi工作标志位
+  
+    //片选信号
+    always @(posedge sys_clk ) begin
+      if(!rst_n)begin
+        spi_cs <=1'b1;
+      end
+      else if(spi_start)begin
+        spi_cs <=1'b0;
+      end
+      else if(spi_end) begin
+        spi_cs <=1'b1;
+      end
+      else
+        spi_cs<=spi_cs;
+    end
+  
+    //发送数据寄存
+    always @(posedge sys_clk) begin
+      if (!rst_n) begin
+        data_send_r <= 8'h00;
+      end 
+      else if(spi_start) begin
+        data_send_r <= data_send;
+      end
+      else
+        data_send_r <= data_send_r;
+    end
+  
+    //spi时钟信号
+    always @(posedge sys_clk ) begin
+      if(!rst_n) begin
+        spi_csk <= 1'b0;
+      end 
+      else if(sck_cnt == (SCK_CNT_MAX_1_2-1) | sck_cnt== (SCK_CNT_MAX-1)) begin
+        spi_csk <= ~spi_csk;
+      end
+      else
+        spi_csk <= spi_csk;
+    end
+  
+    //捕获spi开始和结束信号，更改状态标志位
+    always @(posedge sys_clk ) begin
+      if(!rst_n)begin
+        spi_busy<=1'b0;
+      end
+      else if(spi_start) begin
+        spi_busy<=1'b1;
+      end
+      else if(spi_end) begin
+        spi_busy<=1'b0;
+      end
+      else
+        spi_busy<=spi_busy;
+    end
+  
+    //根据spi状态更新分频计数器和传输比特计数器
+    always @(posedge sys_clk ) begin
+      if(!rst_n) begin
+        sck_cnt<=16'd0;
+        send_cnt<=8'd0;
+      end
+      else if(spi_busy) begin
+        if(sck_cnt==(SCK_CNT_MAX-1)) begin
+          sck_cnt<=16'd0;
+          send_cnt<=send_cnt+1'd1;
+        end
+        else begin
+          sck_cnt<=sck_cnt+1'd1;
+          send_cnt<=send_cnt;
+        end
+          
+      end
+      else begin
+        sck_cnt<=16'd0;
+        send_cnt<=8'd0;
+      end
+    end
+  
+    //mosi数据发送，产生发送完成标志位
+    always @(posedge sys_clk ) begin
+      if(!rst_n)begin
+        spi_mosi<=1'd0;
+        send_done<=1'd0;
+      end
+      else if(spi_busy) begin
+        if(sck_cnt==16'd0)begin
+          spi_mosi<=data_send_r[8'd7-send_cnt];
+        end
+        else begin
+          spi_mosi<=spi_mosi;
+        end 
+        if(send_cnt==8'd7 && sck_cnt==(SCK_CNT_MAX-1)) begin
+          send_done<=1'd1;
+        end
+        else begin
+          send_done<=1'd0;
+        end
+      end
+      else begin
+        spi_mosi<=1'd0;
+        send_done<=1'd0;
+      end
+        
+    end
+    //miso数据接收，产生接收完成标志位
+    always @(posedge sys_clk ) begin
+      if(!rst_n)begin
+        data_rec_r<=1'd0;
+        rec_done<=1'd0;
+      end
+      else if(spi_busy) begin
+        if(sck_cnt==(SCK_CNT_MAX_1_2-1))begin
+          data_rec_r[8'd7-send_cnt]<=spi_miso;
+        end
+        else begin
+          data_rec_r[8'd7-send_cnt]<=data_rec_r[8'd7-send_cnt];
+        end 
+        if(send_cnt==8'd7 && sck_cnt==(SCK_CNT_MAX-1)) begin
+          rec_done<=1'd1;
+          data_rec<=data_rec_r;
+        end
+        else begin
+          rec_done<=1'd0;
+        end
+      end
+      else begin
+        rec_done<=1'd0;
+        data_rec<=data_rec;
+      end
+    end
+  endmodule
+  ```
 
-##### 5.1 建立工程
+- **仿真结果**
 
-打开vivado软件，选择创建项目，项目名为**PLL_IPCoreFreqTransform**，芯片选择**XC7Z010-1CLG400I**。
+  ![image-20250111173548668](asset/image-20250111173548668.png)
 
-##### 5.2 添加 PLL IP 核
+##### **6.3** 显示/存储模块设计
 
-1. **打开 IP Catalog（IP 目录）**
 
-   - 在 Vivado 主界面左侧的 “Flow Navigator”（流程导航器）中，点击 “IP Catalog”。
-     ![image-20250103203354024](asset/image-20250103203230197.png)
 
-2. **查找 PLL IP 核**
 
-   - 在 IP Catalog 中，通过搜索框查找 “Clocking Wizard”（时钟向导）IP 核，这是 Xilinx 提供的用于时钟管理包括 PLL 功能的 IP，如下图所示。
-     ![image-20250103203457984](asset/image-20250103203457984.png)
 
-3. **配置 PLL IP 核**
-
-   - **双击 “Clocking Wizard” IP 核来启动配置向导。弹出的界面如下，这个界面用于配置 FPGA 中的时钟管理模块，实现诸如时钟倍频、分频等功能。**
-     ![image-20250103204502391](asset/image-20250103204502391.png)
-
-   - **在 “Clocking Options”（时钟选项）中，设置输入时钟频率（原频率），这个频率应该是 FPGA 开发板提供的基础时钟频率，50MHz。**
-     ![image-20250103215355598](asset/image-20250103205244153.png)
-
-     第一列“Input Clock（输入时钟）”中 Primary（主要，即主时钟）是必要的，Secondary（次要，即副 时钟）是可选是否使用的，若使用了副时钟则会引入一个时钟选择信号（clk_in_sel），需要注意的是主副时 钟不是同时生效的，我们可以通过控制 clk_in_sel 的高低电平来选择使用哪一个时钟，当 clk_in_sel 为 1 时 选择主时钟，当 clk_in_sel 为 0 时选择副时钟。这里我们只需要用到一个输入时钟，所以保持默认不启用副时钟。
-     第二列“Port Name（端口名称）”可以对输入时钟的端口进行命名，这里我们可以保持默认的命名。
-     第三列“lnput Frequency(输入频率)”可以设置输入信号的时钟频率，单位为 MHz，主时钟可配置的输入时钟范围（19MHz~800MHz）可以在其后面的方块中进行查看；
-     第四列“Jitter Options（抖动选项）”有 UI(百分比)和 PS（皮秒）两种表示单位可选。
-     第五列“lnput Jitter（输入抖动）”为设置时钟上升沿和下降沿的时间，例如输入时钟为 50MHz，Jitter Options 选择 UI，lnput Jitter 输入 0.01，择上升沿和下降沿的时间不超过 0.2ns（20ns*1%），若此时将 UI 改 为 PS，则 0.01 会自动变成 200（0.2ns=200ps）。
-     第六列“Source（来源）”中有四种选项：
-
-     1、“Single ended clock capable pin（支持单端时钟引脚）”，当输入的时钟来自于单端时钟引脚时，需要选择这个。如果系统时钟就是由晶振产生并通过单端时钟引脚接入的，就选择 “Single ended clock capable pin”。
-
-     2、“Differential clock capable pin（支持差分时钟引脚）”，当输入的时钟来自于差分时钟引脚时，需要选择这个。因为本次实验的系统时钟就是由差分晶振产生的，所以这里我们选择 “Differential clock capable pin”。差分晶振有两个输出信号，这两个信号是相位相反的,通常用于高速数据传输和对电磁干扰（EMI）要求较高的场合，此开发板上焊接的晶振虽然有四个引脚，但只有一个引脚接入芯片。
-
-     3、“Global buffer（全局缓冲器）”，输入时钟只要在全局时钟网络上，就需要选择这个。例如前一个 PLL IP 核的输出时钟接到后一个 PLL IP 核的输入时，只要前一个 PLL 输出的时钟不是“No buffer”类型即可。
-
-     4、“No buffer（无缓冲器）”，输入时钟必须经过全局时钟缓冲器（BUFG），才可以选择这个。例如 前一个 PLL IP 核的输出时钟接到后一个 PLL IP 核的输入时，前一个 PLL 输出的时钟必须为 BUFG 或者 BUFGCE 类型才可以。
-
-   - **在 “Output Clocks”（输出时钟）选项卡中，配置输出时钟路数、相位和频率，如下图。**
-     ![image-20250103214957780](asset/image-202501032045023911.png)
-
-   - 第一列“Output Clock”为设置输出时钟的路数，因为我们需要输出四路时钟，所以勾选前 4 个时钟。
-
-     第二列“Port Name”为设置时钟的名字，这里我们可以保持默认的命名。
-
-     第三列“Output Freq(MHz)”为设置输出时钟的频率，这里我们要对“Requested（即理想值）”进行设 置，我们将四路时钟的输出频率分别设为 100、100、50 和 25，设置完理想值后，我们就可以在“Actual” 下看到其对应的实际输出频率。需要注意的是 PLLIP 核的时钟输出范围为 6.25MHz~800MHz，但这个范围 是一个整体范围，根据驱动器类型的选择不同，其所支持的最大输出频率也会有所差异。
-
-     第四列“Phase (degrees)”为设置时钟的相位偏移，同样的我们只需要设置理想值，这里我们将第二路 100MHz 的时钟输出信号的相位偏移设置为 180，其余三路信号不做相位偏移处理。
-
-     第五列“Duty cycle”为占空比，正常情况下如果没有特殊要求的话，占空比一般都是设置为 50%，所 以这里我们保持默认的设置即可。
-
-     第六列“Drives”为驱动器类型，有五种驱动器类型可选： BUFG 是全局缓冲器，如果时钟信号要走全局时钟网络，必须通过 BUFG 来驱动，BUFG 可以驱动所有的 CLB，RAM，IOB。本次实验我们保持默认选项 BUFG。
-
-     BUFH 是区域水平缓冲器，BUFH 可以驱动其水平区域内的所有 CLB，RAM，IOB。 BUFGCE 是带有时钟使能端的全局缓冲器，它有一个输入端 I、一个使能端 CE 和一个输出端 O。只有当 BUFGCE 的使能端 CE 有效(高电平)时，BUFGCE 才有输出。
-
-     BUFHCE 是带有时钟使能端的区域水平缓冲器，用法与 BUFGCE 类似。
-
-     No buffer 即无缓冲器，当输出时钟无需挂在全局时钟网络上时，可以选择无缓冲区。
-
-     第七列“Max Freq of buffer”为缓冲器的最大频率，例如我们选取的 BUFG 缓冲器支持的最大输出频率 为 464.037MHz。
-
-   - **接着是Port Renaming选项卡，主要是对一些控制信号（复位信号以外的信号）的重命名。在上一个选项卡 中我们启用了锁定信号 locked，因此这里我们只看到了 locked 这一个可以重命名的信号，因为默认的名称 已经可以让我们一眼看出该信号的含义，所以无需重命名，保持默认即可。**
-
-   -  **“PLLE2 Setting” 选项卡展示了对整个 PLL 的最终配置参数，这些参数都是由 Vivado 根据之前用户 输入的时钟需求来自动配置的，Vivado 已经对参数进行了最优的配置，在绝大多数情况下都不需要用户对它们进行更改，也不建议更改，所以这一步保持默认即可，如下图所示**。
-
-     ![image-20250103211402430](asset/image-20250103211402430.png)
-
-   - **最后的“Summary”选项卡是对前面所有配置的一个总结，在检查没问题后我们点击“OK”按钮，如 下图所示：**![image-20250103211547331](asset/image-20250103211547331.png)
-
-4. **接着在弹出的“Generate Output Products”窗口，直接点击“Generate”，之后我们就可以在“Design Runs”窗口的“Out-of-Context Module Runs”一栏中看到该 IP 核对应的 run“clk_wiz_0_synth_1”，其综合过程独立于顶层设计的综合，综合完成后，如下图所示：**
-   ![image-20250103212011213](asset/image-20250103212011213.png)
-
-##### 5.3 **生成顶层模块并连接 PLL 输出**
-
-1. **顶层模块设计**
-
-   - **模块接口框图**
-     本实验目的是通过PLL IP和输出四路不同频率或相位的时钟信号，顶层模块名为`pll_top`，输入信号有系统时钟`locked`，`sys_clk`，复位信号`rst_n`，输出信号为`clk_100m`，`clk_100m_180p`，`clk_50m`，`clk_25m`，接口框图如下。![image-20250103221912145](asset/image-20250103213327092.png)
-   - **接口与功能描述**
-     ![image-20250103221957961](asset/image-20250103213812328.png)
-
-2. **代码编写**
-
-   在顶层模块中实例化之前配置好的 PLL IP 核，连接 PLL 的输入时钟，将 PLL 的倍频和分频后的输出时钟信号连接到顶层模块的输出端口。
-
-   ```
-   module pll_top (
-       input sys_clk,
-       input rst_n,
-       output locked,
-       output clk_100m,
-       output clk_100m_180p,
-       output clk_50m,
-       output clk_25m
-   );
-       clk_wiz_0 clk_wiz_0_ins(
-           .clk_in1(sys_clk),
-           .resetn(rst_n),
-           .locked(locked),
-           .clk_out1(clk_100m),
-           .clk_out2(clk_100m_180p),
-           .clk_out3(clk_50m),
-           .clk_out4(clk_25m)
-       );
-   endmodule 
-   ```
-
-   编写测试用例，在vivado中进行仿真
-
-   ```
-   `timescale 1ns/1ps
-   module pll_top_tb ();
-       reg sys_clk,rst_n;
-       wire locked,clk_100m,clk_100m_180p,clk_50m,clk_25m;
-       pll_top uut(
-           .sys_clk(sys_clk),
-           .rst_n(rst_n),
-           .locked(locked),
-           .clk_100m(clk_100m),
-           .clk_100m_180p(clk_100m_180p),
-           .clk_50m(clk_50m),
-           .clk_25m(clk_25m)
-       );
-       // 产生时钟信号
-       always #10 sys_clk = ~sys_clk;  // 50MHz时钟，周期为20ns
-       // 测试过程
-       initial begin
-           // 初始化信号
-           rst_n=0;
-           sys_clk=0;
-           #50;
-           rst_n=1;
-       end
-   endmodule 
-   ```
-
-3. **仿真结果**	![image-20250103222700483](asset/image-20250103222700483.png)
-
-   如图所示，在复位信号拉高后并没有立即就输出四个期望的时钟信号，因为锁相环需要时间锁定输入频率，经过一段时间才会输出我们想要的4路时钟输出。当locked信号被拉高后，才是稳定的时钟信号输出。`clk_100m`频率为100MHz，`clk_100m_180p`频率为100MHz，但相位滞后180度，`clk_50m`信号与系统时钟频率相位一致，`clk_25m`频率为25MHz。
-
-### 6.实验结果
+### 7.实验结果
 

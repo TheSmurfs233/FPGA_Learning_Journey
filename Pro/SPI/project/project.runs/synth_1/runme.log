@@ -14,45 +14,34 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 25160 
+INFO: Helper process launched with PID 3256 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 701.992 ; gain = 240.988
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 700.203 ; gain = 236.316
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'spi_drive' [D:/FPGA_Learning_Journey/Pro/SPI/src/spi_drive.v:1]
 	Parameter SYS_CLK_FREQ bound to: 50000000 - type: integer 
-	Parameter CLK_DIV_FAC bound to: 50 - type: integer 
-	Parameter SCK_CNT_MAX bound to: 1000000 - type: integer 
-WARNING: [Synth 8-3848] Net data_rec in module/entity spi_drive does not have driver. [D:/FPGA_Learning_Journey/Pro/SPI/src/spi_drive.v:9]
-WARNING: [Synth 8-3848] Net send_done in module/entity spi_drive does not have driver. [D:/FPGA_Learning_Journey/Pro/SPI/src/spi_drive.v:10]
-WARNING: [Synth 8-3848] Net rec_done in module/entity spi_drive does not have driver. [D:/FPGA_Learning_Journey/Pro/SPI/src/spi_drive.v:11]
+	Parameter SPI_CSK_FREQ bound to: 1000000 - type: integer 
+	Parameter SCK_CNT_MAX bound to: 50 - type: integer 
+	Parameter SCK_CNT_MAX_1_2 bound to: 25 - type: integer 
+INFO: [Synth 8-4471] merging register 'send_done_reg' into 'rec_done_reg' [D:/FPGA_Learning_Journey/Pro/SPI/src/spi_drive.v:110]
+WARNING: [Synth 8-6014] Unused sequential element send_done_reg was removed.  [D:/FPGA_Learning_Journey/Pro/SPI/src/spi_drive.v:110]
 INFO: [Synth 8-6155] done synthesizing module 'spi_drive' (1#1) [D:/FPGA_Learning_Journey/Pro/SPI/src/spi_drive.v:1]
-WARNING: [Synth 8-3331] design spi_drive has unconnected port data_rec[7]
-WARNING: [Synth 8-3331] design spi_drive has unconnected port data_rec[6]
-WARNING: [Synth 8-3331] design spi_drive has unconnected port data_rec[5]
-WARNING: [Synth 8-3331] design spi_drive has unconnected port data_rec[4]
-WARNING: [Synth 8-3331] design spi_drive has unconnected port data_rec[3]
-WARNING: [Synth 8-3331] design spi_drive has unconnected port data_rec[2]
-WARNING: [Synth 8-3331] design spi_drive has unconnected port data_rec[1]
-WARNING: [Synth 8-3331] design spi_drive has unconnected port data_rec[0]
-WARNING: [Synth 8-3331] design spi_drive has unconnected port send_done
-WARNING: [Synth 8-3331] design spi_drive has unconnected port rec_done
-WARNING: [Synth 8-3331] design spi_drive has unconnected port spi_miso
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 774.777 ; gain = 313.773
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 773.199 ; gain = 309.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 774.777 ; gain = 313.773
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 773.199 ; gain = 309.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 774.777 ; gain = 313.773
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 773.199 ; gain = 309.312
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 774.777 ; gain = 313.773
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 773.199 ; gain = 309.312
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -67,12 +56,15 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     16 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 2     
 +---Registers : 
 	               16 Bit    Registers := 1     
-	                8 Bit    Registers := 2     
-	                1 Bit    Registers := 4     
+	                8 Bit    Registers := 4     
+	                1 Bit    Registers := 5     
 +---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -84,12 +76,15 @@ Module spi_drive
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     16 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 2     
 +---Registers : 
 	               16 Bit    Registers := 1     
-	                8 Bit    Registers := 2     
-	                1 Bit    Registers := 4     
+	                8 Bit    Registers := 4     
+	                1 Bit    Registers := 5     
 +---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -107,27 +102,8 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3331] design spi_drive has unconnected port data_rec[7]
-WARNING: [Synth 8-3331] design spi_drive has unconnected port data_rec[6]
-WARNING: [Synth 8-3331] design spi_drive has unconnected port data_rec[5]
-WARNING: [Synth 8-3331] design spi_drive has unconnected port data_rec[4]
-WARNING: [Synth 8-3331] design spi_drive has unconnected port data_rec[3]
-WARNING: [Synth 8-3331] design spi_drive has unconnected port data_rec[2]
-WARNING: [Synth 8-3331] design spi_drive has unconnected port data_rec[1]
-WARNING: [Synth 8-3331] design spi_drive has unconnected port data_rec[0]
-WARNING: [Synth 8-3331] design spi_drive has unconnected port send_done
-WARNING: [Synth 8-3331] design spi_drive has unconnected port rec_done
-WARNING: [Synth 8-3331] design spi_drive has unconnected port spi_miso
-INFO: [Synth 8-3886] merging instance 'send_cnt_reg[0]' (FDRE) to 'send_cnt_reg[1]'
-INFO: [Synth 8-3886] merging instance 'send_cnt_reg[3]' (FDRE) to 'send_cnt_reg[1]'
-INFO: [Synth 8-3886] merging instance 'send_cnt_reg[4]' (FDRE) to 'send_cnt_reg[1]'
-INFO: [Synth 8-3886] merging instance 'send_cnt_reg[5]' (FDRE) to 'send_cnt_reg[1]'
-INFO: [Synth 8-3886] merging instance 'send_cnt_reg[6]' (FDRE) to 'send_cnt_reg[1]'
-INFO: [Synth 8-3886] merging instance 'send_cnt_reg[7]' (FDRE) to 'send_cnt_reg[1]'
-INFO: [Synth 8-3886] merging instance 'send_cnt_reg[1]' (FDRE) to 'send_cnt_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\send_cnt_reg[2] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 925.074 ; gain = 464.070
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 926.008 ; gain = 462.121
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -140,7 +116,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 927.797 ; gain = 466.793
+Finished Timing Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 930.379 ; gain = 466.492
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -152,7 +128,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 927.980 ; gain = 466.977
+Finished Technology Mapping : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 930.559 ; gain = 466.672
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -176,13 +152,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 927.980 ; gain = 466.977
+Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 930.559 ; gain = 466.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 927.980 ; gain = 466.977
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 930.559 ; gain = 466.672
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -201,25 +177,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 927.980 ; gain = 466.977
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 930.559 ; gain = 466.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 927.980 ; gain = 466.977
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 930.559 ; gain = 466.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 927.980 ; gain = 466.977
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 930.559 ; gain = 466.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 927.980 ; gain = 466.977
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 930.559 ; gain = 466.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -237,47 +213,48 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |     4|
-|3     |LUT1   |     2|
-|4     |LUT2   |     3|
-|5     |LUT3   |     1|
-|6     |LUT4   |     4|
-|7     |LUT6   |    18|
-|8     |FDRE   |    20|
-|9     |FDSE   |     1|
-|10    |IBUF   |     5|
-|11    |OBUF   |     3|
-|12    |OBUFT  |    10|
+|3     |LUT1   |     4|
+|4     |LUT2   |    25|
+|5     |LUT3   |     3|
+|6     |LUT4   |     7|
+|7     |LUT5   |    11|
+|8     |LUT6   |    17|
+|9     |MUXF7  |     1|
+|10    |FDRE   |    52|
+|11    |FDSE   |     1|
+|12    |IBUF   |    13|
+|13    |OBUF   |    13|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+---------+-------+------+
 |      |Instance |Module |Cells |
 +------+---------+-------+------+
-|1     |top      |       |    72|
+|1     |top      |       |   152|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 927.980 ; gain = 466.977
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 930.559 ; gain = 466.672
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 25 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 927.980 ; gain = 466.977
-Synthesis Optimization Complete : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 927.980 ; gain = 466.977
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 930.559 ; gain = 466.672
+Synthesis Optimization Complete : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 930.559 ; gain = 466.672
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 940.926 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 942.520 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1042.055 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1042.117 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-19 Infos, 25 Warnings, 0 Critical Warnings and 0 Errors encountered.
+12 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1042.055 ; gain = 604.891
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1042.055 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1042.117 ; gain = 603.102
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1042.117 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1/spi_drive.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file spi_drive_utilization_synth.rpt -pb spi_drive_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Jan 11 00:41:45 2025...
+INFO: [Common 17-206] Exiting Vivado at Sat Jan 11 17:26:16 2025...

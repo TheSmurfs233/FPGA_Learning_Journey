@@ -16,13 +16,16 @@ module spi_drive (
     output reg spi_mosi
   );
   parameter SYS_CLK_FREQ = 50_000_000;
-  parameter CLK_DIV_FAC = 50;//分频系数
-  parameter SCK_CNT_MAX = SYS_CLK_FREQ/CLK_DIV_FAC; //50
-  
-  reg [15:0] sck_cnt;
-  reg [7:0]  send_cnt;
-  reg [7:0] data_send_r;
-  reg spi_busy;
+  parameter SPI_CSK_FREQ = 1_000_000;//SPI时钟频率
+  parameter SCK_CNT_MAX = SYS_CLK_FREQ/SPI_CSK_FREQ; //50
+  parameter SCK_CNT_MAX_1_2 = SCK_CNT_MAX/2;
+
+  reg [15:0] sck_cnt;   //spi时钟计数器
+  reg [7:0]  send_cnt;  //发送数据计数器
+  reg [7:0] data_send_r; //发送数据寄存器
+  reg [7:0] data_rec_r; //接收数据寄存器
+  reg spi_busy;//spi工作标志位
+
   //片选信号
   always @(posedge sys_clk ) begin
     if(!rst_n)begin
@@ -55,7 +58,7 @@ module spi_drive (
     if(!rst_n) begin
       spi_csk <= 1'b0;
     end 
-    else if(sck_cnt == 16'd24 | sck_cnt== 16'd49) begin
+    else if(sck_cnt == (SCK_CNT_MAX_1_2-1) | sck_cnt== (SCK_CNT_MAX-1)) begin
       spi_csk <= ~spi_csk;
     end
     else
@@ -84,7 +87,7 @@ module spi_drive (
       send_cnt<=8'd0;
     end
     else if(spi_busy) begin
-      if(sck_cnt==16'd49) begin
+      if(sck_cnt==(SCK_CNT_MAX-1)) begin
         sck_cnt<=16'd0;
         send_cnt<=send_cnt+1'd1;
       end
@@ -113,7 +116,7 @@ module spi_drive (
       else begin
         spi_mosi<=spi_mosi;
       end 
-      if(send_cnt==8'd7 && sck_cnt==16'd49) begin
+      if(send_cnt==8'd7 && sck_cnt==(SCK_CNT_MAX-1)) begin
         send_done<=1'd1;
       end
       else begin
@@ -126,5 +129,30 @@ module spi_drive (
     end
       
   end
-  
+  //miso数据接收，产生接收完成标志位
+  always @(posedge sys_clk ) begin
+    if(!rst_n)begin
+      data_rec_r<=1'd0;
+      rec_done<=1'd0;
+    end
+    else if(spi_busy) begin
+      if(sck_cnt==(SCK_CNT_MAX_1_2-1))begin
+        data_rec_r[8'd7-send_cnt]<=spi_miso;
+      end
+      else begin
+        data_rec_r[8'd7-send_cnt]<=data_rec_r[8'd7-send_cnt];
+      end 
+      if(send_cnt==8'd7 && sck_cnt==(SCK_CNT_MAX-1)) begin
+        rec_done<=1'd1;
+        data_rec<=data_rec_r;
+      end
+      else begin
+        rec_done<=1'd0;
+      end
+    end
+    else begin
+      rec_done<=1'd0;
+      data_rec<=data_rec;
+    end
+  end
 endmodule
