@@ -160,3 +160,7 @@ restart
 INFO: [Simtcl 6-17] Simulation restarted
 run 10 us
 $finish called at time : 8450 ns : File "D:/FPGA_Learning_Journey/Pro/SPI/src/spi_dirve_tb.v" Line 69
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Jan 11 17:45:19 2025...

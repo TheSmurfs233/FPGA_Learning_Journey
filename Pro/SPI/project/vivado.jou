@@ -33,3 +33,4 @@ current_wave_config {Untitled 2}
 add_wave {{/spi_drive_tb/uut/spi_busy}} 
 restart
 run 10 us
+close_sim
