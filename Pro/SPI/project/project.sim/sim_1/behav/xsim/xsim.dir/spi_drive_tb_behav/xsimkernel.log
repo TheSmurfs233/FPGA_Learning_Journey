@@ -1,7 +1,7 @@
-Running: xsim.dir/spi_drive_tb_behav/xsimk.exe -simmode gui -wdb spi_drive_tb_behav.wdb -simrunnum 0 -socket 59444
+Running: xsim.dir/spi_drive_tb_behav/xsimk.exe -simmode gui -wdb spi_drive_tb_behav.wdb -simrunnum 0 -socket 51887
 Design successfully loaded
-Design Loading Memory Usage: 7664 KB (Peak: 7664 KB)
-Design Loading CPU Usage: 30 ms
+Design Loading Memory Usage: 7632 KB (Peak: 7632 KB)
+Design Loading CPU Usage: 15 ms
 Simulation completed
-Simulation Memory Usage: 8736 KB (Peak: 8736 KB)
-Simulation CPU Usage: 62 ms
+Simulation Memory Usage: 8400 KB (Peak: 8400 KB)
+Simulation CPU Usage: 30 ms

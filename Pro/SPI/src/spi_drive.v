@@ -4,21 +4,20 @@ module spi_drive (
         input rst_n,
         //用户接口
         input spi_start,
-        input spi_end,
         input [7:0] data_send,
         output reg [7:0] data_rec,
         output reg send_done,
         output reg rec_done,
         //物理接口
         input spi_miso,
-        output reg spi_csk,
+        output reg spi_sck,
         output reg spi_cs,
         output reg spi_mosi
     );
     parameter SYS_CLK_FREQ = 50_000_000;
-    parameter SPI_CSK_FREQ = 1_000_000;//SPI时钟频率
-    parameter SCK_CNT_MAX = SYS_CLK_FREQ/SPI_CSK_FREQ; //50
-    parameter SCK_CNT_MAX_1_2 = SCK_CNT_MAX/2;
+    parameter SPI_SCK_FREQ = 1_000_000;//SPI时钟频率
+    parameter SCK_CNT_MAX = SYS_CLK_FREQ/SPI_SCK_FREQ - 1; //50
+    parameter SCK_CNT_MAX_1_2 = SYS_CLK_FREQ/SPI_SCK_FREQ/2 -1 ;//24
 
     reg [15:0] sck_cnt;   //spi时钟计数器
     reg [7:0]  send_cnt;  //发送数据计数器
@@ -31,14 +30,12 @@ module spi_drive (
         if(!rst_n) begin
             spi_cs <=1'b1;
         end
-        else if(spi_start) begin
+        else if(spi_start | spi_busy) begin
             spi_cs <=1'b0;
         end
-        else if(spi_end) begin
-            spi_cs <=1'b1;
-        end
-        else
-            spi_cs<=spi_cs;
+        else begin
+            spi_cs<=1'b1;
+        end  
     end
 
     //发送数据寄存
@@ -56,16 +53,20 @@ module spi_drive (
     //spi时钟信号
     always @(posedge sys_clk ) begin
         if(!rst_n) begin
-            spi_csk <= 1'b0;
+            spi_sck <= 1'b0;
         end
-        else if(sck_cnt == (SCK_CNT_MAX_1_2-1) | sck_cnt== (SCK_CNT_MAX-1)) begin
-            spi_csk <= ~spi_csk;
+        else if(spi_start | spi_busy) begin
+            if(sck_cnt == SCK_CNT_MAX_1_2 | sck_cnt== SCK_CNT_MAX) begin
+                spi_sck <= ~spi_sck;
+            end
+            else
+                spi_sck <= spi_sck;
         end
-        else
-            spi_csk <= spi_csk;
+        else 
+            spi_sck <= 1'b0;
     end
 
-    //捕获spi开始和结束信号，更改状态标志位
+    //捕获spi开始信号，更改状态标志位
     always @(posedge sys_clk ) begin
         if(!rst_n) begin
             spi_busy<=1'b0;
@@ -73,7 +74,7 @@ module spi_drive (
         else if(spi_start) begin
             spi_busy<=1'b1;
         end
-        else if(spi_end) begin
+        else if(send_done & !spi_start) begin
             spi_busy<=1'b0;
         end
         else
@@ -86,10 +87,15 @@ module spi_drive (
             sck_cnt<=16'd0;
             send_cnt<=8'd0;
         end
-        else if(spi_busy) begin
-            if(sck_cnt==(SCK_CNT_MAX-1)) begin
+        else if(spi_start | spi_busy ) begin
+            if(sck_cnt==SCK_CNT_MAX) begin
                 sck_cnt<=16'd0;
-                send_cnt<=send_cnt+1'd1;
+                if (send_cnt == 8'd7) begin
+                    send_cnt <= 8'd0;
+                end
+                else begin
+                    send_cnt <= send_cnt + 1'd1;
+                end
             end
             else begin
                 sck_cnt<=sck_cnt+1'd1;
@@ -110,13 +116,13 @@ module spi_drive (
             send_done<=1'd0;
         end
         else if(spi_busy) begin
-            if(sck_cnt==16'd0) begin
+            if(sck_cnt==16'd1) begin
                 spi_mosi<=data_send_r[8'd7-send_cnt];
             end
             else begin
                 spi_mosi<=spi_mosi;
             end
-            if(send_cnt==8'd7 && sck_cnt==(SCK_CNT_MAX-1)) begin
+            if(send_cnt==8'd7 && sck_cnt==SCK_CNT_MAX) begin
                 send_done<=1'd1;
             end
             else begin
@@ -136,13 +142,13 @@ module spi_drive (
             rec_done<=1'd0;
         end
         else if(spi_busy) begin
-            if(sck_cnt==(SCK_CNT_MAX_1_2-1)) begin
+            if(sck_cnt==SCK_CNT_MAX_1_2) begin
                 data_rec_r[8'd7-send_cnt]<=spi_miso;
             end
             else begin
                 data_rec_r[8'd7-send_cnt]<=data_rec_r[8'd7-send_cnt];
             end
-            if(send_cnt==8'd7 && sck_cnt==(SCK_CNT_MAX-1)) begin
+            if(send_cnt==8'd7 && sck_cnt==SCK_CNT_MAX) begin
                 rec_done<=1'd1;
                 data_rec<=data_rec_r;
             end
