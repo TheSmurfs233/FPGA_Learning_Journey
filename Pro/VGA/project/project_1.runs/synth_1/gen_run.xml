@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1736842053">
-  <File Type="PA-TCL" Name="vga_clk_gen.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="vga_clk_gen_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="vga_clk_gen_reports.tcl"/>
-  <File Type="RDS-RDS" Name="vga_clk_gen.vds"/>
-  <File Type="RDS-UTIL" Name="vga_clk_gen_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="vga_clk_gen_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="vga_clk_gen.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="vga_clk_gen_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="vga_clk_gen_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1736856677">
+  <File Type="PA-TCL" Name="vga_drive.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="vga_drive_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="vga_drive_reports.tcl"/>
+  <File Type="RDS-RDS" Name="vga_drive.vds"/>
+  <File Type="RDS-UTIL" Name="vga_drive_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="vga_drive_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="vga_drive.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="vga_drive_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="vga_drive_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../src/vga_clk_gen.v">
@@ -18,9 +18,22 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../src/vga_image_gen.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../src/vga_timing_ctrl.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../src/vga_drive.v">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -28,7 +41,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="vga_clk_gen"/>
+      <Option Name="TopModule" Val="vga_drive"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
