@@ -15,7 +15,7 @@ module spi_drive (
         output reg spi_mosi
     );
     parameter SYS_CLK_FREQ = 50_000_000;
-    parameter SPI_SCK_FREQ = 1_000_000;//SPI时钟频率
+    parameter SPI_SCK_FREQ = 10_000_000;//SPI时钟频率
     parameter SCK_CNT_MAX = SYS_CLK_FREQ/SPI_SCK_FREQ - 1; //50
     parameter SCK_CNT_MAX_1_2 = SYS_CLK_FREQ/SPI_SCK_FREQ/2 -1 ;//24
 

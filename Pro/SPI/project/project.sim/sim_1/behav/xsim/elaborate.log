@@ -1,15 +1,17 @@
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 9103709da55f414aa1b50531c7e389c0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot spi_drive_tb_behav xil_defaultlib.spi_drive_tb xil_defaultlib.glbl -log elaborate.log 
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 9103709da55f414aa1b50531c7e389c0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot oled_display_testbench_behav xil_defaultlib.oled_display_testbench xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
 Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/FPGA_Learning_Journey/Pro/SPI/src/oled_display.v" Line 1. Module oled_display doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "D:/FPGA_Learning_Journey/Pro/SPI/src/spi_drive.v" Line 1. Module spi_drive_default doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.spi_drive_default
-Compiling module xil_defaultlib.spi_drive_tb
+Compiling module xil_defaultlib.oled_display
+Compiling module xil_defaultlib.oled_display_testbench
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot spi_drive_tb_behav
+Built simulation snapshot oled_display_testbench_behav

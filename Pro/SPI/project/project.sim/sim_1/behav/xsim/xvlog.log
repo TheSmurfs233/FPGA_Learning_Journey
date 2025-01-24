@@ -1,4 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/SPI/src/oled_display.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module oled_display
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/SPI/src/spi_drive.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module spi_drive
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/SPI/src/spi_drive_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module spi_drive_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/SPI/src/oled_display_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module oled_display_testbench
