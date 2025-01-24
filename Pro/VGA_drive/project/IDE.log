@@ -1,0 +1,7 @@
+01:18:46 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\FPGA_Learning_Journey\Pro\VGA\project\temp_xsdb_launch_script.tcl
+01:18:47 INFO  : Registering command handlers for Vitis TCF services
+01:18:48 INFO  : XSCT server has started successfully.
+01:18:48 INFO  : plnx-install-location is set to ''
+01:18:48 INFO  : Successfully done setting XSCT server connection channel  
+01:18:48 INFO  : Successfully done setting workspace for the tool. 
+01:18:48 INFO  : Successfully done query RDI_DATADIR 

@@ -1,0 +1,804 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Jan 21 22:41:38 2025
+# Process ID: 3016
+# Current directory: D:/FPGA_Learning_Journey/Pro/SPI/project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12688 D:\FPGA_Learning_Journey\Pro\SPI\project\project.xpr
+# Log file: D:/FPGA_Learning_Journey/Pro/SPI/project/vivado.log
+# Journal file: D:/FPGA_Learning_Journey/Pro/SPI/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA_Learning_Journey/Pro/SPI/project/project.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.2/data/ip'.
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Tue Jan 21 23:02:34 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1/runme.log
+[Tue Jan 21 23:02:35 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/runme.log
+reset_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Tue Jan 21 23:03:36 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1/runme.log
+[Tue Jan 21 23:03:36 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/runme.log
+reset_run impl_1
+launch_runs impl_1 -jobs 12
+[Tue Jan 21 23:04:43 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/runme.log
+close_project
+open_project D:/FPGA_Learning_Journey/Pro/SPI/project/project.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.2/data/ip'.
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+[Tue Jan 21 23:05:48 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 12
+[Tue Jan 21 23:06:29 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z010clg400-1
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1247.723 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/FPGA_Learning_Journey/Pro/SPI/project/project.srcs/constrs_1/new/oled_spi.xdc]
+Finished Parsing XDC File [D:/FPGA_Learning_Journey/Pro/SPI/project/project.srcs/constrs_1/new/oled_spi.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1331.422 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 1461.145 ; gain = 312.723
+place_ports key J19
+place_ports led H20
+place_ports oled_rst F20
+set_property IOSTANDARD LVCMOS33 [get_ports [list key]]
+set_property IOSTANDARD LVCMOS25 [get_ports [list led]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list led]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list oled_rst]]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -jobs 12
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1973.547 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1974.031 ; gain = 0.484
+[Tue Jan 21 23:08:06 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Tue Jan 21 23:08:46 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1976.027 ; gain = 1.996
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299847714
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/oled_display.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/oled_display.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Jan 21 23:15:11 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1/runme.log
+[Tue Jan 21 23:15:11 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Jan 21 23:16:05 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1/runme.log
+[Tue Jan 21 23:16:05 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Jan 21 23:16:59 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1/runme.log
+[Tue Jan 21 23:16:59 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/oled_display.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Jan 21 23:22:25 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1/runme.log
+[Tue Jan 21 23:22:25 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/oled_display.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Jan 21 23:26:05 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1/runme.log
+[Tue Jan 21 23:26:05 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/oled_display.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Jan 21 23:27:52 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1/runme.log
+[Tue Jan 21 23:27:52 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/oled_display.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Jan 21 23:31:47 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1/runme.log
+[Tue Jan 21 23:31:47 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/oled_display.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+startgroup
+set_property package_pin "" [get_ports [list  sys_rst_n]]
+place_ports key G19
+endgroup
+place_ports sys_rst_n L16
+save_constraints -force
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Jan 21 23:40:03 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/oled_display.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/oled_display.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Jan 21 23:43:29 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1/runme.log
+[Tue Jan 21 23:43:29 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/oled_display.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Jan 21 23:46:49 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1/runme.log
+[Tue Jan 21 23:46:49 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/oled_display.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/oled_display.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Wed Jan 22 01:28:22 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1/runme.log
+[Wed Jan 22 01:28:22 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/oled_display.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run impl_1
+launch_runs impl_1 -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Wed Jan 22 01:40:17 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/runme.log
+reset_run impl_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Wed Jan 22 01:40:52 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1/runme.log
+[Wed Jan 22 01:40:52 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/oled_display.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Wed Jan 22 01:45:51 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1/runme.log
+[Wed Jan 22 01:45:51 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/oled_display.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/SPI/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'oled_display_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/SPI/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj oled_display_testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/SPI/src/oled_display.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module oled_display
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/SPI/src/spi_drive.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_drive
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/SPI/src/oled_display_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module oled_display_testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/SPI/project/project.sim/sim_1/behav/xsim'
+"xelab -wto 9103709da55f414aa1b50531c7e389c0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot oled_display_testbench_behav xil_defaultlib.oled_display_testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 9103709da55f414aa1b50531c7e389c0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot oled_display_testbench_behav xil_defaultlib.oled_display_testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/FPGA_Learning_Journey/Pro/SPI/src/oled_display.v" Line 1. Module oled_display doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/FPGA_Learning_Journey/Pro/SPI/src/spi_drive.v" Line 1. Module spi_drive_default doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.spi_drive_default
+Compiling module xil_defaultlib.oled_display
+Compiling module xil_defaultlib.oled_display_testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot oled_display_testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/FPGA_Learning_Journey/Pro/SPI/project/project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "oled_display_testbench_behav -key {Behavioral:sim_1:Functional:oled_display_testbench} -tclbatch {oled_display_testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source oled_display_testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'oled_display_testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/oled_display_testbench/oled_display_inst}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 100 us
+Error: LED is not on as expected.
+Time: 3210 ns  Iteration: 0  Process: /oled_display_testbench/Initial35_16  File: D:/FPGA_Learning_Journey/Pro/SPI/src/oled_display_tb.v
+$finish called at time : 4210 ns : File "D:/FPGA_Learning_Journey/Pro/SPI/src/oled_display_tb.v" Line 70
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/SPI/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'oled_display_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/SPI/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj oled_display_testbench_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/SPI/src/oled_display.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module oled_display
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/SPI/src/spi_drive.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_drive
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/SPI/src/oled_display_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module oled_display_testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/SPI/project/project.sim/sim_1/behav/xsim'
+"xelab -wto 9103709da55f414aa1b50531c7e389c0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot oled_display_testbench_behav xil_defaultlib.oled_display_testbench xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 9103709da55f414aa1b50531c7e389c0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot oled_display_testbench_behav xil_defaultlib.oled_display_testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/FPGA_Learning_Journey/Pro/SPI/src/oled_display.v" Line 1. Module oled_display doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/FPGA_Learning_Journey/Pro/SPI/src/spi_drive.v" Line 1. Module spi_drive_default doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.spi_drive_default
+Compiling module xil_defaultlib.oled_display
+Compiling module xil_defaultlib.oled_display_testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot oled_display_testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/FPGA_Learning_Journey/Pro/SPI/project/project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "oled_display_testbench_behav -key {Behavioral:sim_1:Functional:oled_display_testbench} -tclbatch {oled_display_testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source oled_display_testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'oled_display_testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+current_wave_config {Untitled 2}
+Untitled 2
+add_wave {{/oled_display_testbench/oled_display_inst}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 100 us
+Error: LED is not on as expected.
+Time: 3230 ns  Iteration: 0  Process: /oled_display_testbench/Initial35_16  File: D:/FPGA_Learning_Journey/Pro/SPI/src/oled_display_tb.v
+$finish called at time : 4230 ns : File "D:/FPGA_Learning_Journey/Pro/SPI/src/oled_display_tb.v" Line 70
+run 100 us
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Wed Jan 22 01:54:22 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1/runme.log
+[Wed Jan 22 01:54:22 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/runme.log
+run 100 us
+run 100 us
+run 100 us
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/oled_display.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/oled_display.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Wed Jan 22 02:03:56 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1/runme.log
+[Wed Jan 22 02:03:56 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/oled_display.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+create_ip -name ila -vendor xilinx.com -library ip -version 6.2 -module_name ila_0 -dir d:/FPGA_Learning_Journey/Pro/SPI/project/project.srcs/sources_1/ip
+set_property -dict [list CONFIG.C_NUM_OF_PROBES {4}] [get_ips ila_0]
+generate_target {instantiation_template} [get_files d:/FPGA_Learning_Journey/Pro/SPI/project/project.srcs/sources_1/ip/ila_0/ila_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ila_0'...
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+create_ip -name ila -vendor xilinx.com -library ip -version 6.2 -module_name ila_1 -dir d:/FPGA_Learning_Journey/Pro/SPI/project/project.srcs/sources_1/ip
+generate_target {instantiation_template} [get_files d:/FPGA_Learning_Journey/Pro/SPI/project/project.srcs/sources_1/ip/ila_1/ila_1.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ila_1'...
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files d:/FPGA_Learning_Journey/Pro/SPI/project/project.srcs/sources_1/ip/ila_1/ila_1.xci] -no_script -reset -force -quiet
+remove_files  d:/FPGA_Learning_Journey/Pro/SPI/project/project.srcs/sources_1/ip/ila_1/ila_1.xci
+remove_files  d:/FPGA_Learning_Journey/Pro/SPI/project/project.srcs/sources_1/ip/ila_1/ila_1.xci
+WARNING: [Vivado 12-818] No files matched 'd:/FPGA_Learning_Journey/Pro/SPI/project/project.srcs/sources_1/ip/ila_1/ila_1.xci'
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+generate_target all [get_files  d:/FPGA_Learning_Journey/Pro/SPI/project/project.srcs/sources_1/ip/ila_0/ila_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ila_0'...
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/FPGA_Learning_Journey/Pro/SPI/project/project.srcs/sources_1/ip/ila_0/ila_0_ooc.xdc'
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ila_0'...
+catch { config_ip_cache -export [get_ips -all ila_0] }
+export_ip_user_files -of_objects [get_files d:/FPGA_Learning_Journey/Pro/SPI/project/project.srcs/sources_1/ip/ila_0/ila_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/FPGA_Learning_Journey/Pro/SPI/project/project.srcs/sources_1/ip/ila_0/ila_0.xci]
+launch_runs -jobs 12 ila_0_synth_1
+[Wed Jan 22 02:15:22 2025] Launched ila_0_synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/ila_0_synth_1/runme.log
+export_simulation -of_objects [get_files d:/FPGA_Learning_Journey/Pro/SPI/project/project.srcs/sources_1/ip/ila_0/ila_0.xci] -directory D:/FPGA_Learning_Journey/Pro/SPI/project/project.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA_Learning_Journey/Pro/SPI/project/project.ip_user_files -ipstatic_source_dir D:/FPGA_Learning_Journey/Pro/SPI/project/project.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/Xilinx/simlib_ZYNQ7000} {questa=D:/FPGA_Learning_Journey/Pro/SPI/project/project.cache/compile_simlib/questa} {riviera=D:/FPGA_Learning_Journey/Pro/SPI/project/project.cache/compile_simlib/riviera} {activehdl=D:/FPGA_Learning_Journey/Pro/SPI/project/project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Wed Jan 22 02:16:58 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/synth_1/runme.log
+[Wed Jan 22 02:16:58 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/runme.log
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/oled_display.ltx} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/oled_display.ltx} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SPI/project/project.runs/impl_1/oled_display.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-2302] Device xc7z010 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:19:34
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:19:34
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:19:51
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:19:51
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:19:53
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:19:54
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:19:55
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:19:55
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:19:56
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:19:56
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:20:16
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:20:16
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:20:23
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:20:23
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:22:44
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:22:44
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:22:45
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:22:45
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:22:47
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:22:47
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:22:48
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:22:48
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:22:50
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:22:50
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:22:55
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:22:55
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:22:56
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:22:56
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:23:03
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:23:03
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:23:36
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:23:36
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:23:38
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:23:38
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:23:40
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:23:40
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:23:41
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:23:41
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:23:44
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:23:44
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:23:45
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:23:45
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:23:47
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:23:47
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:23:49
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:23:49
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:23:50
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:23:50
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:23:52
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:23:52
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:24:07
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:24:07
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:24:08
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:24:08
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:24:10
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:24:10
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:24:12
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:24:12
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:24:13
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:24:13
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:24:37
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:24:37
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:24:39
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:24:39
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:24:40
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:24:40
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:24:42
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:24:42
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Jan-22 02:24:45
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z010_1] -filter {CELL_NAME=~"ila_0_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Jan-22 02:24:45
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+save_wave_config {D:/FPGA_Learning_Journey/Pro/SPI/project/project.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 22 02:25:17 2025...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 21 23:00:53 2025...

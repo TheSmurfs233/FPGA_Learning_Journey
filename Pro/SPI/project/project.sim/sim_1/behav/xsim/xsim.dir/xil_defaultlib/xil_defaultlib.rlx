@@ -3,5 +3,7 @@
 Nov  6 2019
 21:57:16
 D:/FPGA_Learning_Journey/Pro/SPI/project/project.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
-D:/FPGA_Learning_Journey/Pro/SPI/src/spi_drive.v,1736663407,verilog,,D:/FPGA_Learning_Journey/Pro/SPI/src/spi_drive_tb.v,,spi_drive,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/SPI/src/oled_display.v,1737481862,verilog,,D:/FPGA_Learning_Journey/Pro/SPI/src/spi_drive.v,,oled_display,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/SPI/src/oled_display_tb.v,1737458243,verilog,,,,oled_display_testbench,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/SPI/src/spi_drive.v,1737458106,verilog,,D:/FPGA_Learning_Journey/Pro/SPI/src/oled_display_tb.v,,spi_drive,,,,,,,,
 D:/FPGA_Learning_Journey/Pro/SPI/src/spi_drive_tb.v,1736662774,verilog,,,,spi_drive_tb,,,,,,,,

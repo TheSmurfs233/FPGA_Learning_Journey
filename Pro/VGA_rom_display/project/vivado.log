@@ -1,0 +1,569 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Jan 24 13:10:08 2025
+# Process ID: 14132
+# Current directory: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1804 D:\FPGA_Learning_Journey\Pro\VGA_rom_display\project\project_1.xpr
+# Log file: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/vivado.log
+# Journal file: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.xprScanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.2/data/ip'.
+oopen_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 981.508 ; gain = 254.367update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Fri Jan 24 13:13:13 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/synth_1/runme.log
+[Fri Jan 24 13:13:13 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1032.875 ; gain = 20.312
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299847714
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/impl_1/vga_rom_image.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-2302] Device xc7z010 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/impl_1/vga_rom_image.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Fri Jan 24 14:13:22 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/synth_1/runme.log
+[Fri Jan 24 14:13:22 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Fri Jan 24 14:15:03 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/synth_1/runme.log
+[Fri Jan 24 14:15:03 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2593.344 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 3219.516 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 3219.516 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3219.516 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:18 ; elapsed = 00:00:15 . Memory (MB): peak = 3347.926 ; gain = 1003.230
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/impl_1/vga_rom_image.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for '_vga_rom_image_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.sim/sim_1/behav/xsim/blk_mem_gen_0.mif'
+INFO: [SIM-utils-43] Exported 'D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.sim/sim_1/behav/xsim/image.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj _vga_rom_image_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.srcs/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/VGA_rom_display/src/vga_clk_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_clk_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/VGA_rom_display/src/vga_image_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_image_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/VGA_rom_display/src/vga_rom_image.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_rom_image
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/VGA_rom_display/src/vga_timing_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_timing_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/VGA_rom_display/src/vga_rom_image_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module _vga_rom_image_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 6b6688c2c5f4438c922b95caf8c838c1 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot _vga_rom_image_tb_behav xil_defaultlib._vga_rom_image_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 6b6688c2c5f4438c922b95caf8c838c1 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot _vga_rom_image_tb_behav xil_defaultlib._vga_rom_image_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=33,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.vga_clk_gen
+Compiling module xil_defaultlib.vga_timing_ctrl
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="zyn...
+Compiling module xil_defaultlib.blk_mem_gen_0
+Compiling module xil_defaultlib.vga_image_gen
+Compiling module xil_defaultlib.vga_rom_image
+Compiling module xil_defaultlib._vga_rom_image_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot _vga_rom_image_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "_vga_rom_image_tb_behav -key {Behavioral:sim_1:Functional:_vga_rom_image_tb} -tclbatch {_vga_rom_image_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source _vga_rom_image_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module _vga_rom_image_tb.vga_rom_image_inst.vga_image_gen_inst.blk_mem_gen_0_ins.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+INFO: [USF-XSim-96] XSim completed. Design snapshot '_vga_rom_image_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 3406.191 ; gain = 14.355
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/_vga_rom_image_tb/vga_rom_image_inst/vga_image_gen_inst}} 
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/_vga_rom_image_tb/vga_rom_image_inst/vga_timing_ctrl_inst}} 
+run 20 ms
+run: Time (s): cpu = 00:00:21 ; elapsed = 00:01:17 . Memory (MB): peak = 3407.258 ; gain = 0.000
+run 20 ms
+run: Time (s): cpu = 00:00:23 ; elapsed = 00:02:51 . Memory (MB): peak = 3533.395 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Fri Jan 24 14:55:54 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/synth_1/runme.log
+[Fri Jan 24 14:55:54 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/impl_1/vga_rom_image.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Fri Jan 24 15:17:48 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/synth_1/runme.log
+[Fri Jan 24 15:17:48 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/impl_1/vga_rom_image.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/FPGA_Learning_Journey/Pro/VGA_rom_display/image.coe' provided. It will be converted relative to IP Instance files '../../../../../image.coe'
+set_property -dict [list CONFIG.Coe_File {D:/FPGA_Learning_Journey/Pro/VGA_rom_display/image.coe}] [get_ips blk_mem_gen_0]
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/FPGA_Learning_Journey/Pro/VGA_rom_display/image.coe' provided. It will be converted relative to IP Instance files '../../../../../image.coe'
+generate_target all [get_files  D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_gen_0'...
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_0] }
+export_ip_user_files -of_objects [get_files D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -no_script -sync -force -quiet
+reset_run blk_mem_gen_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/blk_mem_gen_0_synth_1
+
+launch_runs -jobs 6 blk_mem_gen_0_synth_1
+[Fri Jan 24 15:35:31 2025] Launched blk_mem_gen_0_synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/blk_mem_gen_0_synth_1/runme.log
+export_simulation -of_objects [get_files D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -directory D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.ip_user_files -ipstatic_source_dir D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.cache/compile_simlib/modelsim} {questa=D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.cache/compile_simlib/questa} {riviera=D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.cache/compile_simlib/riviera} {activehdl=D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Fri Jan 24 15:36:27 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/synth_1/runme.log
+[Fri Jan 24 15:36:27 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/impl_1/vga_rom_image.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/FPGA_Learning_Journey/Pro/VGA_rom_display/image_bmp.coe' provided. It will be converted relative to IP Instance files '../../../../../image_bmp.coe'
+set_property -dict [list CONFIG.Coe_File {D:/FPGA_Learning_Journey/Pro/VGA_rom_display/image_bmp.coe}] [get_ips blk_mem_gen_0]
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/FPGA_Learning_Journey/Pro/VGA_rom_display/image_bmp.coe' provided. It will be converted relative to IP Instance files '../../../../../image_bmp.coe'
+generate_target all [get_files  D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_gen_0'...
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_0] }
+export_ip_user_files -of_objects [get_files D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -no_script -sync -force -quiet
+reset_run blk_mem_gen_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/blk_mem_gen_0_synth_1
+
+launch_runs -jobs 6 blk_mem_gen_0_synth_1
+[Fri Jan 24 16:09:05 2025] Launched blk_mem_gen_0_synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/blk_mem_gen_0_synth_1/runme.log
+export_simulation -of_objects [get_files D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -directory D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.ip_user_files -ipstatic_source_dir D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.cache/compile_simlib/modelsim} {questa=D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.cache/compile_simlib/questa} {riviera=D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.cache/compile_simlib/riviera} {activehdl=D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Fri Jan 24 16:10:03 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/synth_1/runme.log
+[Fri Jan 24 16:10:03 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/impl_1/runme.log
+export_ip_user_files -of_objects  [get_files D:/FPGA_Learning_Journey/Pro/VGA_rom_display/image.coe] -no_script -reset -force -quiet
+remove_files  D:/FPGA_Learning_Journey/Pro/VGA_rom_display/image.coe
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Fri Jan 24 16:11:04 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/synth_1/runme.log
+[Fri Jan 24 16:11:04 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/impl_1/vga_rom_image.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Fri Jan 24 16:19:23 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/impl_1/vga_rom_image.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+export_ip_user_files -of_objects  [get_files d:/FPGA_Learning_Journey/Pro/VGA_rom_display/image_bmp.coe] -no_script -reset -force -quiet
+remove_files  d:/FPGA_Learning_Journey/Pro/VGA_rom_display/image_bmp.coe
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/FPGA_Learning_Journey/Pro/VGA_rom_display/image_bmp.coe' provided. It will be converted relative to IP Instance files '../../../../../image_bmp.coe'
+set_property -dict [list CONFIG.Coe_File {D:/FPGA_Learning_Journey/Pro/VGA_rom_display/image_bmp.coe}] [get_ips blk_mem_gen_0]
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/FPGA_Learning_Journey/Pro/VGA_rom_display/image_bmp.coe' provided. It will be converted relative to IP Instance files '../../../../../image_bmp.coe'
+generate_target all [get_files  D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_gen_0'...
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_0] }
+export_ip_user_files -of_objects [get_files D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -no_script -sync -force -quiet
+reset_run blk_mem_gen_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/blk_mem_gen_0_synth_1
+
+launch_runs -jobs 6 blk_mem_gen_0_synth_1
+[Fri Jan 24 16:21:37 2025] Launched blk_mem_gen_0_synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/blk_mem_gen_0_synth_1/runme.log
+export_simulation -of_objects [get_files D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -directory D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.ip_user_files -ipstatic_source_dir D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.cache/compile_simlib/modelsim} {questa=D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.cache/compile_simlib/questa} {riviera=D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.cache/compile_simlib/riviera} {activehdl=D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Fri Jan 24 16:22:37 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/synth_1/runme.log
+[Fri Jan 24 16:22:37 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210299847714
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299847714
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-2302] Device xc7z010 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+WARNING: [Labtools 27-1347] Unable to find Debug Probes file []. Please update hw_device property [PROBES.FILE]
+ Update of hw_probe objects, will be skipped.
+WARNING: [Labtools 27-1974] Mismatch between the design programmed into the device xc7z010_1 and the probes file(s) .
+The device design has 1 ILA core(s) and 0 VIO core(s). 0 ILA core(s) and 0 VIO core(s) are matched in the probes file(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/impl_1/vga_rom_image.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/FPGA_Learning_Journey/Pro/VGA_rom_display/bmp.coe' provided. It will be converted relative to IP Instance files '../../../../../bmp.coe'
+set_property -dict [list CONFIG.Coe_File {D:/FPGA_Learning_Journey/Pro/VGA_rom_display/bmp.coe}] [get_ips blk_mem_gen_0]
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/FPGA_Learning_Journey/Pro/VGA_rom_display/bmp.coe' provided. It will be converted relative to IP Instance files '../../../../../bmp.coe'
+generate_target all [get_files  D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_gen_0'...
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_0] }
+export_ip_user_files -of_objects [get_files D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -no_script -sync -force -quiet
+reset_run blk_mem_gen_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/blk_mem_gen_0_synth_1
+
+launch_runs -jobs 6 blk_mem_gen_0_synth_1
+[Fri Jan 24 16:30:00 2025] Launched blk_mem_gen_0_synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/blk_mem_gen_0_synth_1/runme.log
+export_simulation -of_objects [get_files D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -directory D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.ip_user_files -ipstatic_source_dir D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.cache/compile_simlib/modelsim} {questa=D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.cache/compile_simlib/questa} {riviera=D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.cache/compile_simlib/riviera} {activehdl=D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Fri Jan 24 16:31:00 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/synth_1/runme.log
+[Fri Jan 24 16:31:00 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/impl_1/vga_rom_image.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210299847714
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299847714
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/impl_1/vga_rom_image.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+export_ip_user_files -of_objects  [get_files d:/FPGA_Learning_Journey/Pro/VGA_rom_display/bmp.coe] -no_script -reset -force -quiet
+remove_files  d:/FPGA_Learning_Journey/Pro/VGA_rom_display/bmp.coe
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/FPGA_Learning_Journey/Pro/VGA_rom_display/image.coe' provided. It will be converted relative to IP Instance files '../../../../../image.coe'
+set_property -dict [list CONFIG.Coe_File {D:/FPGA_Learning_Journey/Pro/VGA_rom_display/image.coe}] [get_ips blk_mem_gen_0]
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/FPGA_Learning_Journey/Pro/VGA_rom_display/image.coe' provided. It will be converted relative to IP Instance files '../../../../../image.coe'
+generate_target all [get_files  D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_gen_0'...
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_0] }
+export_ip_user_files -of_objects [get_files D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -no_script -sync -force -quiet
+reset_run blk_mem_gen_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/blk_mem_gen_0_synth_1
+
+launch_runs -jobs 6 blk_mem_gen_0_synth_1
+[Fri Jan 24 16:55:55 2025] Launched blk_mem_gen_0_synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.runs/blk_mem_gen_0_synth_1/runme.log
+export_simulation -of_objects [get_files D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -directory D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.ip_user_files -ipstatic_source_dir D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.cache/compile_simlib/modelsim} {questa=D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.cache/compile_simlib/questa} {riviera=D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.cache/compile_simlib/riviera} {activehdl=D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for '_vga_rom_image_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.sim/sim_1/behav/xsim/blk_mem_gen_0.mif'
+INFO: [SIM-utils-43] Exported 'D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.sim/sim_1/behav/xsim/image.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj _vga_rom_image_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.srcs/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/VGA_rom_display/src/vga_clk_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_clk_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/VGA_rom_display/src/vga_image_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_image_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/VGA_rom_display/src/vga_rom_image.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_rom_image
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/VGA_rom_display/src/vga_timing_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_timing_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/VGA_rom_display/src/vga_rom_image_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module _vga_rom_image_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 6b6688c2c5f4438c922b95caf8c838c1 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot _vga_rom_image_tb_behav xil_defaultlib._vga_rom_image_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 6b6688c2c5f4438c922b95caf8c838c1 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot _vga_rom_image_tb_behav xil_defaultlib._vga_rom_image_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=33,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.vga_clk_gen
+Compiling module xil_defaultlib.vga_timing_ctrl
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="zyn...
+Compiling module xil_defaultlib.blk_mem_gen_0
+Compiling module xil_defaultlib.vga_image_gen
+Compiling module xil_defaultlib.vga_rom_image
+Compiling module xil_defaultlib._vga_rom_image_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot _vga_rom_image_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/FPGA_Learning_Journey/Pro/VGA_rom_display/project/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "_vga_rom_image_tb_behav -key {Behavioral:sim_1:Functional:_vga_rom_image_tb} -tclbatch {_vga_rom_image_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source _vga_rom_image_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module _vga_rom_image_tb.vga_rom_image_inst.vga_image_gen_inst.blk_mem_gen_0_ins.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+INFO: [USF-XSim-96] XSim completed. Design snapshot '_vga_rom_image_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 3568.828 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+current_wave_config {Untitled 2}
+Untitled 2
+add_wave {{/_vga_rom_image_tb/vga_rom_image_inst/vga_image_gen_inst}} 
+current_wave_config {Untitled 2}
+Untitled 2
+add_wave {{/_vga_rom_image_tb/vga_rom_image_inst/vga_timing_ctrl_inst}} 
+run 30 ms
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module _vga_rom_image_tb.vga_rom_image_inst.vga_image_gen_inst.blk_mem_gen_0_ins.inst.native_mem_module.blk_mem_gen_v8_4_4_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 3568.828 ; gain = 0.000
+run 30 ms
+run: Time (s): cpu = 00:00:47 ; elapsed = 00:04:05 . Memory (MB): peak = 3568.828 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 24 17:20:41 2025...

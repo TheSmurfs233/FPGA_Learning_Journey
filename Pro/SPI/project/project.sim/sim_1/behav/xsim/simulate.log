@@ -1,3 +1,5 @@
 Vivado Simulator 2019.2
 Time resolution is 1 ps
-$finish called at time : 16390 ns : File "D:/FPGA_Learning_Journey/Pro/SPI/src/spi_drive_tb.v" Line 68
+Error: LED is not on as expected.
+Time: 3230 ns  Iteration: 0  Process: /oled_display_testbench/Initial35_16  File: D:/FPGA_Learning_Journey/Pro/SPI/src/oled_display_tb.v
+$finish called at time : 4230 ns : File "D:/FPGA_Learning_Journey/Pro/SPI/src/oled_display_tb.v" Line 70
