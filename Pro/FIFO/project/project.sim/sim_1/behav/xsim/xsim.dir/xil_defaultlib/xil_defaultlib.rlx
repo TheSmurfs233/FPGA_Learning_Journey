@@ -1,0 +1,13 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+D:/FPGA_Learning_Journey/Pro/FIFO/project/project.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/FIFO/project/project.srcs/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v,1737912043,verilog,,D:/FPGA_Learning_Journey/Pro/FIFO/src/fifo_sum_ctrl.v,,fifo_generator_0,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/FIFO/src/fifo_sum.v,1737912943,verilog,,D:/FPGA_Learning_Journey/Pro/FIFO/src/fifo_sum_tb.v,,fifo_sum,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/FIFO/src/fifo_sum_ctrl.v,1737918740,verilog,,D:/FPGA_Learning_Journey/Pro/FIFO/src/uart_rx.v,,fifo_sum_ctrl,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/FIFO/src/fifo_sum_tb.v,1737916574,verilog,,D:/FPGA_Learning_Journey/Pro/FIFO/src/uart_rx_tb.v,,fifo_sum_tb,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/FIFO/src/uart_rx.v,1735995730,verilog,,D:/FPGA_Learning_Journey/Pro/FIFO/src/uart_tx.v,,uart_rx,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/FIFO/src/uart_rx_tb.v,1735405130,verilog,,D:/FPGA_Learning_Journey/Pro/FIFO/src/uart_tx_tb.v,,uart_rx_tb,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/FIFO/src/uart_tx.v,1735384468,verilog,,D:/FPGA_Learning_Journey/Pro/FIFO/src/fifo_sum.v,,uart_tx,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/FIFO/src/uart_tx_tb.v,1735384474,verilog,,,,uart_tx_tb,,,,,,,,

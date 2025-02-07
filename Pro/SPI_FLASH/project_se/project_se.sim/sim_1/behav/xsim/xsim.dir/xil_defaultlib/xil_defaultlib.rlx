@@ -1,0 +1,10 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+D:/FPGA_Learning_Journey/Pro/SPI_FLASH/project_se/project_se.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/SPI_FLASH/src/se/flash_se_ctrl.v,1738073144,verilog,,D:/FPGA_Learning_Journey/Pro/SPI_FLASH/src/se/key_filter.v,,flash_se_ctrl,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/SPI_FLASH/src/se/flash_se_ctrl_tb.v,1738066045,verilog,,D:/FPGA_Learning_Journey/Pro/SPI_FLASH/src/se/key_filter.v,,flash_se_ctrl_tb,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/SPI_FLASH/src/se/key_filter.v,1738048123,verilog,,D:/FPGA_Learning_Journey/Pro/SPI_FLASH/src/se/spi_flash_se.v,,key_filter,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/SPI_FLASH/src/se/spi_flash_se.v,1738066349,verilog,,D:/FPGA_Learning_Journey/Pro/SPI_FLASH/src/se/spi_flash_se_tb.v,,spi_flash_se,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/SPI_FLASH/src/se/spi_flash_se_tb.v,1738072332,verilog,,,,spi_flash_se_tb,,,,,,,,

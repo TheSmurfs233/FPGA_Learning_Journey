@@ -1,0 +1,7 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+D:/FPGA_Learning_Journey/Pro/SPI_FLASH/project_be/project_be.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/SPI_FLASH/src/be/flash_be_ctrl.v,1738047063,verilog,,D:/FPGA_Learning_Journey/Pro/SPI_FLASH/src/be/flash_be_ctrl_tb.v,,flash_be_ctrl,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/SPI_FLASH/src/be/flash_be_ctrl_tb.v,1738047098,verilog,,,,flash_be_ctrl_tb,,,,,,,,

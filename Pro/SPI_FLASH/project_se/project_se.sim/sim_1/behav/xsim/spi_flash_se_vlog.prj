@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../src/se/flash_se_ctrl.v" \
+"../../../../../src/se/key_filter.v" \
+"../../../../../src/se/spi_flash_se.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

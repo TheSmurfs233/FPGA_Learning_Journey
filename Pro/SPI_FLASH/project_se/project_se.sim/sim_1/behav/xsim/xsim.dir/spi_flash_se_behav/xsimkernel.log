@@ -1,0 +1,7 @@
+Running: xsim.dir/spi_flash_se_behav/xsimk.exe -simmode gui -wdb spi_flash_se_behav.wdb -simrunnum 0 -socket 52155
+Design successfully loaded
+Design Loading Memory Usage: 8312 KB (Peak: 8312 KB)
+Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 9024 KB (Peak: 9024 KB)
+Simulation CPU Usage: 46 ms

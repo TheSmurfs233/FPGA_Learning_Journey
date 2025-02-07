@@ -300,7 +300,7 @@
   ![image-20250124235814692](asset/VGA3-008.png)
   ![image-20250124235955039](asset/VGA3-009.png)
 
-#### 4.2.2RTL视图
+#### 4.2.2 RTL视图
 
 ![image-20250125000128830](asset/VGA3-010.png)
 ![image-20250125000155311](asset/VGA3-011.png)

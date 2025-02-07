@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Jan 29 01:46:02 2025
+# Process ID: 18956
+# Current directory: D:/FPGA_Learning_Journey/Pro/SPI_FLASH/project_pp
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10540 D:\FPGA_Learning_Journey\Pro\SPI_FLASH\project_pp\project_pp.xpr
+# Log file: D:/FPGA_Learning_Journey/Pro/SPI_FLASH/project_pp/vivado.log
+# Journal file: D:/FPGA_Learning_Journey/Pro/SPI_FLASH/project_pp\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA_Learning_Journey/Pro/SPI_FLASH/project_pp/project_pp.xpr
+update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+connect_hw_server -allow_non_jtag
+connect_hw_server -allow_non_jtag
+connect_hw_server -allow_non_jtag
+connect_hw_server -allow_non_jtag
+connect_hw_server -allow_non_jtag
+connect_hw_server -allow_non_jtag
+connect_hw_server -allow_non_jtag
+connect_hw_server -allow_non_jtag
+connect_hw_server -allow_non_jtag
+connect_hw_server -allow_non_jtag
+connect_hw_server -allow_non_jtag
+connect_hw_server -allow_non_jtag
+connect_hw_server -allow_non_jtag

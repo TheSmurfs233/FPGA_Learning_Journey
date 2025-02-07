@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../project.srcs/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v" \
+"../../../../../src/fifo_sum_ctrl.v" \
+"../../../../../src/uart_rx.v" \
+"../../../../../src/uart_tx.v" \
+"../../../../../src/fifo_sum.v" \
+"../../../../../src/fifo_sum_tb.v" \
+"../../../../../src/uart_rx_tb.v" \
+"../../../../../src/uart_tx_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

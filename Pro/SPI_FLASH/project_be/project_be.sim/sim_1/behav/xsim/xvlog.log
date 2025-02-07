@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/SPI_FLASH/src/be/flash_be_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flash_be_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/SPI_FLASH/src/be/flash_be_ctrl_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flash_be_ctrl_tb

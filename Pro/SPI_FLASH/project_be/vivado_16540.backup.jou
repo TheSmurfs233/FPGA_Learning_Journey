@@ -1,0 +1,76 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Jan 28 14:48:13 2025
+# Process ID: 16540
+# Current directory: D:/FPGA_Learning_Journey/Pro/SPI_FLASH/project_be
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17136 D:\FPGA_Learning_Journey\Pro\SPI_FLASH\project_be\project_be.xpr
+# Log file: D:/FPGA_Learning_Journey/Pro/SPI_FLASH/project_be/vivado.log
+# Journal file: D:/FPGA_Learning_Journey/Pro/SPI_FLASH/project_be\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA_Learning_Journey/Pro/SPI_FLASH/project_be/project_be.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source flash_be_ctrl_tb.tcl
+export_ip_user_files -of_objects  [get_files D:/FPGA_Learning_Journey/Pro/SPI_FLASH/src/flash_be_ctrl.v] -no_script -reset -force -quiet
+remove_files  D:/FPGA_Learning_Journey/Pro/SPI_FLASH/src/flash_be_ctrl.v
+export_ip_user_files -of_objects  [get_files D:/FPGA_Learning_Journey/Pro/SPI_FLASH/src/flash_be_ctrl_tb.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 D:/FPGA_Learning_Journey/Pro/SPI_FLASH/src/flash_be_ctrl_tb.v
+add_files -norecurse D:/FPGA_Learning_Journey/Pro/SPI_FLASH/src/be/flash_be_ctrl.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse D:/FPGA_Learning_Journey/Pro/SPI_FLASH/src/be/flash_be_ctrl_tb.v
+update_compile_order -fileset sim_1
+run 50 us
+update_compile_order -fileset sim_1
+current_wave_config {Untitled 1}
+add_wave {{/flash_be_ctrl_tb/flash_be_ctrl_inst}} 
+restart
+run 50 us
+relaunch_sim
+run 50 us
+add_files -norecurse D:/FPGA_Learning_Journey/Pro/SPI_FLASH/src/be/key_filter.v
+update_compile_order -fileset sources_1
+add_files -norecurse D:/FPGA_Learning_Journey/Pro/SPI_FLASH/src/be/spi_flash_be.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list cs_n]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list key_in]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list mosi]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list sck]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list sys_clk]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list sys_clk]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list sys_rst_n]]
+place_ports sys_clk N18
+place_ports sys_rst_n L16
+place_ports key_in G19
+place_ports cs_n J18
+place_ports mosi G20
+place_ports sck K17
+file mkdir D:/FPGA_Learning_Journey/Pro/SPI_FLASH/project_be/project_be.srcs/constrs_1/new
+close [ open D:/FPGA_Learning_Journey/Pro/SPI_FLASH/project_be/project_be.srcs/constrs_1/new/be.xdc w ]
+add_files -fileset constrs_1 D:/FPGA_Learning_Journey/Pro/SPI_FLASH/project_be/project_be.srcs/constrs_1/new/be.xdc
+set_property target_constrs_file D:/FPGA_Learning_Journey/Pro/SPI_FLASH/project_be/project_be.srcs/constrs_1/new/be.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SPI_FLASH/project_be/project_be.runs/impl_1/spi_flash_be.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SPI_FLASH/project_be/project_be.runs/impl_1/spi_flash_be.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+close_sim

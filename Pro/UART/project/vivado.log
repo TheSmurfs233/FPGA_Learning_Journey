@@ -2,10 +2,10 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sun Dec 29 01:21:30 2024
-# Process ID: 20812
+# Start of session at: Sun Jan 26 01:28:10 2025
+# Process ID: 21724
 # Current directory: D:/FPGA_Learning_Journey/Pro/UART/project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22596 D:\FPGA_Learning_Journey\Pro\UART\project\project.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1404 D:\FPGA_Learning_Journey\Pro\UART\project\project.xpr
 # Log file: D:/FPGA_Learning_Journey/Pro/UART/project/vivado.log
 # Journal file: D:/FPGA_Learning_Journey/Pro/UART/project\vivado.jou
 #-----------------------------------------------------------
@@ -16,8 +16,16 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.2/data/ip'.
-reset_project
 update_compile_order -fileset sources_1
-reset_project
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299847714
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
 exit
-INFO: [Common 17-206] Exiting Vivado at Sun Dec 29 01:25:05 2024...
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 26 01:30:24 2025...
