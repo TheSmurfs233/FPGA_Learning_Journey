@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../project.srcs/sources_1/ip/clk_wiz_0" \
+"../../../../project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
+"../../../../project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" \
+"../../../../../src/clk_gen.v" \
+"../../../../../src/encode.v" \
+"../../../../../src/hdmi_colorbar.v" \
+"../../../../../src/hdmi_ctrl.v" \
+"../../../../../src/par2ser.v" \
+"../../../../../src/vga_image_gen.v" \
+"../../../../../src/vga_timing_ctrl.v" \
+"../../../../../src/hdmi_colorbar_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,1677 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Feb  9 19:00:22 2025
+# Process ID: 19288
+# Current directory: D:/FPGA_Learning_Journey/Pro/HDMI____/project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9008 D:\FPGA_Learning_Journey\Pro\HDMI____\project\project.xpr
+# Log file: D:/FPGA_Learning_Journey/Pro/HDMI____/project/vivado.log
+# Journal file: D:/FPGA_Learning_Journey/Pro/HDMI____/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 898.633 ; gain = 187.574
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_wiz_0 -dir d:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip
+set_property -dict [list CONFIG.PRIMITIVE {PLL} CONFIG.PRIM_IN_FREQ {50} CONFIG.CLKOUT2_USED {true} CONFIG.PRIMARY_PORT {sys_clk} CONFIG.CLK_OUT1_PORT {c0_1x} CONFIG.CLK_OUT2_PORT {c1_5x} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {25} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {125} CONFIG.USE_POWER_DOWN {false} CONFIG.RESET_TYPE {ACTIVE_LOW} CONFIG.CLKIN1_JITTER_PS {200.0} CONFIG.CLKOUT1_DRIVES {BUFG} CONFIG.CLKOUT2_DRIVES {BUFG} CONFIG.CLKOUT3_DRIVES {BUFG} CONFIG.CLKOUT4_DRIVES {BUFG} CONFIG.CLKOUT5_DRIVES {BUFG} CONFIG.CLKOUT6_DRIVES {BUFG} CONFIG.CLKOUT7_DRIVES {BUFG} CONFIG.MMCM_DIVCLK_DIVIDE {2} CONFIG.MMCM_BANDWIDTH {OPTIMIZED} CONFIG.MMCM_CLKFBOUT_MULT_F {35} CONFIG.MMCM_CLKIN1_PERIOD {20.000} CONFIG.MMCM_COMPENSATION {ZHOLD} CONFIG.MMCM_CLKOUT0_DIVIDE_F {35} CONFIG.MMCM_CLKOUT1_DIVIDE {7} CONFIG.NUM_OUT_CLKS {2} CONFIG.RESET_PORT {resetn} CONFIG.CLKOUT1_JITTER {364.259} CONFIG.CLKOUT1_PHASE_ERROR {254.101} CONFIG.CLKOUT2_JITTER {238.699} CONFIG.CLKOUT2_PHASE_ERROR {254.101}] [get_ips clk_wiz_0]
+generate_target {instantiation_template} [get_files d:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+update_compile_order -fileset sources_1
+generate_target all [get_files  d:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files d:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+launch_runs -jobs 12 clk_wiz_0_synth_1
+[Sun Feb  9 19:12:36 2025] Launched clk_wiz_0_synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.runs/clk_wiz_0_synth_1/runme.log
+export_simulation -of_objects [get_files d:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.ip_user_files -ipstatic_source_dir D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.cache/compile_simlib/modelsim} {questa=D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.cache/compile_simlib/questa} {riviera=D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.cache/compile_simlib/riviera} {activehdl=D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+add_files -norecurse D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'encode_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj encode_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xelab -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot encode_tb_behav xil_defaultlib.encode_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot encode_tb_behav xil_defaultlib.encode_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.encode
+Compiling module xil_defaultlib.encode_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot encode_tb_behav
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim/xsim.dir/encode_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Feb  9 23:43:02 2025...
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "encode_tb_behav -key {Behavioral:sim_1:Functional:encode_tb} -tclbatch {encode_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source encode_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+[OK] Control token verified: 1101010100
+[ERROR] Control token mismatch! Got 1101010100, Expected 0010101011
+$finish called at time : 100 ns : File "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" Line 104
+run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:47 . Memory (MB): peak = 1155.531 ; gain = 0.727
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:49 . Memory (MB): peak = 1155.531 ; gain = 0.969
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'encode_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:55 . Memory (MB): peak = 1155.531 ; gain = 5.488
+run 50 ms
+[ERROR] Control token mismatch! Got 0010101011, Expected 0101010100
+$finish called at time : 140 ns : File "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" Line 104
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1159.859 ; gain = 1.801
+run 50 ms
+[ERROR] Control token mismatch! Got 0101010100, Expected 1010101011
+$finish called at time : 180 ns : File "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" Line 104
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1164.582 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'encode_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj encode_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xelab -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot encode_tb_behav xil_defaultlib.encode_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot encode_tb_behav xil_defaultlib.encode_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+[OK] Control token verified: 1101010100
+[ERROR] Control token mismatch! Got 1101010100, Expected 0010101011
+$finish called at time : 100 ns : File "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" Line 104
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:01:02 . Memory (MB): peak = 1164.582 ; gain = 0.000
+relaunch_xsim_kernel: Time (s): cpu = 00:00:02 ; elapsed = 00:01:04 . Memory (MB): peak = 1164.582 ; gain = 0.000
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:01:09 . Memory (MB): peak = 1164.582 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'encode_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj encode_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xelab -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot encode_tb_behav xil_defaultlib.encode_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot encode_tb_behav xil_defaultlib.encode_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2989] 'check_ctrl' is not declared [D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v:47]
+ERROR: [VRFC 10-2989] 'check_ctrl' is not declared [D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v:50]
+ERROR: [VRFC 10-2989] 'check_ctrl' is not declared [D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v:53]
+ERROR: [VRFC 10-2989] 'check_ctrl' is not declared [D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v:56]
+ERROR: [VRFC 10-2989] 'check_data' is not declared [D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v:66]
+ERROR: [VRFC 10-2989] 'check_data' is not declared [D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v:71]
+ERROR: [VRFC 10-2989] 'check_reset' is not declared [D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v:88]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+launch_runs synth_1 -jobs 12
+[Sun Feb  9 23:50:27 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'encode_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj encode_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xelab -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot encode_tb_behav xil_defaultlib.encode_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot encode_tb_behav xil_defaultlib.encode_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.encode
+Compiling module xil_defaultlib.encode_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot encode_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "encode_tb_behav -key {Behavioral:sim_1:Functional:encode_tb} -tclbatch {encode_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source encode_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+[OK] Control token verified: 1101010100
+[ERROR] Control token mismatch! Got 1101010100, Expected 0010101011
+$finish called at time : 100 ns : File "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" Line 104
+run: Time (s): cpu = 00:00:02 ; elapsed = 00:00:50 . Memory (MB): peak = 1181.320 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:52 . Memory (MB): peak = 1181.320 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'encode_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:54 . Memory (MB): peak = 1181.320 ; gain = 0.000
+export_ip_user_files -of_objects  [get_files D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode.v] -no_script -reset -force -quiet
+remove_files  D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode.v
+add_files -norecurse D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode.v
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'encode_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj encode_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xelab -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot encode_tb_behav xil_defaultlib.encode_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot encode_tb_behav xil_defaultlib.encode_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "encode_tb_behav -key {Behavioral:sim_1:Functional:encode_tb} -tclbatch {encode_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source encode_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+[OK] Control token verified: 1101010100
+[ERROR] Control token mismatch! Got 1101010100, Expected 0010101011
+$finish called at time : 100 ns : File "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" Line 104
+xsim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1209.973 ; gain = 8.496
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'encode_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1209.973 ; gain = 28.652
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'encode_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj encode_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xelab -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot encode_tb_behav xil_defaultlib.encode_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot encode_tb_behav xil_defaultlib.encode_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.encode
+Compiling module xil_defaultlib.encode_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot encode_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+run 50 ms
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'encode_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj encode_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_tb
+ERROR: [VRFC 10-2939] 'string' is an unknown type [D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v:117]
+ERROR: [VRFC 10-2865] module 'encode_tb' ignored due to previous errors [D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v:3]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'encode_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj encode_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xelab -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot encode_tb_behav xil_defaultlib.encode_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot encode_tb_behav xil_defaultlib.encode_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.encode
+Compiling module xil_defaultlib.encode_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot encode_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "encode_tb_behav -key {Behavioral:sim_1:Functional:encode_tb} -tclbatch {encode_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source encode_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+=== 开始控制令牌测试 ===
+[OK] 控制信号 00 验证通过 → 1101010100
+[ERROR] 控制信号 01 错误，输出：1101010100，预期：0010101011
+$finish called at time : 60 ps : File "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" Line 97
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'encode_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run 50 ms
+[ERROR] 控制信号 10 错误，输出：0010101011，预期：0101010100
+$finish called at time : 80 ps : File "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" Line 97
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'encode_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj encode_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xelab -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot encode_tb_behav xil_defaultlib.encode_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot encode_tb_behav xil_defaultlib.encode_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.encode
+Compiling module xil_defaultlib.encode_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot encode_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+
+=== Control Token Test ===
+[PASS] Ctrl 00 → 1101010100
+[ERROR] Ctrl 01: OUT=1101010100, EXP=0010101011
+$finish called at time : 240 ns : File "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" Line 90
+run 50 ms
+[ERROR] Ctrl 10: OUT=0010101011, EXP=0101010100
+$finish called at time : 320 ns : File "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" Line 90
+run 50 ms
+[ERROR] Ctrl 11: OUT=0101010100, EXP=1010101011
+$finish called at time : 400 ns : File "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" Line 90
+run 50 ms
+
+=== Data Encode Test ===
+[ERROR] Data 0x00: OUT=0100000000, EXP=1101010100
+$finish called at time : 520 ns : File "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" Line 106
+run all
+[ERROR] Data 0xff: OUT=0011111111, EXP=0010101011
+$finish called at time : 640 ns : File "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" Line 106
+run all
+[ERROR] Data 0xaa: OUT=1000110011, EXP=0100110011
+$finish called at time : 760 ns : File "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" Line 106
+run all
+
+=== Reset Test ===
+
+=== ALL TEST PASSED ===
+$finish called at time : 1320 ns : File "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" Line 74
+run all
+run: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1306.289 ; gain = 0.000
+run 50 ms
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'encode_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj encode_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xelab -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot encode_tb_behav xil_defaultlib.encode_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot encode_tb_behav xil_defaultlib.encode_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+
+=== Control Token Test ===
+[PASS] Ctrl 00 → 1101010100
+[ERROR] Ctrl 01: OUT=1101010100, EXP=0010101011
+$finish called at time : 240 ns : File "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" Line 90
+run all
+[ERROR] Ctrl 10: OUT=0010101011, EXP=0101010100
+$finish called at time : 320 ns : File "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" Line 90
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'encode_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj encode_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xelab -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot encode_tb_behav xil_defaultlib.encode_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot encode_tb_behav xil_defaultlib.encode_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode.v" Line 1. Module encode doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.encode
+Compiling module xil_defaultlib.encode_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot encode_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+
+=== Control Token Test ===
+[PASS] Ctrl 00 → 1101010100
+[ERROR] Ctrl 01: OUT=1101010100, EXP=0010101011
+$finish called at time : 240 ns : File "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" Line 90
+run all
+[ERROR] Ctrl 10: OUT=0010101011, EXP=0101010100
+$finish called at time : 320 ns : File "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" Line 90
+run all
+[ERROR] Ctrl 11: OUT=0101010100, EXP=1010101011
+$finish called at time : 400 ns : File "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" Line 90
+run all
+
+=== Data Encode Test ===
+[ERROR] Data 0x00: OUT=0100000000, EXP=1101010100
+$finish called at time : 520 ns : File "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" Line 106
+run all
+[ERROR] Data 0xff: OUT=0011111111, EXP=0010101011
+$finish called at time : 640 ns : File "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" Line 106
+run all
+[ERROR] Data 0xaa: OUT=0101100110, EXP=0100110011
+$finish called at time : 760 ns : File "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" Line 106
+run all
+
+=== Reset Test ===
+
+=== ALL TEST PASSED ===
+$finish called at time : 1320 ns : File "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode_tb.v" Line 74
+run all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+add_files -norecurse D:/FPGA_Learning_Journey/Pro/HDMI____/src/par2ser.v
+update_compile_order -fileset sources_1
+set_property top par2ser [current_fileset]
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+[Mon Feb 10 01:38:12 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.runs/synth_1/runme.log
+add_files -norecurse D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_ctrl.v.v
+update_compile_order -fileset sources_1
+set_property top hdmi_ctrl [current_fileset]
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_ctrl.v.v] -no_script -reset -force -quiet
+remove_files  D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_ctrl.v.v
+add_files -norecurse D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_ctrl.v
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+[Mon Feb 10 01:43:41 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+[Mon Feb 10 01:47:13 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.runs/synth_1/runme.log
+add_files -norecurse {D:/FPGA_Learning_Journey/Pro/HDMI____/src/vga_timing_ctrl.v D:/FPGA_Learning_Journey/Pro/HDMI____/src/clk_gen.v D:/FPGA_Learning_Journey/Pro/HDMI____/src/vga_image_gen.v}
+update_compile_order -fileset sources_1
+add_files -norecurse D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_colorbar.v
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+[Mon Feb 10 02:31:30 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.runs/synth_1/runme.log
+set_property top hdmi_colorbar [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+[Mon Feb 10 02:32:32 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.runs/synth_1/runme.log
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_colorbar_tb.v
+update_compile_order -fileset sim_1
+set_property top hdmi_colorbar_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'hdmi_colorbar_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj hdmi_colorbar_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/clk_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_colorbar.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_colorbar
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/par2ser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module par2ser
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/vga_image_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_image_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/vga_timing_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_timing_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_colorbar_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_colorbar_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xelab -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_colorbar_tb_behav xil_defaultlib.hdmi_colorbar_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_colorbar_tb_behav xil_defaultlib.hdmi_colorbar_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 24 differs from formal bit length 16 for port 'pix_data' [D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_colorbar.v:49]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=35,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.clk_gen
+Compiling module xil_defaultlib.vga_image_gen
+Compiling module xil_defaultlib.vga_timing_ctrl
+Compiling module xil_defaultlib.encode
+Compiling module unisims_ver.ODDR(DDR_CLK_EDGE="SAME_EDGE")
+Compiling module unisims_ver.OBUFDS(IOSTANDARD="TMDS_33")
+Compiling module xil_defaultlib.par2ser
+Compiling module xil_defaultlib.hdmi_ctrl
+Compiling module xil_defaultlib.hdmi_colorbar
+Compiling module xil_defaultlib.hdmi_colorbar_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot hdmi_colorbar_tb_behav
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim/xsim.dir/hdmi_colorbar_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Feb 10 02:39:17 2025...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "hdmi_colorbar_tb_behav -key {Behavioral:sim_1:Functional:hdmi_colorbar_tb} -tclbatch {hdmi_colorbar_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source hdmi_colorbar_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'hdmi_colorbar_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1495.117 ; gain = 14.453
+run 50 ms
+run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:54 . Memory (MB): peak = 1495.117 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'hdmi_colorbar_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj hdmi_colorbar_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_colorbar.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_colorbar
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/par2ser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module par2ser
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/vga_image_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_image_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/vga_timing_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_timing_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_colorbar_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_colorbar_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xelab -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_colorbar_tb_behav xil_defaultlib.hdmi_colorbar_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_colorbar_tb_behav xil_defaultlib.hdmi_colorbar_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 24 differs from formal bit length 16 for port 'pix_data' [D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_colorbar.v:49]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "D:/FPGA_Learning_Journey/Pro/HDMI____/src/clk_gen.v" Line 1. Module clk_gen has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" Line 69. Module clk_wiz_0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" Line 69. Module clk_wiz_0_clk_wiz has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2019.2/continuous/2019_11_06_2708876/data/verilog/src/unisims/IBUF.v" Line 29. Module IBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2019.2/continuous/2019_11_06_2708876/data/verilog/src/unisims/PLLE2_ADV.v" Line 49. Module PLLE2_ADV(CLKFBOUT_MULT=35,CLKIN1_PERIOD=20.0,CLKOUT0_DIVIDE=35,CLKOUT1_DIVIDE=7,DIVCLK_DIVIDE=2) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2019.2/continuous/2019_11_06_2708876/data/verilog/src/unisims/BUFG.v" Line 27. Module BUFG has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2019.2/continuous/2019_11_06_2708876/data/verilog/src/unisims/BUFG.v" Line 27. Module BUFG has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2019.2/continuous/2019_11_06_2708876/data/verilog/src/unisims/BUFG.v" Line 27. Module BUFG has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode.v" Line 3. Module encode has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode.v" Line 3. Module encode has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode.v" Line 3. Module encode has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2019.2/continuous/2019_11_06_2708876/data/verilog/src/unisims/ODDR.v" Line 34. Module ODDR(DDR_CLK_EDGE="SAME_EDGE") has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2019.2/continuous/2019_11_06_2708876/data/verilog/src/unisims/OBUFDS.v" Line 29. Module OBUFDS(IOSTANDARD="TMDS_33") has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2019.2/continuous/2019_11_06_2708876/data/verilog/src/unisims/ODDR.v" Line 34. Module ODDR(DDR_CLK_EDGE="SAME_EDGE") has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2019.2/continuous/2019_11_06_2708876/data/verilog/src/unisims/OBUFDS.v" Line 29. Module OBUFDS(IOSTANDARD="TMDS_33") has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2019.2/continuous/2019_11_06_2708876/data/verilog/src/unisims/ODDR.v" Line 34. Module ODDR(DDR_CLK_EDGE="SAME_EDGE") has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2019.2/continuous/2019_11_06_2708876/data/verilog/src/unisims/OBUFDS.v" Line 29. Module OBUFDS(IOSTANDARD="TMDS_33") has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2019.2/continuous/2019_11_06_2708876/data/verilog/src/unisims/ODDR.v" Line 34. Module ODDR(DDR_CLK_EDGE="SAME_EDGE") has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2019.2/continuous/2019_11_06_2708876/data/verilog/src/unisims/OBUFDS.v" Line 29. Module OBUFDS(IOSTANDARD="TMDS_33") has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=35,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.clk_gen
+Compiling module xil_defaultlib.vga_image_gen
+Compiling module xil_defaultlib.vga_timing_ctrl
+Compiling module xil_defaultlib.encode
+Compiling module unisims_ver.ODDR(DDR_CLK_EDGE="SAME_EDGE")
+Compiling module unisims_ver.OBUFDS(IOSTANDARD="TMDS_33")
+Compiling module xil_defaultlib.par2ser
+Compiling module xil_defaultlib.hdmi_ctrl
+Compiling module xil_defaultlib.hdmi_colorbar
+Compiling module xil_defaultlib.hdmi_colorbar_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot hdmi_colorbar_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 1495.117 ; gain = 0.000
+run 50 ms
+run 50 ms
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'hdmi_colorbar_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj hdmi_colorbar_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xelab -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_colorbar_tb_behav xil_defaultlib.hdmi_colorbar_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_colorbar_tb_behav xil_defaultlib.hdmi_colorbar_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 24 differs from formal bit length 16 for port 'pix_data' [D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_colorbar.v:49]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+run 50 ms
+run: Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 1495.117 ; gain = 0.000
+current_wave_config {Untitled 5}
+Untitled 5
+add_wave {{/hdmi_colorbar_tb/sys_clk}} {{/hdmi_colorbar_tb/sys_rst_n}} {{/hdmi_colorbar_tb/ddc_scl}} {{/hdmi_colorbar_tb/ddc_sda}} {{/hdmi_colorbar_tb/hdmi_clk_p}} {{/hdmi_colorbar_tb/hdmi_clk_n}} {{/hdmi_colorbar_tb/hdmi_r_p}} {{/hdmi_colorbar_tb/hdmi_r_n}} {{/hdmi_colorbar_tb/hdmi_g_p}} {{/hdmi_colorbar_tb/hdmi_g_n}} {{/hdmi_colorbar_tb/hdmi_b_p}} {{/hdmi_colorbar_tb/hdmi_b_n}} 
+run all
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 50 ms
+current_wave_config {Untitled 5}
+Untitled 5
+add_wave {{/hdmi_colorbar_tb/hdmi_colorbar_inst/hdmi_ctrl_inst/encode_inst1}} 
+current_wave_config {Untitled 5}
+Untitled 5
+add_wave {{/hdmi_colorbar_tb/hdmi_colorbar_inst/hdmi_ctrl_inst/par2ser_inst2}} 
+current_wave_config {Untitled 5}
+Untitled 5
+add_wave {{/hdmi_colorbar_tb/hdmi_colorbar_inst/hdmi_ctrl_inst/encode_inst1}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 50 ms
+run: Time (s): cpu = 00:00:13 ; elapsed = 00:01:21 . Memory (MB): peak = 1495.117 ; gain = 0.000
+current_wave_config {Untitled 5}
+Untitled 5
+add_wave {{/hdmi_colorbar_tb/hdmi_colorbar_inst}} 
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'hdmi_colorbar_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj hdmi_colorbar_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xelab -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_colorbar_tb_behav xil_defaultlib.hdmi_colorbar_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_colorbar_tb_behav xil_defaultlib.hdmi_colorbar_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 24 differs from formal bit length 16 for port 'pix_data' [D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_colorbar.v:49]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+run all
+run all
+run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:30 . Memory (MB): peak = 1495.117 ; gain = 0.000
+run all
+run: Time (s): cpu = 00:00:35 ; elapsed = 00:02:32 . Memory (MB): peak = 1495.117 ; gain = 0.000
+current_wave_config {Untitled 5}
+Untitled 5
+add_wave {{/hdmi_colorbar_tb/hdmi_colorbar_inst/vga_image_gen_inst}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:53 . Memory (MB): peak = 1495.117 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'hdmi_colorbar_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj hdmi_colorbar_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/clk_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_colorbar.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_colorbar
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/par2ser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module par2ser
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/vga_image_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_image_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/vga_timing_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_timing_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_colorbar_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_colorbar_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xelab -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_colorbar_tb_behav xil_defaultlib.hdmi_colorbar_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_colorbar_tb_behav xil_defaultlib.hdmi_colorbar_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=35,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.clk_gen
+Compiling module xil_defaultlib.vga_image_gen
+Compiling module xil_defaultlib.vga_timing_ctrl
+Compiling module xil_defaultlib.encode
+Compiling module unisims_ver.ODDR(DDR_CLK_EDGE="SAME_EDGE")
+Compiling module unisims_ver.OBUFDS(IOSTANDARD="TMDS_33")
+Compiling module xil_defaultlib.par2ser
+Compiling module xil_defaultlib.hdmi_ctrl
+Compiling module xil_defaultlib.hdmi_colorbar
+Compiling module xil_defaultlib.hdmi_colorbar_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot hdmi_colorbar_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+Warning : input CLKIN1 period and attribute CLKIN1_PERIOD on PLLE2_ADV instance hdmi_colorbar_tb.hdmi_colorbar_inst.clk_gen_inst.instance_name.inst.plle2_adv_inst are not same.
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1495.117 ; gain = 0.000
+run all
+run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:45 . Memory (MB): peak = 1495.117 ; gain = 0.000
+current_wave_config {Untitled 5}
+Untitled 5
+add_wave {{/hdmi_colorbar_tb/hdmi_colorbar_inst/clk_gen_inst}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+Warning : input CLKIN1 period and attribute CLKIN1_PERIOD on PLLE2_ADV instance hdmi_colorbar_tb.hdmi_colorbar_inst.clk_gen_inst.instance_name.inst.plle2_adv_inst are not same.
+run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:30 . Memory (MB): peak = 1495.117 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'hdmi_colorbar_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj hdmi_colorbar_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/clk_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_colorbar.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_colorbar
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/par2ser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module par2ser
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/vga_image_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_image_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/vga_timing_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_timing_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_colorbar_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_colorbar_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xelab -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_colorbar_tb_behav xil_defaultlib.hdmi_colorbar_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_colorbar_tb_behav xil_defaultlib.hdmi_colorbar_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=35,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.clk_gen
+Compiling module xil_defaultlib.vga_image_gen
+Compiling module xil_defaultlib.vga_timing_ctrl
+Compiling module xil_defaultlib.encode
+Compiling module unisims_ver.ODDR(DDR_CLK_EDGE="SAME_EDGE")
+Compiling module unisims_ver.OBUFDS(IOSTANDARD="TMDS_33")
+Compiling module xil_defaultlib.par2ser
+Compiling module xil_defaultlib.hdmi_ctrl
+Compiling module xil_defaultlib.hdmi_colorbar
+Compiling module xil_defaultlib.hdmi_colorbar_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot hdmi_colorbar_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+Warning : input CLKIN1 period and attribute CLKIN1_PERIOD on PLLE2_ADV instance hdmi_colorbar_tb.hdmi_colorbar_inst.clk_gen_inst.clk_wiz_0_inst.inst.plle2_adv_inst are not same.
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1495.117 ; gain = 0.000
+run 50 ms
+run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:33 . Memory (MB): peak = 1495.117 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'hdmi_colorbar_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj hdmi_colorbar_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/clk_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_colorbar.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_colorbar
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/par2ser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module par2ser
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/vga_image_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_image_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/vga_timing_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_timing_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_colorbar_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_colorbar_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xelab -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_colorbar_tb_behav xil_defaultlib.hdmi_colorbar_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_colorbar_tb_behav xil_defaultlib.hdmi_colorbar_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=35,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.clk_gen
+Compiling module xil_defaultlib.vga_image_gen
+Compiling module xil_defaultlib.vga_timing_ctrl
+Compiling module xil_defaultlib.encode
+Compiling module unisims_ver.ODDR(DDR_CLK_EDGE="SAME_EDGE")
+Compiling module unisims_ver.OBUFDS(IOSTANDARD="TMDS_33")
+Compiling module xil_defaultlib.par2ser
+Compiling module xil_defaultlib.hdmi_ctrl
+Compiling module xil_defaultlib.hdmi_colorbar
+Compiling module xil_defaultlib.hdmi_colorbar_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot hdmi_colorbar_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "hdmi_colorbar_tb_behav -key {Behavioral:sim_1:Functional:hdmi_colorbar_tb} -tclbatch {hdmi_colorbar_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source hdmi_colorbar_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Warning : input CLKIN1 period and attribute CLKIN1_PERIOD on PLLE2_ADV instance hdmi_colorbar_tb.hdmi_colorbar_inst.clk_gen_inst.clk_wiz_0_inst.inst.plle2_adv_inst are not same.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'hdmi_colorbar_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1495.117 ; gain = 0.000
+current_wave_config {Untitled 6}
+Untitled 6
+add_wave {{/hdmi_colorbar_tb/hdmi_colorbar_inst/clk_gen_inst}} 
+run all
+run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 1495.117 ; gain = 0.000
+current_wave_config {Untitled 6}
+Untitled 6
+add_wave {{/hdmi_colorbar_tb/hdmi_colorbar_inst/clk_gen_inst/clk_wiz_0_inst/inst}} 
+current_wave_config {Untitled 6}
+Untitled 6
+add_wave {{/hdmi_colorbar_tb/hdmi_colorbar_inst/clk_gen_inst/clk_wiz_0_inst}} 
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'hdmi_colorbar_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj hdmi_colorbar_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/clk_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_colorbar.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_colorbar
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/par2ser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module par2ser
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/vga_image_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_image_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/vga_timing_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_timing_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_colorbar_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_colorbar_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xelab -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_colorbar_tb_behav xil_defaultlib.hdmi_colorbar_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_colorbar_tb_behav xil_defaultlib.hdmi_colorbar_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=35,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.clk_gen
+Compiling module xil_defaultlib.vga_image_gen
+Compiling module xil_defaultlib.vga_timing_ctrl
+Compiling module xil_defaultlib.encode
+Compiling module unisims_ver.ODDR(DDR_CLK_EDGE="SAME_EDGE")
+Compiling module unisims_ver.OBUFDS(IOSTANDARD="TMDS_33")
+Compiling module xil_defaultlib.par2ser
+Compiling module xil_defaultlib.hdmi_ctrl
+Compiling module xil_defaultlib.hdmi_colorbar
+Compiling module xil_defaultlib.hdmi_colorbar_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot hdmi_colorbar_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+Warning : input CLKIN1 period and attribute CLKIN1_PERIOD on PLLE2_ADV instance hdmi_colorbar_tb.hdmi_colorbar_inst.clk_gen_inst.clk_wiz_0_inst.inst.plle2_adv_inst are not same.
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1495.117 ; gain = 0.000
+run all
+run: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1495.117 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Mon Feb 10 03:00:10 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'hdmi_colorbar_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj hdmi_colorbar_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xelab -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_colorbar_tb_behav xil_defaultlib.hdmi_colorbar_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_colorbar_tb_behav xil_defaultlib.hdmi_colorbar_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "hdmi_colorbar_tb_behav -key {Behavioral:sim_1:Functional:hdmi_colorbar_tb} -tclbatch {hdmi_colorbar_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source hdmi_colorbar_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Warning : input CLKIN1 period and attribute CLKIN1_PERIOD on PLLE2_ADV instance hdmi_colorbar_tb.hdmi_colorbar_inst.clk_gen_inst.clk_wiz_0_inst.inst.plle2_adv_inst are not same.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'hdmi_colorbar_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+current_wave_config {Untitled 7}
+Untitled 7
+add_wave {{/hdmi_colorbar_tb/hdmi_colorbar_inst/clk_gen_inst}} 
+run all
+run 50 ms
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'hdmi_colorbar_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj hdmi_colorbar_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/clk_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_colorbar.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_colorbar
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/par2ser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module par2ser
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/vga_image_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_image_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/vga_timing_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_timing_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_colorbar_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_colorbar_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xelab -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_colorbar_tb_behav xil_defaultlib.hdmi_colorbar_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_colorbar_tb_behav xil_defaultlib.hdmi_colorbar_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=35,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.clk_gen
+Compiling module xil_defaultlib.vga_image_gen
+Compiling module xil_defaultlib.vga_timing_ctrl
+Compiling module xil_defaultlib.encode
+Compiling module unisims_ver.ODDR(DDR_CLK_EDGE="SAME_EDGE")
+Compiling module unisims_ver.OBUFDS(IOSTANDARD="TMDS_33")
+Compiling module xil_defaultlib.par2ser
+Compiling module xil_defaultlib.hdmi_ctrl
+Compiling module xil_defaultlib.hdmi_colorbar
+Compiling module xil_defaultlib.hdmi_colorbar_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot hdmi_colorbar_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+Warning : input CLKIN1 period and attribute CLKIN1_PERIOD on PLLE2_ADV instance hdmi_colorbar_tb.hdmi_colorbar_inst.clk_gen_inst.clk_wiz_0_inst.inst.plle2_adv_inst are not same.
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1495.117 ; gain = 0.000
+run all
+run: Time (s): cpu = 00:00:16 ; elapsed = 00:00:56 . Memory (MB): peak = 1495.117 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+current_wave_config {Untitled 7}
+Untitled 7
+add_wave {{/hdmi_colorbar_tb/hdmi_colorbar_inst}} 
+run all
+Warning : input CLKIN1 period and attribute CLKIN1_PERIOD on PLLE2_ADV instance hdmi_colorbar_tb.hdmi_colorbar_inst.clk_gen_inst.clk_wiz_0_inst.inst.plle2_adv_inst are not same.
+run: Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 1495.117 ; gain = 0.000
+set_property -dict [list CONFIG.USE_LOCKED {true} CONFIG.USE_RESET {true}] [get_ips clk_wiz_0]
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {50} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {20} CONFIG.MMCM_CLKIN2_PERIOD {10.0} CONFIG.MMCM_CLKOUT0_DIVIDE_F {20} CONFIG.MMCM_CLKOUT1_DIVIDE {8} CONFIG.CLKOUT1_JITTER {192.113} CONFIG.CLKOUT1_PHASE_ERROR {164.985} CONFIG.CLKOUT2_JITTER {154.207} CONFIG.CLKOUT2_PHASE_ERROR {164.985}] [get_ips clk_wiz_0]
+generate_target all [get_files  d:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files d:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+reset_run clk_wiz_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.runs/clk_wiz_0_synth_1
+
+launch_runs -jobs 12 clk_wiz_0_synth_1
+[Mon Feb 10 03:04:33 2025] Launched clk_wiz_0_synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.runs/clk_wiz_0_synth_1/runme.log
+export_simulation -of_objects [get_files d:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.ip_user_files -ipstatic_source_dir D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.cache/compile_simlib/modelsim} {questa=D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.cache/compile_simlib/questa} {riviera=D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.cache/compile_simlib/riviera} {activehdl=D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+current_wave_config {Untitled 7}
+Untitled 7
+add_wave {{/hdmi_colorbar_tb/hdmi_colorbar_inst/clk_gen_inst}} 
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'hdmi_colorbar_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj hdmi_colorbar_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/clk_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_colorbar.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_colorbar
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/par2ser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module par2ser
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/vga_image_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_image_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/vga_timing_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_timing_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_colorbar_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_colorbar_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xelab -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_colorbar_tb_behav xil_defaultlib.hdmi_colorbar_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_colorbar_tb_behav xil_defaultlib.hdmi_colorbar_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=20,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.clk_gen
+Compiling module xil_defaultlib.vga_image_gen
+Compiling module xil_defaultlib.vga_timing_ctrl
+Compiling module xil_defaultlib.encode
+Compiling module unisims_ver.ODDR(DDR_CLK_EDGE="SAME_EDGE")
+Compiling module unisims_ver.OBUFDS(IOSTANDARD="TMDS_33")
+Compiling module xil_defaultlib.par2ser
+Compiling module xil_defaultlib.hdmi_ctrl
+Compiling module xil_defaultlib.hdmi_colorbar
+Compiling module xil_defaultlib.hdmi_colorbar_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot hdmi_colorbar_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+Warning : input CLKIN1 period and attribute CLKIN1_PERIOD on PLLE2_ADV instance hdmi_colorbar_tb.hdmi_colorbar_inst.clk_gen_inst.clk_wiz_0_inst.inst.plle2_adv_inst are not same.
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1532.902 ; gain = 0.000
+run all
+run: Time (s): cpu = 00:00:16 ; elapsed = 00:00:40 . Memory (MB): peak = 1532.902 ; gain = 0.000
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {25} CONFIG.MMCM_DIVCLK_DIVIDE {2} CONFIG.MMCM_CLKFBOUT_MULT_F {35} CONFIG.MMCM_CLKIN2_PERIOD {10.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {35} CONFIG.MMCM_CLKOUT1_DIVIDE {7} CONFIG.CLKOUT1_JITTER {364.259} CONFIG.CLKOUT1_PHASE_ERROR {254.101} CONFIG.CLKOUT2_JITTER {238.699} CONFIG.CLKOUT2_PHASE_ERROR {254.101}] [get_ips clk_wiz_0]
+generate_target all [get_files  d:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP clk_wiz_0, cache-ID = cba237d173344fe6; cache size = 0.120 MB.
+catch { [ delete_ip_run [get_ips -all clk_wiz_0] ] }
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.runs/clk_wiz_0_synth_1
+
+INFO: [Project 1-386] Moving file 'd:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci' from fileset 'clk_wiz_0' to fileset 'sources_1'.
+export_ip_user_files -of_objects [get_files d:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'d:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci'
+export_simulation -of_objects [get_files d:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.ip_user_files -ipstatic_source_dir D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.cache/compile_simlib/modelsim} {questa=D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.cache/compile_simlib/questa} {riviera=D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.cache/compile_simlib/riviera} {activehdl=D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'hdmi_colorbar_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj hdmi_colorbar_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/clk_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/encode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module encode
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_colorbar.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_colorbar
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/par2ser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module par2ser
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/vga_image_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_image_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/vga_timing_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_timing_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/HDMI____/src/hdmi_colorbar_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_colorbar_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/HDMI____/project/project.sim/sim_1/behav/xsim'
+"xelab -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_colorbar_tb_behav xil_defaultlib.hdmi_colorbar_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 1ed8f035426f406684f62cad8ff36a49 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_colorbar_tb_behav xil_defaultlib.hdmi_colorbar_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=35,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.clk_gen
+Compiling module xil_defaultlib.vga_image_gen
+Compiling module xil_defaultlib.vga_timing_ctrl
+Compiling module xil_defaultlib.encode
+Compiling module unisims_ver.ODDR(DDR_CLK_EDGE="SAME_EDGE")
+Compiling module unisims_ver.OBUFDS(IOSTANDARD="TMDS_33")
+Compiling module xil_defaultlib.par2ser
+Compiling module xil_defaultlib.hdmi_ctrl
+Compiling module xil_defaultlib.hdmi_colorbar
+Compiling module xil_defaultlib.hdmi_colorbar_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot hdmi_colorbar_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1532.902 ; gain = 0.000
+update_compile_order -fileset sources_1
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 1532.902 ; gain = 0.000
+current_wave_config {Untitled 7}
+Untitled 7
+add_wave {{/hdmi_colorbar_tb/hdmi_colorbar_inst}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1532.902 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+run: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1532.902 ; gain = 0.000
+current_wave_config {Untitled 7}
+Untitled 7
+add_wave {{/hdmi_colorbar_tb/hdmi_colorbar_inst/hdmi_ctrl_inst/encode_inst1}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:24 . Memory (MB): peak = 1532.902 ; gain = 0.000
+current_wave_config {Untitled 7}
+Untitled 7
+add_wave {{/hdmi_colorbar_tb/hdmi_colorbar_inst/hdmi_ctrl_inst/par2ser_inst2}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 50 ms
+run: Time (s): cpu = 00:00:31 ; elapsed = 00:01:10 . Memory (MB): peak = 1532.902 ; gain = 0.000
+current_wave_config {Untitled 7}
+Untitled 7
+add_wave {{/hdmi_colorbar_tb/hdmi_colorbar_inst/hdmi_ctrl_inst/par2ser_inst1}} 
+current_wave_config {Untitled 7}
+Untitled 7
+add_wave {{/hdmi_colorbar_tb/hdmi_colorbar_inst/hdmi_ctrl_inst/par2ser_inst4}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+run: Time (s): cpu = 00:00:37 ; elapsed = 00:01:51 . Memory (MB): peak = 1532.902 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Feb 10 03:17:42 2025...
