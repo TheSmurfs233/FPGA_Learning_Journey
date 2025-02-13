@@ -1,0 +1,735 @@
+
+*** Running vivado
+    with args -log hdmi_char.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source hdmi_char.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source hdmi_char.tcl -notrace
+Command: synth_design -top hdmi_char -part xc7a35tfgg484-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tfgg484-2
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 20840 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 973.164 ; gain = 234.273
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'hdmi_char' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/hdmi_char.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clk_gen' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/clk_gen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/project/project.runs/synth_1/.Xil/Vivado-21436-DESKTOP-I8GGJRG/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [D:/FPGA_Learning_Journey/Pro/HDMI_char___/project/project.runs/synth_1/.Xil/Vivado-21436-DESKTOP-I8GGJRG/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_gen' (2#1) [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/clk_gen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'vga_image_gen' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:1]
+	Parameter CHAR_B_H bound to: 10'b0000111111 
+	Parameter CHAR_B_V bound to: 10'b0011010000 
+	Parameter CHAR_W bound to: 10'b1000000000 
+	Parameter CHAR_H bound to: 10'b0001000000 
+	Parameter BLACK bound to: 24'b000000000000000000000000 
+	Parameter WHITE bound to: 24'b111111111111111111111111 
+	Parameter GOLDEN bound to: 24'b111111111101011100000000 
+INFO: [Synth 8-4471] merging register 'char_reg[62][0:511]' into 'char_reg[63][0:511]' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+INFO: [Synth 8-4471] merging register 'char_reg[61][0:511]' into 'char_reg[63][0:511]' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+INFO: [Synth 8-4471] merging register 'char_reg[60][0:511]' into 'char_reg[63][0:511]' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+INFO: [Synth 8-4471] merging register 'char_reg[59][0:511]' into 'char_reg[63][0:511]' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+INFO: [Synth 8-4471] merging register 'char_reg[58][0:511]' into 'char_reg[63][0:511]' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+INFO: [Synth 8-4471] merging register 'char_reg[57][0:511]' into 'char_reg[63][0:511]' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+INFO: [Synth 8-4471] merging register 'char_reg[56][0:511]' into 'char_reg[63][0:511]' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+INFO: [Synth 8-4471] merging register 'char_reg[55][0:511]' into 'char_reg[63][0:511]' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+INFO: [Synth 8-4471] merging register 'char_reg[54][0:511]' into 'char_reg[63][0:511]' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+INFO: [Synth 8-4471] merging register 'char_reg[53][0:511]' into 'char_reg[63][0:511]' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+INFO: [Synth 8-4471] merging register 'char_reg[52][0:511]' into 'char_reg[63][0:511]' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+INFO: [Synth 8-4471] merging register 'char_reg[51][0:511]' into 'char_reg[63][0:511]' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+INFO: [Synth 8-4471] merging register 'char_reg[4][0:511]' into 'char_reg[63][0:511]' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+INFO: [Synth 8-4471] merging register 'char_reg[3][0:511]' into 'char_reg[63][0:511]' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+INFO: [Synth 8-4471] merging register 'char_reg[2][0:511]' into 'char_reg[63][0:511]' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+INFO: [Synth 8-4471] merging register 'char_reg[1][0:511]' into 'char_reg[63][0:511]' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+INFO: [Synth 8-4471] merging register 'char_reg[0][0:511]' into 'char_reg[63][0:511]' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[62] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[61] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[60] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[59] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[58] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[57] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[56] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[55] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[54] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[53] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[52] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[51] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[4] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[3] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[2] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[1] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[0] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:47]
+INFO: [Synth 8-6155] done synthesizing module 'vga_image_gen' (3#1) [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_image_gen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'vga_timing_ctrl' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_timing_ctrl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'vga_timing_ctrl' (4#1) [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/vga_timing_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_ctrl' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/hdmi_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'encode' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/encode.v:3]
+	Parameter CTRLTOKEN0 bound to: 10'b1101010100 
+	Parameter CTRLTOKEN1 bound to: 10'b0010101011 
+	Parameter CTRLTOKEN2 bound to: 10'b0101010100 
+	Parameter CTRLTOKEN3 bound to: 10'b1010101011 
+INFO: [Synth 8-6155] done synthesizing module 'encode' (5#1) [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/encode.v:3]
+INFO: [Synth 8-6157] synthesizing module 'par2ser' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/par2ser.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ODDR' [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:49681]
+	Parameter DDR_CLK_EDGE bound to: SAME_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'ODDR' (6#1) [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:49681]
+INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:46225]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (7#1) [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:46225]
+INFO: [Synth 8-6155] done synthesizing module 'par2ser' (8#1) [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/par2ser.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_ctrl' (9#1) [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/hdmi_ctrl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_char' (10#1) [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/hdmi_char.v:1]
+WARNING: [Synth 8-3917] design hdmi_char has port ddc_scl driven by constant 1
+WARNING: [Synth 8-3917] design hdmi_char has port ddc_sda driven by constant 1
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1047.066 ; gain = 308.176
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1047.066 ; gain = 308.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1047.066 ; gain = 308.176
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.134 . Memory (MB): peak = 1047.066 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_char___/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_gen_inst/clk_wiz_0_inst'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_char___/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_gen_inst/clk_wiz_0_inst'
+Parsing XDC File [D:/FPGA_Learning_Journey/Pro/HDMI_char___/project/project.srcs/constrs_1/new/hdmi.xdc]
+Finished Parsing XDC File [D:/FPGA_Learning_Journey/Pro/HDMI_char___/project/project.srcs/constrs_1/new/hdmi.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/FPGA_Learning_Journey/Pro/HDMI_char___/project/project.srcs/constrs_1/new/hdmi.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/hdmi_char_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/hdmi_char_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/FPGA_Learning_Journey/Pro/HDMI_char___/project/project.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/FPGA_Learning_Journey/Pro/HDMI_char___/project/project.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1217.418 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 1217.418 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1217.418 ; gain = 478.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tfgg484-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1217.418 ; gain = 478.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clk. (constraint file  d:/FPGA_Learning_Journey/Pro/HDMI_char___/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clk. (constraint file  d:/FPGA_Learning_Journey/Pro/HDMI_char___/project/project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).
+Applied set_property DONT_TOUCH = true for clk_gen_inst/clk_wiz_0_inst. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1217.418 ; gain = 478.527
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/encode.v:119]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1217.418 ; gain = 478.527
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-------------------+------------+----------+
+|      |RTL Partition      |Replication |Instances |
++------+-------------------+------------+----------+
+|1     |vga_image_gen__GB0 |           1|     32004|
+|2     |vga_image_gen__GB1 |           1|      8192|
+|3     |vga_image_gen__GB2 |           1|     10164|
+|4     |par2ser__GC0       |           1|        32|
+|5     |hdmi_ctrl__GC0     |           1|      1275|
+|6     |hdmi_char__GC0     |           1|       404|
++------+-------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 6     
+	   5 Input      5 Bit       Adders := 6     
+	   4 Input      5 Bit       Adders := 3     
+	   8 Input      4 Bit       Adders := 6     
+	   2 Input      4 Bit       Adders := 3     
+	   2 Input      3 Bit       Adders := 4     
++---XORs : 
+	   2 Input      1 Bit         XORs := 42    
++---Registers : 
+	              512 Bit    Registers := 47    
+	               24 Bit    Registers := 1     
+	               10 Bit    Registers := 5     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 3     
+	                5 Bit    Registers := 11    
+	                4 Bit    Registers := 9     
+	                3 Bit    Registers := 4     
+	                1 Bit    Registers := 18    
++---Muxes : 
+	   3 Input     24 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 10    
+	   5 Input     10 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 20    
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 23    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module vga_image_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	              512 Bit    Registers := 47    
+	               24 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     24 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module par2ser 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+Module encode__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   5 Input      5 Bit       Adders := 2     
+	   4 Input      5 Bit       Adders := 1     
+	   8 Input      4 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 14    
++---Registers : 
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   5 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+Module encode__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   5 Input      5 Bit       Adders := 2     
+	   4 Input      5 Bit       Adders := 1     
+	   8 Input      4 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 14    
++---Registers : 
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   5 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+Module encode 
+Detailed RTL Component Info : 
++---Adders : 
+	   5 Input      5 Bit       Adders := 2     
+	   4 Input      5 Bit       Adders := 1     
+	   8 Input      4 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 14    
++---Registers : 
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   5 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+Module vga_timing_ctrl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 4     
++---Registers : 
+	               10 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'encode_inst2/de_q_reg' into 'encode_inst1/de_q_reg' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/encode.v:93]
+INFO: [Synth 8-4471] merging register 'encode_inst2/de_reg_reg' into 'encode_inst1/de_reg_reg' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/encode.v:94]
+INFO: [Synth 8-4471] merging register 'encode_inst2/c0_q_reg' into 'encode_inst1/c0_q_reg' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/encode.v:96]
+INFO: [Synth 8-4471] merging register 'encode_inst2/c0_reg_reg' into 'encode_inst1/c0_reg_reg' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/encode.v:97]
+INFO: [Synth 8-4471] merging register 'encode_inst2/c1_q_reg' into 'encode_inst1/c1_q_reg' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/encode.v:98]
+INFO: [Synth 8-4471] merging register 'encode_inst2/c1_reg_reg' into 'encode_inst1/c1_reg_reg' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/encode.v:99]
+INFO: [Synth 8-4471] merging register 'encode_inst3/de_q_reg' into 'encode_inst1/de_q_reg' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/encode.v:93]
+INFO: [Synth 8-4471] merging register 'encode_inst3/de_reg_reg' into 'encode_inst1/de_reg_reg' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/encode.v:94]
+INFO: [Synth 8-4471] merging register 'encode_inst3/c0_q_reg' into 'encode_inst1/c0_q_reg' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/encode.v:96]
+INFO: [Synth 8-4471] merging register 'encode_inst3/c0_reg_reg' into 'encode_inst1/c0_reg_reg' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/encode.v:97]
+INFO: [Synth 8-4471] merging register 'encode_inst3/c1_q_reg' into 'encode_inst1/c1_q_reg' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/encode.v:98]
+INFO: [Synth 8-4471] merging register 'encode_inst3/c1_reg_reg' into 'encode_inst1/c1_reg_reg' [D:/FPGA_Learning_Journey/Pro/HDMI_char___/src/encode.v:99]
+WARNING: [Synth 8-3917] design hdmi_char has port ddc_scl driven by constant 1
+WARNING: [Synth 8-3917] design hdmi_char has port ddc_sda driven by constant 1
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[36][255] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[35][255] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[34][255] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[33][255] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[32][255] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[31][255] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[30][255] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[29][255] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[8][255] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[7][255] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[6][255] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[5][255] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[36][254] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[35][254] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[34][254] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[33][254] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[32][254] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[31][254] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[30][254] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[29][254] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[8][254] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[7][254] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[6][254] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[5][254] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[36][253] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[35][253] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[34][253] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[33][253] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[32][253] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[31][253] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[30][253] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[29][253] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[8][253] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[7][253] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[6][253] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[5][253] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[36][252] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[35][252] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[34][252] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[33][252] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[32][252] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[31][252] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[30][252] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[29][252] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[8][252] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[7][252] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[6][252] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[5][252] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[36][251] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[35][251] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[34][251] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[33][251] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[32][251] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[31][251] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[30][251] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[29][251] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[8][251] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[7][251] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[6][251] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[5][251] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[36][250] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[35][250] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[34][250] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[33][250] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[32][250] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[31][250] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[30][250] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[29][250] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[8][250] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[7][250] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[6][250] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[5][250] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[36][249] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[35][249] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[34][249] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[33][249] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[32][249] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[31][249] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[30][249] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[29][249] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[8][249] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[7][249] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[6][249] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[5][249] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[36][248] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[35][248] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[34][248] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[33][248] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[32][248] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[31][248] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[30][248] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[29][248] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[8][248] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[7][248] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[6][248] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[5][248] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[36][247] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[35][247] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[34][247] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_image_gen_insti_1/\char_reg[33][247] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'vga_image_gen_insti_3/pix_data_reg[0]' (FDC) to 'vga_image_gen_insti_3/pix_data_reg[1]'
+INFO: [Synth 8-3886] merging instance 'vga_image_gen_insti_3/pix_data_reg[1]' (FDC) to 'vga_image_gen_insti_3/pix_data_reg[2]'
+INFO: [Synth 8-3886] merging instance 'vga_image_gen_insti_3/pix_data_reg[2]' (FDC) to 'vga_image_gen_insti_3/pix_data_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vga_image_gen_insti_3/pix_data_reg[3]' (FDC) to 'vga_image_gen_insti_3/pix_data_reg[4]'
+INFO: [Synth 8-3886] merging instance 'vga_image_gen_insti_3/pix_data_reg[4]' (FDC) to 'vga_image_gen_insti_3/pix_data_reg[5]'
+INFO: [Synth 8-3886] merging instance 'vga_image_gen_insti_3/pix_data_reg[5]' (FDC) to 'vga_image_gen_insti_3/pix_data_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_image_gen_insti_3/pix_data_reg[6]' (FDC) to 'vga_image_gen_insti_3/pix_data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_image_gen_insti_3/pix_data_reg[7]' (FDC) to 'vga_image_gen_insti_3/pix_data_reg[11]'
+INFO: [Synth 8-3886] merging instance 'vga_image_gen_insti_3/pix_data_reg[8]' (FDC) to 'vga_image_gen_insti_3/pix_data_reg[9]'
+INFO: [Synth 8-3886] merging instance 'vga_image_gen_insti_3/pix_data_reg[9]' (FDC) to 'vga_image_gen_insti_3/pix_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'vga_image_gen_insti_3/pix_data_reg[10]' (FDC) to 'vga_image_gen_insti_3/pix_data_reg[12]'
+INFO: [Synth 8-3886] merging instance 'vga_image_gen_insti_3/pix_data_reg[11]' (FDC) to 'vga_image_gen_insti_3/pix_data_reg[13]'
+INFO: [Synth 8-3886] merging instance 'vga_image_gen_insti_3/pix_data_reg[12]' (FDC) to 'vga_image_gen_insti_3/pix_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'vga_image_gen_insti_3/pix_data_reg[14]' (FDC) to 'vga_image_gen_insti_3/pix_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'vga_image_gen_insti_3/pix_data_reg[15]' (FDC) to 'vga_image_gen_insti_3/pix_data_reg[16]'
+INFO: [Synth 8-3886] merging instance 'vga_image_gen_insti_3/pix_data_reg[16]' (FDC) to 'vga_image_gen_insti_3/pix_data_reg[17]'
+INFO: [Synth 8-3886] merging instance 'vga_image_gen_insti_3/pix_data_reg[17]' (FDC) to 'vga_image_gen_insti_3/pix_data_reg[18]'
+INFO: [Synth 8-3886] merging instance 'vga_image_gen_insti_3/pix_data_reg[18]' (FDC) to 'vga_image_gen_insti_3/pix_data_reg[19]'
+INFO: [Synth 8-3886] merging instance 'vga_image_gen_insti_3/pix_data_reg[19]' (FDC) to 'vga_image_gen_insti_3/pix_data_reg[20]'
+INFO: [Synth 8-3886] merging instance 'vga_image_gen_insti_3/pix_data_reg[20]' (FDC) to 'vga_image_gen_insti_3/pix_data_reg[21]'
+INFO: [Synth 8-3886] merging instance 'vga_image_gen_insti_3/pix_data_reg[21]' (FDC) to 'vga_image_gen_insti_3/pix_data_reg[22]'
+INFO: [Synth 8-3886] merging instance 'vga_image_gen_insti_3/pix_data_reg[22]' (FDC) to 'vga_image_gen_insti_3/pix_data_reg[23]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/n0q_m_reg[0]' (FD) to 'hdmi_ctrl_insti_8/encode_inst3/n1q_m_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/n0q_m_reg[0]' (FD) to 'hdmi_ctrl_insti_8/encode_inst2/n1q_m_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst1/n0q_m_reg[0]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/n1q_m_reg[0]'
+INFO: [Synth 8-3886] merging instance 'par2ser_inst4i_7/data_fall_s_reg[4]' (FD) to 'par2ser_inst4i_7/data_rise_s_reg[4]'
+INFO: [Synth 8-3886] merging instance 'par2ser_inst4i_7/data_fall_s_reg[3]' (FD) to 'par2ser_inst4i_7/data_rise_s_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/data_in_q_reg[5]' (FD) to 'hdmi_ctrl_insti_8/encode_inst3/n1d_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/data_in_q_reg[7]' (FD) to 'hdmi_ctrl_insti_8/encode_inst3/n1d_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/data_in_q_reg[1]' (FD) to 'hdmi_ctrl_insti_8/encode_inst3/n1d_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/data_in_q_reg[2]' (FD) to 'hdmi_ctrl_insti_8/encode_inst3/n1d_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/data_in_q_reg[3]' (FD) to 'hdmi_ctrl_insti_8/encode_inst3/n1d_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/data_in_q_reg[4]' (FD) to 'hdmi_ctrl_insti_8/encode_inst3/n1d_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/data_in_q_reg[6]' (FD) to 'hdmi_ctrl_insti_8/encode_inst3/n1d_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/n1d_reg[3]' (FD) to 'hdmi_ctrl_insti_8/encode_inst3/n1d_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/n1d_reg[2]' (FD) to 'hdmi_ctrl_insti_8/encode_inst3/n1d_reg[1]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/data_in_q_reg[0]' (FD) to 'hdmi_ctrl_insti_8/encode_inst3/n1d_reg[1]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/n1d_reg[1]' (FD) to 'hdmi_ctrl_insti_8/encode_inst3/n1d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/n1d_reg[0]' (FD) to 'hdmi_ctrl_insti_8/encode_inst2/data_in_q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/data_in_q_reg[5]' (FD) to 'hdmi_ctrl_insti_8/encode_inst2/data_in_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/data_in_q_reg[7]' (FD) to 'hdmi_ctrl_insti_8/encode_inst2/n1d_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/data_in_q_reg[1]' (FD) to 'hdmi_ctrl_insti_8/encode_inst2/n1d_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/data_in_q_reg[2]' (FD) to 'hdmi_ctrl_insti_8/encode_inst2/n1d_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/data_in_q_reg[3]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/n1d_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/data_in_q_reg[4]' (FD) to 'hdmi_ctrl_insti_8/encode_inst2/n1d_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/data_in_q_reg[6]' (FD) to 'hdmi_ctrl_insti_8/encode_inst2/n1d_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/n1d_reg[3]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/n1d_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/n1d_reg[2]' (FD) to 'hdmi_ctrl_insti_8/encode_inst2/n1d_reg[1]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/data_in_q_reg[0]' (FD) to 'hdmi_ctrl_insti_8/encode_inst2/n1d_reg[1]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/n1d_reg[1]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/n1d_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/n1d_reg[0]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/n1d_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst1/data_in_q_reg[5]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/n1d_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst1/data_in_q_reg[7]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/n1d_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst1/data_in_q_reg[1]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/n1d_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst1/data_in_q_reg[2]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/n1d_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst1/data_in_q_reg[3]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/n1d_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst1/data_in_q_reg[4]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/n1d_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst1/data_in_q_reg[6]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/n1d_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst1/n1d_reg[3]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/data_in_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst1/n1d_reg[2]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/n1d_reg[1]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst1/n1d_reg[1]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/n1d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/q_m_reg_reg[0]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/n1d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/q_m_reg_reg[0]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/q_m_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst1/n1d_reg[0]' (FD) to 'hdmi_ctrl_insti_8/encode_inst3/n0q_m_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/q_m_reg_reg[1]' (FD) to 'hdmi_ctrl_insti_8/encode_inst3/n0q_m_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/q_m_reg_reg[2]' (FD) to 'hdmi_ctrl_insti_8/encode_inst3/n0q_m_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/q_m_reg_reg[3]' (FD) to 'hdmi_ctrl_insti_8/encode_inst3/n0q_m_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/q_m_reg_reg[4]' (FD) to 'hdmi_ctrl_insti_8/encode_inst3/n0q_m_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/q_m_reg_reg[5]' (FD) to 'hdmi_ctrl_insti_8/encode_inst3/n0q_m_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/q_m_reg_reg[6]' (FD) to 'hdmi_ctrl_insti_8/encode_inst3/n0q_m_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/q_m_reg_reg[7]' (FD) to 'hdmi_ctrl_insti_8/encode_inst3/n0q_m_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/n1q_m_reg[3]' (FD) to 'hdmi_ctrl_insti_8/encode_inst3/n0q_m_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/n1q_m_reg[2]' (FD) to 'hdmi_ctrl_insti_8/encode_inst3/n0q_m_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/n0q_m_reg[2]' (FD) to 'hdmi_ctrl_insti_8/encode_inst3/n0q_m_reg[1]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/n1q_m_reg[1]' (FD) to 'hdmi_ctrl_insti_8/encode_inst3/n0q_m_reg[1]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/n0q_m_reg[1]' (FD) to 'hdmi_ctrl_insti_8/encode_inst2/q_m_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/q_m_reg_reg[1]' (FD) to 'hdmi_ctrl_insti_8/encode_inst2/q_m_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/q_m_reg_reg[2]' (FD) to 'hdmi_ctrl_insti_8/encode_inst2/q_m_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/q_m_reg_reg[3]' (FD) to 'hdmi_ctrl_insti_8/encode_inst2/q_m_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/q_m_reg_reg[4]' (FD) to 'hdmi_ctrl_insti_8/encode_inst2/n1q_m_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/q_m_reg_reg[5]' (FD) to 'hdmi_ctrl_insti_8/encode_inst2/q_m_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/q_m_reg_reg[6]' (FD) to 'hdmi_ctrl_insti_8/encode_inst2/n1q_m_reg[1]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/q_m_reg_reg[7]' (FD) to 'hdmi_ctrl_insti_8/encode_inst2/n0q_m_reg[1]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/n0q_m_reg[1]' (FD) to 'hdmi_ctrl_insti_8/encode_inst2/n1q_m_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/n1q_m_reg[2]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/q_m_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/n0q_m_reg[2]' (FD) to 'hdmi_ctrl_insti_8/encode_inst2/n1q_m_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/n1q_m_reg[3]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/n0q_m_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst2/n0q_m_reg[3]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/n0q_m_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst1/q_m_reg_reg[0]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/q_m_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst1/q_m_reg_reg[1]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/q_m_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst1/q_m_reg_reg[2]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/q_m_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst1/q_m_reg_reg[3]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/q_m_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst1/q_m_reg_reg[4]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/q_m_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst1/q_m_reg_reg[5]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/q_m_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst1/q_m_reg_reg[7]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/n1q_m_reg[3]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst1/n1q_m_reg[1]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/n0q_m_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst1/n0q_m_reg[1]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/n0q_m_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst1/n1q_m_reg[2]' (FD) to 'hdmi_ctrl_insti_8/encode_inst1/n0q_m_reg[2]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/data_out_reg[0]' (FDC) to 'hdmi_ctrl_insti_8/encode_inst3/data_out_reg[1]'
+INFO: [Synth 8-3886] merging instance 'hdmi_ctrl_insti_8/encode_inst3/data_out_reg[1]' (FDC) to 'hdmi_ctrl_insti_8/encode_inst3/data_out_reg[3]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1217.418 ; gain = 478.527
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-------------------+------------+----------+
+|      |RTL Partition      |Replication |Instances |
++------+-------------------+------------+----------+
+|1     |vga_image_gen__GB0 |           1|      1328|
+|2     |vga_image_gen__GB2 |           1|       678|
+|3     |par2ser__GC0       |           1|        28|
+|4     |hdmi_ctrl__GC0     |           1|       244|
+|5     |hdmi_char__GC0     |           1|       214|
+|6     |par2ser__GC0__1    |           1|        32|
+|7     |par2ser__GC0__2    |           1|        32|
+|8     |par2ser__GC0__3    |           1|        32|
++------+-------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1217.418 ; gain = 478.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1217.418 ; gain = 478.527
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-------------------+------------+----------+
+|      |RTL Partition      |Replication |Instances |
++------+-------------------+------------+----------+
+|1     |vga_image_gen__GB0 |           1|      1328|
+|2     |vga_image_gen__GB2 |           1|       678|
+|3     |par2ser__GC0       |           1|        28|
+|4     |hdmi_char__GC0     |           1|       214|
+|5     |par2ser__GC0__1    |           1|        32|
+|6     |hdmi_char_GT0      |           1|       308|
++------+-------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1217.418 ; gain = 478.527
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 1217.418 ; gain = 478.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 1217.418 ; gain = 478.527
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1217.418 ; gain = 478.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1217.418 ; gain = 478.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1217.418 ; gain = 478.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1217.418 ; gain = 478.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |clk_wiz_0 |     1|
+|2     |LUT1      |     1|
+|3     |LUT2      |    44|
+|4     |LUT3      |    90|
+|5     |LUT4      |    58|
+|6     |LUT5      |    72|
+|7     |LUT6      |   386|
+|8     |MUXF7     |    96|
+|9     |MUXF8     |    21|
+|10    |ODDR      |     4|
+|11    |FDCE      |    28|
+|12    |FDRE      |    70|
+|13    |FDSE      |    10|
+|14    |IBUF      |     1|
+|15    |OBUF      |     2|
+|16    |OBUFDS    |     4|
++------+----------+------+
+
+Report Instance Areas: 
++------+-----------------------+----------------+------+
+|      |Instance               |Module          |Cells |
++------+-----------------------+----------------+------+
+|1     |top                    |                |   890|
+|2     |  clk_gen_inst         |clk_gen         |     4|
+|3     |  hdmi_ctrl_inst       |hdmi_ctrl       |   191|
+|4     |    encode_inst1       |encode          |    61|
+|5     |    encode_inst2       |encode_0        |    16|
+|6     |    encode_inst3       |encode_1        |    12|
+|7     |    par2ser_inst1      |par2ser         |    28|
+|8     |    par2ser_inst2      |par2ser_2       |    28|
+|9     |    par2ser_inst3      |par2ser_3       |    28|
+|10    |    par2ser_inst4      |par2ser_4       |    18|
+|11    |  vga_image_gen_inst   |vga_image_gen   |     1|
+|12    |  vga_timing_ctrl_inst |vga_timing_ctrl |   691|
++------+-----------------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1217.418 ; gain = 478.527
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 1217.418 ; gain = 308.176
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1217.418 ; gain = 478.527
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1217.418 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 125 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1219.211 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+266 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1219.211 ; gain = 749.219
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1219.211 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/FPGA_Learning_Journey/Pro/HDMI_char___/project/project.runs/synth_1/hdmi_char.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file hdmi_char_utilization_synth.rpt -pb hdmi_char_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 12 16:02:53 2025...

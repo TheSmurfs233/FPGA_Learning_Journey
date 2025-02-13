@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Feb 12 17:28:48 2025
+# Process ID: 18008
+# Current directory: D:/FPGA_Learning_Journey/Pro/HDMI_rom_dispaly___/project/project.runs/synth_1
+# Command line: vivado.exe -log hdmi_char.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hdmi_char.tcl
+# Log file: D:/FPGA_Learning_Journey/Pro/HDMI_rom_dispaly___/project/project.runs/synth_1/hdmi_char.vds
+# Journal file: D:/FPGA_Learning_Journey/Pro/HDMI_rom_dispaly___/project/project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source hdmi_char.tcl -notrace
