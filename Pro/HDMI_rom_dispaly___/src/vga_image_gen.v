@@ -3,6 +3,7 @@ module vga_image_gen (
     input  rst_n,
     input [9:0] pix_x,
     input [9:0] pix_y,  
+
     output [23:0] pix_data
 );
 

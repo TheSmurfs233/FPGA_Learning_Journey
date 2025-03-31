@@ -19,7 +19,7 @@ def image_preprocessing(input_path, output_txt_path):
         for row in high_3bit_array:
             # 将每个像素转为两位十六进制（如7 -> "07"）
             hex_line = ' '.join([f"{pixel:02x}" for pixel in row])
-            f.write(hex_line + '\n')
+            f.write(hex_line)
 
 if __name__ == "__main__":
     # 自动获取脚本所在目录路径

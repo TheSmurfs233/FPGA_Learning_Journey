@@ -92,4 +92,12 @@ if __name__ == "__main__":
     image_preprocessing(input_image, output_txt)
 
 ```
+### 4.2 程序设计
+
+#### 4.2.1 整体说明
+
+#### 4.2.2 数据求和模块
+
+- **模块框图**
+- **模块端口功能描述**
 
