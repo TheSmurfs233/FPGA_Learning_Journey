@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<circuit>
+  <version>2</version>
+  <attributes/>
+  <visualElements>
+    <visualElement>
+      <elementName>External</elementName>
+      <elementAttributes>
+        <entry>
+          <string>applicationType</string>
+          <appType>IVERILOG</appType>
+        </entry>
+        <entry>
+          <string>iverilogOptions_File</string>
+          <string>D:\RISCV\myriscv_v2\src\core\defines.v</string>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>pc_reg</string>
+        </entry>
+        <entry>
+          <string>externalInputs</string>
+          <string>clk,rst_n,rst_pc:32,next_pc_i:32</string>
+        </entry>
+        <entry>
+          <string>Code</string>
+          <string>/* -------程序计数器模块-------- */
+
+
+
+module pc_reg (
+    input   wire                        clk         ,
+    input   wire                        rst_n       ,
+    input   wire    [`CPU_WIDTH - 1:0]  rst_pc      ,
+    output  reg                         ena         ,
+    input   wire    [`CPU_WIDTH - 1:0]  next_pc_i   ,   // 下一个程序计数器地址
+    output  reg     [`CPU_WIDTH - 1:0]  curr_pc_o       // 当前程序计数器地址
+
+);
+//ena:系统使能信号
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        ena &lt;= 1&apos;b0;
+    end
+    else begin
+        ena &lt;= 1&apos;b1;
+    end
+end
+
+//curr_pc_o:当前程序计数器输出
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        curr_pc_o &lt;= rst_pc; //复位时，回到复位地址的指令
+    end
+    else begin
+        curr_pc_o &lt;= next_pc_i;     
+    end
+
+end
+endmodule</string>
+        </entry>
+        <entry>
+          <string>Width</string>
+          <int>10</int>
+        </entry>
+        <entry>
+          <string>externalOutputs</string>
+          <string>ena,curr_pc_o:32</string>
+        </entry>
+      </elementAttributes>
+      <pos x="280" y="460"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Data</elementName>
+      <elementAttributes/>
+      <pos x="20" y="880"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>clk</string>
+        </entry>
+      </elementAttributes>
+      <pos x="100" y="460"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>rst_n</string>
+        </entry>
+      </elementAttributes>
+      <pos x="100" y="520"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Value</string>
+          <long>67108864</long>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="80" y="580"/>
+    </visualElement>
+    <visualElement>
+      <elementName>External</elementName>
+      <elementAttributes>
+        <entry>
+          <string>applicationType</string>
+          <appType>IVERILOG</appType>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>pc_4</string>
+        </entry>
+        <entry>
+          <string>externalInputs</string>
+          <string>din:32</string>
+        </entry>
+        <entry>
+          <string>externalOutputs</string>
+          <string>dout:32</string>
+        </entry>
+        <entry>
+          <string>Code</string>
+          <string>module pc_4(
+ 	input [31:0] din,
+	output [31:0] dout
+);
+	assign dout = din +32&apos;d4;
+endmodule</string>
+        </entry>
+        <entry>
+          <string>Width</string>
+          <int>6</int>
+        </entry>
+      </elementAttributes>
+      <pos x="560" y="320"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>pc</string>
+        </entry>
+      </elementAttributes>
+      <pos x="580" y="420"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>pc</string>
+        </entry>
+      </elementAttributes>
+      <pos x="60" y="760"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Probe</elementName>
+      <elementAttributes/>
+      <pos x="160" y="760"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>NetName</string>
+          <string>pc+4</string>
+        </entry>
+      </elementAttributes>
+      <pos x="500" y="180"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Tunnel</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+        <entry>
+          <string>NetName</string>
+          <string>pc+4</string>
+        </entry>
+      </elementAttributes>
+      <pos x="60" y="820"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Probe</elementName>
+      <elementAttributes/>
+      <pos x="160" y="820"/>
+    </visualElement>
+    <visualElement>
+      <elementName>External</elementName>
+      <elementAttributes>
+        <entry>
+          <string>applicationType</string>
+          <appType>IVERILOG</appType>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>regs</string>
+        </entry>
+        <entry>
+          <string>externalInputs</string>
+          <string>clk,rst_n,reg_wen,reg_waddr:5,reg_wdata:32,reg1_raddr:5,reg2_raddr:5</string>
+        </entry>
+        <entry>
+          <string>Width</string>
+          <int>10</int>
+        </entry>
+        <entry>
+          <string>Code</string>
+          <string>/* -------寄存器堆模块-------- */
+
+//`include &quot;defines.v&quot;
+
+`define CPU_WIDTH               32
+`define REG_DATA_DEPTH 32
+`define REG_ADDR_WIDTH 5 // 2^5 = 32
+
+module regs (
+    input                            clk,
+    input                            rst_n,
+
+    input                            reg_wen,    // 寄存器写使能
+    input      [`REG_ADDR_WIDTH-1:0] reg_waddr,  // 寄存器写地址
+    input      [`CPU_WIDTH-1:0]      reg_wdata,  // 寄存器写数据
+
+    input      [`REG_ADDR_WIDTH-1:0] reg1_raddr, // 寄存器1读地址
+    input      [`REG_ADDR_WIDTH-1:0] reg2_raddr, // 寄存器2读地址
+    output reg [`CPU_WIDTH-1:0]      reg1_rdata, // 寄存器1读数据
+    output reg [`CPU_WIDTH-1:0]      reg2_rdata  // 寄存器2读数据
+);
+    
+reg [`CPU_WIDTH-1:0] regs [0:`REG_DATA_DEPTH-1]; 
+
+// register write
+always @(posedge clk or negedge rst_n) begin
+    if (rst_n &amp;&amp; reg_wen &amp;&amp; (reg_waddr != `REG_ADDR_WIDTH&apos;b0)) // x0 read only
+        regs[reg_waddr] &lt;= reg_wdata; 
+end
+
+// register 1 read
+always @(*) begin
+    if(reg1_raddr == `REG_ADDR_WIDTH&apos;b0)
+        reg1_rdata = `CPU_WIDTH&apos;b0;
+    else
+        reg1_rdata = regs[reg1_raddr];
+end
+
+// register 2 read
+always @(*) begin
+    if(reg2_raddr == `REG_ADDR_WIDTH&apos;b0)
+        reg2_rdata = `CPU_WIDTH&apos;b0;
+    else
+        reg2_rdata = regs[reg2_raddr];
+end
+
+
+endmodule</string>
+        </entry>
+        <entry>
+          <string>externalOutputs</string>
+          <string>reg1_rdata:32,reg2_rdata:32</string>
+        </entry>
+      </elementAttributes>
+      <pos x="700" y="720"/>
+    </visualElement>
+  </visualElements>
+  <wires>
+    <wire>
+      <p1 x="180" y="480"/>
+      <p2 x="280" y="480"/>
+    </wire>
+    <wire>
+      <p1 x="480" y="480"/>
+      <p2 x="540" y="480"/>
+    </wire>
+    <wire>
+      <p1 x="540" y="320"/>
+      <p2 x="560" y="320"/>
+    </wire>
+    <wire>
+      <p1 x="680" y="320"/>
+      <p2 x="700" y="320"/>
+    </wire>
+    <wire>
+      <p1 x="80" y="580"/>
+      <p2 x="200" y="580"/>
+    </wire>
+    <wire>
+      <p1 x="200" y="500"/>
+      <p2 x="280" y="500"/>
+    </wire>
+    <wire>
+      <p1 x="540" y="420"/>
+      <p2 x="580" y="420"/>
+    </wire>
+    <wire>
+      <p1 x="460" y="180"/>
+      <p2 x="500" y="180"/>
+    </wire>
+    <wire>
+      <p1 x="60" y="820"/>
+      <p2 x="160" y="820"/>
+    </wire>
+    <wire>
+      <p1 x="100" y="520"/>
+      <p2 x="180" y="520"/>
+    </wire>
+    <wire>
+      <p1 x="240" y="520"/>
+      <p2 x="280" y="520"/>
+    </wire>
+    <wire>
+      <p1 x="240" y="280"/>
+      <p2 x="460" y="280"/>
+    </wire>
+    <wire>
+      <p1 x="460" y="280"/>
+      <p2 x="700" y="280"/>
+    </wire>
+    <wire>
+      <p1 x="60" y="760"/>
+      <p2 x="160" y="760"/>
+    </wire>
+    <wire>
+      <p1 x="100" y="460"/>
+      <p2 x="280" y="460"/>
+    </wire>
+    <wire>
+      <p1 x="240" y="280"/>
+      <p2 x="240" y="520"/>
+    </wire>
+    <wire>
+      <p1 x="180" y="480"/>
+      <p2 x="180" y="520"/>
+    </wire>
+    <wire>
+      <p1 x="200" y="500"/>
+      <p2 x="200" y="580"/>
+    </wire>
+    <wire>
+      <p1 x="540" y="320"/>
+      <p2 x="540" y="420"/>
+    </wire>
+    <wire>
+      <p1 x="540" y="420"/>
+      <p2 x="540" y="480"/>
+    </wire>
+    <wire>
+      <p1 x="700" y="280"/>
+      <p2 x="700" y="320"/>
+    </wire>
+    <wire>
+      <p1 x="460" y="180"/>
+      <p2 x="460" y="280"/>
+    </wire>
+  </wires>
+  <measurementOrdering/>
+</circuit>

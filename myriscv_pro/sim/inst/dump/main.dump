@@ -1,0 +1,15 @@
+
+.global _start
+_start:
+    li t0, 0x00001000  # GPIO基地址
+    li t1, 0x0F        # LED掩码
+    li t2, 0x10        # 按键掩码
+loop:
+    lw t3, 0(t0)       # 读取GPIO状态
+    and t3, t3, t2     # 检查按键状态
+    beqz t3, off       # 如果按键未按下，跳转到off
+    sw t1, 0(t0)       # 点亮所有LED
+    j loop
+off:
+    sw zero, 0(t0)     # 关闭所有LED
+    j loop
