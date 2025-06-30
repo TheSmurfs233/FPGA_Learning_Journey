@@ -1,0 +1,270 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Jun 17 17:22:06 2025
+# Process ID: 24124
+# Current directory: D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23980 D:\FPGA_Learning_Journey\Pro\OV5640_DDR3_HDMI_UDP_sobel___v2\project\project_1.xpr
+# Log file: D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/vivado.log
+# Journal file: D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.xpr
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.srcs/constrs_1/new/ddr3.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.srcs/constrs_1/new/ddr3.xdc
+add_files -fileset constrs_1 -norecurse D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.srcs/constrs_1/new/ddr3_pro.xdc
+open_run synth_1 -name synth_1
+set_property is_loc_fixed false [get_ports [list  {seg_data[7]} {seg_data[6]} {seg_data[5]} {seg_data[4]} {seg_data[3]} {seg_data[2]} {seg_data[1]} {seg_data[0]}]]
+set_property is_loc_fixed true [get_ports [list  {seg_data[7]} {seg_data[6]} {seg_data[5]} {seg_data[4]} {seg_data[3]} {seg_data[2]} {seg_data[1]} {seg_data[0]}]]
+set_property is_loc_fixed false [get_ports [list  {seg_data[7]} {seg_data[6]} {seg_data[5]} {seg_data[4]} {seg_data[3]} {seg_data[2]} {seg_data[1]} {seg_data[0]}]]
+set_property is_loc_fixed true [get_ports [list  {seg_data[7]} {seg_data[6]} {seg_data[5]} {seg_data[4]} {seg_data[3]} {seg_data[2]} {seg_data[1]} {seg_data[0]}]]
+place_ports {tmds_data_p[0]} J22
+place_ports {tmds_data_p[1]} K21
+place_ports {tmds_data_p[2]} H20
+place_ports tmds_clk_p J20
+place_ports sys_rst_n U7
+place_ports sccb_scl AA8
+place_ports sccb_sda AB8
+place_ports ov5640_href N14
+place_ports ov5640_pclk U18
+place_ports ov5640_pwdn AB18
+place_ports ov5640_rst_n N17
+place_ports ov5640_vsync P14
+place_ports {ov5640_data[0]} P17
+place_ports {ov5640_data[1]} P15
+place_ports {ov5640_data[2]} R16
+place_ports {ov5640_data[3]} R17
+place_ports {ov5640_data[4]} P16
+place_ports {ov5640_data[5]} V17
+place_ports {ov5640_data[6]} W1
+place_ports {ov5640_data[6]} W17
+place_ports {ov5640_data[7]} U17
+set_property target_constrs_file D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.srcs/constrs_1/new/ddr3_pro.xdc [current_fileset -constrset]
+save_constraints -force
+place_ports {led[0]} V9
+place_ports {led[1]} Y8
+place_ports {led[2]} Y7
+place_ports {led[3]} W7
+place_ports {key[0]} T4
+place_ports {key[1]} T3
+place_ports {ddr3_odt[0]} U5
+startgroup
+set_property package_pin "" [get_ports [list  {ddr3_dq[14]}]]
+place_ports {ddr3_dq[0]} C2
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {ddr3_dq[13]}]]
+place_ports {ddr3_dq[1]} G1
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {ddr3_dq[10]}]]
+place_ports {ddr3_dq[2]} A1
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {ddr3_dq[15]}]]
+place_ports {ddr3_dq[3]} F3
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {ddr3_dq[8]}]]
+place_ports {ddr3_dq[4]} B2
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {ddr3_dq[9]}]]
+place_ports {ddr3_dq[5]} F1
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {ddr3_dq[12]}]]
+place_ports {ddr3_dq[6]} B1
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {ddr3_dm[1]}]]
+place_ports {ddr3_dq[7]} E2
+endgroup
+place_ports {ddr3_dq[8]} H3
+place_ports {ddr3_dq[8]} G3
+place_ports {ddr3_dq[8]} H3
+place_ports {ddr3_dq[9]} G3
+place_ports {ddr3_dq[10]} H2
+place_ports {ddr3_dq[11]} H5
+startgroup
+set_property package_pin "" [get_ports [list  {ddr3_dm[0]}]]
+place_ports {ddr3_dq[12]} J1
+endgroup
+place_ports {ddr3_dq[13]} J5
+place_ports {ddr3_dq[14]} K1
+place_ports {ddr3_dq[15]} H4
+place_ports {ddr3_dm[0]} D2
+place_ports {ddr3_dm[1]} G2
+place_ports {ddr3_cs_n[0]} AB3
+place_ports {ddr3_cke[0]} T5
+place_ports {ddr3_ck_p[0]} R3
+place_ports {ddr3_ba[0]} AA3
+place_ports {ddr3_ba[1]} Y3
+place_ports {ddr3_ba[2]} Y4
+place_ports {ddr3_addr[0]} AA4
+place_ports {ddr3_addr[1]} AB2
+place_ports {ddr3_addr[2]} AA5
+place_ports {ddr3_addr[3]} AB5
+place_ports {ddr3_addr[4]} U3
+place_ports {ddr3_addr[5]} W1
+place_ports {ddr3_addr[6]} T1
+place_ports {ddr3_addr[7]} V2
+place_ports {ddr3_addr[8]} U2
+place_ports {ddr3_addr[9]} Y1
+place_ports {ddr3_addr[10]} W2
+place_ports {ddr3_addr[11]} Y2
+place_ports {ddr3_addr[12]} U1
+place_ports {ddr3_addr[13]} V3
+save_constraints
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property -dict [list CONFIG.XML_INPUT_FILE {mig_b.prj} CONFIG.RESET_BOARD_INTERFACE {Custom} CONFIG.MIG_DONT_TOUCH_PARAM {Custom} CONFIG.BOARD_MIG_PARAM {Custom} CONFIG.SYSTEM_RESET.INSERT_VIP {0} CONFIG.CLK_REF_I.INSERT_VIP {0} CONFIG.RESET.INSERT_VIP {0} CONFIG.DDR3_RESET.INSERT_VIP {0} CONFIG.DDR2_RESET.INSERT_VIP {0} CONFIG.LPDDR2_RESET.INSERT_VIP {0} CONFIG.QDRIIP_RESET.INSERT_VIP {0} CONFIG.RLDII_RESET.INSERT_VIP {0} CONFIG.RLDIII_RESET.INSERT_VIP {0} CONFIG.CLOCK.INSERT_VIP {0} CONFIG.MMCM_CLKOUT0.INSERT_VIP {0} CONFIG.MMCM_CLKOUT1.INSERT_VIP {0} CONFIG.MMCM_CLKOUT2.INSERT_VIP {0} CONFIG.MMCM_CLKOUT3.INSERT_VIP {0} CONFIG.MMCM_CLKOUT4.INSERT_VIP {0} CONFIG.S_AXI_CTRL.INSERT_VIP {0} CONFIG.S_AXI.INSERT_VIP {0} CONFIG.SYS_CLK_I.INSERT_VIP {0} CONFIG.ARESETN.INSERT_VIP {0} CONFIG.C0_RESET.INSERT_VIP {0} CONFIG.C0_DDR3_RESET.INSERT_VIP {0} CONFIG.C0_DDR2_RESET.INSERT_VIP {0} CONFIG.C0_LPDDR2_RESET.INSERT_VIP {0} CONFIG.C0_QDRIIP_RESET.INSERT_VIP {0} CONFIG.C0_RLDII_RESET.INSERT_VIP {0} CONFIG.C0_RLDIII_RESET.INSERT_VIP {0} CONFIG.C0_CLOCK.INSERT_VIP {0} CONFIG.C0_MMCM_CLKOUT0.INSERT_VIP {0} CONFIG.C0_MMCM_CLKOUT1.INSERT_VIP {0} CONFIG.C0_MMCM_CLKOUT2.INSERT_VIP {0} CONFIG.C0_MMCM_CLKOUT3.INSERT_VIP {0} CONFIG.C0_MMCM_CLKOUT4.INSERT_VIP {0} CONFIG.S0_AXI_CTRL.INSERT_VIP {0} CONFIG.S0_AXI.INSERT_VIP {0} CONFIG.C0_SYS_CLK_I.INSERT_VIP {0} CONFIG.C0_ARESETN.INSERT_VIP {0} CONFIG.C1_RESET.INSERT_VIP {0} CONFIG.C1_DDR3_RESET.INSERT_VIP {0} CONFIG.C1_DDR2_RESET.INSERT_VIP {0} CONFIG.C1_LPDDR2_RESET.INSERT_VIP {0} CONFIG.C1_QDRIIP_RESET.INSERT_VIP {0} CONFIG.C1_RLDII_RESET.INSERT_VIP {0} CONFIG.C1_RLDIII_RESET.INSERT_VIP {0} CONFIG.C1_CLOCK.INSERT_VIP {0} CONFIG.C1_MMCM_CLKOUT0.INSERT_VIP {0} CONFIG.C1_MMCM_CLKOUT1.INSERT_VIP {0} CONFIG.C1_MMCM_CLKOUT2.INSERT_VIP {0} CONFIG.C1_MMCM_CLKOUT3.INSERT_VIP {0} CONFIG.C1_MMCM_CLKOUT4.INSERT_VIP {0} CONFIG.S1_AXI_CTRL.INSERT_VIP {0} CONFIG.S1_AXI.INSERT_VIP {0} CONFIG.C1_SYS_CLK_I.INSERT_VIP {0} CONFIG.C1_ARESETN.INSERT_VIP {0} CONFIG.C2_RESET.INSERT_VIP {0} CONFIG.C2_DDR3_RESET.INSERT_VIP {0} CONFIG.C2_DDR2_RESET.INSERT_VIP {0} CONFIG.C2_LPDDR2_RESET.INSERT_VIP {0} CONFIG.C2_QDRIIP_RESET.INSERT_VIP {0} CONFIG.C2_RLDII_RESET.INSERT_VIP {0} CONFIG.C2_RLDIII_RESET.INSERT_VIP {0} CONFIG.C2_CLOCK.INSERT_VIP {0} CONFIG.C2_MMCM_CLKOUT0.INSERT_VIP {0} CONFIG.C2_MMCM_CLKOUT1.INSERT_VIP {0} CONFIG.C2_MMCM_CLKOUT2.INSERT_VIP {0} CONFIG.C2_MMCM_CLKOUT3.INSERT_VIP {0} CONFIG.C2_MMCM_CLKOUT4.INSERT_VIP {0} CONFIG.S2_AXI_CTRL.INSERT_VIP {0} CONFIG.S2_AXI.INSERT_VIP {0} CONFIG.C2_SYS_CLK_I.INSERT_VIP {0} CONFIG.C2_ARESETN.INSERT_VIP {0} CONFIG.C3_RESET.INSERT_VIP {0} CONFIG.C3_DDR3_RESET.INSERT_VIP {0} CONFIG.C3_DDR2_RESET.INSERT_VIP {0} CONFIG.C3_LPDDR2_RESET.INSERT_VIP {0} CONFIG.C3_QDRIIP_RESET.INSERT_VIP {0} CONFIG.C3_RLDII_RESET.INSERT_VIP {0} CONFIG.C3_RLDIII_RESET.INSERT_VIP {0} CONFIG.C3_CLOCK.INSERT_VIP {0} CONFIG.C3_MMCM_CLKOUT0.INSERT_VIP {0} CONFIG.C3_MMCM_CLKOUT1.INSERT_VIP {0} CONFIG.C3_MMCM_CLKOUT2.INSERT_VIP {0} CONFIG.C3_MMCM_CLKOUT3.INSERT_VIP {0} CONFIG.C3_MMCM_CLKOUT4.INSERT_VIP {0} CONFIG.S3_AXI_CTRL.INSERT_VIP {0} CONFIG.S3_AXI.INSERT_VIP {0} CONFIG.C3_SYS_CLK_I.INSERT_VIP {0} CONFIG.C3_ARESETN.INSERT_VIP {0} CONFIG.C4_RESET.INSERT_VIP {0} CONFIG.C4_DDR3_RESET.INSERT_VIP {0} CONFIG.C4_DDR2_RESET.INSERT_VIP {0} CONFIG.C4_LPDDR2_RESET.INSERT_VIP {0} CONFIG.C4_QDRIIP_RESET.INSERT_VIP {0} CONFIG.C4_RLDII_RESET.INSERT_VIP {0} CONFIG.C4_RLDIII_RESET.INSERT_VIP {0} CONFIG.C4_CLOCK.INSERT_VIP {0} CONFIG.C4_MMCM_CLKOUT0.INSERT_VIP {0} CONFIG.C4_MMCM_CLKOUT1.INSERT_VIP {0} CONFIG.C4_MMCM_CLKOUT2.INSERT_VIP {0} CONFIG.C4_MMCM_CLKOUT3.INSERT_VIP {0} CONFIG.C4_MMCM_CLKOUT4.INSERT_VIP {0} CONFIG.S4_AXI_CTRL.INSERT_VIP {0} CONFIG.S4_AXI.INSERT_VIP {0} CONFIG.C4_SYS_CLK_I.INSERT_VIP {0} CONFIG.C4_ARESETN.INSERT_VIP {0} CONFIG.C5_RESET.INSERT_VIP {0} CONFIG.C5_DDR3_RESET.INSERT_VIP {0} CONFIG.C5_DDR2_RESET.INSERT_VIP {0} CONFIG.C5_LPDDR2_RESET.INSERT_VIP {0} CONFIG.C5_QDRIIP_RESET.INSERT_VIP {0} CONFIG.C5_RLDII_RESET.INSERT_VIP {0} CONFIG.C5_RLDIII_RESET.INSERT_VIP {0} CONFIG.C5_CLOCK.INSERT_VIP {0} CONFIG.C5_MMCM_CLKOUT0.INSERT_VIP {0} CONFIG.C5_MMCM_CLKOUT1.INSERT_VIP {0} CONFIG.C5_MMCM_CLKOUT2.INSERT_VIP {0} CONFIG.C5_MMCM_CLKOUT3.INSERT_VIP {0} CONFIG.C5_MMCM_CLKOUT4.INSERT_VIP {0} CONFIG.S5_AXI_CTRL.INSERT_VIP {0} CONFIG.S5_AXI.INSERT_VIP {0} CONFIG.C5_SYS_CLK_I.INSERT_VIP {0} CONFIG.C5_ARESETN.INSERT_VIP {0} CONFIG.C6_RESET.INSERT_VIP {0} CONFIG.C6_DDR3_RESET.INSERT_VIP {0} CONFIG.C6_DDR2_RESET.INSERT_VIP {0} CONFIG.C6_LPDDR2_RESET.INSERT_VIP {0} CONFIG.C6_QDRIIP_RESET.INSERT_VIP {0} CONFIG.C6_RLDII_RESET.INSERT_VIP {0} CONFIG.C6_RLDIII_RESET.INSERT_VIP {0} CONFIG.C6_CLOCK.INSERT_VIP {0} CONFIG.C6_MMCM_CLKOUT0.INSERT_VIP {0} CONFIG.C6_MMCM_CLKOUT1.INSERT_VIP {0} CONFIG.C6_MMCM_CLKOUT2.INSERT_VIP {0} CONFIG.C6_MMCM_CLKOUT3.INSERT_VIP {0} CONFIG.C6_MMCM_CLKOUT4.INSERT_VIP {0} CONFIG.S6_AXI_CTRL.INSERT_VIP {0} CONFIG.S6_AXI.INSERT_VIP {0} CONFIG.C6_SYS_CLK_I.INSERT_VIP {0} CONFIG.C6_ARESETN.INSERT_VIP {0} CONFIG.C7_RESET.INSERT_VIP {0} CONFIG.C7_DDR3_RESET.INSERT_VIP {0} CONFIG.C7_DDR2_RESET.INSERT_VIP {0} CONFIG.C7_LPDDR2_RESET.INSERT_VIP {0} CONFIG.C7_QDRIIP_RESET.INSERT_VIP {0} CONFIG.C7_RLDII_RESET.INSERT_VIP {0} CONFIG.C7_RLDIII_RESET.INSERT_VIP {0} CONFIG.C7_CLOCK.INSERT_VIP {0} CONFIG.C7_MMCM_CLKOUT0.INSERT_VIP {0} CONFIG.C7_MMCM_CLKOUT1.INSERT_VIP {0} CONFIG.C7_MMCM_CLKOUT2.INSERT_VIP {0} CONFIG.C7_MMCM_CLKOUT3.INSERT_VIP {0} CONFIG.C7_MMCM_CLKOUT4.INSERT_VIP {0} CONFIG.S7_AXI_CTRL.INSERT_VIP {0} CONFIG.S7_AXI.INSERT_VIP {0} CONFIG.C7_SYS_CLK_I.INSERT_VIP {0} CONFIG.C7_ARESETN.INSERT_VIP {0}] [get_ips axi_ddr]
+generate_target {instantiation_template} [get_files d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr.xci]
+generate_target all [get_files  D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr.xci]
+catch { config_ip_cache -export [get_ips -all axi_ddr] }
+export_ip_user_files -of_objects [get_files D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr.xci] -no_script -sync -force -quiet
+reset_run axi_ddr_synth_1
+launch_runs -jobs 12 axi_ddr_synth_1
+export_simulation -of_objects [get_files D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr.xci] -directory D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.ip_user_files -ipstatic_source_dir D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.cache/compile_simlib/modelsim} {questa=D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.cache/compile_simlib/questa} {riviera=D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.cache/compile_simlib/riviera} {activehdl=D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+wait_on_run axi_ddr_synth_1
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+refresh_design
+set_property is_loc_fixed false [get_ports [list  {seg_data[7]} {seg_data[6]} {seg_data[5]} {seg_data[4]} {seg_data[3]} {seg_data[2]} {seg_data[1]} {seg_data[0]}]]
+refresh_design
+set_property is_loc_fixed false [get_ports [list  {seg_data[7]} {seg_data[6]} {seg_data[5]} {seg_data[4]} {seg_data[3]} {seg_data[2]} {seg_data[1]} {seg_data[0]}]]
+save_constraints
+set_property package_pin "" [get_ports [list  {seg_data[7]}]]
+set_property package_pin "" [get_ports [list  {seg_data[6]}]]
+set_property package_pin "" [get_ports [list  {seg_data[5]}]]
+set_property package_pin "" [get_ports [list  {seg_data[4]}]]
+set_property package_pin "" [get_ports [list  {seg_data[3]}]]
+set_property package_pin "" [get_ports [list  {seg_data[2]}]]
+set_property package_pin "" [get_ports [list  {seg_data[1]}]]
+set_property package_pin "" [get_ports [list  {seg_data[0]}]]
+save_constraints
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+refresh_design
+set_property iostandard LVCMOS33 [get_ports [list {key[1]}]]
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property IOSTANDARD LVCMOS15 [get_ports [list {key[1]} {key[0]}]]
+save_constraints -force
+set_property IOSTANDARD LVCMOS15 [get_ports [list sys_clk]]
+save_constraints -force
+set_property IOSTANDARD LVCMOS15 [get_ports [list sys_rst_n]]
+save_constraints -force
+set_property IOSTANDARD LVCMOS15 [get_ports [list {led[3]} {led[2]} {led[1]} {led[0]}]]
+save_constraints -force
+set_property IOSTANDARD LVCMOS15 [get_ports [list sccb_scl]]
+set_property IOSTANDARD LVCMOS15 [get_ports [list sccb_sda]]
+save_constraints -force
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+place_ports rgmii_tx_clk A20
+place_ports phy_rst_n N20
+set_property IOSTANDARD LVCMOS33 [get_ports [list phy_rst_n]]
+place_ports {rgmii_tx_data[3]} P20
+set_property IOSTANDARD LVCMOS33 [get_ports [list {rgmii_tx_data[3]} {rgmii_tx_data[2]} {rgmii_tx_data[1]} {rgmii_tx_data[0]}]]
+set_property package_pin "" [get_ports [list  {rgmii_tx_data[2]}]]
+save_constraints -force
+set_property IOSTANDARD LVCMOS33 [get_ports [list {seg_data[7]} {seg_data[6]} {seg_data[5]} {seg_data[4]} {seg_data[3]} {seg_data[2]} {seg_data[1]} {seg_data[0]}]]
+place_ports {rgmii_tx_data[2]} T20
+place_ports {rgmii_tx_data[1]} W21
+place_ports {rgmii_tx_data[0]} W22
+set_property IOSTANDARD LVCMOS33 [get_ports [list rgmii_tx_clk]]
+set_property package_pin "" [get_ports [list  rgmii_tx_en]]
+place_ports rgmii_tx_en W20
+place_ports rgmii_tx_clk V18
+set_property IOSTANDARD LVCMOS33 [get_ports [list rgmii_tx_en]]
+save_constraints -force
+refresh_design
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+place_ports rgmii_tx_clk W19
+save_constraints
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+place_ports ov5640_pwdn F16
+undo
+place_ports sccb_scl N13
+place_ports sccb_sda R14
+place_ports ddc_scl AA8
+place_ports ddc_sda AB8
+save_constraints -force
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property iostandard LVCMOS33 [get_ports [list sccb_sda]]
+set_property iostandard LVCMOS33 [get_ports [list sccb_scl]]
+save_constraints -force
+set_property iostandard LVCMOS15 [get_ports [list ddc_scl]]
+set_property iostandard LVCMOS15 [get_ports [list ddc_sda]]
+save_constraints -force
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+refresh_design
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
