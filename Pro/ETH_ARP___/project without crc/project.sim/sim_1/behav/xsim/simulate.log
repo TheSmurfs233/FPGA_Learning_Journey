@@ -1,0 +1,4 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+$stop called at time : 200201 ns : File "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/eth_send_test_tb.v" Line 30
+$stop called at time : 200201 ns : File "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/eth_send_test_tb.v" Line 30

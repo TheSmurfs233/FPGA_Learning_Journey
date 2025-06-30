@@ -1,0 +1,230 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sat Mar  8 15:51:29 2025
+# Process ID: 4704
+# Current directory: D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14080 D:\FPGA_Learning_Journey\Pro\OV5640_DDR3_HDMI_UDP___\project\project_1.xpr
+# Log file: D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/vivado.log
+# Journal file: D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.xpr
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 4096 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+create_debug_core u_ila_1 ila
+set_property C_DATA_DEPTH 4096 [get_debug_cores u_ila_1]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_1]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_1]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_1]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_1]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_1]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_1]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_1]
+connect_debug_port u_ila_0/clk [get_nets [list ov5640_pclk_IBUF_BUFG ]]
+connect_debug_port u_ila_1/clk [get_nets [list clk_wiz_inst/inst/clk_125m ]]
+set_property port_width 16 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {h_cnt[0]} {h_cnt[1]} {h_cnt[2]} {h_cnt[3]} {h_cnt[4]} {h_cnt[5]} {h_cnt[6]} {h_cnt[7]} {h_cnt[8]} {h_cnt[9]} {h_cnt[10]} {h_cnt[11]} {h_cnt[12]} {h_cnt[13]} {h_cnt[14]} {h_cnt[15]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 16 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {h_pix_cnt[0]} {h_pix_cnt[1]} {h_pix_cnt[2]} {h_pix_cnt[3]} {h_pix_cnt[4]} {h_pix_cnt[5]} {h_pix_cnt[6]} {h_pix_cnt[7]} {h_pix_cnt[8]} {h_pix_cnt[9]} {h_pix_cnt[10]} {h_pix_cnt[11]} {h_pix_cnt[12]} {h_pix_cnt[13]} {h_pix_cnt[14]} {h_pix_cnt[15]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 16 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {h_wr_data[0]} {h_wr_data[1]} {h_wr_data[2]} {h_wr_data[3]} {h_wr_data[4]} {h_wr_data[5]} {h_wr_data[6]} {h_wr_data[7]} {h_wr_data[8]} {h_wr_data[9]} {h_wr_data[10]} {h_wr_data[11]} {h_wr_data[12]} {h_wr_data[13]} {h_wr_data[14]} {h_wr_data[15]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 16 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {ov5640_data_out[0]} {ov5640_data_out[1]} {ov5640_data_out[2]} {ov5640_data_out[3]} {ov5640_data_out[4]} {ov5640_data_out[5]} {ov5640_data_out[6]} {ov5640_data_out[7]} {ov5640_data_out[8]} {ov5640_data_out[9]} {ov5640_data_out[10]} {ov5640_data_out[11]} {ov5640_data_out[12]} {ov5640_data_out[13]} {ov5640_data_out[14]} {ov5640_data_out[15]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list h_wr_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list ov5640_href_reg ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe6]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list ov5640_href_rise ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe7]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
+connect_debug_port u_ila_0/probe7 [get_nets [list ov5640_wr_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe8]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe8]
+connect_debug_port u_ila_0/probe8 [get_nets [list p_1_in ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe9]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe9]
+connect_debug_port u_ila_0/probe9 [get_nets [list p_2_in ]]
+set_property port_width 14 [get_debug_ports u_ila_1/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe0]
+connect_debug_port u_ila_1/probe0 [get_nets [list {eth_udp_send_inst/rd_data_count[0]} {eth_udp_send_inst/rd_data_count[1]} {eth_udp_send_inst/rd_data_count[2]} {eth_udp_send_inst/rd_data_count[3]} {eth_udp_send_inst/rd_data_count[4]} {eth_udp_send_inst/rd_data_count[5]} {eth_udp_send_inst/rd_data_count[6]} {eth_udp_send_inst/rd_data_count[7]} {eth_udp_send_inst/rd_data_count[8]} {eth_udp_send_inst/rd_data_count[9]} {eth_udp_send_inst/rd_data_count[10]} {eth_udp_send_inst/rd_data_count[11]} {eth_udp_send_inst/rd_data_count[12]} {eth_udp_send_inst/rd_data_count[13]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 8 [get_debug_ports u_ila_1/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe1]
+connect_debug_port u_ila_1/probe1 [get_nets [list {eth_udp_send_inst/payload_dat_i[0]} {eth_udp_send_inst/payload_dat_i[1]} {eth_udp_send_inst/payload_dat_i[2]} {eth_udp_send_inst/payload_dat_i[3]} {eth_udp_send_inst/payload_dat_i[4]} {eth_udp_send_inst/payload_dat_i[5]} {eth_udp_send_inst/payload_dat_i[6]} {eth_udp_send_inst/payload_dat_i[7]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe2]
+connect_debug_port u_ila_1/probe2 [get_nets [list eth_udp_send_inst/payload_req_o ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe3]
+connect_debug_port u_ila_1/probe3 [get_nets [list eth_udp_send_inst/sending_flag ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe4]
+connect_debug_port u_ila_1/probe4 [get_nets [list eth_udp_send_inst/tx_done ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe5]
+connect_debug_port u_ila_1/probe5 [get_nets [list eth_udp_send_inst/tx_en_pulse ]]
+save_constraints
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes ov5640_wr_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+save_wave_config {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+close_hw_manager
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+set_property -dict [list CONFIG.CLKOUT1_USED {true} CONFIG.CLKOUT2_USED {false} CONFIG.CLKOUT3_USED {false} CONFIG.CLK_OUT1_PORT {clk_320m} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {320} CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {125} CONFIG.CLKOUT4_USED {false} CONFIG.MMCM_CLKFBOUT_MULT_F {32} CONFIG.MMCM_CLKIN2_PERIOD {10.0} CONFIG.MMCM_CLKOUT0_DIVIDE_F {5} CONFIG.MMCM_CLKOUT1_DIVIDE {1} CONFIG.MMCM_CLKOUT2_DIVIDE {1} CONFIG.MMCM_CLKOUT3_DIVIDE {1} CONFIG.NUM_OUT_CLKS {1} CONFIG.CLKOUT1_JITTER {90.415} CONFIG.CLKOUT1_PHASE_ERROR {120.359} CONFIG.CLKOUT3_JITTER {103.731}] [get_ips clk_wiz_0]
+generate_target all [get_files  D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+reset_run clk_wiz_0_synth_1
+launch_runs -jobs 12 clk_wiz_0_synth_1
+export_simulation -of_objects [get_files D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.ip_user_files -ipstatic_source_dir D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.cache/compile_simlib/modelsim} {questa=D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.cache/compile_simlib/questa} {riviera=D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.cache/compile_simlib/riviera} {activehdl=D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_wiz_1 -dir d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip
+set_property -dict [list CONFIG.PRIMITIVE {PLL} CONFIG.PRIM_IN_FREQ {50} CONFIG.CLKOUT2_USED {true} CONFIG.CLKOUT3_USED {true} CONFIG.CLK_OUT1_PORT {clk_50m} CONFIG.CLK_OUT2_PORT {clk_125m} CONFIG.CLK_OUT3_PORT {clk_25m} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {50} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {125} CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {25} CONFIG.RESET_TYPE {ACTIVE_LOW} CONFIG.CLKIN1_JITTER_PS {200.0} CONFIG.CLKOUT1_DRIVES {BUFG} CONFIG.CLKOUT2_DRIVES {BUFG} CONFIG.CLKOUT3_DRIVES {BUFG} CONFIG.CLKOUT4_DRIVES {BUFG} CONFIG.CLKOUT5_DRIVES {BUFG} CONFIG.CLKOUT6_DRIVES {BUFG} CONFIG.CLKOUT7_DRIVES {BUFG} CONFIG.MMCM_BANDWIDTH {OPTIMIZED} CONFIG.MMCM_CLKFBOUT_MULT_F {20} CONFIG.MMCM_CLKIN1_PERIOD {20.000} CONFIG.MMCM_CLKIN2_PERIOD {10.0} CONFIG.MMCM_COMPENSATION {ZHOLD} CONFIG.MMCM_CLKOUT0_DIVIDE_F {20} CONFIG.MMCM_CLKOUT1_DIVIDE {8} CONFIG.MMCM_CLKOUT2_DIVIDE {40} CONFIG.NUM_OUT_CLKS {3} CONFIG.RESET_PORT {resetn} CONFIG.CLKOUT1_JITTER {192.113} CONFIG.CLKOUT1_PHASE_ERROR {164.985} CONFIG.CLKOUT2_JITTER {154.207} CONFIG.CLKOUT2_PHASE_ERROR {164.985} CONFIG.CLKOUT3_JITTER {236.428} CONFIG.CLKOUT3_PHASE_ERROR {164.985}] [get_ips clk_wiz_1]
+generate_target {instantiation_template} [get_files d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz_1] }
+export_ip_user_files -of_objects [get_files d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci]
+launch_runs -jobs 12 clk_wiz_1_synth_1
+export_simulation -of_objects [get_files d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci] -directory D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.ip_user_files -ipstatic_source_dir D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.cache/compile_simlib/modelsim} {questa=D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.cache/compile_simlib/questa} {riviera=D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.cache/compile_simlib/riviera} {activehdl=D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+delete_debug_core [get_debug_cores {u_ila_0 }]
+delete_debug_core [get_debug_cores {u_ila_1 }]
+save_constraints
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+refresh_design
+save_wave_config {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+close_hw_manager
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property -dict [list CONFIG.PRIM_SOURCE {No_buffer}] [get_ips clk_wiz_0]
+generate_target all [get_files  D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+reset_run clk_wiz_0_synth_1
+launch_runs -jobs 12 clk_wiz_0_synth_1
+export_simulation -of_objects [get_files D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.ip_user_files -ipstatic_source_dir D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.cache/compile_simlib/modelsim} {questa=D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.cache/compile_simlib/questa} {riviera=D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.cache/compile_simlib/riviera} {activehdl=D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property -dict [list CONFIG.PRIM_SOURCE {No_buffer}] [get_ips clk_wiz_1]
+generate_target all [get_files  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz_1] }
+export_ip_user_files -of_objects [get_files d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci] -no_script -sync -force -quiet
+reset_run clk_wiz_1_synth_1
+launch_runs -jobs 12 clk_wiz_1_synth_1
+export_simulation -of_objects [get_files d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci] -directory D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.ip_user_files -ipstatic_source_dir D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.cache/compile_simlib/modelsim} {questa=D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.cache/compile_simlib/questa} {riviera=D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.cache/compile_simlib/riviera} {activehdl=D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]

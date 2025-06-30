@@ -1,0 +1,20 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 772ba8a87da04f308a9cd463db9758dc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot rgmii_to_gmii_tb_behav xil_defaultlib.rgmii_to_gmii_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IDDR(DDR_CLK_EDGE="SAME_EDGE_PIP...
+Compiling module xil_defaultlib.rgmii_to_gmii_default
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=7,CLKIN1...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.rx_pll_clk_wiz
+Compiling module xil_defaultlib.rx_pll
+Compiling module xil_defaultlib.rgmii_to_gmii_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot rgmii_to_gmii_tb_behav

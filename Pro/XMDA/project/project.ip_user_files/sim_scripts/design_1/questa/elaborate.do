@@ -1,0 +1,1 @@
+vopt -64 +acc -l elaborate.log -L xilinx_vip -L xpm -L xil_defaultlib -L blk_mem_gen_v8_4_4 -L axi_vip_v1_1_6 -L smartconnect_v1_0 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib xil_defaultlib.design_1 xil_defaultlib.glbl -o design_1_opt

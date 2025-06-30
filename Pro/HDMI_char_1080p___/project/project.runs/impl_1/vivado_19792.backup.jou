@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Wed Jun 25 22:05:14 2025
+# Process ID         : 19792
+# Current directory  : D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/project/project.runs/impl_1
+# Command line       : vivado.exe -log hdmi_char.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source hdmi_char.tcl -notrace
+# Log file           : D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/project/project.runs/impl_1/hdmi_char.vdi
+# Journal file       : D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/project/project.runs/impl_1\vivado.jou
+# Running On         : DESKTOP-I8GGJRG
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-12400F
+# CPU Frequency      : 2496 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 34179 MB
+# Swap memory        : 19327 MB
+# Total Virtual      : 53506 MB
+# Available Virtual  : 27765 MB
+#-----------------------------------------------------------
+source hdmi_char.tcl -notrace

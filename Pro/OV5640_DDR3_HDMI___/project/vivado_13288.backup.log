@@ -1,0 +1,247 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Feb 27 17:47:29 2025
+# Process ID: 13288
+# Current directory: D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22132 D:\FPGA_Learning_Journey\Pro\OV5640_DDR3_HDMI___\project\project_1.xpr
+# Log file: D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/vivado.log
+# Journal file: D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 1024.586 ; gain = 276.195
+open_hw_manager
+update_compile_order -fileset sources_1
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1388.898 ; gain = 15.859
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299847714
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 3 ILA core(s).
+WARNING: [Labtools 27-1973] Mismatch between the design programmed into the device xc7a35t (JTAG device index = 0) and the probes file(s) D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/impl_1/ddr3_test.ltx.
+ The device core at location uuid_3B505A030738513C98471D25F5B1F848, has 1 ILA Input port(s), but the core in the probes file(s) have 4 ILA Input port(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 3 ILA core(s).
+WARNING: [Labtools 27-1973] Mismatch between the design programmed into the device xc7a35t (JTAG device index = 0) and the probes file(s) D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/impl_1/ddr3_test.ltx.
+ The device core at location uuid_23E7D65A79BC59F7BC47406C1714DFAE, has 1 ILA Input port(s), but the core in the probes file(s) have 8 ILA Input port(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 3 ILA core(s).
+WARNING: [Labtools 27-1973] Mismatch between the design programmed into the device xc7a35t (JTAG device index = 0) and the probes file(s) D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/impl_1/ddr3_test.ltx.
+ The device core at location uuid_23E7D65A79BC59F7BC47406C1714DFAE, has 2 ILA Input port(s), but the core in the probes file(s) have 8 ILA Input port(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+refresh_hw_device: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2652.734 ; gain = 0.000
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210299847714
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299847714
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ila_0' at location 'uuid_23E7D65A79BC59F7BC47406C1714DFAE' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ila_1' at location 'uuid_3B505A030738513C98471D25F5B1F848' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ila_2' at location 'uuid_B13C981AC2D554BFB4FBE0EECEA5CFD7' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 3 ILA core(s).
+ERROR: [Labtools 27-3412] Mismatch between the design programmed into the device 'xc7a35t' (JTAG device index = '0'
+ and the probes file(s) 'D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/impl_1/ddr3_test.ltx'.
+ The hw_probe 'data_rd_valid' in the probes file has port index '1'. This port location for the ILA core at location (uuid_3B505A030738513C98471D25F5B1F848), does not support a data probe.
+.
+Resolution: 
+1) Ensure that the clock signal connected to the debug core and/or debug hub is clean and free-running.
+2) Ensure that the clock connected to the debug core and/or debug hub meets all timing constraints.
+3) Ensure that the JTAG clock frequency is 2.5x times slower than the frequency of the clock connected to your debug hub.
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tfgg484-2
+INFO: [Device 21-403] Loading part xc7a35tfgg484-2
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr.dcp' for cell 'ddr_rw_inst/u_axi_ddr'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.dcp' for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.dcp' for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.130 . Memory (MB): peak = 2816.086 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 486 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_inst/inst'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_inst/inst'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_inst/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3532.355 ; gain = 553.219
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_inst/inst'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Parsing XDC File [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
+Finished Parsing XDC File [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 3532.355 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 109 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
+  IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT(x2), INV, OBUFTDS(x2)): 2 instances
+  IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 89 instances
+
+open_run: Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 3568.918 ; gain = 916.184
+refresh_design
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_inst/inst'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_inst/inst'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_inst/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_inst/inst'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Parsing XDC File [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
+Finished Parsing XDC File [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+delete_debug_core [get_debug_cores {u_ila_1 }]
+delete_debug_core [get_debug_cores {u_ila_2 }]
+delete_debug_core [get_debug_cores {u_ila_0 }]
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+[Thu Feb 27 17:52:02 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tfgg484-2
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr.dcp' for cell 'ddr_rw_inst/u_axi_ddr'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.dcp' for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.dcp' for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.125 . Memory (MB): peak = 3768.445 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 486 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_inst/inst'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_inst/inst'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_inst/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_inst/inst'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Parsing XDC File [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
+Finished Parsing XDC File [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 3772.273 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 109 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
+  IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT(x2), INV, OBUFTDS(x2)): 2 instances
+  IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 89 instances
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 3772.273 ; gain = 0.000

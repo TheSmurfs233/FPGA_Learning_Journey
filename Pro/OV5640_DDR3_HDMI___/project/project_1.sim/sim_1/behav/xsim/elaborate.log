@@ -1,0 +1,23 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 44e8ebb0863341bb9e6f0dc7ba84912c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_uart_behav xil_defaultlib.tb_top_uart xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/FPGA_Learning_Journey/Pro/DDR3_uart___/src/uart/top_uart.v" Line 1. Module top_uart doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/FPGA_Learning_Journey/Pro/DDR3_uart___/src/uart/uart_rx.v" Line 1. Module uart_rx_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/FPGA_Learning_Journey/Pro/DDR3_uart___/src/uart/bit8_trans_bit32.v" Line 1. Module bit8_to_bit32 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/FPGA_Learning_Journey/Pro/DDR3_uart___/src/uart/uart_tx_4byte.v" Line 1. Module uart_tx_4byte doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/FPGA_Learning_Journey/Pro/DDR3_uart___/src/uart/uart_tx.v" Line 1. Module uart_tx_default doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.uart_rx_default
+Compiling module xil_defaultlib.bit8_to_bit32
+Compiling module xil_defaultlib.uart_tx_default
+Compiling module xil_defaultlib.uart_tx_4byte
+Compiling module xil_defaultlib.top_uart
+Compiling module xil_defaultlib.tb_top_uart
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_uart_behav

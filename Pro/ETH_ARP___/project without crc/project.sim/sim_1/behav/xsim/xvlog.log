@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/eth_send.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_send
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/eth_send_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_send_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/eth_send_test_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_send_test_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project without crc/project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

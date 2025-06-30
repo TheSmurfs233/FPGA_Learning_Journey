@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/DDR3_uart___/src/uart/bit8_trans_bit32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bit8_to_bit32
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/DDR3_uart___/src/uart/top_uart.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_uart
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/DDR3_uart___/src/uart/uart_rx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_rx
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/DDR3_uart___/src/uart/uart_tx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/DDR3_uart___/src/uart/uart_tx_4byte.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_tx_4byte
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/DDR3_uart___/src/uart/top_uart_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top_uart

@@ -1,0 +1,11 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+D:/FPGA_Learning_Journey/Pro/DDR3_uart___/project/project_1.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/DDR3_uart___/src/uart/bit8_trans_bit32.v,1739783448,verilog,,D:/FPGA_Learning_Journey/Pro/DDR3_uart___/src/uart/top_uart.v,,bit8_to_bit32,,,../../../../project_1.srcs/sources_1/ip/clk_wiz_0,,,,,
+D:/FPGA_Learning_Journey/Pro/DDR3_uart___/src/uart/top_uart.v,1740308442,verilog,,D:/FPGA_Learning_Journey/Pro/DDR3_uart___/src/uart/uart_rx.v,,top_uart,,,../../../../project_1.srcs/sources_1/ip/clk_wiz_0,,,,,
+D:/FPGA_Learning_Journey/Pro/DDR3_uart___/src/uart/top_uart_tb.v,1740309004,verilog,,,,tb_top_uart,,,../../../../project_1.srcs/sources_1/ip/clk_wiz_0,,,,,
+D:/FPGA_Learning_Journey/Pro/DDR3_uart___/src/uart/uart_rx.v,1735995730,verilog,,D:/FPGA_Learning_Journey/Pro/DDR3_uart___/src/uart/uart_tx.v,,uart_rx,,,../../../../project_1.srcs/sources_1/ip/clk_wiz_0,,,,,
+D:/FPGA_Learning_Journey/Pro/DDR3_uart___/src/uart/uart_tx.v,1740307906,verilog,,D:/FPGA_Learning_Journey/Pro/DDR3_uart___/src/uart/uart_tx_4byte.v,,uart_tx,,,../../../../project_1.srcs/sources_1/ip/clk_wiz_0,,,,,
+D:/FPGA_Learning_Journey/Pro/DDR3_uart___/src/uart/uart_tx_4byte.v,1740394787,verilog,,D:/FPGA_Learning_Journey/Pro/DDR3_uart___/src/uart/top_uart_tb.v,,uart_tx_4byte,,,../../../../project_1.srcs/sources_1/ip/clk_wiz_0,,,,,

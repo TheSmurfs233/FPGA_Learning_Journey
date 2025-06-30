@@ -1,0 +1,10 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+D:/FPGA_Learning_Journey/Pro/ETH_MDIO_RW___/project/project.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/ETH_MDIO_RW___/src/mdio_ctrl.v,1740910552,verilog,,D:/FPGA_Learning_Journey/Pro/ETH_MDIO_RW___/src/mdio_dri.v,,mdio_ctrl,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/ETH_MDIO_RW___/src/mdio_dri.v,1740910544,verilog,,D:/FPGA_Learning_Journey/Pro/ETH_MDIO_RW___/src/mdio_rw_test.v,,mdio_dri,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/ETH_MDIO_RW___/src/mdio_rw_test.v,1740910538,verilog,,D:/FPGA_Learning_Journey/Pro/ETH_MDIO_RW___/src/sim/mdio_slave_interface.v,,mdio_rw_test,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/ETH_MDIO_RW___/src/sim/mdio_slave_interface.v,1685501020,verilog,,D:/FPGA_Learning_Journey/Pro/ETH_MDIO_RW___/src/sim/tb_mdio_rw_test.v,,mdio_slave_interface,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/ETH_MDIO_RW___/src/sim/tb_mdio_rw_test.v,1685502504,verilog,,,,tb_mdio_rw_test,,,,,,,,

@@ -1,0 +1,2 @@
+eth_dcfifo.v,verilog,xil_defaultlib,../../../../project.srcs/sources_1/ip/eth_dcfifo/sim/eth_dcfifo.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

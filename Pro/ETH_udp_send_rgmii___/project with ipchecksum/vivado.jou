@@ -1,0 +1,34 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Mar  5 14:37:35 2025
+# Process ID: 1304
+# Current directory: D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/project with ipchecksum
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15884 D:\FPGA_Learning_Journey\Pro\ETH_udp_send_rgmii___\project with ipchecksum\project.xpr
+# Log file: D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/project with ipchecksum/vivado.log
+# Journal file: D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/project with ipchecksum\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/project with ipchecksum/project.xpr}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc/eth_send_test_rgmii.v] -no_script -reset -force -quiet
+remove_files  D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc/eth_send_test_rgmii.v
+export_ip_user_files -of_objects  [get_files D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc/eth_send_test.v] -no_script -reset -force -quiet
+remove_files  D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc/eth_send_test.v
+export_ip_user_files -of_objects  [get_files D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc/gmii_to_rgmii.v] -no_script -reset -force -quiet
+remove_files  D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc/gmii_to_rgmii.v
+update_compile_order -fileset sources_1
+add_files -norecurse {D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc_with_ipchecksum/checksum.v D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc_with_ipchecksum/eth_send.v D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc_with_ipchecksum/crc32_d8.v D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc_with_ipchecksum/eth_send_test.v D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc_with_ipchecksum/gmii_to_rgmii.v D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc_with_ipchecksum/eth_send_test_rgmii.v}
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top eth_send_test_rgmii [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc/crc32_d8.v] -no_script -reset -force -quiet
+remove_files  D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc/crc32_d8.v
+export_ip_user_files -of_objects  [get_files D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc/eth_send.v] -no_script -reset -force -quiet
+remove_files  D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc/eth_send.v
+update_compile_order -fileset sources_1

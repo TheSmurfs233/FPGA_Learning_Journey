@@ -1,0 +1,315 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Wed Jun 25 23:11:45 2025
+# Process ID         : 21928
+# Current directory  : D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/project/project.runs/synth_1
+# Command line       : vivado.exe -log hdmi_char.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hdmi_char.tcl
+# Log file           : D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/project/project.runs/synth_1/hdmi_char.vds
+# Journal file       : D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/project/project.runs/synth_1\vivado.jou
+# Running On         : DESKTOP-I8GGJRG
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-12400F
+# CPU Frequency      : 2496 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 34179 MB
+# Swap memory        : 19327 MB
+# Total Virtual      : 53506 MB
+# Available Virtual  : 26447 MB
+#-----------------------------------------------------------
+source hdmi_char.tcl -notrace
+Command: synth_design -top hdmi_char -part xc7a35tfgg484-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tfgg484-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7340
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1185.262 ; gain = 492.508
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'hdmi_char' [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/hdmi_char.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clk_gen' [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/clk_gen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/project/project.runs/synth_1/.Xil/Vivado-21928-DESKTOP-I8GGJRG/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/project/project.runs/synth_1/.Xil/Vivado-21928-DESKTOP-I8GGJRG/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_1' [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/project/project.runs/synth_1/.Xil/Vivado-21928-DESKTOP-I8GGJRG/realtime/clk_wiz_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_1' (0#1) [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/project/project.runs/synth_1/.Xil/Vivado-21928-DESKTOP-I8GGJRG/realtime/clk_wiz_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_gen' (0#1) [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/clk_gen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'vga_image_gen' [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/vga_image_gen.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'vga_image_gen' (0#1) [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/vga_image_gen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'vga_timing_ctrl' [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/vga_timing_ctrl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'vga_timing_ctrl' (0#1) [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/vga_timing_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_ctrl' [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/hdmi_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'encode' [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/encode.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'encode' (0#1) [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/encode.v:3]
+INFO: [Synth 8-6157] synthesizing module 'par2ser' [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/par2ser.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ODDR' [D:/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:107905]
+	Parameter DDR_CLK_EDGE bound to: SAME_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'ODDR' (0#1) [D:/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:107905]
+INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [D:/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:104275]
+	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (0#1) [D:/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:104275]
+INFO: [Synth 8-6155] done synthesizing module 'par2ser' (0#1) [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/par2ser.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_ctrl' (0#1) [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/hdmi_ctrl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_char' (0#1) [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/hdmi_char.v:1]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[62] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/vga_image_gen.v:51]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[61] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/vga_image_gen.v:51]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[60] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/vga_image_gen.v:51]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[59] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/vga_image_gen.v:51]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[58] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/vga_image_gen.v:51]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[57] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/vga_image_gen.v:51]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[56] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/vga_image_gen.v:51]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[55] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/vga_image_gen.v:51]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[54] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/vga_image_gen.v:51]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[53] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/vga_image_gen.v:51]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[52] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/vga_image_gen.v:51]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[51] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/vga_image_gen.v:51]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[4] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/vga_image_gen.v:51]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[3] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/vga_image_gen.v:51]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[2] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/vga_image_gen.v:51]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[1] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/vga_image_gen.v:51]
+WARNING: [Synth 8-6014] Unused sequential element char_reg[0] was removed.  [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/src/vga_image_gen.v:51]
+WARNING: [Synth 8-3917] design hdmi_char has port ddc_scl driven by constant 1
+WARNING: [Synth 8-3917] design hdmi_char has port ddc_sda driven by constant 1
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1309.586 ; gain = 616.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1309.586 ; gain = 616.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1309.586 ; gain = 616.832
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.123 . Memory (MB): peak = 1309.586 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/project/project.gen/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc] for cell 'clk_gen_inst/clk_wiz_1_inst'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/project/project.gen/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc] for cell 'clk_gen_inst/clk_wiz_1_inst'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/project/project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_gen_inst/clk_wiz_0_inst'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/project/project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_gen_inst/clk_wiz_0_inst'
+Parsing XDC File [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/project/project.srcs/constrs_1/new/hdmi.xdc]
+Finished Parsing XDC File [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/project/project.srcs/constrs_1/new/hdmi.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/project/project.srcs/constrs_1/new/hdmi.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/hdmi_char_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/hdmi_char_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/project/project.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/project/project.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1387.824 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 1387.824 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1387.824 ; gain = 695.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tfgg484-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1387.824 ; gain = 695.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1387.824 ; gain = 695.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1387.824 ; gain = 695.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   12 Bit       Adders := 5     
+	   2 Input   10 Bit       Adders := 1     
+	   5 Input    5 Bit       Adders := 6     
+	   4 Input    5 Bit       Adders := 3     
+	   8 Input    4 Bit       Adders := 6     
+	   2 Input    4 Bit       Adders := 3     
+	   2 Input    3 Bit       Adders := 4     
++---XORs : 
+	   2 Input      1 Bit         XORs := 42    
++---Registers : 
+	              512 Bit    Registers := 47    
+	               24 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
+	               10 Bit    Registers := 3     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 3     
+	                5 Bit    Registers := 11    
+	                4 Bit    Registers := 9     
+	                3 Bit    Registers := 4     
+	                1 Bit    Registers := 18    
++---Muxes : 
+	   3 Input   24 Bit        Muxes := 1     
+	   2 Input   24 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 4     
+	   5 Input   10 Bit        Muxes := 3     
+	   2 Input   10 Bit        Muxes := 6     
+	   2 Input    8 Bit        Muxes := 3     
+	   2 Input    5 Bit        Muxes := 23    
+	   2 Input    3 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 21    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design hdmi_char has port ddc_scl driven by constant 1
+WARNING: [Synth 8-3917] design hdmi_char has port ddc_sda driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1614.523 ; gain = 921.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1614.523 ; gain = 921.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1614.523 ; gain = 921.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1699.242 ; gain = 1006.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1785.387 ; gain = 1092.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1785.387 ; gain = 1092.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1785.387 ; gain = 1092.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1785.387 ; gain = 1092.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1785.387 ; gain = 1092.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1785.387 ; gain = 1092.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
+|2     |clk_wiz_1     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |clk_wiz |     2|
+|3     |CARRY4  |    14|
+|4     |LUT1    |     7|
+|5     |LUT2    |   112|
+|6     |LUT3    |    97|
+|7     |LUT4    |    71|
+|8     |LUT5    |   132|
+|9     |LUT6    |   604|
+|10    |ODDR    |     4|
+|11    |FDCE    |    28|
+|12    |FDRE    |    72|
+|13    |FDSE    |    12|
+|14    |IBUF    |     1|
+|15    |OBUF    |     2|
+|16    |OBUFDS  |     4|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1785.387 ; gain = 1092.633
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 1785.387 ; gain = 1014.395
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1785.387 ; gain = 1092.633
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1785.387 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1798.234 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 6a49aef
+INFO: [Common 17-83] Releasing license: Synthesis
+39 Infos, 22 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 1798.234 ; gain = 1291.434
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1798.234 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/project/project.runs/synth_1/hdmi_char.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file hdmi_char_utilization_synth.rpt -pb hdmi_char_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 25 23:12:28 2025...

@@ -1,0 +1,97 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Mar  3 21:21:13 2025
+# Process ID: 22376
+# Current directory: D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13460 D:\FPGA_Learning_Journey\Pro\ETH_ARP___\project1\project.xpr
+# Log file: D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1/vivado.log
+# Journal file: D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1/project.xpr
+add_files -norecurse {D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/eth_send.v D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/eth_send_test_tb.v D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/eth_send_test.v D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/gmii_to_rgmii.v D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/eth_send_test_rgmii.v D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/eth_send_test_rgmii_tb.v}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/eth_send_test_rgmii_tb.v] -no_script -reset -force -quiet
+remove_files  D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/eth_send_test_rgmii_tb.v
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/eth_send_test_tb.v
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/eth_send_test_tb.v] -no_script -reset -force -quiet
+remove_files  D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/eth_send_test_tb.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name pll -dir d:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1/project.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {pll} CONFIG.PRIMITIVE {PLL} CONFIG.PRIM_IN_FREQ {50} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {125} CONFIG.USE_LOCKED {false} CONFIG.USE_RESET {false} CONFIG.CLKIN1_JITTER_PS {200.0} CONFIG.CLKOUT1_DRIVES {BUFG} CONFIG.CLKOUT2_DRIVES {BUFG} CONFIG.CLKOUT3_DRIVES {BUFG} CONFIG.CLKOUT4_DRIVES {BUFG} CONFIG.CLKOUT5_DRIVES {BUFG} CONFIG.CLKOUT6_DRIVES {BUFG} CONFIG.CLKOUT7_DRIVES {BUFG} CONFIG.MMCM_DIVCLK_DIVIDE {2} CONFIG.MMCM_BANDWIDTH {OPTIMIZED} CONFIG.MMCM_CLKFBOUT_MULT_F {35} CONFIG.MMCM_CLKIN1_PERIOD {20.000} CONFIG.MMCM_COMPENSATION {ZHOLD} CONFIG.MMCM_CLKOUT0_DIVIDE_F {7} CONFIG.CLKOUT1_JITTER {238.699} CONFIG.CLKOUT1_PHASE_ERROR {254.101}] [get_ips pll]
+generate_target {instantiation_template} [get_files d:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1/project.srcs/sources_1/ip/pll/pll.xci]
+generate_target all [get_files  d:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1/project.srcs/sources_1/ip/pll/pll.xci]
+catch { config_ip_cache -export [get_ips -all pll] }
+export_ip_user_files -of_objects [get_files d:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1/project.srcs/sources_1/ip/pll/pll.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1/project.srcs/sources_1/ip/pll/pll.xci]
+launch_runs -jobs 12 pll_synth_1
+export_simulation -of_objects [get_files d:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1/project.srcs/sources_1/ip/pll/pll.xci] -directory D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1/project.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1/project.ip_user_files -ipstatic_source_dir D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1/project.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1/project.cache/compile_simlib/modelsim} {questa=D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1/project.cache/compile_simlib/questa} {riviera=D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1/project.cache/compile_simlib/riviera} {activehdl=D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1/project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+synth_design -rtl -name rtl_1
+place_ports {rgmii_tx_data[0]} AB21
+place_ports {rgmii_tx_data[1]} AA20
+place_ports {rgmii_tx_data[2]} AB20
+place_ports {rgmii_tx_data[3]} AA19
+place_ports clk R4
+place_ports phy_rst_n T21
+place_ports rgmii_tx_clk AA21
+place_ports rgmii_tx_en AB22
+place_ports rst_n U2
+set_property IOSTANDARD LVCMOS33 [get_ports [list clk]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list phy_rst_n]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list rgmii_tx_clk]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list rgmii_tx_en]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list rst_n]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {rgmii_tx_data[3]} {rgmii_tx_data[2]} {rgmii_tx_data[1]} {rgmii_tx_data[0]}]]
+file mkdir D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1/project.srcs/constrs_1/new
+close [ open D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1/project.srcs/constrs_1/new/eth_arp.xdc w ]
+add_files -fileset constrs_1 D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1/project.srcs/constrs_1/new/eth_arp.xdc
+set_property target_constrs_file D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1/project.srcs/constrs_1/new/eth_arp.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1/project.runs/impl_1/eth_send_test_rgmii.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1/project.runs/impl_1/eth_send_test_rgmii.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1/project.runs/impl_1/eth_send_test_rgmii.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+refresh_design
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1/project.runs/impl_1/eth_send_test_rgmii.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1/project.runs/impl_1/eth_send_test_rgmii.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]

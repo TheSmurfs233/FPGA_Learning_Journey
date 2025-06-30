@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii_crc/crc32_d8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CRC32_d8
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii_crc/eth_send.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_send
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii_crc/eth_send_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_send_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii_crc/eth_send_test_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_send_test_tb

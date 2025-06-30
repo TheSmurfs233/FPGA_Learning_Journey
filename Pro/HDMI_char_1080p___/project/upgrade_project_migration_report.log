@@ -1,0 +1,26 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Wed Jun 25 20:51:13 2025
+| Host         : DESKTOP-I8GGJRG running 64-bit major release  (build 9200)
+| Command      : upgrade_project -migrate_output_products
+| Project_Path : D:/FPGA_Learning_Journey/Pro/HDMI_char_1080p___/project/project.xpr
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Project Status Summary
+
+1. Project IP Status
+--------------------
+This project contains 1 IP and 0 Block Designs.
+
+
+1.1 Project IP Instances
++-----------+-------------------------+-------------------------------------+-------------------------------------+
+| Instance  | Status                  | Reason                              | Recommendation                      |
+| Name      |                         |                                     |                                     |
++-----------+-------------------------+-------------------------------------+-------------------------------------+
+| clk_wiz_0 | Will be Migrated.       |                                     |                                     |
++-----------+-------------------------+-------------------------------------+-------------------------------------+
+
+
+

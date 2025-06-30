@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Mar  6 15:55:34 2025
+# Process ID: 424
+# Current directory: D:/FPGA_Learning_Journey/Pro/ETH_udp_tx_rx___/project/project.runs/impl_1
+# Command line: vivado.exe -log eth_udp_send_test.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source eth_udp_send_test.tcl -notrace
+# Log file: D:/FPGA_Learning_Journey/Pro/ETH_udp_tx_rx___/project/project.runs/impl_1/eth_udp_send_test.vdi
+# Journal file: D:/FPGA_Learning_Journey/Pro/ETH_udp_tx_rx___/project/project.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source eth_udp_send_test.tcl -notrace

@@ -1,0 +1,35 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|        clk_50m_clk_wiz_0 |                clk_pll_i |                                                          ddr_rw_inst/axi_ctrl_inst/rd_burst_req_reg_reg/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst2/data_fall_s_reg[0]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst1/data_fall_s_reg[0]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst3/data_fall_s_reg[1]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst3/data_fall_s_reg[0]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst3/data_rise_s_reg[0]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst1/data_fall_s_reg[3]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst3/data_rise_s_reg[1]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst1/data_rise_s_reg[0]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst3/data_rise_s_reg[3]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst2/data_rise_s_reg[3]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst1/data_rise_s_reg[2]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst1/data_rise_s_reg[1]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst2/data_rise_s_reg[2]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst2/data_fall_s_reg[3]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst2/data_rise_s_reg[1]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst3/data_fall_s_reg[3]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst1/data_fall_s_reg[1]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst1/data_fall_s_reg[4]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst1/data_rise_s_reg[4]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst3/data_rise_s_reg[2]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst3/data_fall_s_reg[4]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst3/data_fall_s_reg[2]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst2/data_fall_s_reg[4]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst2/data_rise_s_reg[0]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst2/data_fall_s_reg[1]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst3/data_rise_s_reg[4]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst2/data_rise_s_reg[4]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst1/data_rise_s_reg[3]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst1/data_fall_s_reg[2]/D|
+|        clk_25m_clk_wiz_0 |       clk_125m_clk_wiz_0 |                                           top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst2/data_fall_s_reg[2]/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

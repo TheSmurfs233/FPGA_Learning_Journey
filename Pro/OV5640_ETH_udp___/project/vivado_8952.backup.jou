@@ -1,0 +1,121 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Mar  7 14:41:24 2025
+# Process ID: 8952
+# Current directory: D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13244 D:\FPGA_Learning_Journey\Pro\OV5640_ETH_udp___\project\project.xpr
+# Log file: D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/vivado.log
+# Journal file: D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.xpr
+update_compile_order -fileset sources_1
+set_property -dict [list CONFIG.CLKOUT3_USED {true} CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {25} CONFIG.MMCM_CLKOUT2_DIVIDE {40} CONFIG.NUM_OUT_CLKS {3} CONFIG.CLKOUT3_JITTER {236.428} CONFIG.CLKOUT3_PHASE_ERROR {164.985}] [get_ips pll]
+generate_target all [get_files  D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.srcs/sources_1/ip/pll/pll.xci]
+catch { config_ip_cache -export [get_ips -all pll] }
+export_ip_user_files -of_objects [get_files D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.srcs/sources_1/ip/pll/pll.xci] -no_script -sync -force -quiet
+reset_run pll_synth_1
+launch_runs -jobs 12 pll_synth_1
+export_simulation -of_objects [get_files D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.srcs/sources_1/ip/pll/pll.xci] -directory D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.ip_user_files -ipstatic_source_dir D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.cache/compile_simlib/modelsim} {questa=D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.cache/compile_simlib/questa} {riviera=D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.cache/compile_simlib/riviera} {activehdl=D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.runs/impl_1/ov5640_eth_udp.bit} [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.runs/impl_1/ov5640_eth_udp.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.runs/impl_1/ov5640_eth_udp.ltx} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.runs/impl_1/ov5640_eth_udp.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.runs/impl_1/ov5640_eth_udp.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.runs/impl_1/ov5640_eth_udp.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+save_wave_config {D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+close_hw_manager
+synth_design -rtl -name rtl_1
+close_design
+open_run synth_1 -name synth_1
+delete_debug_core [get_debug_cores {u_ila_0 }]
+delete_debug_core [get_debug_cores {u_ila_1 }]
+save_constraints
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 4096 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+create_debug_core u_ila_1 ila
+set_property C_DATA_DEPTH 4096 [get_debug_cores u_ila_1]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_1]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_1]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_1]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_1]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_1]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_1]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_1]
+connect_debug_port u_ila_0/clk [get_nets [list ov5640_pclk_IBUF_BUFG ]]
+connect_debug_port u_ila_1/clk [get_nets [list pll/inst/clk_out2 ]]
+set_property port_width 16 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {ov5640_data_out[0]} {ov5640_data_out[1]} {ov5640_data_out[2]} {ov5640_data_out[3]} {ov5640_data_out[4]} {ov5640_data_out[5]} {ov5640_data_out[6]} {ov5640_data_out[7]} {ov5640_data_out[8]} {ov5640_data_out[9]} {ov5640_data_out[10]} {ov5640_data_out[11]} {ov5640_data_out[12]} {ov5640_data_out[13]} {ov5640_data_out[14]} {ov5640_data_out[15]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list ov5640_wr_en ]]
+set_property port_width 14 [get_debug_ports u_ila_1/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe0]
+connect_debug_port u_ila_1/probe0 [get_nets [list {eth_udp_send_inst/rd_data_count[0]} {eth_udp_send_inst/rd_data_count[1]} {eth_udp_send_inst/rd_data_count[2]} {eth_udp_send_inst/rd_data_count[3]} {eth_udp_send_inst/rd_data_count[4]} {eth_udp_send_inst/rd_data_count[5]} {eth_udp_send_inst/rd_data_count[6]} {eth_udp_send_inst/rd_data_count[7]} {eth_udp_send_inst/rd_data_count[8]} {eth_udp_send_inst/rd_data_count[9]} {eth_udp_send_inst/rd_data_count[10]} {eth_udp_send_inst/rd_data_count[11]} {eth_udp_send_inst/rd_data_count[12]} {eth_udp_send_inst/rd_data_count[13]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 8 [get_debug_ports u_ila_1/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe1]
+connect_debug_port u_ila_1/probe1 [get_nets [list {eth_udp_send_inst/payload_dat_i[0]} {eth_udp_send_inst/payload_dat_i[1]} {eth_udp_send_inst/payload_dat_i[2]} {eth_udp_send_inst/payload_dat_i[3]} {eth_udp_send_inst/payload_dat_i[4]} {eth_udp_send_inst/payload_dat_i[5]} {eth_udp_send_inst/payload_dat_i[6]} {eth_udp_send_inst/payload_dat_i[7]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe2]
+connect_debug_port u_ila_1/probe2 [get_nets [list eth_udp_send_inst/payload_req_o ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe3]
+connect_debug_port u_ila_1/probe3 [get_nets [list eth_udp_send_inst/sending_flag ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe4]
+connect_debug_port u_ila_1/probe4 [get_nets [list eth_udp_send_inst/tx_done ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe5]
+connect_debug_port u_ila_1/probe5 [get_nets [list eth_udp_send_inst/tx_en_pulse ]]
+save_constraints
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+refresh_design
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.runs/impl_1/ov5640_eth_udp.bit} [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.runs/impl_1/ov5640_eth_udp.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.runs/impl_1/ov5640_eth_udp.ltx} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.runs/impl_1/ov5640_eth_udp.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.runs/impl_1/ov5640_eth_udp.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.runs/impl_1/ov5640_eth_udp.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+save_wave_config {D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {D:/FPGA_Learning_Journey/Pro/OV5640_ETH_udp___/project/project.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+close_hw_manager

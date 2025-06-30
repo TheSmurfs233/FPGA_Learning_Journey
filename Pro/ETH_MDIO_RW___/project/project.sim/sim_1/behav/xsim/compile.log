@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_MDIO_RW___/src/mdio_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mdio_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_MDIO_RW___/src/mdio_dri.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mdio_dri
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_MDIO_RW___/src/mdio_rw_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mdio_rw_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_MDIO_RW___/src/sim/mdio_slave_interface.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mdio_slave_interface
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_MDIO_RW___/src/sim/tb_mdio_rw_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_mdio_rw_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_MDIO_RW___/project/project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

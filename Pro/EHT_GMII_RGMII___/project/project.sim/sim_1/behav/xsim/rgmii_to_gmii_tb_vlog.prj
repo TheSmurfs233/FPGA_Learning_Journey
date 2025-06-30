@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../project.srcs/sources_1/ip/rx_pll" \
+"../../../../project.srcs/sources_1/ip/rx_pll/rx_pll_clk_wiz.v" \
+"../../../../project.srcs/sources_1/ip/rx_pll/rx_pll.v" \
+"../../../../../src/rgmii_to_gmii.v" \
+"../../../../../src/sim/rgmii_to_gmii_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

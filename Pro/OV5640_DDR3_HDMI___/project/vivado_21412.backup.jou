@@ -1,0 +1,162 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Feb 27 17:13:36 2025
+# Process ID: 21412
+# Current directory: D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19732 D:\FPGA_Learning_Journey\Pro\OV5640_DDR3_HDMI___\project\project_1.xpr
+# Log file: D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/vivado.log
+# Journal file: D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.xpr
+open_hw_manager
+update_compile_order -fileset sources_1
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+open_run synth_1 -name synth_1
+delete_debug_core [get_debug_cores {u_ila_0 }]
+delete_debug_core [get_debug_cores {u_ila_1 }]
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+export_ip_user_files -of_objects  [get_files D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/src/uart/bit8_trans_bit32.v] -no_script -reset -force -quiet
+remove_files  D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/src/uart/bit8_trans_bit32.v
+export_ip_user_files -of_objects  [get_files D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/src/hdmi/vga_image_gen.v] -no_script -reset -force -quiet
+remove_files  D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/src/hdmi/vga_image_gen.v
+add_files -norecurse {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/src/ov5640/ov5640_data.v D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/src/ov5640/i2c_ctrl.v D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/src/ov5640/ov5640_cfg.v D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/src/ov5640/ov5640_top.v}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list {ov5640_data[7]} {ov5640_data[6]} {ov5640_data[5]} {ov5640_data[4]} {ov5640_data[3]} {ov5640_data[2]} {ov5640_data[1]} {ov5640_data[0]}]]
+place_ports {ov5640_data[7]} F13
+place_ports {ov5640_data[6]} E13
+place_ports {ov5640_data[5]} E14
+place_ports {ov5640_data[4]} D14
+place_ports {ov5640_data[3]} D15
+place_ports {ov5640_data[2]} C13
+place_ports {ov5640_data[1]} B13
+place_ports {ov5640_data[0]} C14
+place_ports ov5640_href B15
+place_ports ov5640_pclk F14
+place_ports ov5640_pwdn F16
+place_ports ov5640_rst_n C15
+place_ports ov5640_vsync E16
+place_ports sccb_scl D16
+place_ports sccb_sda B16
+set_property IOSTANDARD LVCMOS33 [get_ports [list sccb_sda]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list sccb_scl]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list ov5640_vsync]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list ov5640_rst_n]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list ov5640_pwdn]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list ov5640_pclk]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list ov5640_href]]
+save_constraints
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 4096 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+create_debug_core u_ila_1 ila
+set_property C_DATA_DEPTH 4096 [get_debug_cores u_ila_1]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_1]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_1]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_1]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_1]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_1]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_1]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_1]
+create_debug_core u_ila_2 ila
+set_property C_DATA_DEPTH 4096 [get_debug_cores u_ila_2]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_2]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_2]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_2]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_2]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_2]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_2]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_2]
+connect_debug_port u_ila_0/clk [get_nets [list clk_wiz_inst/inst/clk_50m ]]
+connect_debug_port u_ila_1/clk [get_nets [list clk_wiz_inst/inst/clk_25m ]]
+connect_debug_port u_ila_2/clk [get_nets [list ov5640_top_inst/cfg_clk_BUFG ]]
+set_property port_width 8 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {wr_data[0]} {wr_data[1]} {wr_data[2]} {wr_data[3]} {wr_data[4]} {wr_data[5]} {wr_data[6]} {wr_data[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 24 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {ddr_data_inst/byte_rx_cnt[0]} {ddr_data_inst/byte_rx_cnt[1]} {ddr_data_inst/byte_rx_cnt[2]} {ddr_data_inst/byte_rx_cnt[3]} {ddr_data_inst/byte_rx_cnt[4]} {ddr_data_inst/byte_rx_cnt[5]} {ddr_data_inst/byte_rx_cnt[6]} {ddr_data_inst/byte_rx_cnt[7]} {ddr_data_inst/byte_rx_cnt[8]} {ddr_data_inst/byte_rx_cnt[9]} {ddr_data_inst/byte_rx_cnt[10]} {ddr_data_inst/byte_rx_cnt[11]} {ddr_data_inst/byte_rx_cnt[12]} {ddr_data_inst/byte_rx_cnt[13]} {ddr_data_inst/byte_rx_cnt[14]} {ddr_data_inst/byte_rx_cnt[15]} {ddr_data_inst/byte_rx_cnt[16]} {ddr_data_inst/byte_rx_cnt[17]} {ddr_data_inst/byte_rx_cnt[18]} {ddr_data_inst/byte_rx_cnt[19]} {ddr_data_inst/byte_rx_cnt[20]} {ddr_data_inst/byte_rx_cnt[21]} {ddr_data_inst/byte_rx_cnt[22]} {ddr_data_inst/byte_rx_cnt[23]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 8 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {ddr_data_inst/uart_rx_data[0]} {ddr_data_inst/uart_rx_data[1]} {ddr_data_inst/uart_rx_data[2]} {ddr_data_inst/uart_rx_data[3]} {ddr_data_inst/uart_rx_data[4]} {ddr_data_inst/uart_rx_data[5]} {ddr_data_inst/uart_rx_data[6]} {ddr_data_inst/uart_rx_data[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 24 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {ddr_data_inst/byte4_tx_cnt[0]} {ddr_data_inst/byte4_tx_cnt[1]} {ddr_data_inst/byte4_tx_cnt[2]} {ddr_data_inst/byte4_tx_cnt[3]} {ddr_data_inst/byte4_tx_cnt[4]} {ddr_data_inst/byte4_tx_cnt[5]} {ddr_data_inst/byte4_tx_cnt[6]} {ddr_data_inst/byte4_tx_cnt[7]} {ddr_data_inst/byte4_tx_cnt[8]} {ddr_data_inst/byte4_tx_cnt[9]} {ddr_data_inst/byte4_tx_cnt[10]} {ddr_data_inst/byte4_tx_cnt[11]} {ddr_data_inst/byte4_tx_cnt[12]} {ddr_data_inst/byte4_tx_cnt[13]} {ddr_data_inst/byte4_tx_cnt[14]} {ddr_data_inst/byte4_tx_cnt[15]} {ddr_data_inst/byte4_tx_cnt[16]} {ddr_data_inst/byte4_tx_cnt[17]} {ddr_data_inst/byte4_tx_cnt[18]} {ddr_data_inst/byte4_tx_cnt[19]} {ddr_data_inst/byte4_tx_cnt[20]} {ddr_data_inst/byte4_tx_cnt[21]} {ddr_data_inst/byte4_tx_cnt[22]} {ddr_data_inst/byte4_tx_cnt[23]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list read_enable ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list ddr_data_inst/uart_rx_done ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe6]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list ddr_data_inst/uart_tx_done ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe7]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
+connect_debug_port u_ila_0/probe7 [get_nets [list wr_en ]]
+set_property port_width 32 [get_debug_ports u_ila_1/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe0]
+connect_debug_port u_ila_1/probe0 [get_nets [list {rd_data[0]} {rd_data[1]} {rd_data[2]} {rd_data[3]} {rd_data[4]} {rd_data[5]} {rd_data[6]} {rd_data[7]} {rd_data[8]} {rd_data[9]} {rd_data[10]} {rd_data[11]} {rd_data[12]} {rd_data[13]} {rd_data[14]} {rd_data[15]} {rd_data[16]} {rd_data[17]} {rd_data[18]} {rd_data[19]} {rd_data[20]} {rd_data[21]} {rd_data[22]} {rd_data[23]} {rd_data[24]} {rd_data[25]} {rd_data[26]} {rd_data[27]} {rd_data[28]} {rd_data[29]} {rd_data[30]} {rd_data[31]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe1]
+connect_debug_port u_ila_1/probe1 [get_nets [list data_rd_valid ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe2]
+connect_debug_port u_ila_1/probe2 [get_nets [list pix_data_req ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe3]
+connect_debug_port u_ila_1/probe3 [get_nets [list rd_en ]]
+set_property port_width 1 [get_debug_ports u_ila_2/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe0]
+connect_debug_port u_ila_2/probe0 [get_nets [list cfg_done ]]
+save_constraints
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+startgroup 
+set_property CONTROL.DATA_DEPTH 2 [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~""}]
+set_property CONTROL.TRIGGER_POSITION 0 [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~""}]
+endgroup

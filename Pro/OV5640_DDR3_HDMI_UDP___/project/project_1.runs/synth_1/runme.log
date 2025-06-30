@@ -1,0 +1,1232 @@
+
+*** Running vivado
+    with args -log ddr3_test.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ddr3_test.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source ddr3_test.tcl -notrace
+Command: synth_design -top ddr3_test -part xc7a35tfgg484-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tfgg484-2
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4480 
+WARNING: [Synth 8-2507] parameter declaration becomes local in i2c_ctrl with formal parameter declaration list [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ov5640/i2c_ctrl.v:37]
+WARNING: [Synth 8-2507] parameter declaration becomes local in i2c_ctrl with formal parameter declaration list [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ov5640/i2c_ctrl.v:39]
+WARNING: [Synth 8-2507] parameter declaration becomes local in i2c_ctrl with formal parameter declaration list [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ov5640/i2c_ctrl.v:56]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1002.316 ; gain = 242.516
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ddr3_test' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ddr3_test.v:2]
+	Parameter H_PIXEL bound to: 24'b000000000000001010000000 
+	Parameter V_PIXEL bound to: 24'b000000000000000111100000 
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ddr3_test.v:18]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ddr3_test.v:19]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ddr3_test.v:83]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ddr3_test.v:84]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ddr3_test.v:235]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ddr3_test.v:236]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ddr3_test.v:237]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ddr3_test.v:238]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ddr3_test.v:281]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ddr3_test.v:282]
+INFO: [Synth 8-6157] synthesizing module 'IBUFG' [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:33402]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFG' (1#1) [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:33402]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (2#1) [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/synth_1/.Xil/Vivado-5084-DESKTOP-I8GGJRG/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (3#1) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/synth_1/.Xil/Vivado-5084-DESKTOP-I8GGJRG/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_1' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/synth_1/.Xil/Vivado-5084-DESKTOP-I8GGJRG/realtime/clk_wiz_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_1' (4#1) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/synth_1/.Xil/Vivado-5084-DESKTOP-I8GGJRG/realtime/clk_wiz_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_hdmi' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/hdmi/top_hdmi.v:1]
+INFO: [Synth 8-6157] synthesizing module 'vga_timing_ctrl' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/hdmi/vga_timing_ctrl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'vga_timing_ctrl' (5#1) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/hdmi/vga_timing_ctrl.v:1]
+WARNING: [Synth 8-689] width (32) of port connection 'pix_data' does not match port width (24) of module 'vga_timing_ctrl' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/hdmi/top_hdmi.v:54]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_ctrl' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/hdmi/hdmi_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'encode' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/hdmi/encode.v:3]
+	Parameter CTRLTOKEN0 bound to: 10'b1101010100 
+	Parameter CTRLTOKEN1 bound to: 10'b0010101011 
+	Parameter CTRLTOKEN2 bound to: 10'b0101010100 
+	Parameter CTRLTOKEN3 bound to: 10'b1010101011 
+INFO: [Synth 8-6155] done synthesizing module 'encode' (6#1) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/hdmi/encode.v:3]
+INFO: [Synth 8-6157] synthesizing module 'par2ser' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/hdmi/par2ser.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ODDR' [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:49681]
+	Parameter DDR_CLK_EDGE bound to: SAME_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'ODDR' (7#1) [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:49681]
+INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:46225]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (8#1) [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:46225]
+INFO: [Synth 8-6155] done synthesizing module 'par2ser' (9#1) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/hdmi/par2ser.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_ctrl' (10#1) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/hdmi/hdmi_ctrl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'top_hdmi' (11#1) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/hdmi/top_hdmi.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ov5640_top' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ov5640/ov5640_top.v:3]
+	Parameter SLAVE_ADDR bound to: 7'b0111100 
+	Parameter BIT_CTRL bound to: 1'b1 
+	Parameter CLK_FREQ bound to: 26'b01011111010111100001000000 
+	Parameter I2C_FREQ bound to: 18'b111101000010010000 
+INFO: [Synth 8-6157] synthesizing module 'i2c_ctrl' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ov5640/i2c_ctrl.v:10]
+	Parameter DEVICE_ADDR bound to: 7'b0111100 
+	Parameter SYS_CLK_FREQ bound to: 26'b01011111010111100001000000 
+	Parameter SCL_FREQ bound to: 18'b111101000010010000 
+	Parameter CNT_CLK_MAX bound to: 26'b00000000000000000000001100 
+	Parameter CNT_START_MAX bound to: 8'b01100100 
+	Parameter IDLE bound to: 4'b0000 
+	Parameter START_1 bound to: 4'b0001 
+	Parameter SEND_D_ADDR bound to: 4'b0010 
+	Parameter ACK_1 bound to: 4'b0011 
+	Parameter SEND_B_ADDR_H bound to: 4'b0100 
+	Parameter ACK_2 bound to: 4'b0101 
+	Parameter SEND_B_ADDR_L bound to: 4'b0110 
+	Parameter ACK_3 bound to: 4'b0111 
+	Parameter WR_DATA bound to: 4'b1000 
+	Parameter ACK_4 bound to: 4'b1001 
+	Parameter START_2 bound to: 4'b1010 
+	Parameter SEND_RD_ADDR bound to: 4'b1011 
+	Parameter ACK_5 bound to: 4'b1100 
+	Parameter RD_DATA bound to: 4'b1101 
+	Parameter N_ACK bound to: 4'b1110 
+	Parameter STOP bound to: 4'b1111 
+INFO: [Synth 8-226] default block is never used [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ov5640/i2c_ctrl.v:124]
+INFO: [Synth 8-226] default block is never used [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ov5640/i2c_ctrl.v:236]
+INFO: [Synth 8-226] default block is never used [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ov5640/i2c_ctrl.v:260]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_ctrl' (12#1) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ov5640/i2c_ctrl.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ov5640_cfg' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ov5640/ov5640_cfg.v:3]
+	Parameter REG_NUM bound to: 8'b11111011 
+	Parameter CNT_WAIT_MAX bound to: 15'b100111000100000 
+INFO: [Synth 8-6155] done synthesizing module 'ov5640_cfg' (13#1) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ov5640/ov5640_cfg.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ov5640_data' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ov5640/ov5640_data.v:3]
+	Parameter PIC_WAIT bound to: 4'b1010 
+INFO: [Synth 8-6155] done synthesizing module 'ov5640_data' (14#1) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ov5640/ov5640_data.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ov5640_top' (15#1) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ov5640/ov5640_top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'axi_ddr_top' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/axi_ddr3_rw/axi_ddr_top.v:3]
+	Parameter DDR_WR_LEN bound to: 8 - type: integer 
+	Parameter DDR_RD_LEN bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'axi_ctrl' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/axi_ddr3_rw/axi_ctrl.v:3]
+	Parameter DDR_WR_LEN bound to: 8 - type: integer 
+	Parameter DDR_RD_LEN bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'wr_fifo' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/synth_1/.Xil/Vivado-5084-DESKTOP-I8GGJRG/realtime/wr_fifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'wr_fifo' (16#1) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/synth_1/.Xil/Vivado-5084-DESKTOP-I8GGJRG/realtime/wr_fifo_stub.v:6]
+WARNING: [Synth 8-689] width (64) of port connection 'din' does not match port width (16) of module 'wr_fifo' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/axi_ddr3_rw/axi_ctrl.v:295]
+WARNING: [Synth 8-689] width (10) of port connection 'rd_data_count' does not match port width (11) of module 'wr_fifo' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/axi_ddr3_rw/axi_ctrl.v:303]
+WARNING: [Synth 8-689] width (12) of port connection 'wr_data_count' does not match port width (13) of module 'wr_fifo' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/axi_ddr3_rw/axi_ctrl.v:304]
+INFO: [Synth 8-6157] synthesizing module 'rd_fifo' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/synth_1/.Xil/Vivado-5084-DESKTOP-I8GGJRG/realtime/rd_fifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rd_fifo' (17#1) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/synth_1/.Xil/Vivado-5084-DESKTOP-I8GGJRG/realtime/rd_fifo_stub.v:6]
+WARNING: [Synth 8-689] width (64) of port connection 'dout' does not match port width (16) of module 'rd_fifo' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/axi_ddr3_rw/axi_ctrl.v:317]
+WARNING: [Synth 8-689] width (12) of port connection 'rd_data_count' does not match port width (13) of module 'rd_fifo' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/axi_ddr3_rw/axi_ctrl.v:322]
+WARNING: [Synth 8-689] width (10) of port connection 'wr_data_count' does not match port width (11) of module 'rd_fifo' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/axi_ddr3_rw/axi_ctrl.v:323]
+WARNING: [Synth 8-5788] Register wr_burst_addr_reg_reg in module axi_ctrl is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/axi_ddr3_rw/axi_ctrl.v:104]
+WARNING: [Synth 8-5788] Register rd_burst_addr_reg_reg in module axi_ctrl is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/axi_ddr3_rw/axi_ctrl.v:108]
+INFO: [Synth 8-6155] done synthesizing module 'axi_ctrl' (18#1) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/axi_ddr3_rw/axi_ctrl.v:3]
+INFO: [Synth 8-6157] synthesizing module 'axi_master_write' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/axi_ddr3_rw/axi_master_write.v:3]
+	Parameter S_WR_IDLE bound to: 3'b000 
+	Parameter S_WA_WAIT bound to: 3'b001 
+	Parameter S_WA_START bound to: 3'b010 
+	Parameter S_WD_WAIT bound to: 3'b011 
+	Parameter S_WD_PROC bound to: 3'b100 
+	Parameter S_WR_WAIT bound to: 3'b101 
+	Parameter S_WR_DONE bound to: 3'b110 
+WARNING: [Synth 8-6014] Unused sequential element reg_w_last_reg was removed.  [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/axi_ddr3_rw/axi_master_write.v:103]
+INFO: [Synth 8-6155] done synthesizing module 'axi_master_write' (19#1) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/axi_ddr3_rw/axi_master_write.v:3]
+INFO: [Synth 8-6157] synthesizing module 'axi_master_read' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/axi_ddr3_rw/axi_master_read.v:3]
+	Parameter S_RD_IDLE bound to: 3'b000 
+	Parameter S_RA_WAIT bound to: 3'b001 
+	Parameter S_RA_START bound to: 3'b010 
+	Parameter S_RD_WAIT bound to: 3'b011 
+	Parameter S_RD_PROC bound to: 3'b100 
+	Parameter S_RD_DONE bound to: 3'b101 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/axi_ddr3_rw/axi_master_read.v:82]
+WARNING: [Synth 8-6014] Unused sequential element reg_rd_len_reg was removed.  [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/axi_ddr3_rw/axi_master_read.v:79]
+INFO: [Synth 8-6155] done synthesizing module 'axi_master_read' (20#1) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/axi_ddr3_rw/axi_master_read.v:3]
+INFO: [Synth 8-6157] synthesizing module 'axi_ddr' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/synth_1/.Xil/Vivado-5084-DESKTOP-I8GGJRG/realtime/axi_ddr_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'axi_ddr' (21#1) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/synth_1/.Xil/Vivado-5084-DESKTOP-I8GGJRG/realtime/axi_ddr_stub.v:5]
+WARNING: [Synth 8-689] width (4) of port connection 'ddr3_dm' does not match port width (2) of module 'axi_ddr' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/axi_ddr3_rw/axi_ddr_top.v:265]
+WARNING: [Synth 8-689] width (32) of port connection 's_axi_awaddr' does not match port width (28) of module 'axi_ddr' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/axi_ddr3_rw/axi_ddr_top.v:282]
+WARNING: [Synth 8-689] width (32) of port connection 's_axi_araddr' does not match port width (28) of module 'axi_ddr' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/axi_ddr3_rw/axi_ddr_top.v:305]
+WARNING: [Synth 8-689] width (2) of port connection 's_axi_arlock' does not match port width (1) of module 'axi_ddr' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/axi_ddr3_rw/axi_ddr_top.v:309]
+WARNING: [Synth 8-7023] instance 'u_axi_ddr' of module 'axi_ddr' has 67 connections declared, but only 66 given [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/axi_ddr3_rw/axi_ddr_top.v:250]
+INFO: [Synth 8-6155] done synthesizing module 'axi_ddr_top' (22#1) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/axi_ddr3_rw/axi_ddr_top.v:3]
+WARNING: [Synth 8-689] width (16) of port connection 'data_rd' does not match port width (64) of module 'axi_ddr_top' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ddr3_test.v:202]
+WARNING: [Synth 8-689] width (2) of port connection 'ddr3_dm' does not match port width (4) of module 'axi_ddr_top' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ddr3_test.v:227]
+INFO: [Synth 8-6157] synthesizing module 'eth_udp_send' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/udp_tx/eth_udp_send.v:1]
+	Parameter data_length bound to: 15'b000010100000010 
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/udp_tx/eth_udp_send.v:25]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/udp_tx/eth_udp_send.v:26]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/udp_tx/eth_udp_send.v:27]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/udp_tx/eth_udp_send.v:28]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/udp_tx/eth_udp_send.v:31]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/udp_tx/eth_udp_send.v:32]
+INFO: [Synth 8-6157] synthesizing module 'eth_udp_tx_gmii' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/udp_tx/eth_udp_tx_gmii.v:2]
+	Parameter ETH_type bound to: 16'b0000100000000000 
+	Parameter IP_ver bound to: 4'b0100 
+	Parameter IP_hdr_len bound to: 4'b0101 
+	Parameter IP_tos bound to: 8'b00000000 
+	Parameter IP_id bound to: 16'b0000000000000000 
+	Parameter IP_rsv bound to: 1'b0 
+	Parameter IP_df bound to: 1'b0 
+	Parameter IP_mf bound to: 1'b0 
+	Parameter IP_frag_offset bound to: 13'b0000000000000 
+	Parameter IP_ttl bound to: 8'b01000000 
+	Parameter IP_protocol bound to: 8'b00010001 
+	Parameter IDLE bound to: 9'b000000001 
+	Parameter TX_PREAMBLE bound to: 9'b000000010 
+	Parameter TX_ETH_HEADER bound to: 9'b000000100 
+	Parameter TX_IP_HEADER bound to: 9'b000001000 
+	Parameter TX_UDP_HEADER bound to: 9'b000010000 
+	Parameter TX_DATA bound to: 9'b000100000 
+	Parameter TX_FILL_DATA bound to: 9'b001000000 
+	Parameter TX_CRC bound to: 9'b010000000 
+	Parameter TX_DLY bound to: 9'b100000000 
+INFO: [Synth 8-6157] synthesizing module 'ip_checksum' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/udp_tx/ip_checksum.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'ip_checksum' (23#1) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/udp_tx/ip_checksum.v:2]
+INFO: [Synth 8-6157] synthesizing module 'CRC32_d8' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/udp_tx/crc32_d8.v:2]
+	Parameter Tp bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'CRC32_d8' (24#1) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/udp_tx/crc32_d8.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'eth_udp_tx_gmii' (25#1) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/udp_tx/eth_udp_tx_gmii.v:2]
+INFO: [Synth 8-6157] synthesizing module 'eth_dcfifo' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/synth_1/.Xil/Vivado-5084-DESKTOP-I8GGJRG/realtime/eth_dcfifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'eth_dcfifo' (26#1) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/synth_1/.Xil/Vivado-5084-DESKTOP-I8GGJRG/realtime/eth_dcfifo_stub.v:6]
+WARNING: [Synth 8-689] width (14) of port connection 'rd_data_count' does not match port width (13) of module 'eth_dcfifo' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/udp_tx/eth_udp_send.v:101]
+INFO: [Synth 8-6157] synthesizing module 'gmii_to_rgmii' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/udp_tx/gmii_to_rgmii.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'gmii_to_rgmii' (27#1) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/udp_tx/gmii_to_rgmii.v:1]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'eth_udp_tx_gmii_inst'. This will prevent further optimization [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/udp_tx/eth_udp_send.v:68]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'eth_dcfifor_inst'. This will prevent further optimization [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/udp_tx/eth_udp_send.v:90]
+INFO: [Synth 8-6155] done synthesizing module 'eth_udp_send' (28#1) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/udp_tx/eth_udp_send.v:1]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ov5640_top_inst'. This will prevent further optimization [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ddr3_test.v:165]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ddr_rw_inst'. This will prevent further optimization [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ddr3_test.v:187]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'eth_udp_send_inst'. This will prevent further optimization [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ddr3_test.v:305]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ddr3_test.v-2.8 with 1st driver pin 'ddr3_test:/eth_udp_send_inst/phy_rst_n' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ddr3_test.v:2]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ddr3_test.v-2.8 with 2nd driver pin 'VCC' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ddr3_test.v:2]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ddr3_test.v-2.8 is connected to at least one constant driver which has been preserved, other driver is ignored [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ddr3_test.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'ddr3_test' (29#1) [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ddr3_test.v:2]
+WARNING: [Synth 8-3917] design ddr3_test has port led[0] driven by constant 0
+WARNING: [Synth 8-3917] design ddr3_test has port phy_rst_n driven by constant 1
+WARNING: [Synth 8-3917] design ddr3_test has port ov5640_pwdn driven by constant 0
+WARNING: [Synth 8-3917] design ddr3_test has port ov5640_rst_n driven by constant 1
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port M_AXI_RID[3]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port M_AXI_RID[2]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port M_AXI_RID[1]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port M_AXI_RID[0]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port M_AXI_RRESP[1]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port M_AXI_RRESP[0]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port RD_LEN[9]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port RD_LEN[8]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port M_AXI_BID[3]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port M_AXI_BID[2]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port M_AXI_BID[1]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port M_AXI_BID[0]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port M_AXI_BRESP[1]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port M_AXI_BRESP[0]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port WR_LEN[9]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port WR_LEN[8]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[63]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[62]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[61]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[60]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[59]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[58]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[57]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[56]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[55]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[54]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[53]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[52]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[51]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[50]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[49]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[48]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[47]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[46]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[45]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[44]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[43]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[42]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[41]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[40]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[39]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[38]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[37]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[36]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[35]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[34]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[33]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[32]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[31]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[30]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[29]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[28]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[27]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[26]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[25]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[24]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[23]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[22]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[21]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[20]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[19]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[18]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[17]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[16]
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port sys_clk
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[31]
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[30]
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[29]
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[28]
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[27]
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[26]
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[25]
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[24]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1061.547 ; gain = 301.746
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1063.441 ; gain = 303.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1063.441 ; gain = 303.641
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1074.719 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
+WARNING: [Netlist 29-432] The IBUFG primitive 'IBUFG_inst' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo/rd_fifo_in_context.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo/rd_fifo_in_context.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wiz_0_inst'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wiz_0_inst'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo/wr_fifo_in_context.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo/wr_fifo_in_context.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo/eth_dcfifo_in_context.xdc] for cell 'eth_udp_send_inst/eth_dcfifor_inst'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo/eth_dcfifo_in_context.xdc] for cell 'eth_udp_send_inst/eth_dcfifor_inst'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc] for cell 'clk_wiz_1_inst'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc] for cell 'clk_wiz_1_inst'
+Parsing XDC File [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
+WARNING: [Vivado 12-584] No ports matched 'uart_rx_d'. [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/constrs_1/new/ddr3.xdc:5]
+WARNING: [Vivado 12-584] No ports matched 'uart_rx_d'. [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/constrs_1/new/ddr3.xdc:6]
+WARNING: [Vivado 12-584] No ports matched 'uart_tx_d'. [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/constrs_1/new/ddr3.xdc:7]
+WARNING: [Vivado 12-584] No ports matched 'uart_tx_d'. [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/constrs_1/new/ddr3.xdc:8]
+WARNING: [Vivado 12-507] No nets matched 'ov5640_pclk_IBUF'. [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/constrs_1/new/ddr3.xdc:58]
+Finished Parsing XDC File [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/constrs_1/new/ddr3.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/ddr3_test_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/constrs_1/new/ddr3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ddr3_test_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ddr3_test_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1192.184 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IBUFG => IBUF: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1192.184 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst' at clock pin 'wr_clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst' at clock pin 'rd_clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1195.180 ; gain = 435.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tfgg484-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1195.180 ; gain = 435.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[0]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[0]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[10]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[10]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[11]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[11]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[12]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[12]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[13]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[13]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[1]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[1]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[2]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[2]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[3]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[3]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[4]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[4]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[5]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 20).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[5]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[6]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 22).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[6]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[7]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 24).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[7]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[8]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 26).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[8]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[9]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 28).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[9]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[0]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 30).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[0]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[1]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 32).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[1]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 33).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[2]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 34).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[2]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 35).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cas_n. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 36).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cas_n. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 37).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_n[0]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 38).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ck_n[0]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 39).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_p[0]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 40).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ck_p[0]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 41).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cke[0]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 42).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cke[0]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 43).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cs_n[0]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 44).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cs_n[0]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 45).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[0]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 46).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[0]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 47).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[1]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 48).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[1]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 49).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[0]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 50).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[0]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 51).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[10]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 52).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[10]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 53).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[11]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 54).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[11]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 55).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[12]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 56).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[12]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 57).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[13]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 58).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[13]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 59).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[14]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 60).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[14]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 61).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[15]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 62).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[15]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 63).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[1]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 64).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[1]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 65).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[2]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 66).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[2]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 67).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[3]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 68).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[3]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 69).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[4]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 70).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[4]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 71).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[5]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 72).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[5]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 73).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[6]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 74).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[6]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 75).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[7]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 76).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[7]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 77).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[8]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 78).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[8]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 79).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[9]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 80).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[9]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 81).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[0]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 82).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[0]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 83).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[1]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 84).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[1]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 85).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[0]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 86).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[0]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 87).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[1]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 88).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[1]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 89).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_odt[0]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 90).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_odt[0]. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 91).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ras_n. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 92).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ras_n. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 93).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_reset_n. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 94).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_reset_n. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 95).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 96).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  d:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 97).
+Applied set_property DONT_TOUCH = true for ddr_rw_inst/u_axi_ddr. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for clk_wiz_0_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for eth_udp_send_inst/eth_dcfifor_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for clk_wiz_1_inst. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1195.180 ; gain = 435.379
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/hdmi/encode.v:119]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'i2c_ctrl'
+INFO: [Synth 8-5544] ROM "i2c_sda_reg" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'wr_state_reg' in module 'axi_master_write'
+INFO: [Synth 8-5544] ROM "wr_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'rd_state_reg' in module 'axi_master_read'
+INFO: [Synth 8-802] inferred FSM for state register 'curr_state_reg' in module 'eth_udp_tx_gmii'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                 0000100000000000 |                             0000
+                 START_1 |                 0000010000000000 |                             0001
+             SEND_D_ADDR |                 0000000001000000 |                             0010
+                   ACK_1 |                 0000000000000001 |                             0011
+           SEND_B_ADDR_H |                 0000000000000010 |                             0100
+                   ACK_2 |                 0000000000001000 |                             0101
+           SEND_B_ADDR_L |                 0000000000000100 |                             0110
+                   ACK_3 |                 0001000000000000 |                             0111
+                 WR_DATA |                 0010000000000000 |                             1000
+                   ACK_4 |                 0100000000000000 |                             1001
+                 START_2 |                 0000001000000000 |                             1010
+            SEND_RD_ADDR |                 0000000100000000 |                             1011
+                   ACK_5 |                 0000000010000000 |                             1100
+                 RD_DATA |                 0000000000010000 |                             1101
+                   N_ACK |                 0000000000100000 |                             1110
+                    STOP |                 1000000000000000 |                             1111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'i2c_ctrl'
+WARNING: [Synth 8-327] inferring latch for variable 'ack_reg' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ov5640/i2c_ctrl.v:225]
+WARNING: [Synth 8-327] inferring latch for variable 'rd_data_reg_reg' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ov5640/i2c_ctrl.v:264]
+WARNING: [Synth 8-327] inferring latch for variable 'i2c_sda_reg_reg' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/ov5640/i2c_ctrl.v:263]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               S_WR_IDLE |                              000 |                              000
+               S_WA_WAIT |                              001 |                              001
+              S_WA_START |                              010 |                              010
+               S_WD_WAIT |                              011 |                              011
+               S_WD_PROC |                              100 |                              100
+               S_WR_WAIT |                              101 |                              101
+               S_WR_DONE |                              110 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wr_state_reg' using encoding 'sequential' in module 'axi_master_write'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               S_RD_IDLE |                              000 |                              000
+               S_RA_WAIT |                              001 |                              001
+              S_RA_START |                              010 |                              010
+               S_RD_WAIT |                              011 |                              011
+               S_RD_PROC |                              100 |                              100
+               S_RD_DONE |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rd_state_reg' using encoding 'sequential' in module 'axi_master_read'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                        000000001 |                        000000001
+             TX_PREAMBLE |                        000000010 |                        000000010
+           TX_ETH_HEADER |                        000000100 |                        000000100
+            TX_IP_HEADER |                        000001000 |                        000001000
+           TX_UDP_HEADER |                        000010000 |                        000010000
+                 TX_DATA |                        000100000 |                        000100000
+            TX_FILL_DATA |                        001000000 |                        001000000
+                  TX_CRC |                        010000000 |                        010000000
+                  TX_DLY |                        100000000 |                        100000000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'curr_state_reg' in module 'eth_udp_tx_gmii'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1195.180 ; gain = 435.379
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   3 Input     32 Bit       Adders := 4     
+	   9 Input     20 Bit       Adders := 1     
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 6     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 4     
+	   2 Input      8 Bit       Adders := 6     
+	   5 Input      5 Bit       Adders := 6     
+	   4 Input      5 Bit       Adders := 3     
+	   2 Input      5 Bit       Adders := 2     
+	   8 Input      4 Bit       Adders := 6     
+	   2 Input      4 Bit       Adders := 8     
+	   2 Input      3 Bit       Adders := 6     
+	   2 Input      2 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 54    
+	   4 Input      1 Bit         XORs := 2     
+	   6 Input      1 Bit         XORs := 8     
+	   7 Input      1 Bit         XORs := 6     
+	   3 Input      1 Bit         XORs := 4     
+	  11 Input      1 Bit         XORs := 2     
+	   9 Input      1 Bit         XORs := 2     
+	   8 Input      1 Bit         XORs := 2     
+	  10 Input      1 Bit         XORs := 1     
+	   5 Input      1 Bit         XORs := 4     
++---Registers : 
+	               48 Bit    Registers := 2     
+	               32 Bit    Registers := 8     
+	               16 Bit    Registers := 9     
+	               10 Bit    Registers := 5     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 14    
+	                5 Bit    Registers := 13    
+	                4 Bit    Registers := 14    
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 53    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 14    
+	   7 Input     32 Bit        Muxes := 1     
+	   6 Input     32 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 1     
+	  16 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 22    
+	   2 Input     10 Bit        Muxes := 8     
+	   5 Input     10 Bit        Muxes := 3     
+	  10 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 12    
+	  16 Input      8 Bit        Muxes := 2     
+	   7 Input      8 Bit        Muxes := 1     
+	   9 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 23    
+	   2 Input      4 Bit        Muxes := 8     
+	   2 Input      3 Bit        Muxes := 7     
+	   7 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 42    
+	   4 Input      1 Bit        Muxes := 1     
+	  16 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 2     
+	   7 Input      1 Bit        Muxes := 6     
+	   6 Input      1 Bit        Muxes := 3     
+	   9 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ddr3_test 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module vga_timing_ctrl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 4     
++---Registers : 
+	               10 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module encode 
+Detailed RTL Component Info : 
++---Adders : 
+	   5 Input      5 Bit       Adders := 2     
+	   4 Input      5 Bit       Adders := 1     
+	   8 Input      4 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 14    
++---Registers : 
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   5 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+Module par2ser 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+Module i2c_ctrl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	  16 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 19    
+	   2 Input      8 Bit        Muxes := 2     
+	  16 Input      8 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 1     
+	  16 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 2     
+Module ov5640_cfg 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module ov5640_data 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+Module axi_ctrl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   3 Input     32 Bit       Adders := 4     
+	   2 Input     11 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 14    
+	   2 Input      1 Bit        Muxes := 2     
+Module axi_master_write 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   7 Input     32 Bit        Muxes := 1     
+	   7 Input      8 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   7 Input      1 Bit        Muxes := 6     
+Module axi_master_read 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   6 Input     32 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 3     
+Module ip_checksum 
+Detailed RTL Component Info : 
++---Adders : 
+	   9 Input     20 Bit       Adders := 1     
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+Module CRC32_d8 
+Detailed RTL Component Info : 
++---XORs : 
+	   4 Input      1 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 11    
+	   6 Input      1 Bit         XORs := 8     
+	   7 Input      1 Bit         XORs := 6     
+	   3 Input      1 Bit         XORs := 4     
+	  11 Input      1 Bit         XORs := 2     
+	   9 Input      1 Bit         XORs := 2     
+	   8 Input      1 Bit         XORs := 2     
+	  10 Input      1 Bit         XORs := 1     
+	   5 Input      1 Bit         XORs := 4     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module eth_udp_tx_gmii 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 5     
+	   2 Input      5 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 4     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               48 Bit    Registers := 2     
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 6     
+	                8 Bit    Registers := 5     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 4     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	  10 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 6     
+	   9 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 5     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+	   9 Input      1 Bit        Muxes := 1     
+Module gmii_to_rgmii 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module eth_udp_send 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+Why this net has no driver: _order_recur <const0>
+INFO: [Synth 8-4471] merging register 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst2/de_q_reg' into 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst1/de_q_reg' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/hdmi/encode.v:93]
+INFO: [Synth 8-4471] merging register 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst2/de_reg_reg' into 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst1/de_reg_reg' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/hdmi/encode.v:94]
+INFO: [Synth 8-4471] merging register 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst2/c0_q_reg' into 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst1/c0_q_reg' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/hdmi/encode.v:96]
+INFO: [Synth 8-4471] merging register 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst2/c0_reg_reg' into 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst1/c0_reg_reg' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/hdmi/encode.v:97]
+INFO: [Synth 8-4471] merging register 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst2/c1_q_reg' into 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst1/c1_q_reg' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/hdmi/encode.v:98]
+INFO: [Synth 8-4471] merging register 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst2/c1_reg_reg' into 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst1/c1_reg_reg' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/hdmi/encode.v:99]
+INFO: [Synth 8-4471] merging register 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst3/de_q_reg' into 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst1/de_q_reg' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/hdmi/encode.v:93]
+INFO: [Synth 8-4471] merging register 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst3/de_reg_reg' into 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst1/de_reg_reg' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/hdmi/encode.v:94]
+INFO: [Synth 8-4471] merging register 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst3/c0_q_reg' into 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst1/c0_q_reg' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/hdmi/encode.v:96]
+INFO: [Synth 8-4471] merging register 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst3/c0_reg_reg' into 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst1/c0_reg_reg' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/hdmi/encode.v:97]
+INFO: [Synth 8-4471] merging register 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst3/c1_q_reg' into 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst1/c1_q_reg' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/hdmi/encode.v:98]
+INFO: [Synth 8-4471] merging register 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst3/c1_reg_reg' into 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst1/c1_reg_reg' [D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/src/hdmi/encode.v:99]
+WARNING: [Synth 8-3917] design ddr3_test has port led[0] driven by constant 0
+WARNING: [Synth 8-3917] design ddr3_test has port phy_rst_n driven by constant 1
+WARNING: [Synth 8-3917] design ddr3_test has port ov5640_pwdn driven by constant 0
+WARNING: [Synth 8-3917] design ddr3_test has port ov5640_rst_n driven by constant 1
+WARNING: [Synth 8-3917] design ddr3_test has port ddc_scl driven by constant 1
+WARNING: [Synth 8-3917] design ddr3_test has port ddc_sda driven by constant 1
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port M_AXI_RID[3]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port M_AXI_RID[2]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port M_AXI_RID[1]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port M_AXI_RID[0]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port M_AXI_RRESP[1]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port M_AXI_RRESP[0]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port RD_LEN[9]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port RD_LEN[8]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port M_AXI_BID[3]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port M_AXI_BID[2]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port M_AXI_BID[1]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port M_AXI_BID[0]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port M_AXI_BRESP[1]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port M_AXI_BRESP[0]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port WR_LEN[9]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port WR_LEN[8]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[63]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[62]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[61]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[60]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[59]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[58]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[57]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[56]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[55]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[54]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[53]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst4/data_fall_s_reg[4]' (FD) to 'top_hdmi_inst/hdmi_ctrl_inst/par2ser_inst4/data_rise_s_reg[4]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/data_length_reg_reg[0]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/data_length_reg_reg[1]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/data_length_reg_reg[2]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/data_length_reg_reg[3]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/data_length_reg_reg[4]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/data_length_reg_reg[5]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/data_length_reg_reg[6]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/data_length_reg_reg[7]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/data_length_reg_reg[8]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/data_length_reg_reg[9]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/data_length_reg_reg[10]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/data_length_reg_reg[11]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/data_length_reg_reg[12]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/data_length_reg_reg[13]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/data_length_reg_reg[14]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/data_length_reg_reg[15]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst3/data_in_q_reg[2]' (FD) to 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst3/n1d_reg[3]'
+INFO: [Synth 8-3886] merging instance 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst3/n1d_reg[3]' (FD) to 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst3/data_in_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst3/data_in_q_reg[1]' (FD) to 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst3/data_in_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst3/data_in_q_reg[0]' (FD) to 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst2/n1d_reg[3]'
+INFO: [Synth 8-3886] merging instance 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst2/n1d_reg[3]' (FD) to 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst2/data_in_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst2/data_in_q_reg[1]' (FD) to 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst2/data_in_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst2/data_in_q_reg[0]' (FD) to 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst1/n1d_reg[3]'
+INFO: [Synth 8-3886] merging instance 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst1/data_in_q_reg[2]' (FD) to 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst1/n1d_reg[3]'
+INFO: [Synth 8-3886] merging instance 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst1/n1d_reg[3]' (FD) to 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst1/data_in_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst1/data_in_q_reg[1]' (FD) to 'top_hdmi_inst/hdmi_ctrl_inst/encode_inst1/data_in_q_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\top_hdmi_inst/hdmi_ctrl_inst/encode_inst1/data_in_q_reg[0] )
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_mac_reg_reg[4]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_mac_reg_reg[12]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_mac_reg_reg[20]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_mac_reg_reg[28]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_mac_reg_reg[36]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_mac_reg_reg[44]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_mac_reg_reg[4]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_mac_reg_reg[12]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_mac_reg_reg[20]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_mac_reg_reg[28]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_mac_reg_reg[36]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_mac_reg_reg[44]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_ip_reg_reg[4]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_ip_reg_reg[12]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_ip_reg_reg[20]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_ip_reg_reg[28]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/IP_total_len_reg_reg[4]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/IP_total_len_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/IP_total_len_reg_reg[12]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_ip_reg_reg[4]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_ip_reg_reg[12]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_ip_reg_reg[20]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_ip_reg_reg[28]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[4]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[12]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_port_reg_reg[4]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_port_reg_reg[12]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/udp_length_reg_reg[12]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_mac_reg_reg[0]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_mac_reg_reg[8]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_mac_reg_reg[16]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_mac_reg_reg[24]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_mac_reg_reg[32]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_mac_reg_reg[40]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_mac_reg_reg[0]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_mac_reg_reg[8]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_mac_reg_reg[16]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_mac_reg_reg[24]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_mac_reg_reg[32]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_mac_reg_reg[40]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_ip_reg_reg[0]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_ip_reg_reg[8]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_ip_reg_reg[16]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_ip_reg_reg[24]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/IP_total_len_reg_reg[0]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/IP_total_len_reg_reg[8]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_ip_reg_reg[0]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_ip_reg_reg[8]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_ip_reg_reg[16]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_ip_reg_reg[24]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[0]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[8]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_port_reg_reg[0]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_port_reg_reg[8]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/udp_length_reg_reg[0]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/udp_length_reg_reg[8]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_mac_reg_reg[6]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_mac_reg_reg[14]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_mac_reg_reg[22]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_mac_reg_reg[30]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_mac_reg_reg[38]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_mac_reg_reg[46]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_mac_reg_reg[6]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_mac_reg_reg[14]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_mac_reg_reg[22]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_mac_reg_reg[30]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_mac_reg_reg[38]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_mac_reg_reg[46]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_ip_reg_reg[6]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_ip_reg_reg[14]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_ip_reg_reg[22]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/src_ip_reg_reg[30]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/IP_total_len_reg_reg[6]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_udp_send_inst/eth_udp_tx_gmii_inst/IP_total_len_reg_reg[14]' (FDCE) to 'eth_udp_send_inst/eth_udp_tx_gmii_inst/dst_port_reg_reg[3]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (eth_udp_send_inst/eth_udp_tx_gmii_inst/\udp_length_reg_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ddr_rw_inst/\axi_ctrl_inst/pingpang_reg_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ddr_rw_inst/\axi_ctrl_inst/wr_rst_reg1_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\top_hdmi_inst/hdmi_ctrl_inst/encode_inst1/data_in_q_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (i2c_ctrl_inst/FSM_onehot_state_reg[9]) is unused and will be removed from module ov5640_top.
+WARNING: [Synth 8-3332] Sequential element (i2c_ctrl_inst/FSM_onehot_state_reg[8]) is unused and will be removed from module ov5640_top.
+WARNING: [Synth 8-3332] Sequential element (i2c_ctrl_inst/FSM_onehot_state_reg[7]) is unused and will be removed from module ov5640_top.
+WARNING: [Synth 8-3332] Sequential element (i2c_ctrl_inst/FSM_onehot_state_reg[5]) is unused and will be removed from module ov5640_top.
+WARNING: [Synth 8-3332] Sequential element (i2c_ctrl_inst/FSM_onehot_state_reg[4]) is unused and will be removed from module ov5640_top.
+WARNING: [Synth 8-3332] Sequential element (i2c_ctrl_inst/rd_data_reg_reg[7]) is unused and will be removed from module ov5640_top.
+WARNING: [Synth 8-3332] Sequential element (i2c_ctrl_inst/rd_data_reg_reg[6]) is unused and will be removed from module ov5640_top.
+WARNING: [Synth 8-3332] Sequential element (i2c_ctrl_inst/rd_data_reg_reg[5]) is unused and will be removed from module ov5640_top.
+WARNING: [Synth 8-3332] Sequential element (i2c_ctrl_inst/rd_data_reg_reg[4]) is unused and will be removed from module ov5640_top.
+WARNING: [Synth 8-3332] Sequential element (i2c_ctrl_inst/rd_data_reg_reg[3]) is unused and will be removed from module ov5640_top.
+WARNING: [Synth 8-3332] Sequential element (i2c_ctrl_inst/rd_data_reg_reg[2]) is unused and will be removed from module ov5640_top.
+WARNING: [Synth 8-3332] Sequential element (i2c_ctrl_inst/rd_data_reg_reg[1]) is unused and will be removed from module ov5640_top.
+WARNING: [Synth 8-3332] Sequential element (i2c_ctrl_inst/rd_data_reg_reg[0]) is unused and will be removed from module ov5640_top.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (eth_udp_send_inst/eth_udp_tx_gmii_inst/\ip_checksum/suma_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\top_hdmi_inst/hdmi_ctrl_inst/encode_inst1/n1q_m_reg[3] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1195.180 ; gain = 435.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+------------------------------+---------------+----------------+
+|Module Name | RTL Object                   | Depth x Width | Implemented As | 
++------------+------------------------------+---------------+----------------+
+|ov5640_cfg  | cfg_data_reg                 | 256x23        | LUT            | 
+|ov5640_top  | ov5640_cfg_inst/cfg_data_reg | 256x23        | LUT            | 
++------------+------------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1195.180 ; gain = 435.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1195.180 ; gain = 435.379
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1195.180 ; gain = 435.379
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1195.180 ; gain = 435.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1195.180 ; gain = 435.379
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1195.180 ; gain = 435.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1195.180 ; gain = 435.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1195.180 ; gain = 435.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1195.180 ; gain = 435.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |axi_ddr       |         1|
+|2     |wr_fifo       |         1|
+|3     |rd_fifo       |         1|
+|4     |eth_dcfifo    |         1|
+|5     |clk_wiz_0     |         1|
+|6     |clk_wiz_1     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |axi_ddr    |     1|
+|2     |clk_wiz_0  |     1|
+|3     |clk_wiz_1  |     1|
+|4     |eth_dcfifo |     1|
+|5     |rd_fifo    |     1|
+|6     |wr_fifo    |     1|
+|7     |BUFG       |     3|
+|8     |CARRY4     |    43|
+|9     |LUT1       |    22|
+|10    |LUT2       |   245|
+|11    |LUT3       |   109|
+|12    |LUT4       |    91|
+|13    |LUT5       |   130|
+|14    |LUT6       |   279|
+|15    |MUXF7      |    31|
+|16    |MUXF8      |    12|
+|17    |ODDR       |    10|
+|18    |FDCE       |   396|
+|19    |FDPE       |     3|
+|20    |FDRE       |   122|
+|21    |FDSE       |    42|
+|22    |LD         |     2|
+|23    |IBUF       |    12|
+|24    |IBUFG      |     1|
+|25    |IOBUF      |     1|
+|26    |OBUF       |    16|
+|27    |OBUFDS     |     4|
++------+-----------+------+
+
+Report Instance Areas: 
++------+--------------------------+-----------------+------+
+|      |Instance                  |Module           |Cells |
++------+--------------------------+-----------------+------+
+|1     |top                       |                 |  1880|
+|2     |  ov5640_top_inst         |ov5640_top       |   343|
+|3     |    i2c_ctrl_inst         |i2c_ctrl         |    81|
+|4     |    ov5640_cfg_inst       |ov5640_cfg       |   193|
+|5     |    ov5640_data_inst      |ov5640_data      |    67|
+|6     |  ddr_rw_inst             |axi_ddr_top      |   543|
+|7     |    axi_ctrl_inst         |axi_ctrl         |   317|
+|8     |    axi_master_read_inst  |axi_master_read  |    35|
+|9     |    axi_master_write_inst |axi_master_write |    62|
+|10    |  eth_udp_send_inst       |eth_udp_send     |   409|
+|11    |    eth_udp_tx_gmii_inst  |eth_udp_tx_gmii  |   360|
+|12    |      CRC32_d8_inst       |CRC32_d8         |    93|
+|13    |    gmii_to_rgmii_inst    |gmii_to_rgmii    |     7|
+|14    |  top_hdmi_inst           |top_hdmi         |   442|
+|15    |    hdmi_ctrl_inst        |hdmi_ctrl        |   366|
+|16    |      encode_inst1        |encode           |    97|
+|17    |      encode_inst2        |encode_0         |    90|
+|18    |      encode_inst3        |encode_1         |    77|
+|19    |      par2ser_inst1       |par2ser          |    28|
+|20    |      par2ser_inst2       |par2ser_2        |    28|
+|21    |      par2ser_inst3       |par2ser_3        |    28|
+|22    |      par2ser_inst4       |par2ser_4        |    18|
+|23    |    vga_timing_ctrl_inst  |vga_timing_ctrl  |    76|
++------+--------------------------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1195.180 ; gain = 435.379
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 86 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1195.180 ; gain = 303.641
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1195.180 ; gain = 435.379
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1195.539 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 104 Unisim elements for replacement
+WARNING: [Netlist 29-432] The IBUFG primitive 'IBUFG_inst' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1197.527 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  IBUFG => IBUF: 1 instance 
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
+  LD => LDCE: 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+229 Infos, 158 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 1197.527 ; gain = 707.262
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1197.527 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP___/project/project_1.runs/synth_1/ddr3_test.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ddr3_test_utilization_synth.rpt -pb ddr3_test_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Mar  8 17:21:52 2025...

@@ -1,0 +1,1636 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Mar  5 15:44:29 2025
+| Host         : DESKTOP-I8GGJRG running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -file eth_send_test_rgmii_timing_summary_routed.rpt -pb eth_send_test_rgmii_timing_summary_routed.pb -rpx eth_send_test_rgmii_timing_summary_routed.rpx -warn_on_violation
+| Design       : eth_send_test_rgmii
+| Device       : 7a35t-fgg484
+| Speed File   : -2  PRODUCTION 1.23 2018-06-13
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There is 1 input port with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 6 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      1.940        0.000                      0                  209        0.149        0.000                      0                  209        3.500        0.000                       0                   119  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock           Waveform(ns)         Period(ns)      Frequency(MHz)
+-----           ------------         ----------      --------------
+clk             {0.000 10.000}       20.000          50.000          
+  clk_out1_pll  {0.000 4.000}        8.000           125.000         
+  clkfbout_pll  {0.000 20.000}       40.000          25.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock               WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----               -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk                                                                                                                                                               7.000        0.000                       0                     1  
+  clk_out1_pll        1.940        0.000                      0                  209        0.149        0.000                      0                  209        3.500        0.000                       0                   115  
+  clkfbout_pll                                                                                                                                                   12.633        0.000                       0                     3  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk
+  To Clock:  clk
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        7.000ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk
+Waveform(ns):       { 0.000 10.000 }
+Period(ns):         20.000
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin           Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
+Min Period        n/a     PLLE2_ADV/CLKIN1  n/a            1.249         20.000      18.751     PLLE2_ADV_X1Y0  pll/inst/plle2_adv_inst/CLKIN1
+Max Period        n/a     PLLE2_ADV/CLKIN1  n/a            52.633        20.000      32.633     PLLE2_ADV_X1Y0  pll/inst/plle2_adv_inst/CLKIN1
+Low Pulse Width   Slow    PLLE2_ADV/CLKIN1  n/a            3.000         10.000      7.000      PLLE2_ADV_X1Y0  pll/inst/plle2_adv_inst/CLKIN1
+Low Pulse Width   Fast    PLLE2_ADV/CLKIN1  n/a            3.000         10.000      7.000      PLLE2_ADV_X1Y0  pll/inst/plle2_adv_inst/CLKIN1
+High Pulse Width  Slow    PLLE2_ADV/CLKIN1  n/a            3.000         10.000      7.000      PLLE2_ADV_X1Y0  pll/inst/plle2_adv_inst/CLKIN1
+High Pulse Width  Fast    PLLE2_ADV/CLKIN1  n/a            3.000         10.000      7.000      PLLE2_ADV_X1Y0  pll/inst/plle2_adv_inst/CLKIN1
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_out1_pll
+  To Clock:  clk_out1_pll
+
+Setup :            0  Failing Endpoints,  Worst Slack        1.940ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.149ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             1.940ns  (required time - arrival time)
+  Source:                 eth_send_test/data_total_len_reg[1]/C
+                            (rising edge-triggered cell FDPE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            eth_send_test/eth_send/gmii_tx_data_reg[5]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk_out1_pll
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (clk_out1_pll rise@8.000ns - clk_out1_pll rise@0.000ns)
+  Data Path Delay:        5.697ns  (logic 2.790ns (48.973%)  route 2.907ns (51.027%))
+  Logic Levels:           8  (CARRY4=4 LUT4=1 LUT6=3)
+  Clock Path Skew:        -0.037ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.381ns = ( 6.619 - 8.000 ) 
+    Source Clock Delay      (SCD):    -1.808ns
+    Clock Pessimism Removal (CPR):    -0.464ns
+  Clock Uncertainty:      0.124ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.239ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         1.432     1.432 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.080     2.512    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -7.242    -4.730 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.419    -3.312    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081    -3.231 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         1.423    -1.808    eth_send_test/clk_out1
+    SLICE_X5Y22          FDPE                                         r  eth_send_test/data_total_len_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y22          FDPE (Prop_fdpe_C_Q)         0.379    -1.429 r  eth_send_test/data_total_len_reg[1]/Q
+                         net (fo=3, routed)           0.361    -1.068    eth_send_test/data_total_len_reg[1]
+    SLICE_X7Y23          CARRY4 (Prop_carry4_S[0]_O[2])
+                                                      0.558    -0.510 r  eth_send_test/ip_total_len_carry/O[2]
+                         net (fo=4, routed)           0.267    -0.243    eth_send_test/checksum_inst/O[2]
+    SLICE_X6Y22          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.567     0.324 r  eth_send_test/checksum_inst/suma_carry/CO[3]
+                         net (fo=1, routed)           0.000     0.324    eth_send_test/checksum_inst/suma_carry_n_0
+    SLICE_X6Y23          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.178     0.502 r  eth_send_test/checksum_inst/suma_carry__0/O[0]
+                         net (fo=1, routed)           0.376     0.878    eth_send_test/checksum_inst/suma_carry__0_n_7
+    SLICE_X7Y21          CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.533     1.411 f  eth_send_test/checksum_inst/sumb__4_carry/O[3]
+                         net (fo=1, routed)           0.483     1.894    eth_send_test/checksum_inst/sumb__4_carry_n_4
+    SLICE_X6Y24          LUT6 (Prop_lut6_I0_O)        0.257     2.151 f  eth_send_test/checksum_inst/gmii_tx_data[5]_i_9/O
+                         net (fo=1, routed)           0.350     2.501    eth_send_test/checksum_inst/gmii_tx_data[5]_i_9_n_0
+    SLICE_X3Y23          LUT6 (Prop_lut6_I3_O)        0.105     2.606 r  eth_send_test/checksum_inst/gmii_tx_data[5]_i_6/O
+                         net (fo=1, routed)           0.342     2.948    eth_send_test/eth_send/gmii_tx_data_reg[5]_1
+    SLICE_X3Y20          LUT6 (Prop_lut6_I5_O)        0.105     3.053 f  eth_send_test/eth_send/gmii_tx_data[5]_i_3/O
+                         net (fo=1, routed)           0.348     3.401    eth_send_test/eth_send/gmii_tx_data[5]_i_3_n_0
+    SLICE_X3Y20          LUT4 (Prop_lut4_I2_O)        0.108     3.509 r  eth_send_test/eth_send/gmii_tx_data[5]_i_1/O
+                         net (fo=1, routed)           0.380     3.889    eth_send_test/eth_send/gmii_tx_data[5]_i_1_n_0
+    SLICE_X3Y20          FDCE                                         r  eth_send_test/eth_send/gmii_tx_data_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_pll rise edge)
+                                                      8.000     8.000 r  
+    R4                                                0.000     8.000 r  clk (IN)
+                         net (fo=0)                   0.000     8.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         1.366     9.366 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.019    10.384    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -6.511     3.873 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.349     5.223    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     5.300 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         1.320     6.619    eth_send_test/eth_send/clk_out1
+    SLICE_X3Y20          FDCE                                         r  eth_send_test/eth_send/gmii_tx_data_reg[5]/C
+                         clock pessimism             -0.464     6.155    
+                         clock uncertainty           -0.124     6.031    
+    SLICE_X3Y20          FDCE (Setup_fdce_C_D)       -0.202     5.829    eth_send_test/eth_send/gmii_tx_data_reg[5]
+  -------------------------------------------------------------------
+                         required time                          5.829    
+                         arrival time                          -3.889    
+  -------------------------------------------------------------------
+                         slack                                  1.940    
+
+Slack (MET) :             2.605ns  (required time - arrival time)
+  Source:                 eth_send_test/data_total_len_reg[1]/C
+                            (rising edge-triggered cell FDPE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            eth_send_test/eth_send/gmii_tx_data_reg[7]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk_out1_pll
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (clk_out1_pll rise@8.000ns - clk_out1_pll rise@0.000ns)
+  Data Path Delay:        5.308ns  (logic 3.168ns (59.680%)  route 2.140ns (40.320%))
+  Logic Levels:           9  (CARRY4=5 LUT6=4)
+  Clock Path Skew:        -0.036ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.380ns = ( 6.620 - 8.000 ) 
+    Source Clock Delay      (SCD):    -1.808ns
+    Clock Pessimism Removal (CPR):    -0.464ns
+  Clock Uncertainty:      0.124ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.239ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         1.432     1.432 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.080     2.512    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -7.242    -4.730 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.419    -3.312    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081    -3.231 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         1.423    -1.808    eth_send_test/clk_out1
+    SLICE_X5Y22          FDPE                                         r  eth_send_test/data_total_len_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y22          FDPE (Prop_fdpe_C_Q)         0.379    -1.429 r  eth_send_test/data_total_len_reg[1]/Q
+                         net (fo=3, routed)           0.361    -1.068    eth_send_test/data_total_len_reg[1]
+    SLICE_X7Y23          CARRY4 (Prop_carry4_S[0]_O[2])
+                                                      0.558    -0.510 r  eth_send_test/ip_total_len_carry/O[2]
+                         net (fo=4, routed)           0.267    -0.243    eth_send_test/checksum_inst/O[2]
+    SLICE_X6Y22          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.567     0.324 r  eth_send_test/checksum_inst/suma_carry/CO[3]
+                         net (fo=1, routed)           0.000     0.324    eth_send_test/checksum_inst/suma_carry_n_0
+    SLICE_X6Y23          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.257     0.581 r  eth_send_test/checksum_inst/suma_carry__0/O[1]
+                         net (fo=1, routed)           0.350     0.931    eth_send_test/checksum_inst/suma_carry__0_n_6
+    SLICE_X7Y21          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.577     1.508 r  eth_send_test/checksum_inst/sumb__4_carry/CO[3]
+                         net (fo=1, routed)           0.000     1.508    eth_send_test/checksum_inst/sumb__4_carry_n_0
+    SLICE_X7Y22          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.265     1.773 f  eth_send_test/checksum_inst/sumb__4_carry__0/O[1]
+                         net (fo=1, routed)           0.362     2.134    eth_send_test/checksum_inst/sumb__4_carry__0_n_6
+    SLICE_X2Y22          LUT6 (Prop_lut6_I4_O)        0.250     2.384 r  eth_send_test/checksum_inst/gmii_tx_data[7]_i_8/O
+                         net (fo=1, routed)           0.130     2.514    eth_send_test/eth_send/gmii_tx_data[7]_i_4_0
+    SLICE_X2Y22          LUT6 (Prop_lut6_I5_O)        0.105     2.619 f  eth_send_test/eth_send/gmii_tx_data[7]_i_6/O
+                         net (fo=1, routed)           0.452     3.071    eth_send_test/eth_send/gmii_tx_data[7]_i_6_n_0
+    SLICE_X2Y19          LUT6 (Prop_lut6_I1_O)        0.105     3.176 f  eth_send_test/eth_send/gmii_tx_data[7]_i_4/O
+                         net (fo=1, routed)           0.220     3.395    eth_send_test/eth_send/gmii_tx_data[7]_i_4_n_0
+    SLICE_X2Y19          LUT6 (Prop_lut6_I5_O)        0.105     3.500 r  eth_send_test/eth_send/gmii_tx_data[7]_i_1/O
+                         net (fo=1, routed)           0.000     3.500    eth_send_test/eth_send/gmii_tx_data[7]_i_1_n_0
+    SLICE_X2Y19          FDCE                                         r  eth_send_test/eth_send/gmii_tx_data_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_pll rise edge)
+                                                      8.000     8.000 r  
+    R4                                                0.000     8.000 r  clk (IN)
+                         net (fo=0)                   0.000     8.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         1.366     9.366 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.019    10.384    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -6.511     3.873 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.349     5.223    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     5.300 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         1.321     6.620    eth_send_test/eth_send/clk_out1
+    SLICE_X2Y19          FDCE                                         r  eth_send_test/eth_send/gmii_tx_data_reg[7]/C
+                         clock pessimism             -0.464     6.156    
+                         clock uncertainty           -0.124     6.032    
+    SLICE_X2Y19          FDCE (Setup_fdce_C_D)        0.074     6.106    eth_send_test/eth_send/gmii_tx_data_reg[7]
+  -------------------------------------------------------------------
+                         required time                          6.106    
+                         arrival time                          -3.500    
+  -------------------------------------------------------------------
+                         slack                                  2.605    
+
+Slack (MET) :             2.632ns  (required time - arrival time)
+  Source:                 eth_send_test/data_total_len_reg[1]/C
+                            (rising edge-triggered cell FDPE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            eth_send_test/eth_send/gmii_tx_data_reg[6]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk_out1_pll
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (clk_out1_pll rise@8.000ns - clk_out1_pll rise@0.000ns)
+  Data Path Delay:        5.255ns  (logic 3.082ns (58.649%)  route 2.173ns (41.351%))
+  Logic Levels:           9  (CARRY4=5 LUT6=4)
+  Clock Path Skew:        -0.021ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.381ns = ( 6.619 - 8.000 ) 
+    Source Clock Delay      (SCD):    -1.808ns
+    Clock Pessimism Removal (CPR):    -0.448ns
+  Clock Uncertainty:      0.124ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.239ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         1.432     1.432 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.080     2.512    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -7.242    -4.730 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.419    -3.312    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081    -3.231 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         1.423    -1.808    eth_send_test/clk_out1
+    SLICE_X5Y22          FDPE                                         r  eth_send_test/data_total_len_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y22          FDPE (Prop_fdpe_C_Q)         0.379    -1.429 r  eth_send_test/data_total_len_reg[1]/Q
+                         net (fo=3, routed)           0.361    -1.068    eth_send_test/data_total_len_reg[1]
+    SLICE_X7Y23          CARRY4 (Prop_carry4_S[0]_O[2])
+                                                      0.558    -0.510 r  eth_send_test/ip_total_len_carry/O[2]
+                         net (fo=4, routed)           0.267    -0.243    eth_send_test/checksum_inst/O[2]
+    SLICE_X6Y22          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.567     0.324 r  eth_send_test/checksum_inst/suma_carry/CO[3]
+                         net (fo=1, routed)           0.000     0.324    eth_send_test/checksum_inst/suma_carry_n_0
+    SLICE_X6Y23          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.257     0.581 r  eth_send_test/checksum_inst/suma_carry__0/O[1]
+                         net (fo=1, routed)           0.350     0.931    eth_send_test/checksum_inst/suma_carry__0_n_6
+    SLICE_X7Y21          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.577     1.508 r  eth_send_test/checksum_inst/sumb__4_carry/CO[3]
+                         net (fo=1, routed)           0.000     1.508    eth_send_test/checksum_inst/sumb__4_carry_n_0
+    SLICE_X7Y22          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180     1.688 f  eth_send_test/checksum_inst/sumb__4_carry__0/O[0]
+                         net (fo=1, routed)           0.246     1.934    eth_send_test/checksum_inst/sumb__4_carry__0_n_7
+    SLICE_X6Y24          LUT6 (Prop_lut6_I1_O)        0.249     2.183 f  eth_send_test/checksum_inst/gmii_tx_data[6]_i_16/O
+                         net (fo=1, routed)           0.227     2.410    eth_send_test/checksum_inst/gmii_tx_data[6]_i_16_n_0
+    SLICE_X5Y24          LUT6 (Prop_lut6_I5_O)        0.105     2.515 f  eth_send_test/checksum_inst/gmii_tx_data[6]_i_10/O
+                         net (fo=1, routed)           0.348     2.863    eth_send_test/eth_send/gmii_tx_data_reg[6]_0
+    SLICE_X5Y21          LUT6 (Prop_lut6_I1_O)        0.105     2.968 r  eth_send_test/eth_send/gmii_tx_data[6]_i_5/O
+                         net (fo=1, routed)           0.374     3.342    eth_send_test/eth_send/gmii_tx_data[6]_i_5_n_0
+    SLICE_X5Y19          LUT6 (Prop_lut6_I3_O)        0.105     3.447 r  eth_send_test/eth_send/gmii_tx_data[6]_i_1/O
+                         net (fo=1, routed)           0.000     3.447    eth_send_test/eth_send/p_0_in[6]
+    SLICE_X5Y19          FDCE                                         r  eth_send_test/eth_send/gmii_tx_data_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_pll rise edge)
+                                                      8.000     8.000 r  
+    R4                                                0.000     8.000 r  clk (IN)
+                         net (fo=0)                   0.000     8.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         1.366     9.366 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.019    10.384    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -6.511     3.873 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.349     5.223    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     5.300 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         1.320     6.619    eth_send_test/eth_send/clk_out1
+    SLICE_X5Y19          FDCE                                         r  eth_send_test/eth_send/gmii_tx_data_reg[6]/C
+                         clock pessimism             -0.448     6.171    
+                         clock uncertainty           -0.124     6.047    
+    SLICE_X5Y19          FDCE (Setup_fdce_C_D)        0.032     6.079    eth_send_test/eth_send/gmii_tx_data_reg[6]
+  -------------------------------------------------------------------
+                         required time                          6.079    
+                         arrival time                          -3.447    
+  -------------------------------------------------------------------
+                         slack                                  2.632    
+
+Slack (MET) :             2.661ns  (required time - arrival time)
+  Source:                 eth_send_test/data_total_len_reg[1]/C
+                            (rising edge-triggered cell FDPE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            eth_send_test/eth_send/gmii_tx_data_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk_out1_pll
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (clk_out1_pll rise@8.000ns - clk_out1_pll rise@0.000ns)
+  Data Path Delay:        5.223ns  (logic 2.966ns (56.782%)  route 2.257ns (43.218%))
+  Logic Levels:           8  (CARRY4=4 LUT5=1 LUT6=3)
+  Clock Path Skew:        -0.021ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.381ns = ( 6.619 - 8.000 ) 
+    Source Clock Delay      (SCD):    -1.808ns
+    Clock Pessimism Removal (CPR):    -0.448ns
+  Clock Uncertainty:      0.124ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.239ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         1.432     1.432 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.080     2.512    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -7.242    -4.730 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.419    -3.312    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081    -3.231 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         1.423    -1.808    eth_send_test/clk_out1
+    SLICE_X5Y22          FDPE                                         r  eth_send_test/data_total_len_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y22          FDPE (Prop_fdpe_C_Q)         0.379    -1.429 r  eth_send_test/data_total_len_reg[1]/Q
+                         net (fo=3, routed)           0.361    -1.068    eth_send_test/data_total_len_reg[1]
+    SLICE_X7Y23          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.545    -0.523 r  eth_send_test/ip_total_len_carry/CO[3]
+                         net (fo=1, routed)           0.000    -0.523    eth_send_test/ip_total_len_carry_n_0
+    SLICE_X7Y24          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.180    -0.343 r  eth_send_test/ip_total_len_carry__0/O[0]
+                         net (fo=5, routed)           0.410     0.067    eth_send_test/checksum_inst/gmii_tx_data[5]_i_6_0[0]
+    SLICE_X6Y23          CARRY4 (Prop_carry4_DI[1]_O[2])
+                                                      0.596     0.663 r  eth_send_test/checksum_inst/suma_carry__0/O[2]
+                         net (fo=1, routed)           0.461     1.124    eth_send_test/checksum_inst/suma_carry__0_n_5
+    SLICE_X7Y22          CARRY4 (Prop_carry4_S[0]_CO[2])
+                                                      0.690     1.814 f  eth_send_test/checksum_inst/sumb__4_carry__0/CO[2]
+                         net (fo=1, routed)           0.245     2.059    eth_send_test/checksum_inst/sumb__4_carry__0_n_1
+    SLICE_X6Y21          LUT5 (Prop_lut5_I3_O)        0.261     2.320 f  eth_send_test/checksum_inst/gmii_tx_data[0]_i_10/O
+                         net (fo=1, routed)           0.329     2.648    eth_send_test/checksum_inst/gmii_tx_data[0]_i_10_n_0
+    SLICE_X6Y20          LUT6 (Prop_lut6_I4_O)        0.105     2.753 f  eth_send_test/checksum_inst/gmii_tx_data[0]_i_6/O
+                         net (fo=1, routed)           0.221     2.975    eth_send_test/eth_send/gmii_tx_data_reg[0]_1
+    SLICE_X5Y20          LUT6 (Prop_lut6_I1_O)        0.105     3.080 r  eth_send_test/eth_send/gmii_tx_data[0]_i_4/O
+                         net (fo=1, routed)           0.231     3.311    eth_send_test/eth_send/gmii_tx_data[0]_i_4_n_0
+    SLICE_X4Y19          LUT6 (Prop_lut6_I3_O)        0.105     3.416 r  eth_send_test/eth_send/gmii_tx_data[0]_i_1/O
+                         net (fo=1, routed)           0.000     3.416    eth_send_test/eth_send/p_0_in[0]
+    SLICE_X4Y19          FDCE                                         r  eth_send_test/eth_send/gmii_tx_data_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_pll rise edge)
+                                                      8.000     8.000 r  
+    R4                                                0.000     8.000 r  clk (IN)
+                         net (fo=0)                   0.000     8.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         1.366     9.366 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.019    10.384    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -6.511     3.873 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.349     5.223    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     5.300 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         1.320     6.619    eth_send_test/eth_send/clk_out1
+    SLICE_X4Y19          FDCE                                         r  eth_send_test/eth_send/gmii_tx_data_reg[0]/C
+                         clock pessimism             -0.448     6.171    
+                         clock uncertainty           -0.124     6.047    
+    SLICE_X4Y19          FDCE (Setup_fdce_C_D)        0.030     6.077    eth_send_test/eth_send/gmii_tx_data_reg[0]
+  -------------------------------------------------------------------
+                         required time                          6.077    
+                         arrival time                          -3.416    
+  -------------------------------------------------------------------
+                         slack                                  2.661    
+
+Slack (MET) :             2.905ns  (required time - arrival time)
+  Source:                 eth_send_test/data_total_len_reg[1]/C
+                            (rising edge-triggered cell FDPE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            eth_send_test/eth_send/gmii_tx_data_reg[4]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk_out1_pll
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (clk_out1_pll rise@8.000ns - clk_out1_pll rise@0.000ns)
+  Data Path Delay:        4.982ns  (logic 2.695ns (54.100%)  route 2.287ns (45.900%))
+  Logic Levels:           8  (CARRY4=4 LUT6=4)
+  Clock Path Skew:        -0.021ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.381ns = ( 6.619 - 8.000 ) 
+    Source Clock Delay      (SCD):    -1.808ns
+    Clock Pessimism Removal (CPR):    -0.448ns
+  Clock Uncertainty:      0.124ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.239ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         1.432     1.432 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.080     2.512    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -7.242    -4.730 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.419    -3.312    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081    -3.231 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         1.423    -1.808    eth_send_test/clk_out1
+    SLICE_X5Y22          FDPE                                         r  eth_send_test/data_total_len_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y22          FDPE (Prop_fdpe_C_Q)         0.379    -1.429 r  eth_send_test/data_total_len_reg[1]/Q
+                         net (fo=3, routed)           0.361    -1.068    eth_send_test/data_total_len_reg[1]
+    SLICE_X7Y23          CARRY4 (Prop_carry4_S[0]_O[2])
+                                                      0.558    -0.510 r  eth_send_test/ip_total_len_carry/O[2]
+                         net (fo=4, routed)           0.267    -0.243    eth_send_test/checksum_inst/O[2]
+    SLICE_X6Y22          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.567     0.324 r  eth_send_test/checksum_inst/suma_carry/CO[3]
+                         net (fo=1, routed)           0.000     0.324    eth_send_test/checksum_inst/suma_carry_n_0
+    SLICE_X6Y23          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.178     0.502 r  eth_send_test/checksum_inst/suma_carry__0/O[0]
+                         net (fo=1, routed)           0.376     0.878    eth_send_test/checksum_inst/suma_carry__0_n_7
+    SLICE_X7Y21          CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.445     1.323 f  eth_send_test/checksum_inst/sumb__4_carry/O[2]
+                         net (fo=1, routed)           0.267     1.590    eth_send_test/checksum_inst/sumb__4_carry_n_5
+    SLICE_X6Y21          LUT6 (Prop_lut6_I0_O)        0.253     1.843 r  eth_send_test/checksum_inst/gmii_tx_data[4]_i_9/O
+                         net (fo=1, routed)           0.452     2.295    eth_send_test/checksum_inst/gmii_tx_data[4]_i_9_n_0
+    SLICE_X5Y21          LUT6 (Prop_lut6_I1_O)        0.105     2.400 r  eth_send_test/checksum_inst/gmii_tx_data[4]_i_7/O
+                         net (fo=1, routed)           0.229     2.629    eth_send_test/eth_send/gmii_tx_data_reg[4]_1
+    SLICE_X4Y20          LUT6 (Prop_lut6_I5_O)        0.105     2.734 f  eth_send_test/eth_send/gmii_tx_data[4]_i_4/O
+                         net (fo=1, routed)           0.335     3.069    eth_send_test/eth_send/gmii_tx_data[4]_i_4_n_0
+    SLICE_X4Y19          LUT6 (Prop_lut6_I4_O)        0.105     3.174 r  eth_send_test/eth_send/gmii_tx_data[4]_i_1/O
+                         net (fo=1, routed)           0.000     3.174    eth_send_test/eth_send/p_0_in[4]
+    SLICE_X4Y19          FDCE                                         r  eth_send_test/eth_send/gmii_tx_data_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_pll rise edge)
+                                                      8.000     8.000 r  
+    R4                                                0.000     8.000 r  clk (IN)
+                         net (fo=0)                   0.000     8.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         1.366     9.366 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.019    10.384    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -6.511     3.873 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.349     5.223    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     5.300 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         1.320     6.619    eth_send_test/eth_send/clk_out1
+    SLICE_X4Y19          FDCE                                         r  eth_send_test/eth_send/gmii_tx_data_reg[4]/C
+                         clock pessimism             -0.448     6.171    
+                         clock uncertainty           -0.124     6.047    
+    SLICE_X4Y19          FDCE (Setup_fdce_C_D)        0.032     6.079    eth_send_test/eth_send/gmii_tx_data_reg[4]
+  -------------------------------------------------------------------
+                         required time                          6.079    
+                         arrival time                          -3.174    
+  -------------------------------------------------------------------
+                         slack                                  2.905    
+
+Slack (MET) :             3.134ns  (required time - arrival time)
+  Source:                 eth_send_test/data_total_len_reg[1]/C
+                            (rising edge-triggered cell FDPE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            eth_send_test/eth_send/gmii_tx_data_reg[2]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk_out1_pll
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (clk_out1_pll rise@8.000ns - clk_out1_pll rise@0.000ns)
+  Data Path Delay:        4.752ns  (logic 2.302ns (48.439%)  route 2.450ns (51.561%))
+  Logic Levels:           7  (CARRY4=3 LUT6=4)
+  Clock Path Skew:        -0.021ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.381ns = ( 6.619 - 8.000 ) 
+    Source Clock Delay      (SCD):    -1.808ns
+    Clock Pessimism Removal (CPR):    -0.448ns
+  Clock Uncertainty:      0.124ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.239ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         1.432     1.432 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.080     2.512    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -7.242    -4.730 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.419    -3.312    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081    -3.231 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         1.423    -1.808    eth_send_test/clk_out1
+    SLICE_X5Y22          FDPE                                         r  eth_send_test/data_total_len_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y22          FDPE (Prop_fdpe_C_Q)         0.379    -1.429 r  eth_send_test/data_total_len_reg[1]/Q
+                         net (fo=3, routed)           0.361    -1.068    eth_send_test/data_total_len_reg[1]
+    SLICE_X7Y23          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.312    -0.756 r  eth_send_test/ip_total_len_carry/O[0]
+                         net (fo=5, routed)           0.429    -0.327    eth_send_test/checksum_inst/O[0]
+    SLICE_X6Y22          CARRY4 (Prop_carry4_DI[1]_O[2])
+                                                      0.596     0.269 r  eth_send_test/checksum_inst/suma_carry/O[2]
+                         net (fo=1, routed)           0.313     0.582    eth_send_test/checksum_inst/suma_carry_n_5
+    SLICE_X7Y21          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.451     1.033 f  eth_send_test/checksum_inst/sumb__4_carry/O[0]
+                         net (fo=1, routed)           0.484     1.517    eth_send_test/checksum_inst/sumb__4_carry_n_7
+    SLICE_X6Y20          LUT6 (Prop_lut6_I0_O)        0.249     1.766 r  eth_send_test/checksum_inst/gmii_tx_data[2]_i_9/O
+                         net (fo=1, routed)           0.223     1.988    eth_send_test/checksum_inst/gmii_tx_data[2]_i_9_n_0
+    SLICE_X5Y20          LUT6 (Prop_lut6_I5_O)        0.105     2.093 f  eth_send_test/checksum_inst/gmii_tx_data[2]_i_7/O
+                         net (fo=1, routed)           0.263     2.356    eth_send_test/eth_send/gmii_tx_data_reg[2]_2
+    SLICE_X4Y20          LUT6 (Prop_lut6_I4_O)        0.105     2.461 f  eth_send_test/eth_send/gmii_tx_data[2]_i_4/O
+                         net (fo=1, routed)           0.379     2.839    eth_send_test/eth_send/gmii_tx_data[2]_i_4_n_0
+    SLICE_X4Y19          LUT6 (Prop_lut6_I3_O)        0.105     2.944 r  eth_send_test/eth_send/gmii_tx_data[2]_i_1/O
+                         net (fo=1, routed)           0.000     2.944    eth_send_test/eth_send/p_0_in[2]
+    SLICE_X4Y19          FDCE                                         r  eth_send_test/eth_send/gmii_tx_data_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_pll rise edge)
+                                                      8.000     8.000 r  
+    R4                                                0.000     8.000 r  clk (IN)
+                         net (fo=0)                   0.000     8.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         1.366     9.366 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.019    10.384    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -6.511     3.873 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.349     5.223    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     5.300 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         1.320     6.619    eth_send_test/eth_send/clk_out1
+    SLICE_X4Y19          FDCE                                         r  eth_send_test/eth_send/gmii_tx_data_reg[2]/C
+                         clock pessimism             -0.448     6.171    
+                         clock uncertainty           -0.124     6.047    
+    SLICE_X4Y19          FDCE (Setup_fdce_C_D)        0.032     6.079    eth_send_test/eth_send/gmii_tx_data_reg[2]
+  -------------------------------------------------------------------
+                         required time                          6.079    
+                         arrival time                          -2.944    
+  -------------------------------------------------------------------
+                         slack                                  3.134    
+
+Slack (MET) :             3.484ns  (required time - arrival time)
+  Source:                 eth_send_test/eth_send/cnt_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            eth_send_test/data_cnt_reg[11]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk_out1_pll
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (clk_out1_pll rise@8.000ns - clk_out1_pll rise@0.000ns)
+  Data Path Delay:        4.407ns  (logic 1.343ns (30.473%)  route 3.064ns (69.527%))
+  Logic Levels:           4  (CARRY4=1 LUT2=1 LUT6=2)
+  Clock Path Skew:        -0.043ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.383ns = ( 6.617 - 8.000 ) 
+    Source Clock Delay      (SCD):    -1.804ns
+    Clock Pessimism Removal (CPR):    -0.464ns
+  Clock Uncertainty:      0.124ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.239ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         1.432     1.432 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.080     2.512    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -7.242    -4.730 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.419    -3.312    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081    -3.231 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         1.427    -1.804    eth_send_test/eth_send/clk_out1
+    SLICE_X2Y20          FDCE                                         r  eth_send_test/eth_send/cnt_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y20          FDCE (Prop_fdce_C_Q)         0.398    -1.406 f  eth_send_test/eth_send/cnt_reg[3]/Q
+                         net (fo=27, routed)          1.104    -0.302    eth_send_test/eth_send/cnt_reg_0[3]
+    SLICE_X2Y22          LUT6 (Prop_lut6_I0_O)        0.232    -0.070 f  eth_send_test/eth_send/cnt[5]_i_7/O
+                         net (fo=1, routed)           0.845     0.775    eth_send_test/eth_send/cnt[5]_i_7_n_0
+    SLICE_X5Y26          LUT6 (Prop_lut6_I5_O)        0.105     0.880 r  eth_send_test/eth_send/cnt[5]_i_3/O
+                         net (fo=15, routed)          1.115     1.995    eth_send_test/eth_send/fifo_rdreq
+    SLICE_X3Y28          LUT2 (Prop_lut2_I1_O)        0.105     2.100 r  eth_send_test/eth_send/data_cnt[8]_i_5/O
+                         net (fo=1, routed)           0.000     2.100    eth_send_test/eth_send/data_cnt[8]_i_5_n_0
+    SLICE_X3Y28          CARRY4 (Prop_carry4_S[0]_O[3])
+                                                      0.503     2.603 r  eth_send_test/eth_send/data_cnt_reg[8]_i_1/O[3]
+                         net (fo=1, routed)           0.000     2.603    eth_send_test/eth_send_n_16
+    SLICE_X3Y28          FDCE                                         r  eth_send_test/data_cnt_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_pll rise edge)
+                                                      8.000     8.000 r  
+    R4                                                0.000     8.000 r  clk (IN)
+                         net (fo=0)                   0.000     8.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         1.366     9.366 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.019    10.384    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -6.511     3.873 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.349     5.223    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     5.300 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         1.318     6.617    eth_send_test/clk_out1
+    SLICE_X3Y28          FDCE                                         r  eth_send_test/data_cnt_reg[11]/C
+                         clock pessimism             -0.464     6.153    
+                         clock uncertainty           -0.124     6.029    
+    SLICE_X3Y28          FDCE (Setup_fdce_C_D)        0.059     6.088    eth_send_test/data_cnt_reg[11]
+  -------------------------------------------------------------------
+                         required time                          6.088    
+                         arrival time                          -2.603    
+  -------------------------------------------------------------------
+                         slack                                  3.484    
+
+Slack (MET) :             3.510ns  (required time - arrival time)
+  Source:                 eth_send_test/data_total_len_reg[1]/C
+                            (rising edge-triggered cell FDPE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            eth_send_test/eth_send/gmii_tx_data_reg[3]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk_out1_pll
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (clk_out1_pll rise@8.000ns - clk_out1_pll rise@0.000ns)
+  Data Path Delay:        4.359ns  (logic 2.334ns (53.549%)  route 2.025ns (46.451%))
+  Logic Levels:           6  (CARRY4=3 LUT6=3)
+  Clock Path Skew:        -0.037ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.381ns = ( 6.619 - 8.000 ) 
+    Source Clock Delay      (SCD):    -1.808ns
+    Clock Pessimism Removal (CPR):    -0.464ns
+  Clock Uncertainty:      0.124ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.239ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         1.432     1.432 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.080     2.512    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -7.242    -4.730 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.419    -3.312    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081    -3.231 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         1.423    -1.808    eth_send_test/clk_out1
+    SLICE_X5Y22          FDPE                                         r  eth_send_test/data_total_len_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y22          FDPE (Prop_fdpe_C_Q)         0.379    -1.429 r  eth_send_test/data_total_len_reg[1]/Q
+                         net (fo=3, routed)           0.361    -1.068    eth_send_test/data_total_len_reg[1]
+    SLICE_X7Y23          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.312    -0.756 r  eth_send_test/ip_total_len_carry/O[0]
+                         net (fo=5, routed)           0.429    -0.327    eth_send_test/checksum_inst/O[0]
+    SLICE_X6Y22          CARRY4 (Prop_carry4_DI[1]_O[2])
+                                                      0.596     0.269 r  eth_send_test/checksum_inst/suma_carry/O[2]
+                         net (fo=1, routed)           0.313     0.582    eth_send_test/checksum_inst/suma_carry_n_5
+    SLICE_X7Y21          CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.587     1.169 f  eth_send_test/checksum_inst/sumb__4_carry/O[1]
+                         net (fo=1, routed)           0.449     1.618    eth_send_test/checksum_inst/sumb__4_carry_n_6
+    SLICE_X4Y21          LUT6 (Prop_lut6_I1_O)        0.250     1.868 r  eth_send_test/checksum_inst/gmii_tx_data[3]_i_10/O
+                         net (fo=1, routed)           0.241     2.109    eth_send_test/eth_send/gmii_tx_data_reg[3]_1
+    SLICE_X3Y21          LUT6 (Prop_lut6_I4_O)        0.105     2.214 f  eth_send_test/eth_send/gmii_tx_data[3]_i_3/O
+                         net (fo=1, routed)           0.232     2.446    eth_send_test/eth_send/gmii_tx_data[3]_i_3_n_0
+    SLICE_X3Y20          LUT6 (Prop_lut6_I2_O)        0.105     2.551 r  eth_send_test/eth_send/gmii_tx_data[3]_i_1/O
+                         net (fo=1, routed)           0.000     2.551    eth_send_test/eth_send/p_0_in[3]
+    SLICE_X3Y20          FDCE                                         r  eth_send_test/eth_send/gmii_tx_data_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_pll rise edge)
+                                                      8.000     8.000 r  
+    R4                                                0.000     8.000 r  clk (IN)
+                         net (fo=0)                   0.000     8.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         1.366     9.366 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.019    10.384    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -6.511     3.873 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.349     5.223    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     5.300 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         1.320     6.619    eth_send_test/eth_send/clk_out1
+    SLICE_X3Y20          FDCE                                         r  eth_send_test/eth_send/gmii_tx_data_reg[3]/C
+                         clock pessimism             -0.464     6.155    
+                         clock uncertainty           -0.124     6.031    
+    SLICE_X3Y20          FDCE (Setup_fdce_C_D)        0.030     6.061    eth_send_test/eth_send/gmii_tx_data_reg[3]
+  -------------------------------------------------------------------
+                         required time                          6.061    
+                         arrival time                          -2.551    
+  -------------------------------------------------------------------
+                         slack                                  3.510    
+
+Slack (MET) :             3.534ns  (required time - arrival time)
+  Source:                 eth_send_test/eth_send/cnt_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            eth_send_test/data_cnt_reg[10]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk_out1_pll
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (clk_out1_pll rise@8.000ns - clk_out1_pll rise@0.000ns)
+  Data Path Delay:        4.357ns  (logic 1.293ns (29.675%)  route 3.064ns (70.325%))
+  Logic Levels:           4  (CARRY4=1 LUT2=1 LUT6=2)
+  Clock Path Skew:        -0.043ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.383ns = ( 6.617 - 8.000 ) 
+    Source Clock Delay      (SCD):    -1.804ns
+    Clock Pessimism Removal (CPR):    -0.464ns
+  Clock Uncertainty:      0.124ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.239ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         1.432     1.432 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.080     2.512    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -7.242    -4.730 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.419    -3.312    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081    -3.231 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         1.427    -1.804    eth_send_test/eth_send/clk_out1
+    SLICE_X2Y20          FDCE                                         r  eth_send_test/eth_send/cnt_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y20          FDCE (Prop_fdce_C_Q)         0.398    -1.406 f  eth_send_test/eth_send/cnt_reg[3]/Q
+                         net (fo=27, routed)          1.104    -0.302    eth_send_test/eth_send/cnt_reg_0[3]
+    SLICE_X2Y22          LUT6 (Prop_lut6_I0_O)        0.232    -0.070 f  eth_send_test/eth_send/cnt[5]_i_7/O
+                         net (fo=1, routed)           0.845     0.775    eth_send_test/eth_send/cnt[5]_i_7_n_0
+    SLICE_X5Y26          LUT6 (Prop_lut6_I5_O)        0.105     0.880 r  eth_send_test/eth_send/cnt[5]_i_3/O
+                         net (fo=15, routed)          1.115     1.995    eth_send_test/eth_send/fifo_rdreq
+    SLICE_X3Y28          LUT2 (Prop_lut2_I1_O)        0.105     2.100 r  eth_send_test/eth_send/data_cnt[8]_i_5/O
+                         net (fo=1, routed)           0.000     2.100    eth_send_test/eth_send/data_cnt[8]_i_5_n_0
+    SLICE_X3Y28          CARRY4 (Prop_carry4_S[0]_O[2])
+                                                      0.453     2.553 r  eth_send_test/eth_send/data_cnt_reg[8]_i_1/O[2]
+                         net (fo=1, routed)           0.000     2.553    eth_send_test/eth_send_n_17
+    SLICE_X3Y28          FDCE                                         r  eth_send_test/data_cnt_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_pll rise edge)
+                                                      8.000     8.000 r  
+    R4                                                0.000     8.000 r  clk (IN)
+                         net (fo=0)                   0.000     8.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         1.366     9.366 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.019    10.384    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -6.511     3.873 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.349     5.223    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     5.300 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         1.318     6.617    eth_send_test/clk_out1
+    SLICE_X3Y28          FDCE                                         r  eth_send_test/data_cnt_reg[10]/C
+                         clock pessimism             -0.464     6.153    
+                         clock uncertainty           -0.124     6.029    
+    SLICE_X3Y28          FDCE (Setup_fdce_C_D)        0.059     6.088    eth_send_test/data_cnt_reg[10]
+  -------------------------------------------------------------------
+                         required time                          6.088    
+                         arrival time                          -2.553    
+  -------------------------------------------------------------------
+                         slack                                  3.534    
+
+Slack (MET) :             3.644ns  (required time - arrival time)
+  Source:                 eth_send_test/eth_send/cnt_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            eth_send_test/data_cnt_reg[9]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk_out1_pll
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (clk_out1_pll rise@8.000ns - clk_out1_pll rise@0.000ns)
+  Data Path Delay:        4.247ns  (logic 1.183ns (27.854%)  route 3.064ns (72.146%))
+  Logic Levels:           4  (CARRY4=1 LUT2=1 LUT6=2)
+  Clock Path Skew:        -0.043ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.383ns = ( 6.617 - 8.000 ) 
+    Source Clock Delay      (SCD):    -1.804ns
+    Clock Pessimism Removal (CPR):    -0.464ns
+  Clock Uncertainty:      0.124ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.239ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         1.432     1.432 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.080     2.512    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -7.242    -4.730 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.419    -3.312    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081    -3.231 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         1.427    -1.804    eth_send_test/eth_send/clk_out1
+    SLICE_X2Y20          FDCE                                         r  eth_send_test/eth_send/cnt_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y20          FDCE (Prop_fdce_C_Q)         0.398    -1.406 f  eth_send_test/eth_send/cnt_reg[3]/Q
+                         net (fo=27, routed)          1.104    -0.302    eth_send_test/eth_send/cnt_reg_0[3]
+    SLICE_X2Y22          LUT6 (Prop_lut6_I0_O)        0.232    -0.070 f  eth_send_test/eth_send/cnt[5]_i_7/O
+                         net (fo=1, routed)           0.845     0.775    eth_send_test/eth_send/cnt[5]_i_7_n_0
+    SLICE_X5Y26          LUT6 (Prop_lut6_I5_O)        0.105     0.880 r  eth_send_test/eth_send/cnt[5]_i_3/O
+                         net (fo=15, routed)          1.115     1.995    eth_send_test/eth_send/fifo_rdreq
+    SLICE_X3Y28          LUT2 (Prop_lut2_I1_O)        0.105     2.100 r  eth_send_test/eth_send/data_cnt[8]_i_5/O
+                         net (fo=1, routed)           0.000     2.100    eth_send_test/eth_send/data_cnt[8]_i_5_n_0
+    SLICE_X3Y28          CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.343     2.443 r  eth_send_test/eth_send/data_cnt_reg[8]_i_1/O[1]
+                         net (fo=1, routed)           0.000     2.443    eth_send_test/eth_send_n_18
+    SLICE_X3Y28          FDCE                                         r  eth_send_test/data_cnt_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_pll rise edge)
+                                                      8.000     8.000 r  
+    R4                                                0.000     8.000 r  clk (IN)
+                         net (fo=0)                   0.000     8.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         1.366     9.366 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.019    10.384    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -6.511     3.873 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.349     5.223    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     5.300 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         1.318     6.617    eth_send_test/clk_out1
+    SLICE_X3Y28          FDCE                                         r  eth_send_test/data_cnt_reg[9]/C
+                         clock pessimism             -0.464     6.153    
+                         clock uncertainty           -0.124     6.029    
+    SLICE_X3Y28          FDCE (Setup_fdce_C_D)        0.059     6.088    eth_send_test/data_cnt_reg[9]
+  -------------------------------------------------------------------
+                         required time                          6.088    
+                         arrival time                          -2.443    
+  -------------------------------------------------------------------
+                         slack                                  3.644    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.149ns  (arrival time - required time)
+  Source:                 eth_send_test/CRC32_d8_inst/crc_reg[9]/C
+                            (rising edge-triggered cell FDSE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            eth_send_test/CRC32_d8_inst/crc_reg[17]/D
+                            (rising edge-triggered cell FDSE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk_out1_pll
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_pll rise@0.000ns - clk_out1_pll rise@0.000ns)
+  Data Path Delay:        0.253ns  (logic 0.186ns (73.589%)  route 0.067ns (26.411%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.270ns
+    Source Clock Delay      (SCD):    -0.500ns
+    Clock Pessimism Removal (CPR):    0.217ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         0.269     0.269 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.709    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.322    -1.614 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.501    -1.113    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.087 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         0.587    -0.500    eth_send_test/CRC32_d8_inst/clk_out1
+    SLICE_X1Y19          FDSE                                         r  eth_send_test/CRC32_d8_inst/crc_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y19          FDSE (Prop_fdse_C_Q)         0.141    -0.359 r  eth_send_test/CRC32_d8_inst/crc_reg[9]/Q
+                         net (fo=2, routed)           0.067    -0.292    eth_send_test/CRC32_d8_inst/crc_reg[29]_0[2]
+    SLICE_X0Y19          LUT6 (Prop_lut6_I0_O)        0.045    -0.247 r  eth_send_test/CRC32_d8_inst/crc[17]_i_1/O
+                         net (fo=1, routed)           0.000    -0.247    eth_send_test/CRC32_d8_inst/crc[17]_i_1_n_0
+    SLICE_X0Y19          FDSE                                         r  eth_send_test/CRC32_d8_inst/crc_reg[17]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         0.457     0.457 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.481     0.938    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.638    -1.700 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.546    -1.155    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.126 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         0.856    -0.270    eth_send_test/CRC32_d8_inst/clk_out1
+    SLICE_X0Y19          FDSE                                         r  eth_send_test/CRC32_d8_inst/crc_reg[17]/C
+                         clock pessimism             -0.217    -0.487    
+    SLICE_X0Y19          FDSE (Hold_fdse_C_D)         0.091    -0.396    eth_send_test/CRC32_d8_inst/crc_reg[17]
+  -------------------------------------------------------------------
+                         required time                          0.396    
+                         arrival time                          -0.247    
+  -------------------------------------------------------------------
+                         slack                                  0.149    
+
+Slack (MET) :             0.163ns  (arrival time - required time)
+  Source:                 eth_send_test/eth_send/en_tx_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            eth_send_test/eth_send/cnt_reg[5]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk_out1_pll
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_pll rise@0.000ns - clk_out1_pll rise@0.000ns)
+  Data Path Delay:        0.296ns  (logic 0.186ns (62.902%)  route 0.110ns (37.098%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.272ns
+    Source Clock Delay      (SCD):    -0.502ns
+    Clock Pessimism Removal (CPR):    0.217ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         0.269     0.269 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.709    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.322    -1.614 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.501    -1.113    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.087 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         0.585    -0.502    eth_send_test/eth_send/clk_out1
+    SLICE_X3Y21          FDCE                                         r  eth_send_test/eth_send/en_tx_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y21          FDCE (Prop_fdce_C_Q)         0.141    -0.361 r  eth_send_test/eth_send/en_tx_reg/Q
+                         net (fo=8, routed)           0.110    -0.252    eth_send_test/eth_send/en_tx
+    SLICE_X2Y21          LUT6 (Prop_lut6_I0_O)        0.045    -0.207 r  eth_send_test/eth_send/cnt[5]_i_2/O
+                         net (fo=1, routed)           0.000    -0.207    eth_send_test/eth_send/p_0_in__0[5]
+    SLICE_X2Y21          FDCE                                         r  eth_send_test/eth_send/cnt_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         0.457     0.457 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.481     0.938    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.638    -1.700 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.546    -1.155    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.126 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         0.854    -0.272    eth_send_test/eth_send/clk_out1
+    SLICE_X2Y21          FDCE                                         r  eth_send_test/eth_send/cnt_reg[5]/C
+                         clock pessimism             -0.217    -0.489    
+    SLICE_X2Y21          FDCE (Hold_fdce_C_D)         0.120    -0.369    eth_send_test/eth_send/cnt_reg[5]
+  -------------------------------------------------------------------
+                         required time                          0.369    
+                         arrival time                          -0.207    
+  -------------------------------------------------------------------
+                         slack                                  0.163    
+
+Slack (MET) :             0.165ns  (arrival time - required time)
+  Source:                 eth_send_test/CRC32_d8_inst/crc_reg[25]/C
+                            (rising edge-triggered cell FDSE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            eth_send_test/CRC32_d8_inst/crc_reg[9]/D
+                            (rising edge-triggered cell FDSE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk_out1_pll
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_pll rise@0.000ns - clk_out1_pll rise@0.000ns)
+  Data Path Delay:        0.270ns  (logic 0.186ns (68.892%)  route 0.084ns (31.108%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.270ns
+    Source Clock Delay      (SCD):    -0.500ns
+    Clock Pessimism Removal (CPR):    0.217ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         0.269     0.269 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.709    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.322    -1.614 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.501    -1.113    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.087 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         0.587    -0.500    eth_send_test/CRC32_d8_inst/clk_out1
+    SLICE_X0Y19          FDSE                                         r  eth_send_test/CRC32_d8_inst/crc_reg[25]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y19          FDSE (Prop_fdse_C_Q)         0.141    -0.359 r  eth_send_test/CRC32_d8_inst/crc_reg[25]/Q
+                         net (fo=8, routed)           0.084    -0.275    eth_send_test/CRC32_d8_inst/crc_reg_n_0_[25]
+    SLICE_X1Y19          LUT6 (Prop_lut6_I4_O)        0.045    -0.230 r  eth_send_test/CRC32_d8_inst/crc[9]_i_1/O
+                         net (fo=1, routed)           0.000    -0.230    eth_send_test/CRC32_d8_inst/crc[9]_i_1_n_0
+    SLICE_X1Y19          FDSE                                         r  eth_send_test/CRC32_d8_inst/crc_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         0.457     0.457 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.481     0.938    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.638    -1.700 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.546    -1.155    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.126 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         0.856    -0.270    eth_send_test/CRC32_d8_inst/clk_out1
+    SLICE_X1Y19          FDSE                                         r  eth_send_test/CRC32_d8_inst/crc_reg[9]/C
+                         clock pessimism             -0.217    -0.487    
+    SLICE_X1Y19          FDSE (Hold_fdse_C_D)         0.092    -0.395    eth_send_test/CRC32_d8_inst/crc_reg[9]
+  -------------------------------------------------------------------
+                         required time                          0.395    
+                         arrival time                          -0.230    
+  -------------------------------------------------------------------
+                         slack                                  0.165    
+
+Slack (MET) :             0.189ns  (arrival time - required time)
+  Source:                 eth_send_test/CRC32_d8_inst/crc_reg[2]/C
+                            (rising edge-triggered cell FDSE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            eth_send_test/CRC32_d8_inst/crc_reg[10]/D
+                            (rising edge-triggered cell FDSE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk_out1_pll
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_pll rise@0.000ns - clk_out1_pll rise@0.000ns)
+  Data Path Delay:        0.296ns  (logic 0.186ns (62.933%)  route 0.110ns (37.067%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.269ns
+    Source Clock Delay      (SCD):    -0.500ns
+    Clock Pessimism Removal (CPR):    0.216ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         0.269     0.269 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.709    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.322    -1.614 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.501    -1.113    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.087 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         0.587    -0.500    eth_send_test/CRC32_d8_inst/clk_out1
+    SLICE_X1Y19          FDSE                                         r  eth_send_test/CRC32_d8_inst/crc_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y19          FDSE (Prop_fdse_C_Q)         0.141    -0.359 r  eth_send_test/CRC32_d8_inst/crc_reg[2]/Q
+                         net (fo=2, routed)           0.110    -0.250    eth_send_test/CRC32_d8_inst/crc_reg_n_0_[2]
+    SLICE_X1Y18          LUT6 (Prop_lut6_I0_O)        0.045    -0.205 r  eth_send_test/CRC32_d8_inst/crc[10]_i_1/O
+                         net (fo=1, routed)           0.000    -0.205    eth_send_test/CRC32_d8_inst/crc[10]_i_1_n_0
+    SLICE_X1Y18          FDSE                                         r  eth_send_test/CRC32_d8_inst/crc_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         0.457     0.457 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.481     0.938    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.638    -1.700 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.546    -1.155    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.126 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         0.857    -0.269    eth_send_test/CRC32_d8_inst/clk_out1
+    SLICE_X1Y18          FDSE                                         r  eth_send_test/CRC32_d8_inst/crc_reg[10]/C
+                         clock pessimism             -0.216    -0.485    
+    SLICE_X1Y18          FDSE (Hold_fdse_C_D)         0.092    -0.393    eth_send_test/CRC32_d8_inst/crc_reg[10]
+  -------------------------------------------------------------------
+                         required time                          0.393    
+                         arrival time                          -0.205    
+  -------------------------------------------------------------------
+                         slack                                  0.189    
+
+Slack (MET) :             0.193ns  (arrival time - required time)
+  Source:                 eth_send_test/CRC32_d8_inst/crc_reg[23]/C
+                            (rising edge-triggered cell FDSE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            eth_send_test/CRC32_d8_inst/crc_reg[31]/D
+                            (rising edge-triggered cell FDSE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk_out1_pll
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_pll rise@0.000ns - clk_out1_pll rise@0.000ns)
+  Data Path Delay:        0.337ns  (logic 0.187ns (55.535%)  route 0.150ns (44.465%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.268ns
+    Source Clock Delay      (SCD):    -0.498ns
+    Clock Pessimism Removal (CPR):    0.217ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         0.269     0.269 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.709    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.322    -1.614 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.501    -1.113    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.087 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         0.589    -0.498    eth_send_test/CRC32_d8_inst/clk_out1
+    SLICE_X3Y17          FDSE                                         r  eth_send_test/CRC32_d8_inst/crc_reg[23]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y17          FDSE (Prop_fdse_C_Q)         0.141    -0.357 r  eth_send_test/CRC32_d8_inst/crc_reg[23]/Q
+                         net (fo=2, routed)           0.150    -0.207    eth_send_test/CRC32_d8_inst/crc_reg_n_0_[23]
+    SLICE_X2Y17          LUT3 (Prop_lut3_I2_O)        0.046    -0.161 r  eth_send_test/CRC32_d8_inst/crc[31]_i_3/O
+                         net (fo=1, routed)           0.000    -0.161    eth_send_test/CRC32_d8_inst/crc[31]_i_3_n_0
+    SLICE_X2Y17          FDSE                                         r  eth_send_test/CRC32_d8_inst/crc_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         0.457     0.457 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.481     0.938    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.638    -1.700 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.546    -1.155    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.126 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         0.858    -0.268    eth_send_test/CRC32_d8_inst/clk_out1
+    SLICE_X2Y17          FDSE                                         r  eth_send_test/CRC32_d8_inst/crc_reg[31]/C
+                         clock pessimism             -0.217    -0.485    
+    SLICE_X2Y17          FDSE (Hold_fdse_C_D)         0.131    -0.354    eth_send_test/CRC32_d8_inst/crc_reg[31]
+  -------------------------------------------------------------------
+                         required time                          0.354    
+                         arrival time                          -0.161    
+  -------------------------------------------------------------------
+                         slack                                  0.193    
+
+Slack (MET) :             0.202ns  (arrival time - required time)
+  Source:                 eth_send_test/CRC32_d8_inst/crc_reg[4]/C
+                            (rising edge-triggered cell FDSE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            eth_send_test/CRC32_d8_inst/crc_reg[12]/D
+                            (rising edge-triggered cell FDSE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk_out1_pll
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_pll rise@0.000ns - clk_out1_pll rise@0.000ns)
+  Data Path Delay:        0.337ns  (logic 0.227ns (67.327%)  route 0.110ns (32.673%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.267ns
+    Source Clock Delay      (SCD):    -0.498ns
+    Clock Pessimism Removal (CPR):    0.216ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         0.269     0.269 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.709    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.322    -1.614 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.501    -1.113    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.087 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         0.589    -0.498    eth_send_test/CRC32_d8_inst/clk_out1
+    SLICE_X1Y17          FDSE                                         r  eth_send_test/CRC32_d8_inst/crc_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y17          FDSE (Prop_fdse_C_Q)         0.128    -0.370 r  eth_send_test/CRC32_d8_inst/crc_reg[4]/Q
+                         net (fo=2, routed)           0.110    -0.260    eth_send_test/CRC32_d8_inst/crc_reg_n_0_[4]
+    SLICE_X2Y16          LUT6 (Prop_lut6_I1_O)        0.099    -0.161 r  eth_send_test/CRC32_d8_inst/crc[12]_i_1/O
+                         net (fo=1, routed)           0.000    -0.161    eth_send_test/CRC32_d8_inst/crc[12]_i_1_n_0
+    SLICE_X2Y16          FDSE                                         r  eth_send_test/CRC32_d8_inst/crc_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         0.457     0.457 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.481     0.938    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.638    -1.700 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.546    -1.155    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.126 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         0.859    -0.267    eth_send_test/CRC32_d8_inst/clk_out1
+    SLICE_X2Y16          FDSE                                         r  eth_send_test/CRC32_d8_inst/crc_reg[12]/C
+                         clock pessimism             -0.216    -0.483    
+    SLICE_X2Y16          FDSE (Hold_fdse_C_D)         0.120    -0.363    eth_send_test/CRC32_d8_inst/crc_reg[12]
+  -------------------------------------------------------------------
+                         required time                          0.363    
+                         arrival time                          -0.161    
+  -------------------------------------------------------------------
+                         slack                                  0.202    
+
+Slack (MET) :             0.220ns  (arrival time - required time)
+  Source:                 eth_send_test/eth_send/cnt_reg[5]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            eth_send_test/eth_send/en_tx_reg/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk_out1_pll
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_pll rise@0.000ns - clk_out1_pll rise@0.000ns)
+  Data Path Delay:        0.324ns  (logic 0.209ns (64.494%)  route 0.115ns (35.506%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.272ns
+    Source Clock Delay      (SCD):    -0.502ns
+    Clock Pessimism Removal (CPR):    0.217ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         0.269     0.269 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.709    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.322    -1.614 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.501    -1.113    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.087 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         0.585    -0.502    eth_send_test/eth_send/clk_out1
+    SLICE_X2Y21          FDCE                                         r  eth_send_test/eth_send/cnt_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y21          FDCE (Prop_fdce_C_Q)         0.164    -0.338 f  eth_send_test/eth_send/cnt_reg[5]/Q
+                         net (fo=15, routed)          0.115    -0.223    eth_send_test/eth_send/cnt_reg_0[5]
+    SLICE_X3Y21          LUT6 (Prop_lut6_I0_O)        0.045    -0.178 r  eth_send_test/eth_send/en_tx_i_1/O
+                         net (fo=1, routed)           0.000    -0.178    eth_send_test/eth_send/en_tx_i_1_n_0
+    SLICE_X3Y21          FDCE                                         r  eth_send_test/eth_send/en_tx_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         0.457     0.457 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.481     0.938    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.638    -1.700 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.546    -1.155    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.126 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         0.854    -0.272    eth_send_test/eth_send/clk_out1
+    SLICE_X3Y21          FDCE                                         r  eth_send_test/eth_send/en_tx_reg/C
+                         clock pessimism             -0.217    -0.489    
+    SLICE_X3Y21          FDCE (Hold_fdce_C_D)         0.091    -0.398    eth_send_test/eth_send/en_tx_reg
+  -------------------------------------------------------------------
+                         required time                          0.398    
+                         arrival time                          -0.178    
+  -------------------------------------------------------------------
+                         slack                                  0.220    
+
+Slack (MET) :             0.227ns  (arrival time - required time)
+  Source:                 eth_send_test/CRC32_d8_inst/crc_reg[0]/C
+                            (rising edge-triggered cell FDSE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            eth_send_test/CRC32_d8_inst/crc_reg[8]/D
+                            (rising edge-triggered cell FDSE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk_out1_pll
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_pll rise@0.000ns - clk_out1_pll rise@0.000ns)
+  Data Path Delay:        0.363ns  (logic 0.226ns (62.186%)  route 0.137ns (37.814%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.267ns
+    Source Clock Delay      (SCD):    -0.498ns
+    Clock Pessimism Removal (CPR):    0.216ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         0.269     0.269 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.709    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.322    -1.614 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.501    -1.113    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.087 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         0.589    -0.498    eth_send_test/CRC32_d8_inst/clk_out1
+    SLICE_X1Y17          FDSE                                         r  eth_send_test/CRC32_d8_inst/crc_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y17          FDSE (Prop_fdse_C_Q)         0.128    -0.370 r  eth_send_test/CRC32_d8_inst/crc_reg[0]/Q
+                         net (fo=2, routed)           0.137    -0.233    eth_send_test/CRC32_d8_inst/crc_reg_n_0_[0]
+    SLICE_X2Y16          LUT6 (Prop_lut6_I0_O)        0.098    -0.135 r  eth_send_test/CRC32_d8_inst/crc[8]_i_1/O
+                         net (fo=1, routed)           0.000    -0.135    eth_send_test/CRC32_d8_inst/crc[8]_i_1_n_0
+    SLICE_X2Y16          FDSE                                         r  eth_send_test/CRC32_d8_inst/crc_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         0.457     0.457 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.481     0.938    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.638    -1.700 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.546    -1.155    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.126 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         0.859    -0.267    eth_send_test/CRC32_d8_inst/clk_out1
+    SLICE_X2Y16          FDSE                                         r  eth_send_test/CRC32_d8_inst/crc_reg[8]/C
+                         clock pessimism             -0.216    -0.483    
+    SLICE_X2Y16          FDSE (Hold_fdse_C_D)         0.121    -0.362    eth_send_test/CRC32_d8_inst/crc_reg[8]
+  -------------------------------------------------------------------
+                         required time                          0.362    
+                         arrival time                          -0.135    
+  -------------------------------------------------------------------
+                         slack                                  0.227    
+
+Slack (MET) :             0.231ns  (arrival time - required time)
+  Source:                 eth_send_test/eth_send/cnt_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            eth_send_test/eth_send/cnt_reg[4]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk_out1_pll
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_pll rise@0.000ns - clk_out1_pll rise@0.000ns)
+  Data Path Delay:        0.352ns  (logic 0.246ns (69.850%)  route 0.106ns (30.150%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.271ns
+    Source Clock Delay      (SCD):    -0.501ns
+    Clock Pessimism Removal (CPR):    0.230ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         0.269     0.269 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.709    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.322    -1.614 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.501    -1.113    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.087 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         0.586    -0.501    eth_send_test/eth_send/clk_out1
+    SLICE_X2Y20          FDCE                                         r  eth_send_test/eth_send/cnt_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y20          FDCE (Prop_fdce_C_Q)         0.148    -0.353 r  eth_send_test/eth_send/cnt_reg[3]/Q
+                         net (fo=27, routed)          0.106    -0.247    eth_send_test/eth_send/cnt_reg_0[3]
+    SLICE_X2Y20          LUT6 (Prop_lut6_I4_O)        0.098    -0.149 r  eth_send_test/eth_send/cnt[4]_i_1/O
+                         net (fo=1, routed)           0.000    -0.149    eth_send_test/eth_send/p_0_in__0[4]
+    SLICE_X2Y20          FDCE                                         r  eth_send_test/eth_send/cnt_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         0.457     0.457 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.481     0.938    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.638    -1.700 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.546    -1.155    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.126 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         0.855    -0.271    eth_send_test/eth_send/clk_out1
+    SLICE_X2Y20          FDCE                                         r  eth_send_test/eth_send/cnt_reg[4]/C
+                         clock pessimism             -0.230    -0.501    
+    SLICE_X2Y20          FDCE (Hold_fdce_C_D)         0.121    -0.380    eth_send_test/eth_send/cnt_reg[4]
+  -------------------------------------------------------------------
+                         required time                          0.380    
+                         arrival time                          -0.149    
+  -------------------------------------------------------------------
+                         slack                                  0.231    
+
+Slack (MET) :             0.248ns  (arrival time - required time)
+  Source:                 eth_send_test/CRC32_d8_inst/crc_reg[26]/C
+                            (rising edge-triggered cell FDSE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            eth_send_test/CRC32_d8_inst/crc_reg[7]/D
+                            (rising edge-triggered cell FDSE clocked by clk_out1_pll  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk_out1_pll
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_pll rise@0.000ns - clk_out1_pll rise@0.000ns)
+  Data Path Delay:        0.355ns  (logic 0.186ns (52.462%)  route 0.169ns (47.538%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.268ns
+    Source Clock Delay      (SCD):    -0.499ns
+    Clock Pessimism Removal (CPR):    0.216ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         0.269     0.269 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.709    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.322    -1.614 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.501    -1.113    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.087 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         0.588    -0.499    eth_send_test/CRC32_d8_inst/clk_out1
+    SLICE_X1Y18          FDSE                                         r  eth_send_test/CRC32_d8_inst/crc_reg[26]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y18          FDSE (Prop_fdse_C_Q)         0.141    -0.358 r  eth_send_test/CRC32_d8_inst/crc_reg[26]/Q
+                         net (fo=13, routed)          0.169    -0.190    eth_send_test/eth_send/crc_reg[7][6]
+    SLICE_X3Y17          LUT6 (Prop_lut6_I2_O)        0.045    -0.145 r  eth_send_test/eth_send/crc[7]_i_1/O
+                         net (fo=1, routed)           0.000    -0.145    eth_send_test/CRC32_d8_inst/D[0]
+    SLICE_X3Y17          FDSE                                         r  eth_send_test/CRC32_d8_inst/crc_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_pll rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    pll/inst/clk_in1
+    R4                   IBUF (Prop_ibuf_I_O)         0.457     0.457 r  pll/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.481     0.938    pll/inst/clk_in1_pll
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.638    -1.700 r  pll/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.546    -1.155    pll/inst/clk_out1_pll
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.126 r  pll/inst/clkout1_buf/O
+                         net (fo=113, routed)         0.858    -0.268    eth_send_test/CRC32_d8_inst/clk_out1
+    SLICE_X3Y17          FDSE                                         r  eth_send_test/CRC32_d8_inst/crc_reg[7]/C
+                         clock pessimism             -0.216    -0.484    
+    SLICE_X3Y17          FDSE (Hold_fdse_C_D)         0.092    -0.392    eth_send_test/CRC32_d8_inst/crc_reg[7]
+  -------------------------------------------------------------------
+                         required time                          0.392    
+                         arrival time                          -0.145    
+  -------------------------------------------------------------------
+                         slack                                  0.248    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_out1_pll
+Waveform(ns):       { 0.000 4.000 }
+Period(ns):         8.000
+Sources:            { pll/inst/plle2_adv_inst/CLKOUT0 }
+
+Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
+Min Period        n/a     BUFG/I             n/a            1.592         8.000       6.408      BUFGCTRL_X0Y0   pll/inst/clkout1_buf/I
+Min Period        n/a     ODDR/C             n/a            1.474         8.000       6.526      OLOGIC_X0Y33    gmii_to_rgmii_inst/ODDR_rgmii_clk/C
+Min Period        n/a     ODDR/C             n/a            1.474         8.000       6.526      OLOGIC_X0Y29    gmii_to_rgmii_inst/ODDR_rgmii_txd/C
+Min Period        n/a     ODDR/C             n/a            1.474         8.000       6.526      OLOGIC_X0Y30    gmii_to_rgmii_inst/rgmii_tx_data_o[0].ODDR_rgmii_txd/C
+Min Period        n/a     ODDR/C             n/a            1.474         8.000       6.526      OLOGIC_X0Y34    gmii_to_rgmii_inst/rgmii_tx_data_o[1].ODDR_rgmii_txd/C
+Min Period        n/a     ODDR/C             n/a            1.474         8.000       6.526      OLOGIC_X0Y19    gmii_to_rgmii_inst/rgmii_tx_data_o[2].ODDR_rgmii_txd/C
+Min Period        n/a     ODDR/C             n/a            1.474         8.000       6.526      OLOGIC_X0Y20    gmii_to_rgmii_inst/rgmii_tx_data_o[3].ODDR_rgmii_txd/C
+Min Period        n/a     PLLE2_ADV/CLKOUT0  n/a            1.249         8.000       6.751      PLLE2_ADV_X1Y0  pll/inst/plle2_adv_inst/CLKOUT0
+Min Period        n/a     FDSE/C             n/a            1.000         8.000       7.000      SLICE_X2Y16     eth_send_test/CRC32_d8_inst/crc_reg[12]/C
+Min Period        n/a     FDSE/C             n/a            1.000         8.000       7.000      SLICE_X2Y18     eth_send_test/CRC32_d8_inst/crc_reg[13]/C
+Max Period        n/a     PLLE2_ADV/CLKOUT0  n/a            160.000       8.000       152.000    PLLE2_ADV_X1Y0  pll/inst/plle2_adv_inst/CLKOUT0
+Low Pulse Width   Fast    FDSE/C             n/a            0.500         4.000       3.500      SLICE_X2Y18     eth_send_test/CRC32_d8_inst/crc_reg[13]/C
+Low Pulse Width   Fast    FDSE/C             n/a            0.500         4.000       3.500      SLICE_X3Y18     eth_send_test/CRC32_d8_inst/crc_reg[14]/C
+Low Pulse Width   Fast    FDSE/C             n/a            0.500         4.000       3.500      SLICE_X3Y17     eth_send_test/CRC32_d8_inst/crc_reg[15]/C
+Low Pulse Width   Fast    FDSE/C             n/a            0.500         4.000       3.500      SLICE_X0Y19     eth_send_test/CRC32_d8_inst/crc_reg[17]/C
+Low Pulse Width   Fast    FDSE/C             n/a            0.500         4.000       3.500      SLICE_X1Y18     eth_send_test/CRC32_d8_inst/crc_reg[18]/C
+Low Pulse Width   Fast    FDSE/C             n/a            0.500         4.000       3.500      SLICE_X3Y18     eth_send_test/CRC32_d8_inst/crc_reg[19]/C
+Low Pulse Width   Fast    FDSE/C             n/a            0.500         4.000       3.500      SLICE_X1Y19     eth_send_test/CRC32_d8_inst/crc_reg[1]/C
+Low Pulse Width   Fast    FDSE/C             n/a            0.500         4.000       3.500      SLICE_X2Y17     eth_send_test/CRC32_d8_inst/crc_reg[20]/C
+Low Pulse Width   Fast    FDSE/C             n/a            0.500         4.000       3.500      SLICE_X2Y17     eth_send_test/CRC32_d8_inst/crc_reg[21]/C
+Low Pulse Width   Fast    FDSE/C             n/a            0.500         4.000       3.500      SLICE_X3Y18     eth_send_test/CRC32_d8_inst/crc_reg[22]/C
+High Pulse Width  Fast    FDSE/C             n/a            0.500         4.000       3.500      SLICE_X2Y16     eth_send_test/CRC32_d8_inst/crc_reg[12]/C
+High Pulse Width  Slow    FDSE/C             n/a            0.500         4.000       3.500      SLICE_X3Y17     eth_send_test/CRC32_d8_inst/crc_reg[15]/C
+High Pulse Width  Fast    FDSE/C             n/a            0.500         4.000       3.500      SLICE_X2Y16     eth_send_test/CRC32_d8_inst/crc_reg[16]/C
+High Pulse Width  Fast    FDSE/C             n/a            0.500         4.000       3.500      SLICE_X0Y19     eth_send_test/CRC32_d8_inst/crc_reg[17]/C
+High Pulse Width  Fast    FDSE/C             n/a            0.500         4.000       3.500      SLICE_X1Y19     eth_send_test/CRC32_d8_inst/crc_reg[1]/C
+High Pulse Width  Slow    FDSE/C             n/a            0.500         4.000       3.500      SLICE_X2Y17     eth_send_test/CRC32_d8_inst/crc_reg[20]/C
+High Pulse Width  Slow    FDSE/C             n/a            0.500         4.000       3.500      SLICE_X2Y17     eth_send_test/CRC32_d8_inst/crc_reg[21]/C
+High Pulse Width  Slow    FDSE/C             n/a            0.500         4.000       3.500      SLICE_X3Y17     eth_send_test/CRC32_d8_inst/crc_reg[23]/C
+High Pulse Width  Slow    FDSE/C             n/a            0.500         4.000       3.500      SLICE_X1Y17     eth_send_test/CRC32_d8_inst/crc_reg[24]/C
+High Pulse Width  Fast    FDSE/C             n/a            0.500         4.000       3.500      SLICE_X0Y19     eth_send_test/CRC32_d8_inst/crc_reg[25]/C
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clkfbout_pll
+  To Clock:  clkfbout_pll
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack       12.633ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clkfbout_pll
+Waveform(ns):       { 0.000 20.000 }
+Period(ns):         40.000
+Sources:            { pll/inst/plle2_adv_inst/CLKFBOUT }
+
+Check Type  Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
+Min Period  n/a     BUFG/I              n/a            1.592         40.000      38.408     BUFGCTRL_X0Y1   pll/inst/clkf_buf/I
+Min Period  n/a     PLLE2_ADV/CLKFBOUT  n/a            1.249         40.000      38.751     PLLE2_ADV_X1Y0  pll/inst/plle2_adv_inst/CLKFBOUT
+Min Period  n/a     PLLE2_ADV/CLKFBIN   n/a            1.249         40.000      38.751     PLLE2_ADV_X1Y0  pll/inst/plle2_adv_inst/CLKFBIN
+Max Period  n/a     PLLE2_ADV/CLKFBIN   n/a            52.633        40.000      12.633     PLLE2_ADV_X1Y0  pll/inst/plle2_adv_inst/CLKFBIN
+Max Period  n/a     PLLE2_ADV/CLKFBOUT  n/a            160.000       40.000      120.000    PLLE2_ADV_X1Y0  pll/inst/plle2_adv_inst/CLKFBOUT
+
+
+

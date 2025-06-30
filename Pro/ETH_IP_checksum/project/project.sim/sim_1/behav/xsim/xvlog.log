@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_IP_checksum/src/checksum.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module checksum
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_IP_checksum/src/checksum_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module checksum_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_IP_checksum/project/project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

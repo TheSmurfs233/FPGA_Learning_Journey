@@ -1,0 +1,3 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+$stop called at time : 1389 us : File "D:/FPGA_Learning_Journey/Pro/DDR3_uart___/src/uart/top_uart_tb.v" Line 63

@@ -1,0 +1,11 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+D:/FPGA_Learning_Journey/Pro/EHT_GMII_RGMII___/project/project.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/EHT_GMII_RGMII___/project/project.srcs/sources_1/ip/rx_pll/rx_pll.v,1740995831,verilog,,D:/FPGA_Learning_Journey/Pro/EHT_GMII_RGMII___/src/rgmii_to_gmii.v,,rx_pll,,,../../../../project.srcs/sources_1/ip/rx_pll,,,,,
+D:/FPGA_Learning_Journey/Pro/EHT_GMII_RGMII___/project/project.srcs/sources_1/ip/rx_pll/rx_pll_clk_wiz.v,1740995831,verilog,,D:/FPGA_Learning_Journey/Pro/EHT_GMII_RGMII___/project/project.srcs/sources_1/ip/rx_pll/rx_pll.v,,rx_pll_clk_wiz,,,../../../../project.srcs/sources_1/ip/rx_pll,,,,,
+D:/FPGA_Learning_Journey/Pro/EHT_GMII_RGMII___/src/gmii_to_rgmii.v,1740992632,verilog,,D:/FPGA_Learning_Journey/Pro/EHT_GMII_RGMII___/src/sim/gmii_to_rgmii_tb.v,,gmii_to_rgmii,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/EHT_GMII_RGMII___/src/rgmii_to_gmii.v,1740995590,verilog,,D:/FPGA_Learning_Journey/Pro/EHT_GMII_RGMII___/src/sim/rgmii_to_gmii_tb.v,,rgmii_to_gmii,,,../../../../project.srcs/sources_1/ip/rx_pll,,,,,
+D:/FPGA_Learning_Journey/Pro/EHT_GMII_RGMII___/src/sim/gmii_to_rgmii_tb.v,1687154549,verilog,,,,gmii_to_rgmii_tb,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/EHT_GMII_RGMII___/src/sim/rgmii_to_gmii_tb.v,1740995958,verilog,,,,rgmii_to_gmii_tb,,,../../../../project.srcs/sources_1/ip/rx_pll,,,,,

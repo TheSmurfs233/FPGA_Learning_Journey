@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Mar  3 18:53:01 2025
+# Process ID: 19616
+# Current directory: D:/FPGA_Learning_Journey/Pro/EHT_GMII_RGMII___/project/project.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source D:/FPGA_Learning_Journey/Pro/EHT_GMII_RGMII___/project/project.sim/sim_1/behav/xsim/xsim.dir/rgmii_to_gmii_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/FPGA_Learning_Journey/Pro/EHT_GMII_RGMII___/project/project.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: D:/FPGA_Learning_Journey/Pro/EHT_GMII_RGMII___/project/project.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source D:/FPGA_Learning_Journey/Pro/EHT_GMII_RGMII___/project/project.sim/sim_1/behav/xsim/xsim.dir/rgmii_to_gmii_tb_behav/webtalk/xsim_webtalk.tcl -notrace

@@ -1,0 +1,20 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 99e96a5ba40c4d9bb13c5fbadeacbdd2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_mdio_rw_test_behav xil_defaultlib.tb_mdio_rw_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/FPGA_Learning_Journey/Pro/ETH_MDIO_RW___/src/mdio_rw_test.v" Line 2. Module mdio_rw_test doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/FPGA_Learning_Journey/Pro/ETH_MDIO_RW___/src/mdio_dri.v" Line 2. Module mdio_dri doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/FPGA_Learning_Journey/Pro/ETH_MDIO_RW___/src/mdio_ctrl.v" Line 2. Module mdio_ctrl(TIME_CNT=1000) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mdio_dri
+Compiling module xil_defaultlib.mdio_ctrl(TIME_CNT=1000)
+Compiling module xil_defaultlib.mdio_rw_test
+Compiling module xil_defaultlib.mdio_slave_interface
+Compiling module xil_defaultlib.tb_mdio_rw_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_mdio_rw_test_behav

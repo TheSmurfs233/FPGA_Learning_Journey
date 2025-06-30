@@ -1,0 +1,460 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Mar  5 15:43:25 2025
+# Process ID: 14144
+# Current directory: D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/project without ipchecksum/project.runs/synth_1
+# Command line: vivado.exe -log eth_send_test_rgmii.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source eth_send_test_rgmii.tcl
+# Log file: D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/project without ipchecksum/project.runs/synth_1/eth_send_test_rgmii.vds
+# Journal file: D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/project without ipchecksum/project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source eth_send_test_rgmii.tcl -notrace
+Command: synth_design -top eth_send_test_rgmii -part xc7a35tfgg484-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tfgg484-2
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 14628 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 972.867 ; gain = 233.746
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'eth_send_test_rgmii' [D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc_with_ipchecksum/eth_send_test_rgmii.v:2]
+INFO: [Synth 8-6157] synthesizing module 'pll' [D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/project without ipchecksum/project.runs/synth_1/.Xil/Vivado-14144-DESKTOP-I8GGJRG/realtime/pll_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'pll' (1#1) [D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/project without ipchecksum/project.runs/synth_1/.Xil/Vivado-14144-DESKTOP-I8GGJRG/realtime/pll_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'eth_send_test' [D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc_with_ipchecksum/eth_send_test.v:5]
+	Parameter CRC bound to: 1853019265 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'CRC32_d8' [D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc_with_ipchecksum/crc32_d8.v:2]
+	Parameter Tp bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'CRC32_d8' (2#1) [D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc_with_ipchecksum/crc32_d8.v:2]
+INFO: [Synth 8-6157] synthesizing module 'eth_send' [D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc_with_ipchecksum/eth_send.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'eth_send' (3#1) [D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc_with_ipchecksum/eth_send.v:4]
+INFO: [Synth 8-6157] synthesizing module 'checksum' [D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc_with_ipchecksum/checksum.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'checksum' (4#1) [D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc_with_ipchecksum/checksum.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'eth_send_test' (5#1) [D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc_with_ipchecksum/eth_send_test.v:5]
+INFO: [Synth 8-6157] synthesizing module 'gmii_to_rgmii' [D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc_with_ipchecksum/gmii_to_rgmii.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ODDR' [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:49681]
+	Parameter DDR_CLK_EDGE bound to: SAME_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'ODDR' (6#1) [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:49681]
+INFO: [Synth 8-6155] done synthesizing module 'gmii_to_rgmii' (7#1) [D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc_with_ipchecksum/gmii_to_rgmii.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'eth_send_test_rgmii' (8#1) [D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/src/arp_send_rgmii_crc_with_ipchecksum/eth_send_test_rgmii.v:2]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1046.637 ; gain = 307.516
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1046.637 ; gain = 307.516
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1046.637 ; gain = 307.516
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1046.637 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/project without ipchecksum/project.srcs/sources_1/ip/pll/pll/pll_in_context.xdc] for cell 'pll'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/project without ipchecksum/project.srcs/sources_1/ip/pll/pll/pll_in_context.xdc] for cell 'pll'
+Parsing XDC File [D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/project without ipchecksum/project.srcs/constrs_1/new/eth_udp.xdc]
+Finished Parsing XDC File [D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/project without ipchecksum/project.srcs/constrs_1/new/eth_udp.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/project without ipchecksum/project.srcs/constrs_1/new/eth_udp.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/eth_send_test_rgmii_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/eth_send_test_rgmii_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1142.191 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1142.191 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1142.191 ; gain = 403.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tfgg484-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1142.191 ; gain = 403.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  {d:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/project without ipchecksum/project.srcs/sources_1/ip/pll/pll/pll_in_context.xdc}, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  {d:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/project without ipchecksum/project.srcs/sources_1/ip/pll/pll/pll_in_context.xdc}, line 4).
+Applied set_property DONT_TOUCH = true for pll. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1142.191 ; gain = 403.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1142.191 ; gain = 403.070
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   9 Input     20 Bit       Adders := 1     
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 3     
+	   2 Input      6 Bit       Adders := 1     
++---XORs : 
+	   4 Input      1 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 12    
+	   6 Input      1 Bit         XORs := 8     
+	   7 Input      1 Bit         XORs := 6     
+	   3 Input      1 Bit         XORs := 4     
+	  11 Input      1 Bit         XORs := 2     
+	   9 Input      1 Bit         XORs := 2     
+	   8 Input      1 Bit         XORs := 2     
+	  10 Input      1 Bit         XORs := 1     
+	   5 Input      1 Bit         XORs := 4     
++---Registers : 
+	               48 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module CRC32_d8 
+Detailed RTL Component Info : 
++---XORs : 
+	   4 Input      1 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 11    
+	   6 Input      1 Bit         XORs := 8     
+	   7 Input      1 Bit         XORs := 6     
+	   3 Input      1 Bit         XORs := 4     
+	  11 Input      1 Bit         XORs := 2     
+	   9 Input      1 Bit         XORs := 2     
+	   8 Input      1 Bit         XORs := 2     
+	  10 Input      1 Bit         XORs := 1     
+	   5 Input      1 Bit         XORs := 4     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module eth_send 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               48 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module checksum 
+Detailed RTL Component Info : 
++---Adders : 
+	   9 Input     20 Bit       Adders := 1     
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module eth_send_test 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module gmii_to_rgmii 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3917] design eth_send_test_rgmii has port phy_rst_n driven by constant 1
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_type_length_reg[4]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_type_length_reg[12]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[4]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[12]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[20]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[28]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[36]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[44]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[0]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_type_length_reg[0]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_type_length_reg[8]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[0]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[8]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[16]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[24]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[32]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[40]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_type_length_reg[5]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_type_length_reg[13]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[5]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[13]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[21]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[29]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[37]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[45]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[1]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_type_length_reg[1]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_type_length_reg[9]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[1]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[9]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[17]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[25]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[33]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[41]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_type_length_reg[6]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_type_length_reg[14]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[6]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[14]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[22]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[30]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[38]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[46]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[2]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_type_length_reg[2]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_type_length_reg[10]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[2]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[10]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[18]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[26]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[34]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[42]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_type_length_reg[7]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_type_length_reg[15]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[7]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[15]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[23]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[31]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[39]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[47]' (FDE) to 'eth_send_test/eth_send/r_type_length_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_type_length_reg[3]' (FDE) to 'eth_send_test/eth_send/r_des_mac_reg[11]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_type_length_reg[11]' (FDE) to 'eth_send_test/eth_send/r_des_mac_reg[3]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[3]' (FDE) to 'eth_send_test/eth_send/r_des_mac_reg[19]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[11]' (FDE) to 'eth_send_test/eth_send/r_des_mac_reg[27]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\eth_send_test/eth_send/r_des_mac_reg[19] )
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[27]' (FDE) to 'eth_send_test/eth_send/r_des_mac_reg[35]'
+INFO: [Synth 8-3886] merging instance 'eth_send_test/eth_send/r_des_mac_reg[35]' (FDE) to 'eth_send_test/eth_send/r_des_mac_reg[43]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\eth_send_test/eth_send/r_des_mac_reg[43] )
+INFO: [Synth 8-3886] merging instance 'i_1/eth_send_test/data_total_len_reg[12]' (FDCE) to 'i_1/eth_send_test/data_total_len_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_1/eth_send_test/data_total_len_reg[13]' (FDCE) to 'i_1/eth_send_test/data_total_len_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_1/eth_send_test/data_total_len_reg[14]' (FDCE) to 'i_1/eth_send_test/data_total_len_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_1/eth_send_test/data_total_len_reg[15]' (FDCE) to 'i_1/eth_send_test/data_total_len_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_1/eth_send_test/data_total_len_reg[6]' (FDCE) to 'i_1/eth_send_test/data_total_len_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_1/eth_send_test/data_total_len_reg[7]' (FDCE) to 'i_1/eth_send_test/data_total_len_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_1/eth_send_test/data_total_len_reg[8]' (FDCE) to 'i_1/eth_send_test/data_total_len_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_1/eth_send_test/data_total_len_reg[9]' (FDCE) to 'i_1/eth_send_test/data_total_len_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_1/eth_send_test/data_total_len_reg[10]' (FDCE) to 'i_1/eth_send_test/data_total_len_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\eth_send_test/data_total_len_reg[11] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1142.191 ; gain = 403.070
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1142.191 ; gain = 403.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1149.770 ; gain = 410.648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1153.664 ; gain = 414.543
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1158.445 ; gain = 419.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1158.445 ; gain = 419.324
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1158.445 ; gain = 419.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1158.445 ; gain = 419.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1158.445 ; gain = 419.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1158.445 ; gain = 419.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |pll           |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |pll    |     1|
+|2     |CARRY4 |    23|
+|3     |LUT1   |    10|
+|4     |LUT2   |    50|
+|5     |LUT3   |    25|
+|6     |LUT4   |    23|
+|7     |LUT5   |    27|
+|8     |LUT6   |    80|
+|9     |ODDR   |     6|
+|10    |FDCE   |    72|
+|11    |FDPE   |     3|
+|12    |FDSE   |    32|
+|13    |IBUF   |     1|
+|14    |OBUF   |     7|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------------------+--------------+------+
+|      |Instance             |Module        |Cells |
++------+---------------------+--------------+------+
+|1     |top                  |              |   360|
+|2     |  eth_send_test      |eth_send_test |   345|
+|3     |    CRC32_d8_inst    |CRC32_d8      |    80|
+|4     |    checksum_inst    |checksum      |    22|
+|5     |    eth_send         |eth_send      |   177|
+|6     |  gmii_to_rgmii_inst |gmii_to_rgmii |     6|
++------+---------------------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1158.445 ; gain = 419.324
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1158.445 ; gain = 323.770
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1158.445 ; gain = 419.324
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1158.445 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 29 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1170.270 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+104 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1170.270 ; gain = 699.730
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1170.270 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/FPGA_Learning_Journey/Pro/ETH_udp_send_rgmii___/project without ipchecksum/project.runs/synth_1/eth_send_test_rgmii.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file eth_send_test_rgmii_utilization_synth.rpt -pb eth_send_test_rgmii_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Mar  5 15:43:50 2025...

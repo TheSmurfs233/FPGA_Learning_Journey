@@ -1,0 +1,60 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Wed Jun 25 23:14:05 2025
+| Host         : DESKTOP-I8GGJRG running 64-bit major release  (build 9200)
+| Command      : report_methodology -file hdmi_char_methodology_drc_routed.rpt -pb hdmi_char_methodology_drc_routed.pb -rpx hdmi_char_methodology_drc_routed.rpx
+| Design       : hdmi_char
+| Device       : xc7a35tfgg484-2
+| Speed File   : -2
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max checks: <unlimited>
+             Checks found: 2
++-----------+----------+------------------------------+--------+
+| Rule      | Severity | Description                  | Checks |
++-----------+----------+------------------------------+--------+
+| LUTAR-1   | Warning  | LUT drives async reset alert | 1      |
+| TIMING-16 | Warning  | Large setup violation        | 1      |
++-----------+----------+------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell clk_gen_inst/pix_data[23]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) hdmi_ctrl_inst/encode_inst2/data_out_reg[3]/CLR,
+hdmi_ctrl_inst/encode_inst2/data_out_reg[4]/CLR,
+hdmi_ctrl_inst/encode_inst2/data_out_reg[5]/CLR,
+hdmi_ctrl_inst/encode_inst2/data_out_reg[6]/CLR,
+hdmi_ctrl_inst/encode_inst2/data_out_reg[7]/CLR,
+hdmi_ctrl_inst/encode_inst2/data_out_reg[9]/CLR,
+hdmi_ctrl_inst/encode_inst3/cnt_reg[1]/CLR,
+hdmi_ctrl_inst/encode_inst3/cnt_reg[2]/CLR,
+hdmi_ctrl_inst/encode_inst3/cnt_reg[3]/CLR,
+hdmi_ctrl_inst/encode_inst3/cnt_reg[4]/CLR,
+hdmi_ctrl_inst/encode_inst3/data_out_reg[6]/CLR,
+hdmi_ctrl_inst/encode_inst3/data_out_reg[7]/CLR,
+hdmi_ctrl_inst/encode_inst3/data_out_reg[8]/CLR,
+hdmi_ctrl_inst/encode_inst3/data_out_reg[9]/CLR,
+vga_image_gen_inst/pix_data_reg[23]/CLR (the first 15 of 28 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -2.918 ns between vga_timing_ctrl_inst/h_cnt_reg[0]_replica/C (clocked by c0_1x_clk_wiz_0) and vga_image_gen_inst/pix_data_reg[23]/D (clocked by c0_1x_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+

@@ -1,0 +1,860 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Feb 25 15:20:41 2025
+# Process ID: 22500
+# Current directory: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19676 D:\FPGA_Learning_Journey\Pro\HDMI_DDR3_uart___\project\project_1.xpr
+# Log file: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/vivado.log
+# Journal file: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.xpr
+INFO: [Project 1-313] Project file moved from 'D:/FPGA_Learning_Journey/Pro/DDR3_uart___/project' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 1024.281 ; gain = 265.117
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/src/uart/top_uart.v] -no_script -reset -force -quiet
+remove_files  D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/src/uart/top_uart.v
+add_files -norecurse {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/src/hdmi/vga_image_gen.v D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/src/hdmi/encode.v D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/src/hdmi/hdmi_ctrl.v D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/src/hdmi/top_hdmi.v D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/src/hdmi/vga_timing_ctrl.v D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/src/hdmi/par2ser.v}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Tue Feb 25 15:34:51 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/synth_1/runme.log
+[Tue Feb 25 15:34:51 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+launch_runs synth_1 -jobs 12
+[Tue Feb 25 15:34:57 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tfgg484-2
+INFO: [Device 21-403] Loading part xc7a35tfgg484-2
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr.dcp' for cell 'ddr_rw_inst/u_axi_ddr'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.dcp' for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.dcp' for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.119 . Memory (MB): peak = 1434.520 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 436 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_inst/inst'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_inst/inst'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_inst/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2131.324 ; gain = 550.895
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_inst/inst'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Parsing XDC File [D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
+Finished Parsing XDC File [D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2131.324 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 108 instances were transformed.
+  IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT(x2), INV, OBUFTDS(x2)): 2 instances
+  IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 89 instances
+
+open_run: Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 2137.883 ; gain = 796.172
+place_ports {tmds_data_p[2]} A18
+place_ports {tmds_data_p[1]} A15
+startgroup
+set_property package_pin "" [get_ports [list  {tmds_data_p[2]}]]
+place_ports {tmds_data_p[0]} A18
+endgroup
+place_ports {tmds_data_p[2]} A13
+place_ports tmds_clk_p B17
+place_ports ddc_scl C17
+place_ports ddc_sda D20
+set_property IOSTANDARD LVCMOS33 [get_ports [list ddc_scl]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list ddc_sda]]
+save_constraints
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2149.828 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 2163.371 ; gain = 13.543
+[Tue Feb 25 15:38:05 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2166.188 ; gain = 2.816
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299847714
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ila_0' at location 'uuid_23E7D65A79BC59F7BC47406C1714DFAE' from probes file, since it cannot be found on the programmed device.
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Feb 25 15:45:42 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/synth_1/runme.log
+[Tue Feb 25 15:45:42 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+close_design
+launch_runs synth_1 -jobs 12
+[Tue Feb 25 15:46:03 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tfgg484-2
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr.dcp' for cell 'ddr_rw_inst/u_axi_ddr'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.dcp' for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.dcp' for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.122 . Memory (MB): peak = 3522.477 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 436 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_inst/inst'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_inst/inst'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_inst/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_inst/inst'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Parsing XDC File [D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
+Finished Parsing XDC File [D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 3629.496 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 108 instances were transformed.
+  IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT(x2), INV, OBUFTDS(x2)): 2 instances
+  IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 89 instances
+
+open_run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 3629.496 ; gain = 120.934
+place_ports {led[0]} R2
+place_ports {led[1]} R3
+place_ports {led[2]} V2
+place_ports {led[3]} Y2
+set_property IOSTANDARD LVCMOS33 [get_ports [list {led[3]} {led[2]} {led[1]} {led[0]}]]
+save_constraints
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 3629.496 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 3629.496 ; gain = 0.000
+[Tue Feb 25 15:47:44 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Tue Feb 25 15:55:20 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes rd_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'hXXXX_XXXX [get_hw_probes rd_data -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq16'u0 [get_hw_probes ddr_data_inst/byte_rx_cnt -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq16'u39999 [get_hw_probes ddr_data_inst/byte_rx_cnt -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-25 15:59:18
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-25 15:59:35
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq16'u40000 [get_hw_probes ddr_data_inst/byte_rx_cnt -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-25 16:01:19
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-25 16:01:19
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Feb 25 16:04:01 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/synth_1/runme.log
+[Tue Feb 25 16:04:01 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+[Tue Feb 25 16:30:23 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tfgg484-2
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr.dcp' for cell 'ddr_rw_inst/u_axi_ddr'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.dcp' for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.dcp' for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.126 . Memory (MB): peak = 3654.391 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 442 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_inst/inst'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_inst/inst'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_inst/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_inst/inst'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Parsing XDC File [D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
+Finished Parsing XDC File [D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 3761.441 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 108 instances were transformed.
+  IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT(x2), INV, OBUFTDS(x2)): 2 instances
+  IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 89 instances
+
+set_property IOSTANDARD LVCMOS33 [get_ports [list {led[3]} {led[2]} {led[1]} {led[0]}]]
+place_ports {led[0]} R2
+place_ports {led[1]} R3
+place_ports {led[2]} V2
+place_ports {led[3]} Y2
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 4096 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+create_debug_core u_ila_1 ila
+set_property C_DATA_DEPTH 4096 [get_debug_cores u_ila_1]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_1]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_1]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_1]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_1]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_1]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_1]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_1]
+connect_debug_port u_ila_0/clk [get_nets [list clk_wiz_inst/inst/clk_50m ]]
+connect_debug_port u_ila_1/clk [get_nets [list clk_wiz_inst/inst/clk_25m ]]
+set_property port_width 24 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {ddr_data_inst/byte4_tx_cnt[0]} {ddr_data_inst/byte4_tx_cnt[1]} {ddr_data_inst/byte4_tx_cnt[2]} {ddr_data_inst/byte4_tx_cnt[3]} {ddr_data_inst/byte4_tx_cnt[4]} {ddr_data_inst/byte4_tx_cnt[5]} {ddr_data_inst/byte4_tx_cnt[6]} {ddr_data_inst/byte4_tx_cnt[7]} {ddr_data_inst/byte4_tx_cnt[8]} {ddr_data_inst/byte4_tx_cnt[9]} {ddr_data_inst/byte4_tx_cnt[10]} {ddr_data_inst/byte4_tx_cnt[11]} {ddr_data_inst/byte4_tx_cnt[12]} {ddr_data_inst/byte4_tx_cnt[13]} {ddr_data_inst/byte4_tx_cnt[14]} {ddr_data_inst/byte4_tx_cnt[15]} {ddr_data_inst/byte4_tx_cnt[16]} {ddr_data_inst/byte4_tx_cnt[17]} {ddr_data_inst/byte4_tx_cnt[18]} {ddr_data_inst/byte4_tx_cnt[19]} {ddr_data_inst/byte4_tx_cnt[20]} {ddr_data_inst/byte4_tx_cnt[21]} {ddr_data_inst/byte4_tx_cnt[22]} {ddr_data_inst/byte4_tx_cnt[23]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 8 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {ddr_data_inst/uart_rx_data[0]} {ddr_data_inst/uart_rx_data[1]} {ddr_data_inst/uart_rx_data[2]} {ddr_data_inst/uart_rx_data[3]} {ddr_data_inst/uart_rx_data[4]} {ddr_data_inst/uart_rx_data[5]} {ddr_data_inst/uart_rx_data[6]} {ddr_data_inst/uart_rx_data[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 24 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {ddr_data_inst/byte_rx_cnt[0]} {ddr_data_inst/byte_rx_cnt[1]} {ddr_data_inst/byte_rx_cnt[2]} {ddr_data_inst/byte_rx_cnt[3]} {ddr_data_inst/byte_rx_cnt[4]} {ddr_data_inst/byte_rx_cnt[5]} {ddr_data_inst/byte_rx_cnt[6]} {ddr_data_inst/byte_rx_cnt[7]} {ddr_data_inst/byte_rx_cnt[8]} {ddr_data_inst/byte_rx_cnt[9]} {ddr_data_inst/byte_rx_cnt[10]} {ddr_data_inst/byte_rx_cnt[11]} {ddr_data_inst/byte_rx_cnt[12]} {ddr_data_inst/byte_rx_cnt[13]} {ddr_data_inst/byte_rx_cnt[14]} {ddr_data_inst/byte_rx_cnt[15]} {ddr_data_inst/byte_rx_cnt[16]} {ddr_data_inst/byte_rx_cnt[17]} {ddr_data_inst/byte_rx_cnt[18]} {ddr_data_inst/byte_rx_cnt[19]} {ddr_data_inst/byte_rx_cnt[20]} {ddr_data_inst/byte_rx_cnt[21]} {ddr_data_inst/byte_rx_cnt[22]} {ddr_data_inst/byte_rx_cnt[23]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 8 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {wr_data[0]} {wr_data[1]} {wr_data[2]} {wr_data[3]} {wr_data[4]} {wr_data[5]} {wr_data[6]} {wr_data[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list read_enable ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list ddr_data_inst/uart_rx_done ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe6]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list ddr_data_inst/uart_tx_done ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe7]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
+connect_debug_port u_ila_0/probe7 [get_nets [list wr_en ]]
+set_property port_width 32 [get_debug_ports u_ila_1/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe0]
+connect_debug_port u_ila_1/probe0 [get_nets [list {rd_data[0]} {rd_data[1]} {rd_data[2]} {rd_data[3]} {rd_data[4]} {rd_data[5]} {rd_data[6]} {rd_data[7]} {rd_data[8]} {rd_data[9]} {rd_data[10]} {rd_data[11]} {rd_data[12]} {rd_data[13]} {rd_data[14]} {rd_data[15]} {rd_data[16]} {rd_data[17]} {rd_data[18]} {rd_data[19]} {rd_data[20]} {rd_data[21]} {rd_data[22]} {rd_data[23]} {rd_data[24]} {rd_data[25]} {rd_data[26]} {rd_data[27]} {rd_data[28]} {rd_data[29]} {rd_data[30]} {rd_data[31]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe1]
+connect_debug_port u_ila_1/probe1 [get_nets [list data_rd_valid ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe2]
+connect_debug_port u_ila_1/probe2 [get_nets [list rd_en ]]
+save_constraints
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Feb 25 16:32:39 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/synth_1/runme.log
+[Tue Feb 25 16:32:39 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+WARNING: Simulation object read_enable was not found in the design.
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {ddr_data_inst/byte4_tx_cnt} {ddr_data_inst/byte_rx_cnt} }
+add_wave -into {hw_ila_data_2.wcfg} -radix hex { {data_rd_valid} {rd_data} {rd_en} }
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes rd_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2025-Feb-25 16:41:40
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {ddr_data_inst/byte4_tx_cnt} {ddr_data_inst/byte_rx_cnt} {ddr_data_inst/uart_rx_data} {ddr_data_inst/uart_rx_done} {ddr_data_inst/uart_tx_done} {read_enable} {wr_data} {wr_en} }
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes read_enable -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-25 16:42:38
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-25 16:43:01
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes read_enable -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes rd_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bB [get_hw_probes rd_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'b0 [get_hw_probes rd_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes rd_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bF [get_hw_probes rd_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bN [get_hw_probes rd_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Feb 25 16:55:46 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/synth_1/runme.log
+[Tue Feb 25 16:55:46 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/runme.log
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes rd_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+ERROR: [Labtools 27-3312] Data read from hw_ila [hw_ila_2] is corrupted. Unable to upload waveform.
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+set_property TRIGGER_COMPARE_VALUE eq24'u0 [get_hw_probes ddr_data_inst/byte_rx_cnt -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq24'u01228800 [get_hw_probes ddr_data_inst/byte_rx_cnt -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-25 17:02:07
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2025-Feb-25 17:02:12
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+ERROR: [Labtools 27-3312] Data read from hw_ila [hw_ila_2] is corrupted. Unable to upload waveform.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2025-Feb-25 17:02:20
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+ERROR: [Labtools 27-3312] Data read from hw_ila [hw_ila_2] is corrupted. Unable to upload waveform.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2025-Feb-25 17:02:30
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2025-Feb-25 17:02:30
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2025-Feb-25 17:02:42
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2025-Feb-25 17:02:42
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq1'b0 [get_hw_probes rd_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes rd_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2025-Feb-25 17:02:51
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2025-Feb-25 17:02:51
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2025-Feb-25 17:02:52
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2025-Feb-25 17:02:52
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes rd_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes rd_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2025-Feb-25 17:03:03
+update_compile_order -fileset sources_1
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-25 17:07:38
+ERROR: [Xicom 50-38] xicom: Multiple trigger marks in window: 0, buffer index: 1.
+ERROR: [Xicom 50-41] Waveform data read from ILA core is corrupted (user chain=1, slave index=0).
+Resolution:
+1) Ensure that the clock signal connected to the debug core and/or debug hub is clean and free-running.
+2) Ensure that the clock connected to the debug core and/or debug hub meets all timing constraints.
+3) Ensure that the clock connected to debug core and/or debug hub is faster than the JTAG clock frequency.
+ERROR: [Xicom 50-38] xicom: Error during interpreting trace readback data
+ERROR: [Labtools 27-3176] hw_server failed during internal command.
+Resolution: Check that the hw_server is running and the hardware connectivity to the target
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-25 17:10:27
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-25 17:10:27
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes rd_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_2' trigger was stopped by user at 2025-Feb-25 17:11:09
+WARNING: [Labtools 27-157] hw_ila [hw_ila_2] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2025-Feb-25 17:11:11
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+ERROR: [Labtools 27-3312] Data read from hw_ila [hw_ila_2] is corrupted. Unable to upload waveform.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Feb 25 17:11:48 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/synth_1/runme.log
+[Tue Feb 25 17:11:48 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+[Tue Feb 25 17:12:35 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tfgg484-2
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr.dcp' for cell 'ddr_rw_inst/u_axi_ddr'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.dcp' for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.dcp' for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.132 . Memory (MB): peak = 3761.441 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 442 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_inst/inst'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_inst/inst'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_inst/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_inst/inst'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Parsing XDC File [D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
+Finished Parsing XDC File [D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 3774.465 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 108 instances were transformed.
+  IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT(x2), INV, OBUFTDS(x2)): 2 instances
+  IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 89 instances
+
+open_run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 3774.465 ; gain = 13.023
+refresh_design
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_inst/inst'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_inst/inst'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_inst/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_inst/inst'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Parsing XDC File [D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
+Finished Parsing XDC File [D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+delete_debug_core [get_debug_cores {u_ila_0 u_ila_1 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 4096 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+create_debug_core u_ila_1 ila
+set_property C_DATA_DEPTH 4096 [get_debug_cores u_ila_1]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_1]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_1]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_1]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_1]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_1]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_1]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_1]
+connect_debug_port u_ila_0/clk [get_nets [list clk_wiz_inst/inst/clk_50m ]]
+connect_debug_port u_ila_1/clk [get_nets [list clk_wiz_inst/inst/clk_25m ]]
+set_property port_width 24 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {ddr_data_inst/byte4_tx_cnt[0]} {ddr_data_inst/byte4_tx_cnt[1]} {ddr_data_inst/byte4_tx_cnt[2]} {ddr_data_inst/byte4_tx_cnt[3]} {ddr_data_inst/byte4_tx_cnt[4]} {ddr_data_inst/byte4_tx_cnt[5]} {ddr_data_inst/byte4_tx_cnt[6]} {ddr_data_inst/byte4_tx_cnt[7]} {ddr_data_inst/byte4_tx_cnt[8]} {ddr_data_inst/byte4_tx_cnt[9]} {ddr_data_inst/byte4_tx_cnt[10]} {ddr_data_inst/byte4_tx_cnt[11]} {ddr_data_inst/byte4_tx_cnt[12]} {ddr_data_inst/byte4_tx_cnt[13]} {ddr_data_inst/byte4_tx_cnt[14]} {ddr_data_inst/byte4_tx_cnt[15]} {ddr_data_inst/byte4_tx_cnt[16]} {ddr_data_inst/byte4_tx_cnt[17]} {ddr_data_inst/byte4_tx_cnt[18]} {ddr_data_inst/byte4_tx_cnt[19]} {ddr_data_inst/byte4_tx_cnt[20]} {ddr_data_inst/byte4_tx_cnt[21]} {ddr_data_inst/byte4_tx_cnt[22]} {ddr_data_inst/byte4_tx_cnt[23]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 24 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {ddr_data_inst/byte_rx_cnt[0]} {ddr_data_inst/byte_rx_cnt[1]} {ddr_data_inst/byte_rx_cnt[2]} {ddr_data_inst/byte_rx_cnt[3]} {ddr_data_inst/byte_rx_cnt[4]} {ddr_data_inst/byte_rx_cnt[5]} {ddr_data_inst/byte_rx_cnt[6]} {ddr_data_inst/byte_rx_cnt[7]} {ddr_data_inst/byte_rx_cnt[8]} {ddr_data_inst/byte_rx_cnt[9]} {ddr_data_inst/byte_rx_cnt[10]} {ddr_data_inst/byte_rx_cnt[11]} {ddr_data_inst/byte_rx_cnt[12]} {ddr_data_inst/byte_rx_cnt[13]} {ddr_data_inst/byte_rx_cnt[14]} {ddr_data_inst/byte_rx_cnt[15]} {ddr_data_inst/byte_rx_cnt[16]} {ddr_data_inst/byte_rx_cnt[17]} {ddr_data_inst/byte_rx_cnt[18]} {ddr_data_inst/byte_rx_cnt[19]} {ddr_data_inst/byte_rx_cnt[20]} {ddr_data_inst/byte_rx_cnt[21]} {ddr_data_inst/byte_rx_cnt[22]} {ddr_data_inst/byte_rx_cnt[23]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 8 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {ddr_data_inst/uart_rx_data[0]} {ddr_data_inst/uart_rx_data[1]} {ddr_data_inst/uart_rx_data[2]} {ddr_data_inst/uart_rx_data[3]} {ddr_data_inst/uart_rx_data[4]} {ddr_data_inst/uart_rx_data[5]} {ddr_data_inst/uart_rx_data[6]} {ddr_data_inst/uart_rx_data[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 8 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {wr_data[0]} {wr_data[1]} {wr_data[2]} {wr_data[3]} {wr_data[4]} {wr_data[5]} {wr_data[6]} {wr_data[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list read_enable ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list ddr_data_inst/uart_rx_done ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe6]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list ddr_data_inst/uart_tx_done ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe7]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
+connect_debug_port u_ila_0/probe7 [get_nets [list wr_en ]]
+set_property port_width 32 [get_debug_ports u_ila_1/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe0]
+connect_debug_port u_ila_1/probe0 [get_nets [list {rd_data[0]} {rd_data[1]} {rd_data[2]} {rd_data[3]} {rd_data[4]} {rd_data[5]} {rd_data[6]} {rd_data[7]} {rd_data[8]} {rd_data[9]} {rd_data[10]} {rd_data[11]} {rd_data[12]} {rd_data[13]} {rd_data[14]} {rd_data[15]} {rd_data[16]} {rd_data[17]} {rd_data[18]} {rd_data[19]} {rd_data[20]} {rd_data[21]} {rd_data[22]} {rd_data[23]} {rd_data[24]} {rd_data[25]} {rd_data[26]} {rd_data[27]} {rd_data[28]} {rd_data[29]} {rd_data[30]} {rd_data[31]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe1]
+connect_debug_port u_ila_1/probe1 [get_nets [list data_rd_valid ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe2]
+connect_debug_port u_ila_1/probe2 [get_nets [list pix_data_req ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe3]
+connect_debug_port u_ila_1/probe3 [get_nets [list rd_en ]]
+save_constraints
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Feb 25 17:15:25 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/synth_1/runme.log
+[Tue Feb 25 17:15:25 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+add_wave -into {hw_ila_data_2.wcfg} -radix hex { {pix_data_req} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2025-Feb-25 17:22:34
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_2' triggered at 2025-Feb-25 17:22:34
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-25 17:22:38
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2025-Feb-25 17:22:41
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-25 17:22:48
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes rd_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes pix_data_req -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-25 17:25:17
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-25 17:25:17
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Feb 25 17:31:50 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/synth_1/runme.log
+[Tue Feb 25 17:31:50 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes pix_data_req -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes rd_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2025-Feb-25 17:37:21
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Feb-25 17:37:33
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]\
+  [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Feb-25 17:38:02
+ERROR: [Xicom 50-38] xicom: Multiple trigger marks in window: 0, buffer index: 783.
+ERROR: [Xicom 50-41] Waveform data read from ILA core is corrupted (user chain=1, slave index=0).
+Resolution:
+1) Ensure that the clock signal connected to the debug core and/or debug hub is clean and free-running.
+2) Ensure that the clock connected to the debug core and/or debug hub meets all timing constraints.
+3) Ensure that the clock connected to debug core and/or debug hub is faster than the JTAG clock frequency.
+ERROR: [Xicom 50-38] xicom: Error during interpreting trace readback data
+ERROR: [Labtools 27-3176] hw_server failed during internal command.
+Resolution: Check that the hw_server is running and the hardware connectivity to the target
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210299847714
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-JTAG-HS3-210299847714" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-JTAG-HS3-210299847714" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-JTAG-HS3-210299847714" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-JTAG-HS3-210299847714" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-JTAG-HS3-210299847714" may be locked by another hw_server.
+close_hw_manager
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299847714
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ila_0' at location 'uuid_23E7D65A79BC59F7BC47406C1714DFAE' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ila_1' at location 'uuid_3B505A030738513C98471D25F5B1F848' from probes file, since it cannot be found on the programmed device.
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"u_ila_1"}]]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Feb 25 21:11:20 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/synth_1/runme.log
+[Tue Feb 25 21:11:20 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.ltx} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/HDMI_DDR3_uart___/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 25 23:30:24 2025...

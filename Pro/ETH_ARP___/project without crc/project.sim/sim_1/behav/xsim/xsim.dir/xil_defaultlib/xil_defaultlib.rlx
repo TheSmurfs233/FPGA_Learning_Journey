@@ -1,0 +1,8 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project without crc/project.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/eth_send.v,1741009891,verilog,,D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/eth_send_test.v,,eth_send,,,../../../../project.srcs/sources_1/ip/pll,,,,,
+D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/eth_send_test.v,1741012693,verilog,,D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/eth_send_test_tb.v,,eth_send_test,,,../../../../project.srcs/sources_1/ip/pll,,,,,
+D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/eth_send_test_tb.v,1676961883,verilog,,,,eth_send_test_tb,,,../../../../project.srcs/sources_1/ip/pll,,,,,

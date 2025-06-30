@@ -1,0 +1,688 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Mar  4 14:16:52 2025
+# Process ID: 19184
+# Current directory: D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project without crc
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18972 D:\FPGA_Learning_Journey\Pro\ETH_ARP___\project without crc\project.xpr
+# Log file: D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project without crc/vivado.log
+# Journal file: D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project without crc\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project without crc/project.xpr}
+INFO: [Project 1-313] Project file moved from 'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project1' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.2/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project without crc/project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project without crc/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'eth_send_test_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project without crc/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj eth_send_test_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/eth_send.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_send
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/eth_send_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_send_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/eth_send_test_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_send_test_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project without crc/project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project without crc/project.sim/sim_1/behav/xsim'
+"xelab -wto b1a4a8e343d143ff971c3f8dfce4d140 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot eth_send_test_tb_behav xil_defaultlib.eth_send_test_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto b1a4a8e343d143ff971c3f8dfce4d140 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot eth_send_test_tb_behav xil_defaultlib.eth_send_test_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.eth_send
+Compiling module xil_defaultlib.eth_send_test
+Compiling module xil_defaultlib.eth_send_test_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot eth_send_test_tb_behav
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project -notrace
+couldn't read file "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project": no such file or directory
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar  4 14:17:20 2025...
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project without crc/project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "eth_send_test_tb_behav -key {Behavioral:sim_1:Functional:eth_send_test_tb} -tclbatch {eth_send_test_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source eth_send_test_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'eth_send_test_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1023.473 ; gain = 6.434
+run all
+$stop called at time : 200201 ns : File "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/eth_send_test_tb.v" Line 30
+run all
+run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1028.281 ; gain = 0.000
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/eth_send_test_tb/eth_send_test/rst_n}} {{/eth_send_test_tb/eth_send_test/gmii_tx_clk}} {{/eth_send_test_tb/eth_send_test/gmii_tx_en}} {{/eth_send_test_tb/eth_send_test/gmii_tx_er}} {{/eth_send_test_tb/eth_send_test/gmii_tx_data}} {{/eth_send_test_tb/eth_send_test/phy_rst_n}} {{/eth_send_test_tb/eth_send_test/fifo_rdreq}} {{/eth_send_test_tb/eth_send_test/tx_go}} {{/eth_send_test_tb/eth_send_test/fifo_rddata}} {{/eth_send_test_tb/eth_send_test/fifo_rdclk}} {{/eth_send_test_tb/eth_send_test/data_cnt}} {{/eth_send_test_tb/eth_send_test/CRC_result}} {{/eth_send_test_tb/eth_send_test/cnt}} {{/eth_send_test_tb/eth_send_test/CRC}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$stop called at time : 200201 ns : File "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii/eth_send_test_tb.v" Line 30
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project without crc/project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Tue Mar  4 16:00:01 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project without crc/project.runs/synth_1/runme.log
+[Tue Mar  4 16:00:01 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project without crc/project.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1212.922 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299847714
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project without crc/project.runs/impl_1/eth_send_test_rgmii.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project without crc/project.runs/impl_1/eth_send_test_rgmii.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Mar  4 16:04:04 2025...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    set_property top eth_send_test_rgmii_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+set_property top eth_send_test_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+set_property top eth_send_test [current_fileset]
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'eth_send_test_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj eth_send_test_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii_crc/crc32_d8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CRC32_d8
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii_crc/eth_send.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_send
+INFO: [VRFC 10-2458] undeclared symbol CRC_EN, assumed default net type wire [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii_crc/eth_send.v:36]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii_crc/eth_send_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_send_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii_crc/eth_send_test_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_send_test_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.sim/sim_1/behav/xsim'
+"xelab -wto b59fb324b85d4660b96653f419961681 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot eth_send_test_tb_behav xil_defaultlib.eth_send_test_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto b59fb324b85d4660b96653f419961681 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot eth_send_test_tb_behav xil_defaultlib.eth_send_test_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.CRC32_d8
+Compiling module xil_defaultlib.eth_send
+Compiling module xil_defaultlib.eth_send_test
+Compiling module xil_defaultlib.eth_send_test_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot eth_send_test_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "eth_send_test_tb_behav -key {Behavioral:sim_1:Functional:eth_send_test_tb} -tclbatch {eth_send_test_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source eth_send_test_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'eth_send_test_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run all
+$stop called at time : 200201 ns : File "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii_crc/eth_send_test_tb.v" Line 30
+current_wave_config {Untitled 2}
+Untitled 2
+add_wave {{/eth_send_test_tb/eth_send_test/rst_n}} {{/eth_send_test_tb/eth_send_test/gmii_tx_clk}} {{/eth_send_test_tb/eth_send_test/gmii_tx_en}} {{/eth_send_test_tb/eth_send_test/gmii_tx_er}} {{/eth_send_test_tb/eth_send_test/gmii_tx_data}} {{/eth_send_test_tb/eth_send_test/phy_rst_n}} {{/eth_send_test_tb/eth_send_test/fifo_rdreq}} {{/eth_send_test_tb/eth_send_test/tx_go}} {{/eth_send_test_tb/eth_send_test/fifo_rddata}} {{/eth_send_test_tb/eth_send_test/fifo_rdclk}} {{/eth_send_test_tb/eth_send_test/data_cnt}} {{/eth_send_test_tb/eth_send_test/crc_en}} {{/eth_send_test_tb/eth_send_test/CRC_result}} {{/eth_send_test_tb/eth_send_test/cnt}} {{/eth_send_test_tb/eth_send_test/CRC}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$stop called at time : 200201 ns : File "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii_crc/eth_send_test_tb.v" Line 30
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'eth_send_test_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj eth_send_test_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii_crc/crc32_d8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CRC32_d8
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii_crc/eth_send.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_send
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii_crc/eth_send_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_send_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii_crc/eth_send_test_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_send_test_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.sim/sim_1/behav/xsim'
+"xelab -wto b59fb324b85d4660b96653f419961681 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot eth_send_test_tb_behav xil_defaultlib.eth_send_test_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto b59fb324b85d4660b96653f419961681 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot eth_send_test_tb_behav xil_defaultlib.eth_send_test_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.CRC32_d8
+Compiling module xil_defaultlib.eth_send
+Compiling module xil_defaultlib.eth_send_test
+Compiling module xil_defaultlib.eth_send_test_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot eth_send_test_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1414.562 ; gain = 0.000
+run all
+$stop called at time : 200201 ns : File "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii_crc/eth_send_test_tb.v" Line 30
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'eth_send_test_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj eth_send_test_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.sim/sim_1/behav/xsim'
+"xelab -wto b59fb324b85d4660b96653f419961681 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot eth_send_test_tb_behav xil_defaultlib.eth_send_test_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto b59fb324b85d4660b96653f419961681 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot eth_send_test_tb_behav xil_defaultlib.eth_send_test_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+run all
+$stop called at time : 200201 ns : File "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii_crc/eth_send_test_tb.v" Line 30
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'eth_send_test_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj eth_send_test_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii_crc/crc32_d8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CRC32_d8
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii_crc/eth_send.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_send
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii_crc/eth_send_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_send_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/src/arp_send_rgmii_crc/eth_send_test_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_send_test_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.sim/sim_1/behav/xsim'
+"xelab -wto b59fb324b85d4660b96653f419961681 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot eth_send_test_tb_behav xil_defaultlib.eth_send_test_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto b59fb324b85d4660b96653f419961681 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot eth_send_test_tb_behav xil_defaultlib.eth_send_test_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.CRC32_d8
+Compiling module xil_defaultlib.eth_send
+Compiling module xil_defaultlib.eth_send_test
+Compiling module xil_defaultlib.eth_send_test_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot eth_send_test_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1424.250 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Tue Mar  4 16:07:42 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.runs/synth_1/runme.log
+[Tue Mar  4 16:07:42 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+file mkdir D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/sim_1/new
+can't create directory "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project": file already exists
+file mkdir D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/sim_1/new
+can't create directory "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project": file already exists
+file mkdir D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/sim_1/new
+can't create directory "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project": file already exists
+file mkdir D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/sim_1/new
+can't create directory "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project": file already exists
+file mkdir D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/sim_1/new
+can't create directory "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project": file already exists
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+file mkdir D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/sim_1/new
+can't create directory "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project": file already exists
+file mkdir {D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/sim_1/new}
+close [ open {D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/sim_1/new/eth_arp.v} w ]
+add_files -fileset sim_1 {{D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/sim_1/new/eth_arp.v}}
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files {{D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/sim_1/new/eth_arp.v}}] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 {{D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/sim_1/new/eth_arp.v}}
+file mkdir D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1
+can't create directory "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project": file already exists
+file mkdir D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1
+can't create directory "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project": file already exists
+file mkdir D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new
+can't create directory "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project": file already exists
+file mkdir D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new
+can't create directory "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project": file already exists
+file mkdir D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new
+can't create directory "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project": file already exists
+file mkdir D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new
+can't create directory "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project": file already exists
+file mkdir D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1
+can't create directory "D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project": file already exists
+file mkdir {D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new}
+close [ open {D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc} w ]
+add_files -fileset constrs_1 {{D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc}}
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Tue Mar  4 16:09:24 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.runs/synth_1/runme.log
+[Tue Mar  4 16:09:24 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Tue Mar  4 16:14:05 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.runs/synth_1/runme.log
+[Tue Mar  4 16:14:05 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.runs/impl_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tfgg484-2
+INFO: [Device 21-403] Loading part xc7a35tfgg484-2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1839.266 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc]
+WARNING: [Vivado 12-584] No ports matched 'rgmii_tx_data[0]'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:1]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:1]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgmii_tx_data[1]'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:2]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:2]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgmii_tx_data[2]'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgmii_tx_data[3]'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgmii_tx_clk'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgmii_tx_en'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgmii_tx_clk'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgmii_tx_en'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgmii_tx_data[3]'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgmii_tx_data[2]'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgmii_tx_data[1]'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgmii_tx_data[0]'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1896.156 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1925.031 ; gain = 256.703
+refresh_design
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc]
+WARNING: [Vivado 12-584] No ports matched 'rgmii_tx_data[0]'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:1]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:1]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgmii_tx_data[1]'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:2]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:2]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgmii_tx_data[2]'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgmii_tx_data[3]'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgmii_tx_clk'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgmii_tx_en'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgmii_tx_clk'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgmii_tx_en'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgmii_tx_data[3]'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgmii_tx_data[2]'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgmii_tx_data[1]'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgmii_tx_data[0]'. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+set_property top eth_send_test_rgmii [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue Mar  4 16:16:32 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tfgg484-2
+INFO: [Project 1-454] Reading design checkpoint 'd:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/sources_1/ip/pll/pll.dcp' for cell 'pll'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2320.566 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/sources_1/ip/pll/pll_board.xdc] for cell 'pll/inst'
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/sources_1/ip/pll/pll_board.xdc] for cell 'pll/inst'
+Parsing XDC File [d:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/sources_1/ip/pll/pll.xdc] for cell 'pll/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/sources_1/ip/pll/pll.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [d:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/sources_1/ip/pll/pll.xdc:57]
+Finished Parsing XDC File [d:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/sources_1/ip/pll/pll.xdc] for cell 'pll/inst'
+Parsing XDC File [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc]
+Finished Parsing XDC File [D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.srcs/constrs_1/new/eth_arp.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2389.332 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Mar  4 16:19:29 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.runs/synth_1/runme.log
+[Tue Mar  4 16:19:29 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2389.332 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299847714
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.runs/impl_1/eth_send_test_rgmii.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/ETH_ARP___/project with crc/project.runs/impl_1/eth_send_test_rgmii.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210299847714
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+create_project project D:/FPGA_Learning_Journey/Pro/ETH_IP_checksum/project -part xc7a35tfgg484-2
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.2/data/ip'.
+add_files -norecurse D:/FPGA_Learning_Journey/Pro/ETH_IP_checksum/src/checksum.v
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse D:/FPGA_Learning_Journey/Pro/ETH_IP_checksum/src/checksum_tb.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/FPGA_Learning_Journey/Pro/ETH_IP_checksum/project/project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'checksum_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/FPGA_Learning_Journey/Pro/ETH_IP_checksum/project/project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj checksum_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_IP_checksum/src/checksum.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module checksum
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_IP_checksum/src/checksum_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module checksum_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/ETH_IP_checksum/project/project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/FPGA_Learning_Journey/Pro/ETH_IP_checksum/project/project.sim/sim_1/behav/xsim'
+"xelab -wto 63abbb7a271a42239e9946aa25b40b63 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot checksum_tb_behav xil_defaultlib.checksum_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 63abbb7a271a42239e9946aa25b40b63 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot checksum_tb_behav xil_defaultlib.checksum_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/FPGA_Learning_Journey/Pro/ETH_IP_checksum/src/checksum.v" Line 1. Module checksum doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.checksum
+Compiling module xil_defaultlib.checksum_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot checksum_tb_behav
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/FPGA_Learning_Journey/Pro/ETH_IP_checksum/project/project.sim/sim_1/behav/xsim/xsim.dir/checksum_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar  4 22:28:24 2025...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/FPGA_Learning_Journey/Pro/ETH_IP_checksum/project/project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "checksum_tb_behav -key {Behavioral:sim_1:Functional:checksum_tb} -tclbatch {checksum_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source checksum_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'checksum_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 3631.375 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Mar  4 22:32:28 2025...

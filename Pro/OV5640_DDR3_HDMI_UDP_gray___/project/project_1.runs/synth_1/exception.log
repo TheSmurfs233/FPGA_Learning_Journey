@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file D:\FPGA_Learning_Journey\Pro\OV5640_DDR3_HDMI_UDP_gray___\project\project_1.runs\synth_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: 没有权限

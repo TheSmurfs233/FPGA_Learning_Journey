@@ -1,0 +1,49 @@
++====================+===================+===================================================+
+| Launch Setup Clock | Launch Hold Clock | Pin                                               |
++====================+===================+===================================================+
+| c0_1x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst1/data_fall_s_reg[2]/D |
+| c0_1x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst1/data_fall_s_reg[0]/D |
+| c1_5x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst2/data_rise_s_reg[3]/D |
+| c0_1x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst1/data_rise_s_reg[3]/D |
+| c0_1x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst3/data_fall_s_reg[3]/D |
+| c0_1x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst2/data_rise_s_reg[1]/D |
+| c0_1x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst3/data_rise_s_reg[3]/D |
+| c0_1x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst1/data_rise_s_reg[0]/D |
+| c1_5x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst1/data_rise_s_reg[2]/D |
+| c1_5x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst2/data_fall_s_reg[1]/D |
+| c0_1x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst3/data_rise_s_reg[4]/D |
+| c0_1x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst1/data_fall_s_reg[1]/D |
+| c1_5x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst3/data_rise_s_reg[2]/D |
+| c1_5x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst2/data_rise_s_reg[4]/D |
+| c1_5x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst1/data_fall_s_reg[4]/D |
+| c0_1x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst1/data_fall_s_reg[3]/D |
+| c0_1x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst3/data_rise_s_reg[1]/D |
+| c0_1x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst1/data_rise_s_reg[4]/D |
+| c1_5x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst1/data_rise_s_reg[1]/D |
+| c1_5x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst3/data_rise_s_reg[0]/D |
+| c1_5x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst2/data_fall_s_reg[2]/D |
+| c1_5x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst2/data_rise_s_reg[0]/D |
+| c0_1x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst3/data_fall_s_reg[2]/D |
+| c0_1x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst3/data_fall_s_reg[0]/D |
+| c1_5x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst2/data_fall_s_reg[3]/D |
+| c0_1x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst3/data_fall_s_reg[1]/D |
+| c0_1x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst2/data_rise_s_reg[2]/D |
+| c0_1x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst2/data_fall_s_reg[0]/D |
+| c0_1x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst2/data_fall_s_reg[4]/D |
+| c0_1x_clk_wiz_0    | c0_1x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst3/data_fall_s_reg[4]/D |
+| c1_5x_clk_wiz_0    | c1_5x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst4/data_rise_s_reg[3]/D |
+| c1_5x_clk_wiz_0    | c1_5x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst2/cnt_reg[2]/D         |
+| c1_5x_clk_wiz_0    | c1_5x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst2/cnt_reg[1]/D         |
+| c1_5x_clk_wiz_0    | c1_5x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst1/cnt_reg[0]/D         |
+| c1_5x_clk_wiz_0    | c1_5x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst1/cnt_reg[2]/D         |
+| c1_5x_clk_wiz_0    | c1_5x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst4/cnt_reg[2]/D         |
+| c1_5x_clk_wiz_0    | c1_5x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst3/cnt_reg[2]/D         |
+| c1_5x_clk_wiz_0    | c1_5x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst1/cnt_reg[1]/D         |
+| c1_5x_clk_wiz_0    | c1_5x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst4/cnt_reg[1]/D         |
+| c1_5x_clk_wiz_0    | c1_5x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst3/cnt_reg[1]/D         |
+| c1_5x_clk_wiz_0    | c1_5x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst2/cnt_reg[0]/D         |
+| c1_5x_clk_wiz_0    | c1_5x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst3/cnt_reg[0]/D         |
+| c1_5x_clk_wiz_0    | c1_5x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst4/data_fall_s_reg[2]/D |
+| c1_5x_clk_wiz_0    | c1_5x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst4/cnt_reg[0]/D         |
+| c1_5x_clk_wiz_0    | c1_5x_clk_wiz_0   | hdmi_ctrl_inst/par2ser_inst4/data_fall_s_reg[1]/D |
++--------------------+-------------------+---------------------------------------------------+
