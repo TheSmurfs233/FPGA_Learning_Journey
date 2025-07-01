@@ -55,7 +55,7 @@ FPGA_Learning_Journey/Pro/HDMI
 
 #### 🌟 [明星项目：基于FPGA的实时图像处理系统设计与实现](./Pro/OV5640_DDR3_HDMI_UDP_sobel___)
 
-[![点击跳转视频](Pro/OV5640_DDR3_HDMI_UDP_sobel___v3/aseet/vedio_face.png)]([基于FPGA的实时图像处理异构系统设计_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1REgXzjESP/?vd_source=e8f3da2949bc8fe3a5314746bc8d1f2d))
+[![vedio_face](Pro/OV5640_DDR3_HDMI_UDP_sobel___v3/aseet/vedio_face.png)](https://www.bilibili.com/video/BV1REgXzjESP/?vd_source=e8f3da2949bc8fe3a5314746bc8d1f2d)
 
 **🔥 技术亮点：**
 
