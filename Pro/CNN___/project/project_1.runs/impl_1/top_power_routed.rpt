@@ -1,0 +1,275 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date             : Sat May 17 18:46:48 2025
+| Host             : DESKTOP-I8GGJRG running 64-bit major release  (build 9200)
+| Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
+| Design           : top
+| Device           : xc7a35tfgg484-2
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+-----------------------------------+
+| Total On-Chip Power (W)  | 127.175 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                      |
+| Power Budget Margin (W)  | NA                                |
+| Dynamic (W)              | 126.659                           |
+| Device Static (W)        | 0.516                             |
+| Effective TJA (C/W)      | 2.8                               |
+| Max Ambient (C)          | 0.0                               |
+| Junction Temperature (C) | 125.0                             |
+| Confidence Level         | Low                               |
+| Setting File             | ---                               |
+| Simulation Activity File | ---                               |
+| Design Nets Matched      | NA                                |
++--------------------------+-----------------------------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Slice Logic              |    34.290 |    27832 |       --- |             --- |
+|   LUT as Logic           |    27.547 |     9021 |     20800 |           43.37 |
+|   CARRY4                 |     2.684 |      838 |      8150 |           10.28 |
+|   Register               |     2.258 |    10284 |     41600 |           24.72 |
+|   LUT as Distributed RAM |     1.089 |     2040 |      9600 |           21.25 |
+|   LUT as Shift Register  |     0.614 |      335 |      9600 |            3.49 |
+|   BUFG                   |     0.052 |       10 |        32 |           31.25 |
+|   F7/F8 Muxes            |     0.046 |      613 |     32600 |            1.88 |
+|   Others                 |     0.000 |     2234 |       --- |             --- |
+|   BUFR                   |     0.000 |        1 |        92 |            1.09 |
+| Signals                  |    39.090 |    18648 |       --- |             --- |
+| Block RAM                |     1.577 |     44.5 |        50 |           89.00 |
+| MMCM                     |     1.433 |        1 |         5 |           20.00 |
+| PLL                      |    20.021 |        3 |         5 |           60.00 |
+| DSPs                     |     9.998 |       23 |        90 |           25.56 |
+| I/O                      |    18.125 |      100 |       250 |           40.00 |
+| PHASER                   |     2.004 |       14 |       --- |             --- |
+| XADC                     |     0.121 |        1 |       --- |             --- |
+| Static Power             |     0.516 |          |           |                 |
+| Total                    |   127.175 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |    91.856 |      91.501 |      0.355 |
+| Vccaux    |       1.800 |    14.225 |      14.172 |      0.053 |
+| Vcco33    |       3.300 |     2.342 |       2.341 |      0.001 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     1.137 |       1.136 |      0.001 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.155 |       0.132 |      0.024 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.070 |       0.050 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 2.8                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 4.6                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-------------------------------------------------------------------------------------------------------+-----------+
+| Name                                                                                                  | Power (W) |
++-------------------------------------------------------------------------------------------------------+-----------+
+| top                                                                                                   |   126.659 |
+|   clk_wiz_0_inst                                                                                      |    12.344 |
+|     inst                                                                                              |    12.344 |
+|   clk_wiz_1_inst                                                                                      |     6.700 |
+|     inst                                                                                              |     6.700 |
+|   ddr_rw_inst                                                                                         |    38.728 |
+|     axi_ctrl_inst                                                                                     |     1.985 |
+|       rd_fifo_inst                                                                                    |     0.833 |
+|       wr_fifo_inst                                                                                    |     0.809 |
+|     axi_master_read_inst                                                                              |     0.077 |
+|     axi_master_write_inst                                                                             |     0.219 |
+|     u_axi_ddr                                                                                         |    36.444 |
+|       ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_0_5              |     0.005 |
+|       ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_12_17            |     0.004 |
+|       ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_24_29            |     0.005 |
+|       ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_30_35            |     0.005 |
+|       ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_36_41            |     0.004 |
+|       ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_42_47            |     0.006 |
+|       ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_48_53            |     0.008 |
+|       ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_54_59            |     0.006 |
+|       ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_60_65            |     0.004 |
+|       ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_6_11             |     0.005 |
+|       ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_72_77            |     0.002 |
+|       ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_12_17 |     0.009 |
+|       ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_18_23 |     0.008 |
+|       ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_24_29 |     0.010 |
+|       ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_30_35 |     0.009 |
+|       ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_36_41 |     0.009 |
+|       ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_42_47 |     0.009 |
+|       ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_48_53 |     0.010 |
+|       ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_54_59 |     0.009 |
+|       ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_6_11  |     0.007 |
+|       ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_72_77 |     0.009 |
+|       ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_12_17            |     0.005 |
+|       ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_18_23            |     0.005 |
+|       ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_24_29            |     0.011 |
+|       ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_30_35            |     0.010 |
+|       ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_36_41            |     0.005 |
+|       ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_42_47            |     0.006 |
+|       ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_48_53            |     0.010 |
+|       ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_54_59            |     0.012 |
+|       ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_6_11             |     0.012 |
+|       ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_72_77            |     0.011 |
+|       ddr_byte_lane_D.ddr_byte_lane_D/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_12_17 |     0.009 |
+|       ddr_byte_lane_D.ddr_byte_lane_D/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_18_23 |     0.008 |
+|       ddr_byte_lane_D.ddr_byte_lane_D/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_24_29 |     0.010 |
+|       ddr_byte_lane_D.ddr_byte_lane_D/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_30_35 |     0.010 |
+|       ddr_byte_lane_D.ddr_byte_lane_D/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_48_53 |     0.010 |
+|       ddr_byte_lane_D.ddr_byte_lane_D/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_54_59 |     0.009 |
+|       ddr_byte_lane_D.ddr_byte_lane_D/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_60_65 |     0.011 |
+|       ddr_byte_lane_D.ddr_byte_lane_D/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_66_71 |     0.010 |
+|       ddr_byte_lane_D.ddr_byte_lane_D/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_6_11  |     0.007 |
+|       ddr_byte_lane_D.ddr_byte_lane_D/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg_0_3_72_77 |     0.009 |
+|       ddr_byte_lane_D.ddr_byte_lane_D/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_12_17            |     0.005 |
+|       ddr_byte_lane_D.ddr_byte_lane_D/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_18_23            |     0.005 |
+|       ddr_byte_lane_D.ddr_byte_lane_D/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_24_29            |     0.011 |
+|       ddr_byte_lane_D.ddr_byte_lane_D/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_30_35            |     0.010 |
+|       ddr_byte_lane_D.ddr_byte_lane_D/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_48_53            |     0.009 |
+|       ddr_byte_lane_D.ddr_byte_lane_D/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_54_59            |     0.011 |
+|       ddr_byte_lane_D.ddr_byte_lane_D/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_60_65            |     0.005 |
+|       ddr_byte_lane_D.ddr_byte_lane_D/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_66_71            |     0.005 |
+|       ddr_byte_lane_D.ddr_byte_lane_D/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_6_11             |     0.010 |
+|       ddr_byte_lane_D.ddr_byte_lane_D/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg_0_15_72_77            |     0.010 |
+|       u_axi_ddr_mig                                                                                   |    36.039 |
+|   eth_udp_send_inst                                                                                   |     0.960 |
+|     eth_dcfifor_inst                                                                                  |     0.548 |
+|       U0                                                                                              |     0.548 |
+|     eth_udp_tx_gmii_inst                                                                              |     0.349 |
+|       CRC32_d8_inst                                                                                   |     0.178 |
+|     gmii_to_rgmii_inst                                                                                |     0.009 |
+|   fcnn_top_inst                                                                                       |    55.283 |
+|     MatrixMultiplier_100_10_inst                                                                      |     3.101 |
+|       fcnn_fifo_inst1                                                                                 |     0.727 |
+|       fcnn_fifo_inst2                                                                                 |     0.656 |
+|       mac_q6_10_inst0                                                                                 |     0.290 |
+|       mac_q6_10_inst1                                                                                 |     0.320 |
+|       mac_res_fifo_inst0                                                                              |     0.123 |
+|       mac_res_fifo_inst1                                                                              |     0.125 |
+|       u_weights                                                                                       |     0.359 |
+|     MatrixMultiplier_inst                                                                             |    16.703 |
+|       fcnn_fifo_inst1                                                                                 |     1.252 |
+|       fcnn_fifo_inst2                                                                                 |     0.656 |
+|       mac_q6_10_inst0                                                                                 |     1.434 |
+|       mac_q6_10_inst1                                                                                 |     1.427 |
+|       mac_q6_10_inst2                                                                                 |     1.429 |
+|       mac_q6_10_inst3                                                                                 |     1.427 |
+|       mac_q6_10_inst4                                                                                 |     1.551 |
+|       mac_res_fifo_inst0                                                                              |     0.134 |
+|       mac_res_fifo_inst1                                                                              |     0.131 |
+|       mac_res_fifo_inst2                                                                              |     0.131 |
+|       mac_res_fifo_inst3                                                                              |     0.130 |
+|       mac_res_fifo_inst4                                                                              |     0.137 |
+|       u_weights                                                                                       |     2.623 |
+|     Softmax_inst                                                                                      |    25.639 |
+|       fixed_to_float_inst                                                                             |     0.033 |
+|       float_accum_inst                                                                                |     7.650 |
+|       float_div_inst                                                                                  |    12.957 |
+|       float_mult_inst                                                                                 |     3.098 |
+|       float_to_int8_inst                                                                              |     1.145 |
+|     buf_fifo_inst                                                                                     |     1.694 |
+|       U0                                                                                              |     1.694 |
+|     pretreatment_inst                                                                                 |     8.108 |
+|       float_div_inst                                                                                  |     8.081 |
+|   max_prob_finder_inst                                                                                |     0.172 |
+|   ov5640_top_inst                                                                                     |     0.475 |
+|     i2c_ctrl_inst                                                                                     |     0.324 |
+|     ov5640_cfg_inst                                                                                   |     0.054 |
+|     ov5640_data_inst                                                                                  |     0.096 |
+|   seg_led_inst                                                                                        |     0.185 |
+|   top_hdmi_inst                                                                                       |     1.420 |
+|     hdmi_ctrl_inst                                                                                    |     1.243 |
+|       encode_inst1                                                                                    |     0.028 |
+|       encode_inst2                                                                                    |     0.022 |
+|       encode_inst3                                                                                    |     0.021 |
+|       par2ser_inst1                                                                                   |     0.274 |
+|       par2ser_inst2                                                                                   |     0.279 |
+|       par2ser_inst3                                                                                   |     0.275 |
+|       par2ser_inst4                                                                                   |     0.346 |
+|     vga_timing_ctrl_inst                                                                              |     0.176 |
+|   video_stream_process_inst                                                                           |     1.986 |
+|     rgb2gray_inst                                                                                     |     0.301 |
+|     strem_encode_inst                                                                                 |     1.633 |
++-------------------------------------------------------------------------------------------------------+-----------+
+
+

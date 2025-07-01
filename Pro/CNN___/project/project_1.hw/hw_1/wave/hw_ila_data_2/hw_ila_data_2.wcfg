@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/CNN/OV5640_DDR3_HDMI_UDP_gray___/project/project_1.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="15fs"></ZoomEndTime>
+      <Cursor1Time time="548fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="634"></NameColumnWidth>
+      <ValueColumnWidth column_width="155"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="22" />
+   <wvobject fp_name="fcnn_top_inst/done_flag" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fcnn_top_inst/done_flag</obj_property>
+      <obj_property name="ObjectShortName">done_flag</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fcnn_top_inst/done_flag_l2" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fcnn_top_inst/done_flag_l2</obj_property>
+      <obj_property name="ObjectShortName">done_flag_l2</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fcnn_top_inst/h1_relu_res" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fcnn_top_inst/h1_relu_res[14:0]</obj_property>
+      <obj_property name="ObjectShortName">h1_relu_res[14:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fcnn_top_inst/h1_relu_res_valid" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fcnn_top_inst/h1_relu_res_valid</obj_property>
+      <obj_property name="ObjectShortName">h1_relu_res_valid</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fcnn_top_inst/matmul_h1_res" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fcnn_top_inst/matmul_h1_res[15:0]</obj_property>
+      <obj_property name="ObjectShortName">matmul_h1_res[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fcnn_top_inst/matmul_h1_res_valid" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fcnn_top_inst/matmul_h1_res_valid</obj_property>
+      <obj_property name="ObjectShortName">matmul_h1_res_valid</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fcnn_top_inst/matmul_h2_res" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fcnn_top_inst/matmul_h2_res[15:0]</obj_property>
+      <obj_property name="ObjectShortName">matmul_h2_res[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fcnn_top_inst/matmul_h2_res_valid" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fcnn_top_inst/matmul_h2_res_valid</obj_property>
+      <obj_property name="ObjectShortName">matmul_h2_res_valid</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fcnn_top_inst/MatrixMultiplier_inst/fifo0_data_count" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fcnn_top_inst/MatrixMultiplier_inst/fifo0_data_count[9:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo0_data_count[9:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fcnn_top_inst/MatrixMultiplier_inst/pretreatment_inst/fcnn_wr_fifo_din_uint32" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fcnn_top_inst/MatrixMultiplier_inst/pretreatment_inst/fcnn_wr_fifo_din_uint32[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fcnn_wr_fifo_din_uint32[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fcnn_top_inst/MatrixMultiplier_inst/pretreatment_inst/fcnn_wr_fifo_din_uint32_valid" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fcnn_top_inst/MatrixMultiplier_inst/pretreatment_inst/fcnn_wr_fifo_din_uint32_valid</obj_property>
+      <obj_property name="ObjectShortName">fcnn_wr_fifo_din_uint32_valid</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fcnn_top_inst/MatrixMultiplier_inst/pretreatment_inst/fcnn_wr_fifo_din_float" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fcnn_top_inst/MatrixMultiplier_inst/pretreatment_inst/fcnn_wr_fifo_din_float[30:0]</obj_property>
+      <obj_property name="ObjectShortName">fcnn_wr_fifo_din_float[30:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fcnn_top_inst/MatrixMultiplier_inst/pretreatment_inst/fcnn_wr_fifo_din_float_valid" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fcnn_top_inst/MatrixMultiplier_inst/pretreatment_inst/fcnn_wr_fifo_din_float_valid</obj_property>
+      <obj_property name="ObjectShortName">fcnn_wr_fifo_din_float_valid</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fcnn_top_inst/MatrixMultiplier_inst/pretreatment_inst/fcnn_wr_fifo_din_float_norm" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fcnn_top_inst/MatrixMultiplier_inst/pretreatment_inst/fcnn_wr_fifo_din_float_norm[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fcnn_wr_fifo_din_float_norm[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fcnn_top_inst/MatrixMultiplier_inst/pretreatment_inst/fcnn_wr_fifo_din_float_valid_norm" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fcnn_top_inst/MatrixMultiplier_inst/pretreatment_inst/fcnn_wr_fifo_din_float_valid_norm</obj_property>
+      <obj_property name="ObjectShortName">fcnn_wr_fifo_din_float_valid_norm</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fcnn_top_inst/MatrixMultiplier_inst/pretreatment_inst/fcnn_wr_fifo_din_q6_10" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fcnn_top_inst/MatrixMultiplier_inst/pretreatment_inst/fcnn_wr_fifo_din_q6_10[15:0]</obj_property>
+      <obj_property name="ObjectShortName">fcnn_wr_fifo_din_q6_10[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fcnn_top_inst/MatrixMultiplier_inst/pretreatment_inst/fcnn_wr_fifo_din_q6_10_valid" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fcnn_top_inst/MatrixMultiplier_inst/pretreatment_inst/fcnn_wr_fifo_din_q6_10_valid</obj_property>
+      <obj_property name="ObjectShortName">fcnn_wr_fifo_din_q6_10_valid</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fcnn_top_inst/MatrixMultiplier_inst/rd_buffer_fifo_data" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fcnn_top_inst/MatrixMultiplier_inst/rd_buffer_fifo_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_buffer_fifo_data[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fcnn_top_inst/MatrixMultiplier_inst/rd_buffer_fifo_data_valid" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fcnn_top_inst/MatrixMultiplier_inst/rd_buffer_fifo_data_valid</obj_property>
+      <obj_property name="ObjectShortName">rd_buffer_fifo_data_valid</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fcnn_top_inst/MatrixMultiplier_inst/rd_buffer_fifo_en" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fcnn_top_inst/MatrixMultiplier_inst/rd_buffer_fifo_en</obj_property>
+      <obj_property name="ObjectShortName">rd_buffer_fifo_en</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="norm_res" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">norm_res[7:0]</obj_property>
+      <obj_property name="ObjectShortName">norm_res[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="norm_res_valid" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">norm_res_valid</obj_property>
+      <obj_property name="ObjectShortName">norm_res_valid</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,2 @@
+uint32_to_float.vhd,vhdl,xil_defaultlib,../../../../project_1.srcs/sources_1/ip/uint32_to_float/sim/uint32_to_float.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

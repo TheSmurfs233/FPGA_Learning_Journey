@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue May  6 00:29:03 2025
+# Process ID: 18768
+# Current directory: D:/CNN/OV5640_DDR3_HDMI_UDP_gray___/project/project_1.runs/mult_synth_1
+# Command line: vivado.exe -log mult.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mult.tcl
+# Log file: D:/CNN/OV5640_DDR3_HDMI_UDP_gray___/project/project_1.runs/mult_synth_1/mult.vds
+# Journal file: D:/CNN/OV5640_DDR3_HDMI_UDP_gray___/project/project_1.runs/mult_synth_1\vivado.jou
+#-----------------------------------------------------------
+source mult.tcl -notrace

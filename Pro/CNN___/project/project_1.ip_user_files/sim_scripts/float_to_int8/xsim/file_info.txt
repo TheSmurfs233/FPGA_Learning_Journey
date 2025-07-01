@@ -1,0 +1,2 @@
+float_to_int8.vhd,vhdl,xil_defaultlib,../../../../../src/ip/float_to_int8/sim/float_to_int8.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

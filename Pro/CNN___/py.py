@@ -1,0 +1,190 @@
+import socket
+import numpy as np
+import cv2
+import time
+import threading
+from queue import Queue
+
+# -------------------- 配置参数 --------------------
+UDP_IP = "0.0.0.0"
+UDP_PORT = 6102
+WIDTH, HEIGHT = 640, 480
+BUFFER_SIZE = WIDTH*2 + 2  # WIDTH*2 + 2
+MAX_QUEUE_SIZE = 100  # 接收队列最大长度
+
+# -------------------- 共享资源与同步机制 --------------------
+frame_lock = threading.Lock()
+current_frame = np.zeros((HEIGHT, WIDTH, 3), dtype=np.uint8)
+exit_flag = False
+data_queue = Queue(maxsize=MAX_QUEUE_SIZE)
+
+# -------------------- UDP接收线程 --------------------
+class UDPReceiver(threading.Thread):
+    def __init__(self):
+        super().__init__()
+        self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        self.sock.bind((UDP_IP, UDP_PORT))
+        self.sock.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 1024 * 1024)
+        self.last_line_time = time.time()
+        
+        # 网络速度统计相关
+        self.total_bytes = 0
+        self.speed_lock = threading.Lock()
+
+    def run(self):
+        global exit_flag, current_frame
+        print("UDP接收线程启动")
+        
+        while not exit_flag:
+            try:
+                data, _ = self.sock.recvfrom(BUFFER_SIZE)
+                
+                # 统计接收数据量（线程安全）
+                with self.speed_lock:
+                    self.total_bytes += len(data)
+
+                if len(data) != BUFFER_SIZE:
+                    continue
+
+                # 解析行号（大端字节序）
+                line_number = int.from_bytes(data[-2:], byteorder='big')
+
+                # 帧同步处理
+                if line_number == 0:
+                    with frame_lock:
+                        current_frame.fill(0)
+                    continue
+
+                # 有效性检查
+                if not (1 <= line_number <= HEIGHT):
+                    continue
+
+                # 解析像素数据
+                line_index = line_number - 1
+                pixel_data = data[:WIDTH*2]
+                pixels = np.frombuffer(pixel_data, dtype='>u2')
+
+                # RGB565转BGR888（优化后的向量化操作）
+                r = (pixels & 0xF800) >> 11
+                g = (pixels & 0x07E0) >> 5
+                b = pixels & 0x001F
+                
+                r = (r << 3) | (r >> 2)
+                g = (g << 2) | (g >> 4)
+                b = (b << 3) | (b >> 2)
+                
+                bgr = np.stack([b, g, r], axis=1).astype(np.uint8)
+
+                # 更新帧缓冲区
+                with frame_lock:
+                    current_frame[line_index] = bgr
+                    self.last_line_time = time.time()
+
+            except Exception as e:
+                print(f"接收异常: {str(e)}")
+        
+        self.sock.close()
+        print("UDP接收线程已退出")
+
+# -------------------- 显示线程 --------------------
+class DisplayThread(threading.Thread):
+    def __init__(self, receiver):
+        super().__init__()
+        self.last_display_time = time.time()
+        self.display_interval = 1/30  # 30 FPS
+        self.last_fps_time = time.time()
+        self.fps = 0.0
+        
+        # 网络速度统计相关
+        self.receiver = receiver
+        self.last_speed_bytes = 0
+        self.last_speed_time = time.time()
+
+    def run(self):
+        global exit_flag
+        print("显示线程启动")
+        
+        while not exit_flag:
+            try:
+                # 控制显示频率
+                if time.time() - self.last_display_time < self.display_interval:
+                    time.sleep(0.001)
+                    continue
+                
+                # 拷贝当前帧数据
+                with frame_lock:
+                    display_frame = current_frame.copy()
+
+                # 计算帧率（指数平滑）
+                current_time = time.time()
+                delta = current_time - self.last_fps_time
+                self.last_fps_time = current_time
+                if delta > 0:
+                    current_fps = 1.0 / delta
+                    self.fps = self.fps * 0.9 + current_fps * 0.1
+
+                # 计算网络速度（线程安全）
+                with self.receiver.speed_lock:
+                    current_bytes = self.receiver.total_bytes
+                current_speed_time = time.time()
+                time_diff = current_speed_time - self.last_speed_time
+                byte_diff = current_bytes - self.last_speed_bytes
+                
+                if time_diff > 0:
+                    # 转换为比特率（bytes转bits需要*8）
+                    speed_bps = (byte_diff * 8) / time_diff
+                    if speed_bps >= 1e6:
+                        speed_str = f"{speed_bps/1e6:.2f} Mbps"
+                    else:
+                        speed_str = f"{speed_bps/1e3:.2f} Kbps"
+                    
+                    # 更新统计基准
+                    self.last_speed_time = current_speed_time
+                    self.last_speed_bytes = current_bytes
+                else:
+                    speed_str = "0.00 Kbps"
+
+                # 绘制帧率信息
+                cv2.putText(display_frame, f"FPS: {self.fps:.1f}", 
+                           (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 
+                           0.6, (0, 255, 0), 2)
+                
+                # 绘制网络速度信息
+                cv2.putText(display_frame, f"Speed: {speed_str}", 
+                           (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 
+                           0.6, (0, 255, 0), 2)
+
+                # 显示图像
+                cv2.imshow('UDP Video Stream', display_frame)
+                self.last_display_time = time.time()
+
+                # 处理退出按键
+                if cv2.waitKey(1) & 0xFF == ord('q'):
+                    exit_flag = True
+                    break
+
+            except Exception as e:
+                print(f"显示异常: {str(e)}")
+        
+        cv2.destroyAllWindows()
+        print("显示线程已退出")
+
+# -------------------- 主程序 --------------------
+if __name__ == "__main__":
+    # 启动线程
+    receiver = UDPReceiver()
+    display = DisplayThread(receiver)
+    
+    receiver.start()
+    display.start()
+
+    # 等待线程结束
+    try:
+        while not exit_flag:
+            time.sleep(0.1)
+    except KeyboardInterrupt:
+        exit_flag = True
+    
+    receiver.join()
+    display.join()
+    print("程序已正常退出")

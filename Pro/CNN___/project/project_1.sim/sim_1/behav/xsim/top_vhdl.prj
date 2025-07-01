@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../src/ip/float_to_int8/sim/float_to_int8.vhd" \
+"../../../../../src/ip/float_mult/sim/float_mult.vhd" \
+"../../../../../src/ip/float_div/sim/float_div.vhd" \
+"../../../../../src/ip/float_accum/sim/float_accum.vhd" \
+"../../../../../src/ip/exp/sim/exp.vhd" \
+"../../../../../src/ip/fixed_to_float/sim/fixed_to_float.vhd" \
+"../../../../../src/ip/mult/sim/mult.vhd" \
+
+# Do not sort compile order
+nosort

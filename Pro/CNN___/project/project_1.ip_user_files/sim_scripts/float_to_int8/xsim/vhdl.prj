@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../../src/ip/float_to_int8/sim/float_to_int8.vhd" \
+
+nosort

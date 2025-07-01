@@ -1,0 +1,1468 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon May 12 20:45:20 2025
+# Process ID: 27936
+# Current directory: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21736 D:\CNN\OV5640_DDR3_HDMI_UDP_gray_v3___\project\project_1.xpr
+# Log file: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/vivado.log
+# Journal file: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.xpr
+INFO: [Project 1-313] Project file moved from 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v2___/project' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 1069.969 ; gain = 365.344
+update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1892.492 ; gain = 7.996
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299847714
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Digilent/210299847714.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+ERROR: [Common 17-39] 'open_hw_target' failed due to earlier errors.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210299847714
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299847714
+set_property PROGRAM.FILE {D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xci' is already up-to-date
+[Mon May 12 20:52:35 2025] Launched synth_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/runme.log
+[Mon May 12 20:52:35 2025] Launched impl_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xci' is already up-to-date
+[Mon May 12 20:58:52 2025] Launched synth_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/runme.log
+[Mon May 12 20:58:52 2025] Launched impl_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xci' is already up-to-date
+[Mon May 12 21:04:12 2025] Launched synth_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/runme.log
+[Mon May 12 21:04:12 2025] Launched impl_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299847714
+set_property PROGRAM.FILE {D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xci' is already up-to-date
+[Mon May 12 21:26:13 2025] Launched synth_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/runme.log
+[Mon May 12 21:26:13 2025] Launched impl_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xci' is already up-to-date
+[Mon May 12 21:40:02 2025] Launched synth_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/runme.log
+[Mon May 12 21:40:02 2025] Launched impl_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xci' is already up-to-date
+[Mon May 12 21:46:30 2025] Launched synth_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/runme.log
+[Mon May 12 21:46:30 2025] Launched impl_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tfgg484-2
+Top: top
+INFO: [Device 21-403] Loading part xc7a35tfgg484-2
+WARNING: [Synth 8-2507] parameter declaration becomes local in i2c_ctrl with formal parameter declaration list [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:30]
+WARNING: [Synth 8-2507] parameter declaration becomes local in i2c_ctrl with formal parameter declaration list [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:32]
+WARNING: [Synth 8-2507] parameter declaration becomes local in i2c_ctrl with formal parameter declaration list [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:49]
+WARNING: [Synth 8-2292] literal value truncated to fit in 15 bits [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/ov5640_cfg.v:30]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 3144.379 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:2]
+	Parameter H_PIXEL bound to: 24'b000000000000001010000000 
+	Parameter V_PIXEL bound to: 24'b000000000000000111100000 
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:206]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:207]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:208]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:239]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:240]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:241]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:242]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:243]
+INFO: [Synth 8-6157] synthesizing module 'IBUFG' [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:33402]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFG' (1#1) [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:33402]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (2#1) [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (3#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_1' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/clk_wiz_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_1' (4#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/clk_wiz_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_hdmi' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/top_hdmi.v:1]
+INFO: [Synth 8-6157] synthesizing module 'vga_timing_ctrl' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/vga_timing_ctrl.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'vga_timing_ctrl' (5#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/vga_timing_ctrl.v:3]
+WARNING: [Synth 8-689] width (32) of port connection 'pix_data' does not match port width (24) of module 'vga_timing_ctrl' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/top_hdmi.v:54]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_ctrl' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/hdmi_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'encode' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/encode.v:3]
+	Parameter CTRLTOKEN0 bound to: 10'b1101010100 
+	Parameter CTRLTOKEN1 bound to: 10'b0010101011 
+	Parameter CTRLTOKEN2 bound to: 10'b0101010100 
+	Parameter CTRLTOKEN3 bound to: 10'b1010101011 
+INFO: [Synth 8-6155] done synthesizing module 'encode' (6#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/encode.v:3]
+INFO: [Synth 8-6157] synthesizing module 'par2ser' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/par2ser.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ODDR' [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:49681]
+	Parameter DDR_CLK_EDGE bound to: SAME_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'ODDR' (7#1) [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:49681]
+INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:46225]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (8#1) [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:46225]
+INFO: [Synth 8-6155] done synthesizing module 'par2ser' (9#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/par2ser.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_ctrl' (10#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/hdmi_ctrl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'top_hdmi' (11#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/top_hdmi.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ov5640_top' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/ov5640_top.v:3]
+	Parameter SLAVE_ADDR bound to: 7'b0111100 
+	Parameter BIT_CTRL bound to: 1'b1 
+	Parameter CLK_FREQ bound to: 26'b01011111010111100001000000 
+	Parameter I2C_FREQ bound to: 18'b111101000010010000 
+INFO: [Synth 8-6157] synthesizing module 'i2c_ctrl' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:3]
+	Parameter DEVICE_ADDR bound to: 7'b0111100 
+	Parameter SYS_CLK_FREQ bound to: 26'b01011111010111100001000000 
+	Parameter SCL_FREQ bound to: 18'b111101000010010000 
+	Parameter CNT_CLK_MAX bound to: 26'b00000000000000000000001100 
+	Parameter CNT_START_MAX bound to: 8'b01100100 
+	Parameter IDLE bound to: 4'b0000 
+	Parameter START_1 bound to: 4'b0001 
+	Parameter SEND_D_ADDR bound to: 4'b0010 
+	Parameter ACK_1 bound to: 4'b0011 
+	Parameter SEND_B_ADDR_H bound to: 4'b0100 
+	Parameter ACK_2 bound to: 4'b0101 
+	Parameter SEND_B_ADDR_L bound to: 4'b0110 
+	Parameter ACK_3 bound to: 4'b0111 
+	Parameter WR_DATA bound to: 4'b1000 
+	Parameter ACK_4 bound to: 4'b1001 
+	Parameter START_2 bound to: 4'b1010 
+	Parameter SEND_RD_ADDR bound to: 4'b1011 
+	Parameter ACK_5 bound to: 4'b1100 
+	Parameter RD_DATA bound to: 4'b1101 
+	Parameter N_ACK bound to: 4'b1110 
+	Parameter STOP bound to: 4'b1111 
+INFO: [Synth 8-226] default block is never used [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:117]
+INFO: [Synth 8-226] default block is never used [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:229]
+INFO: [Synth 8-226] default block is never used [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:253]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_ctrl' (12#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ov5640_cfg' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/ov5640_cfg.v:3]
+	Parameter IMAGE_WIDTH bound to: 16'b0000001010000000 
+	Parameter IMAGE_HEIGHT bound to: 16'b0000000111100000 
+	Parameter IMAGE_FLIP_EN bound to: 1'b0 
+	Parameter IMAGE_MIRROR_EN bound to: 1'b0 
+	Parameter IMAGE_FLIP_DAT bound to: 8'b01000111 
+	Parameter IMAGE_MIRROR_DAT bound to: 4'b0000 
+	Parameter REG_NUM bound to: 8'b11111011 
+	Parameter CNT_WAIT_MAX bound to: 15'b000110101000000 
+INFO: [Synth 8-6155] done synthesizing module 'ov5640_cfg' (13#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/ov5640_cfg.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ov5640_data' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/ov5640_data.v:3]
+	Parameter PIC_WAIT bound to: 4'b1010 
+INFO: [Synth 8-6155] done synthesizing module 'ov5640_data' (14#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/ov5640_data.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ov5640_top' (15#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/ov5640_top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'rgb2gray' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/rgb2gray/rgb2gray.v:22]
+	Parameter Pixel_Width bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rgb2gray' (16#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/rgb2gray/rgb2gray.v:22]
+INFO: [Synth 8-6157] synthesizing module 'strem_encode' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/strem_encode.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'strem_encode' (17#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/strem_encode.v:5]
+INFO: [Synth 8-6157] synthesizing module 'axi_ddr_top' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ddr_top.v:8]
+	Parameter DDR_WR_LEN bound to: 8 - type: integer 
+	Parameter DDR_RD_LEN bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'axi_ctrl' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ctrl.v:3]
+	Parameter DDR_WR_LEN bound to: 8 - type: integer 
+	Parameter DDR_RD_LEN bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'wr_fifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/wr_fifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'wr_fifo' (18#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/wr_fifo_stub.v:6]
+WARNING: [Synth 8-689] width (64) of port connection 'din' does not match port width (16) of module 'wr_fifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ctrl.v:295]
+INFO: [Synth 8-6157] synthesizing module 'rd_fifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/rd_fifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rd_fifo' (19#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/rd_fifo_stub.v:6]
+WARNING: [Synth 8-689] width (64) of port connection 'dout' does not match port width (16) of module 'rd_fifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ctrl.v:317]
+WARNING: [Synth 8-5788] Register wr_burst_addr_reg_reg in module axi_ctrl is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ctrl.v:104]
+WARNING: [Synth 8-5788] Register rd_burst_addr_reg_reg in module axi_ctrl is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ctrl.v:108]
+INFO: [Synth 8-6155] done synthesizing module 'axi_ctrl' (20#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ctrl.v:3]
+INFO: [Synth 8-6157] synthesizing module 'axi_master_write' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_master_write.v:3]
+	Parameter S_WR_IDLE bound to: 3'b000 
+	Parameter S_WA_WAIT bound to: 3'b001 
+	Parameter S_WA_START bound to: 3'b010 
+	Parameter S_WD_WAIT bound to: 3'b011 
+	Parameter S_WD_PROC bound to: 3'b100 
+	Parameter S_WR_WAIT bound to: 3'b101 
+	Parameter S_WR_DONE bound to: 3'b110 
+WARNING: [Synth 8-6014] Unused sequential element reg_w_last_reg was removed.  [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_master_write.v:103]
+INFO: [Synth 8-6155] done synthesizing module 'axi_master_write' (21#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_master_write.v:3]
+INFO: [Synth 8-6157] synthesizing module 'axi_master_read' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_master_read.v:3]
+	Parameter S_RD_IDLE bound to: 3'b000 
+	Parameter S_RA_WAIT bound to: 3'b001 
+	Parameter S_RA_START bound to: 3'b010 
+	Parameter S_RD_WAIT bound to: 3'b011 
+	Parameter S_RD_PROC bound to: 3'b100 
+	Parameter S_RD_DONE bound to: 3'b101 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_master_read.v:82]
+WARNING: [Synth 8-6014] Unused sequential element reg_rd_len_reg was removed.  [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_master_read.v:79]
+INFO: [Synth 8-6155] done synthesizing module 'axi_master_read' (22#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_master_read.v:3]
+INFO: [Synth 8-6157] synthesizing module 'axi_ddr' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/axi_ddr_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'axi_ddr' (23#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/axi_ddr_stub.v:5]
+WARNING: [Synth 8-689] width (4) of port connection 'ddr3_dm' does not match port width (2) of module 'axi_ddr' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ddr_top.v:270]
+WARNING: [Synth 8-689] width (32) of port connection 's_axi_awaddr' does not match port width (28) of module 'axi_ddr' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ddr_top.v:287]
+WARNING: [Synth 8-689] width (32) of port connection 's_axi_araddr' does not match port width (28) of module 'axi_ddr' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ddr_top.v:310]
+WARNING: [Synth 8-689] width (2) of port connection 's_axi_arlock' does not match port width (1) of module 'axi_ddr' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ddr_top.v:314]
+WARNING: [Synth 8-7023] instance 'u_axi_ddr' of module 'axi_ddr' has 67 connections declared, but only 66 given [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ddr_top.v:255]
+INFO: [Synth 8-6155] done synthesizing module 'axi_ddr_top' (24#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ddr_top.v:8]
+WARNING: [Synth 8-689] width (16) of port connection 'data_rd' does not match port width (64) of module 'axi_ddr_top' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:291]
+WARNING: [Synth 8-689] width (2) of port connection 'ddr3_dm' does not match port width (4) of module 'axi_ddr_top' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:316]
+INFO: [Synth 8-6157] synthesizing module 'eth_udp_send' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/eth_udp_send.v:1]
+	Parameter data_length bound to: 15'b000010100000010 
+INFO: [Synth 8-6157] synthesizing module 'eth_udp_tx_gmii' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/eth_udp_tx_gmii.v:2]
+	Parameter ETH_type bound to: 16'b0000100000000000 
+	Parameter IP_ver bound to: 4'b0100 
+	Parameter IP_hdr_len bound to: 4'b0101 
+	Parameter IP_tos bound to: 8'b00000000 
+	Parameter IP_id bound to: 16'b0000000000000000 
+	Parameter IP_rsv bound to: 1'b0 
+	Parameter IP_df bound to: 1'b0 
+	Parameter IP_mf bound to: 1'b0 
+	Parameter IP_frag_offset bound to: 13'b0000000000000 
+	Parameter IP_ttl bound to: 8'b01000000 
+	Parameter IP_protocol bound to: 8'b00010001 
+	Parameter IDLE bound to: 9'b000000001 
+	Parameter TX_PREAMBLE bound to: 9'b000000010 
+	Parameter TX_ETH_HEADER bound to: 9'b000000100 
+	Parameter TX_IP_HEADER bound to: 9'b000001000 
+	Parameter TX_UDP_HEADER bound to: 9'b000010000 
+	Parameter TX_DATA bound to: 9'b000100000 
+	Parameter TX_FILL_DATA bound to: 9'b001000000 
+	Parameter TX_CRC bound to: 9'b010000000 
+	Parameter TX_DLY bound to: 9'b100000000 
+INFO: [Synth 8-6157] synthesizing module 'ip_checksum' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/ip_checksum.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'ip_checksum' (25#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/ip_checksum.v:2]
+INFO: [Synth 8-6157] synthesizing module 'CRC32_d8' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/crc32_d8.v:2]
+	Parameter Tp bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'CRC32_d8' (26#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/crc32_d8.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'eth_udp_tx_gmii' (27#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/eth_udp_tx_gmii.v:2]
+INFO: [Synth 8-6157] synthesizing module 'eth_dcfifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/eth_dcfifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'eth_dcfifo' (28#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/eth_dcfifo_stub.v:6]
+WARNING: [Synth 8-689] width (14) of port connection 'rd_data_count' does not match port width (13) of module 'eth_dcfifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/eth_udp_send.v:101]
+INFO: [Synth 8-6157] synthesizing module 'gmii_to_rgmii' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/gmii_to_rgmii.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'gmii_to_rgmii' (29#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/gmii_to_rgmii.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'eth_udp_send' (30#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/eth_udp_send.v:1]
+INFO: [Synth 8-6157] synthesizing module 'fcnn_top' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/fcnn_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MatrixMultiplier' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/MatrixMultiplier.v:1]
+	Parameter DATA_COUNT bound to: 785 - type: integer 
+	Parameter COLUMNS bound to: 20 - type: integer 
+	Parameter ROWS bound to: 785 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'buf_fifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/buf_fifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'buf_fifo' (31#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/buf_fifo_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pretreatment' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/pretreatment.v:3]
+INFO: [Synth 8-6157] synthesizing module 'uint32_to_float' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/uint32_to_float_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'uint32_to_float' (32#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/uint32_to_float_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'float_div' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/float_div_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'float_div' (33#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/float_div_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'float_to_q6_10' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/float_to_q6_10_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'float_to_q6_10' (34#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/float_to_q6_10_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pretreatment' (35#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/pretreatment.v:3]
+INFO: [Synth 8-6157] synthesizing module 'fcnn_fifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/fcnn_fifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fcnn_fifo' (36#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/fcnn_fifo_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mac_q6_10' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/mac_q6_10.v:2]
+INFO: [Synth 8-6157] synthesizing module 'mult' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/mult_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mult' (37#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/mult_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mac_q6_10' (38#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/mac_q6_10.v:2]
+INFO: [Synth 8-6157] synthesizing module 'mac_res_fifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/mac_res_fifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mac_res_fifo' (39#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/mac_res_fifo_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'neural_weights1_bram' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights_bram.v:1]
+INFO: [Synth 8-6157] synthesizing module 'weight1_bram_0' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight1_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'weight1_bram_0' (40#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight1_bram_0_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (14) of module 'weight1_bram_0' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights_bram.v:41]
+INFO: [Synth 8-6157] synthesizing module 'weight1_bram_1' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight1_bram_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'weight1_bram_1' (41#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight1_bram_1_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (14) of module 'weight1_bram_1' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights_bram.v:56]
+INFO: [Synth 8-6157] synthesizing module 'weight1_bram_2' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight1_bram_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'weight1_bram_2' (42#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight1_bram_2_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (14) of module 'weight1_bram_2' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights_bram.v:70]
+INFO: [Synth 8-6157] synthesizing module 'weight1_bram_3' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight1_bram_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'weight1_bram_3' (43#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight1_bram_3_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (14) of module 'weight1_bram_3' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights_bram.v:84]
+INFO: [Synth 8-6157] synthesizing module 'weight1_bram_4' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight1_bram_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'weight1_bram_4' (44#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight1_bram_4_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (14) of module 'weight1_bram_4' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights_bram.v:98]
+INFO: [Synth 8-6155] done synthesizing module 'neural_weights1_bram' (45#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights_bram.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MatrixMultiplier' (46#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/MatrixMultiplier.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Relu' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/Relu.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Relu' (47#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/Relu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MatrixMultiplier_100_10' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/MatrixMultiplier_100_10.v:2]
+	Parameter DATA_COUNT bound to: 100 - type: integer 
+	Parameter COLUMNS bound to: 10 - type: integer 
+	Parameter MAC_NUM bound to: 2 - type: integer 
+	Parameter MAC_COL bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'neural_weights2_bram' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights2_bram.v:1]
+INFO: [Synth 8-6157] synthesizing module 'weight2_bram_0' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight2_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'weight2_bram_0' (48#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight2_bram_0_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (9) of module 'weight2_bram_0' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights2_bram.v:13]
+INFO: [Synth 8-6157] synthesizing module 'weight2_bram_1' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight2_bram_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'weight2_bram_1' (49#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight2_bram_1_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (9) of module 'weight2_bram_1' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights2_bram.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'neural_weights2_bram' (50#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights2_bram.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MatrixMultiplier_100_10' (51#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/MatrixMultiplier_100_10.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Softmax' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/Softmax.v:6]
+INFO: [Synth 8-6157] synthesizing module 'fixed_to_float' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/fixed_to_float_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fixed_to_float' (52#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/fixed_to_float_stub.v:6]
+WARNING: [Synth 8-7023] instance 'fixed_to_float_inst' of module 'fixed_to_float' has 6 connections declared, but only 5 given [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/Softmax.v:21]
+INFO: [Synth 8-6157] synthesizing module 'exp' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/exp_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exp' (53#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/exp_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'float_accum' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/float_accum_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'float_accum' (54#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/float_accum_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'float_mult' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/float_mult_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'float_mult' (55#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/float_mult_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'float_to_int8' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/float_to_int8_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'float_to_int8' (56#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/float_to_int8_stub.v:6]
+WARNING: [Synth 8-6014] Unused sequential element buffer_ready_reg was removed.  [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/Softmax.v:61]
+WARNING: [Synth 8-5788] Register exp_buffer_reg in module Softmax is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-4767] Trying to implement RAM 'exp_buffer_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "exp_buffer_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'Softmax' (57#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/Softmax.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fcnn_top' (58#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/fcnn_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'max_prob_finder' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/max_prob_finder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'max_prob_finder' (59#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/max_prob_finder.v:1]
+INFO: [Synth 8-6157] synthesizing module 'seg_led' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/seg_led/seg_led.v:1]
+	Parameter SCAN_FREQ bound to: 1000 - type: integer 
+	Parameter CLK_FREQ bound to: 50000000 - type: integer 
+	Parameter SCAN_CYCLES bound to: 8333 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'bin_2_bcd' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/seg_led/bin_2_bcd.v:2]
+	Parameter W bound to: 20 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'bin_2_bcd' (60#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/seg_led/bin_2_bcd.v:2]
+WARNING: [Synth 8-689] width (24) of port connection 'bcd' does not match port width (26) of module 'bin_2_bcd' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/seg_led/seg_led.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'seg_led' (61#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/seg_led/seg_led.v:1]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'rgb2gray_inst'. This will prevent further optimization [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:212]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'strem_encode_inst'. This will prevent further optimization [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:245]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v-2.8 with 1st driver pin 'top:/eth_udp_send_inst/phy_rst_n' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:2]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v-2.8 with 2nd driver pin 'VCC' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:2]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v-2.8 is connected to at least one constant driver which has been preserved, other driver is ignored [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'top' (62#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:2]
+WARNING: [Synth 8-3917] design top has port led[0] driven by constant 0
+WARNING: [Synth 8-3917] design top has port phy_rst_n driven by constant 1
+WARNING: [Synth 8-3917] design top has port ov5640_pwdn driven by constant 0
+WARNING: [Synth 8-3917] design top has port ov5640_rst_n driven by constant 1
+WARNING: [Synth 8-3331] design neural_weights2_bram has unconnected port bram_addr[15]
+WARNING: [Synth 8-3331] design neural_weights2_bram has unconnected port bram_addr[14]
+WARNING: [Synth 8-3331] design neural_weights2_bram has unconnected port bram_addr[13]
+WARNING: [Synth 8-3331] design neural_weights2_bram has unconnected port bram_addr[12]
+WARNING: [Synth 8-3331] design neural_weights2_bram has unconnected port bram_addr[11]
+WARNING: [Synth 8-3331] design neural_weights2_bram has unconnected port bram_addr[10]
+WARNING: [Synth 8-3331] design neural_weights2_bram has unconnected port bram_addr[9]
+WARNING: [Synth 8-3331] design neural_weights1_bram has unconnected port bram_addr[15]
+WARNING: [Synth 8-3331] design neural_weights1_bram has unconnected port bram_addr[14]
+WARNING: [Synth 8-3331] design pretreatment has unconnected port rst_n
+WARNING: [Synth 8-3331] design pretreatment has unconnected port data_in[15]
+WARNING: [Synth 8-3331] design pretreatment has unconnected port data_in[14]
+WARNING: [Synth 8-3331] design pretreatment has unconnected port data_in[13]
+WARNING: [Synth 8-3331] design pretreatment has unconnected port data_in[12]
+WARNING: [Synth 8-3331] design pretreatment has unconnected port data_in[11]
+WARNING: [Synth 8-3331] design pretreatment has unconnected port data_in[10]
+WARNING: [Synth 8-3331] design pretreatment has unconnected port data_in[9]
+WARNING: [Synth 8-3331] design pretreatment has unconnected port data_in[8]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port M_AXI_RID[3]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port M_AXI_RID[2]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port M_AXI_RID[1]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port M_AXI_RID[0]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port M_AXI_RRESP[1]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port M_AXI_RRESP[0]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port RD_LEN[9]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port RD_LEN[8]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port M_AXI_BID[3]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port M_AXI_BID[2]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port M_AXI_BID[1]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port M_AXI_BID[0]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port M_AXI_BRESP[1]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port M_AXI_BRESP[0]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port WR_LEN[9]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port WR_LEN[8]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[63]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[62]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[61]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[60]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[59]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[58]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[57]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[56]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[55]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[54]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[53]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[52]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[51]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[50]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[49]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[48]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[47]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[46]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[45]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[44]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[43]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[42]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[41]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[40]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[39]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[38]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[37]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[36]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[35]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[34]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[33]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[32]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[31]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[30]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[29]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[28]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[27]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[26]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[25]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[24]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[23]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[22]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[21]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[20]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[19]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[18]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[17]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[16]
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port sys_clk
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[31]
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[30]
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[29]
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[28]
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[27]
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[26]
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[25]
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[24]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3144.379 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3144.379 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3144.379 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz_0_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.dcp' for cell 'clk_wiz_1_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr.dcp' for cell 'ddr_rw_inst/u_axi_ddr'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.dcp' for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.dcp' for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.dcp' for cell 'eth_udp_send_inst/eth_dcfifor_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo.dcp' for cell 'fcnn_top_inst/MatrixMultiplier_inst/buf_fifo_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo.dcp' for cell 'fcnn_top_inst/MatrixMultiplier_inst/fcnn_fifo_inst1'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.dcp' for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/uint32_to_float/uint32_to_float.dcp' for cell 'fcnn_top_inst/MatrixMultiplier_inst/pretreatment_inst/uint32_to_float_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_div/float_div.dcp' for cell 'fcnn_top_inst/MatrixMultiplier_inst/pretreatment_inst/float_div_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/float_to_q6_10/float_to_q6_10.dcp' for cell 'fcnn_top_inst/MatrixMultiplier_inst/pretreatment_inst/float_to_q6_10_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mult/mult.dcp' for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_q6_10_inst0/mult_inst_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_0/weight1_bram_0.dcp' for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_1/weight1_bram_1.dcp' for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_1'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_2/weight1_bram_2.dcp' for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_2'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_3/weight1_bram_3.dcp' for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_3'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/weight1_bram_4/weight1_bram_4.dcp' for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_4'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight2_bram_0/weight2_bram_0.dcp' for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/u_weights/weight2_bram_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight2_bram_1/weight2_bram_1.dcp' for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/u_weights/weight2_bram_1'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fixed_to_float/fixed_to_float.dcp' for cell 'fcnn_top_inst/Softmax_inst/fixed_to_float_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/exp/exp.dcp' for cell 'fcnn_top_inst/Softmax_inst/exp_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_accum/float_accum.dcp' for cell 'fcnn_top_inst/Softmax_inst/float_accum_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_mult/float_mult.dcp' for cell 'fcnn_top_inst/Softmax_inst/float_mult_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_to_int8/float_to_int8.dcp' for cell 'fcnn_top_inst/Softmax_inst/float_to_int8_inst'
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.391 . Memory (MB): peak = 3163.750 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1877 Unisim elements for replacement
+WARNING: [Netlist 29-432] The IBUFG primitive 'IBUFG_inst' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
+WARNING: [Netlist 29-432] The IBUFG primitive 'IBUFG_inst1' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 13 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xdc] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xdc] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc:346]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc:353]
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_0_inst/inst'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_0_inst/inst'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_0_inst/inst'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_0_inst/inst'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1_board.xdc] for cell 'clk_wiz_1_inst/inst'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1_board.xdc] for cell 'clk_wiz_1_inst/inst'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc] for cell 'clk_wiz_1_inst/inst'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc] for cell 'clk_wiz_1_inst/inst'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/fcnn_fifo_inst1/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/fcnn_fifo_inst1/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/fcnn_fifo_inst2/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/fcnn_fifo_inst2/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/fcnn_fifo_inst1/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/fcnn_fifo_inst1/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/fcnn_fifo_inst2/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/fcnn_fifo_inst2/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/mac_res_fifo_inst0/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/mac_res_fifo_inst0/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/mac_res_fifo_inst1/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/mac_res_fifo_inst1/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst0/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst0/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst1/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst1/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst2/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst2/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst3/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst3/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst4/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst4/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/buf_fifo_inst/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/buf_fifo_inst/U0'
+Parsing XDC File [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
+Finished Parsing XDC File [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo_clocks.xdc] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo_clocks.xdc] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'clk_wiz_0_inst/inst'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'clk_wiz_0_inst/inst'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1_late.xdc] for cell 'clk_wiz_1_inst/inst'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1_late.xdc] for cell 'clk_wiz_1_inst/inst'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo_clocks.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/buf_fifo_inst/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo_clocks.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/buf_fifo_inst/U0'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'fcnn_top_inst/MatrixMultiplier_inst/buf_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'fcnn_top_inst/MatrixMultiplier_inst/buf_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'fcnn_top_inst/MatrixMultiplier_inst/buf_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'fcnn_top_inst/MatrixMultiplier_inst/buf_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 3374.707 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 515 instances were transformed.
+  IBUFG => IBUF: 2 instances
+  IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT(x2), INV, OBUFTDS(x2)): 2 instances
+  IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 110 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 320 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 64 instances
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 3389.504 ; gain = 245.125
+175 Infos, 130 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 3389.504 ; gain = 245.125
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xci' is already up-to-date
+[Mon May 12 22:16:21 2025] Launched synth_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/runme.log
+[Mon May 12 22:16:21 2025] Launched impl_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xci' is already up-to-date
+[Mon May 12 22:20:05 2025] Launched synth_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/runme.log
+[Mon May 12 22:20:05 2025] Launched impl_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xci' is already up-to-date
+[Mon May 12 22:20:32 2025] Launched synth_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/runme.log
+[Mon May 12 22:20:32 2025] Launched impl_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/runme.log
+refresh_design
+WARNING: [Synth 8-2507] parameter declaration becomes local in i2c_ctrl with formal parameter declaration list [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:30]
+WARNING: [Synth 8-2507] parameter declaration becomes local in i2c_ctrl with formal parameter declaration list [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:32]
+WARNING: [Synth 8-2507] parameter declaration becomes local in i2c_ctrl with formal parameter declaration list [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:49]
+WARNING: [Synth 8-2292] literal value truncated to fit in 15 bits [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/ov5640_cfg.v:30]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3443.992 ; gain = 26.574
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:2]
+	Parameter H_PIXEL bound to: 24'b000000000000001010000000 
+	Parameter V_PIXEL bound to: 24'b000000000000000111100000 
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:206]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:207]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:208]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:239]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:240]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:241]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:242]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:243]
+INFO: [Synth 8-6157] synthesizing module 'IBUFG' [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:33402]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFG' (1#1) [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:33402]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (2#1) [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (3#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_1' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/clk_wiz_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_1' (4#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/clk_wiz_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_hdmi' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/top_hdmi.v:1]
+INFO: [Synth 8-6157] synthesizing module 'vga_timing_ctrl' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/vga_timing_ctrl.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'vga_timing_ctrl' (5#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/vga_timing_ctrl.v:3]
+WARNING: [Synth 8-689] width (32) of port connection 'pix_data' does not match port width (24) of module 'vga_timing_ctrl' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/top_hdmi.v:54]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_ctrl' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/hdmi_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'encode' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/encode.v:3]
+	Parameter CTRLTOKEN0 bound to: 10'b1101010100 
+	Parameter CTRLTOKEN1 bound to: 10'b0010101011 
+	Parameter CTRLTOKEN2 bound to: 10'b0101010100 
+	Parameter CTRLTOKEN3 bound to: 10'b1010101011 
+INFO: [Synth 8-6155] done synthesizing module 'encode' (6#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/encode.v:3]
+INFO: [Synth 8-6157] synthesizing module 'par2ser' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/par2ser.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ODDR' [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:49681]
+	Parameter DDR_CLK_EDGE bound to: SAME_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'ODDR' (7#1) [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:49681]
+INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:46225]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (8#1) [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:46225]
+INFO: [Synth 8-6155] done synthesizing module 'par2ser' (9#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/par2ser.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_ctrl' (10#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/hdmi_ctrl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'top_hdmi' (11#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/top_hdmi.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ov5640_top' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/ov5640_top.v:3]
+	Parameter SLAVE_ADDR bound to: 7'b0111100 
+	Parameter BIT_CTRL bound to: 1'b1 
+	Parameter CLK_FREQ bound to: 26'b01011111010111100001000000 
+	Parameter I2C_FREQ bound to: 18'b111101000010010000 
+INFO: [Synth 8-6157] synthesizing module 'i2c_ctrl' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:3]
+	Parameter DEVICE_ADDR bound to: 7'b0111100 
+	Parameter SYS_CLK_FREQ bound to: 26'b01011111010111100001000000 
+	Parameter SCL_FREQ bound to: 18'b111101000010010000 
+	Parameter CNT_CLK_MAX bound to: 26'b00000000000000000000001100 
+	Parameter CNT_START_MAX bound to: 8'b01100100 
+	Parameter IDLE bound to: 4'b0000 
+	Parameter START_1 bound to: 4'b0001 
+	Parameter SEND_D_ADDR bound to: 4'b0010 
+	Parameter ACK_1 bound to: 4'b0011 
+	Parameter SEND_B_ADDR_H bound to: 4'b0100 
+	Parameter ACK_2 bound to: 4'b0101 
+	Parameter SEND_B_ADDR_L bound to: 4'b0110 
+	Parameter ACK_3 bound to: 4'b0111 
+	Parameter WR_DATA bound to: 4'b1000 
+	Parameter ACK_4 bound to: 4'b1001 
+	Parameter START_2 bound to: 4'b1010 
+	Parameter SEND_RD_ADDR bound to: 4'b1011 
+	Parameter ACK_5 bound to: 4'b1100 
+	Parameter RD_DATA bound to: 4'b1101 
+	Parameter N_ACK bound to: 4'b1110 
+	Parameter STOP bound to: 4'b1111 
+INFO: [Synth 8-226] default block is never used [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:117]
+INFO: [Synth 8-226] default block is never used [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:229]
+INFO: [Synth 8-226] default block is never used [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:253]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_ctrl' (12#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ov5640_cfg' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/ov5640_cfg.v:3]
+	Parameter IMAGE_WIDTH bound to: 16'b0000001010000000 
+	Parameter IMAGE_HEIGHT bound to: 16'b0000000111100000 
+	Parameter IMAGE_FLIP_EN bound to: 1'b0 
+	Parameter IMAGE_MIRROR_EN bound to: 1'b0 
+	Parameter IMAGE_FLIP_DAT bound to: 8'b01000111 
+	Parameter IMAGE_MIRROR_DAT bound to: 4'b0000 
+	Parameter REG_NUM bound to: 8'b11111011 
+	Parameter CNT_WAIT_MAX bound to: 15'b000110101000000 
+INFO: [Synth 8-6155] done synthesizing module 'ov5640_cfg' (13#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/ov5640_cfg.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ov5640_data' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/ov5640_data.v:3]
+	Parameter PIC_WAIT bound to: 4'b1010 
+INFO: [Synth 8-6155] done synthesizing module 'ov5640_data' (14#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/ov5640_data.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ov5640_top' (15#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/ov5640_top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'rgb2gray' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/rgb2gray/rgb2gray.v:22]
+	Parameter Pixel_Width bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rgb2gray' (16#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/rgb2gray/rgb2gray.v:22]
+INFO: [Synth 8-6157] synthesizing module 'strem_encode' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/strem_encode.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'strem_encode' (17#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/strem_encode.v:5]
+INFO: [Synth 8-6157] synthesizing module 'axi_ddr_top' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ddr_top.v:8]
+	Parameter DDR_WR_LEN bound to: 8 - type: integer 
+	Parameter DDR_RD_LEN bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'axi_ctrl' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ctrl.v:3]
+	Parameter DDR_WR_LEN bound to: 8 - type: integer 
+	Parameter DDR_RD_LEN bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'wr_fifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/wr_fifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'wr_fifo' (18#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/wr_fifo_stub.v:6]
+WARNING: [Synth 8-689] width (64) of port connection 'din' does not match port width (16) of module 'wr_fifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ctrl.v:295]
+INFO: [Synth 8-6157] synthesizing module 'rd_fifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/rd_fifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rd_fifo' (19#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/rd_fifo_stub.v:6]
+WARNING: [Synth 8-689] width (64) of port connection 'dout' does not match port width (16) of module 'rd_fifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ctrl.v:317]
+WARNING: [Synth 8-5788] Register wr_burst_addr_reg_reg in module axi_ctrl is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ctrl.v:104]
+WARNING: [Synth 8-5788] Register rd_burst_addr_reg_reg in module axi_ctrl is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ctrl.v:108]
+INFO: [Synth 8-6155] done synthesizing module 'axi_ctrl' (20#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ctrl.v:3]
+INFO: [Synth 8-6157] synthesizing module 'axi_master_write' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_master_write.v:3]
+	Parameter S_WR_IDLE bound to: 3'b000 
+	Parameter S_WA_WAIT bound to: 3'b001 
+	Parameter S_WA_START bound to: 3'b010 
+	Parameter S_WD_WAIT bound to: 3'b011 
+	Parameter S_WD_PROC bound to: 3'b100 
+	Parameter S_WR_WAIT bound to: 3'b101 
+	Parameter S_WR_DONE bound to: 3'b110 
+WARNING: [Synth 8-6014] Unused sequential element reg_w_last_reg was removed.  [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_master_write.v:103]
+INFO: [Synth 8-6155] done synthesizing module 'axi_master_write' (21#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_master_write.v:3]
+INFO: [Synth 8-6157] synthesizing module 'axi_master_read' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_master_read.v:3]
+	Parameter S_RD_IDLE bound to: 3'b000 
+	Parameter S_RA_WAIT bound to: 3'b001 
+	Parameter S_RA_START bound to: 3'b010 
+	Parameter S_RD_WAIT bound to: 3'b011 
+	Parameter S_RD_PROC bound to: 3'b100 
+	Parameter S_RD_DONE bound to: 3'b101 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_master_read.v:82]
+WARNING: [Synth 8-6014] Unused sequential element reg_rd_len_reg was removed.  [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_master_read.v:79]
+INFO: [Synth 8-6155] done synthesizing module 'axi_master_read' (22#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_master_read.v:3]
+INFO: [Synth 8-6157] synthesizing module 'axi_ddr' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/axi_ddr_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'axi_ddr' (23#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/axi_ddr_stub.v:5]
+WARNING: [Synth 8-689] width (4) of port connection 'ddr3_dm' does not match port width (2) of module 'axi_ddr' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ddr_top.v:270]
+WARNING: [Synth 8-689] width (32) of port connection 's_axi_awaddr' does not match port width (28) of module 'axi_ddr' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ddr_top.v:287]
+WARNING: [Synth 8-689] width (32) of port connection 's_axi_araddr' does not match port width (28) of module 'axi_ddr' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ddr_top.v:310]
+WARNING: [Synth 8-689] width (2) of port connection 's_axi_arlock' does not match port width (1) of module 'axi_ddr' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ddr_top.v:314]
+WARNING: [Synth 8-7023] instance 'u_axi_ddr' of module 'axi_ddr' has 67 connections declared, but only 66 given [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ddr_top.v:255]
+INFO: [Synth 8-6155] done synthesizing module 'axi_ddr_top' (24#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ddr_top.v:8]
+WARNING: [Synth 8-689] width (16) of port connection 'data_rd' does not match port width (64) of module 'axi_ddr_top' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:291]
+WARNING: [Synth 8-689] width (2) of port connection 'ddr3_dm' does not match port width (4) of module 'axi_ddr_top' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:316]
+INFO: [Synth 8-6157] synthesizing module 'eth_udp_send' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/eth_udp_send.v:1]
+	Parameter data_length bound to: 15'b000010100000010 
+INFO: [Synth 8-6157] synthesizing module 'eth_udp_tx_gmii' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/eth_udp_tx_gmii.v:2]
+	Parameter ETH_type bound to: 16'b0000100000000000 
+	Parameter IP_ver bound to: 4'b0100 
+	Parameter IP_hdr_len bound to: 4'b0101 
+	Parameter IP_tos bound to: 8'b00000000 
+	Parameter IP_id bound to: 16'b0000000000000000 
+	Parameter IP_rsv bound to: 1'b0 
+	Parameter IP_df bound to: 1'b0 
+	Parameter IP_mf bound to: 1'b0 
+	Parameter IP_frag_offset bound to: 13'b0000000000000 
+	Parameter IP_ttl bound to: 8'b01000000 
+	Parameter IP_protocol bound to: 8'b00010001 
+	Parameter IDLE bound to: 9'b000000001 
+	Parameter TX_PREAMBLE bound to: 9'b000000010 
+	Parameter TX_ETH_HEADER bound to: 9'b000000100 
+	Parameter TX_IP_HEADER bound to: 9'b000001000 
+	Parameter TX_UDP_HEADER bound to: 9'b000010000 
+	Parameter TX_DATA bound to: 9'b000100000 
+	Parameter TX_FILL_DATA bound to: 9'b001000000 
+	Parameter TX_CRC bound to: 9'b010000000 
+	Parameter TX_DLY bound to: 9'b100000000 
+INFO: [Synth 8-6157] synthesizing module 'ip_checksum' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/ip_checksum.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'ip_checksum' (25#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/ip_checksum.v:2]
+INFO: [Synth 8-6157] synthesizing module 'CRC32_d8' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/crc32_d8.v:2]
+	Parameter Tp bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'CRC32_d8' (26#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/crc32_d8.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'eth_udp_tx_gmii' (27#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/eth_udp_tx_gmii.v:2]
+INFO: [Synth 8-6157] synthesizing module 'eth_dcfifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/eth_dcfifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'eth_dcfifo' (28#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/eth_dcfifo_stub.v:6]
+WARNING: [Synth 8-689] width (14) of port connection 'rd_data_count' does not match port width (13) of module 'eth_dcfifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/eth_udp_send.v:101]
+INFO: [Synth 8-6157] synthesizing module 'gmii_to_rgmii' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/gmii_to_rgmii.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'gmii_to_rgmii' (29#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/gmii_to_rgmii.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'eth_udp_send' (30#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/eth_udp_send.v:1]
+INFO: [Synth 8-6157] synthesizing module 'fcnn_top' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/fcnn_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'buf_fifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/buf_fifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'buf_fifo' (31#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/buf_fifo_stub.v:6]
+WARNING: [Synth 8-689] width (1) of port connection 'rd_data_count' does not match port width (10) of module 'buf_fifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/fcnn_top.v:51]
+INFO: [Synth 8-6157] synthesizing module 'pretreatment' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/pretreatment.v:3]
+INFO: [Synth 8-6157] synthesizing module 'uint32_to_float' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/uint32_to_float_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'uint32_to_float' (32#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/uint32_to_float_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'float_div' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/float_div_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'float_div' (33#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/float_div_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'float_to_q6_10' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/float_to_q6_10_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'float_to_q6_10' (34#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/float_to_q6_10_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pretreatment' (35#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/pretreatment.v:3]
+INFO: [Synth 8-6157] synthesizing module 'MatrixMultiplier' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/MatrixMultiplier.v:1]
+	Parameter DATA_COUNT bound to: 785 - type: integer 
+	Parameter COLUMNS bound to: 20 - type: integer 
+	Parameter ROWS bound to: 785 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fcnn_fifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/fcnn_fifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fcnn_fifo' (36#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/fcnn_fifo_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mac_q6_10' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/mac_q6_10.v:2]
+INFO: [Synth 8-6157] synthesizing module 'mult' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/mult_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mult' (37#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/mult_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mac_q6_10' (38#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/mac_q6_10.v:2]
+INFO: [Synth 8-6157] synthesizing module 'mac_res_fifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/mac_res_fifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mac_res_fifo' (39#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/mac_res_fifo_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'neural_weights1_bram' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights_bram.v:1]
+INFO: [Synth 8-6157] synthesizing module 'weight1_bram_0' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight1_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'weight1_bram_0' (40#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight1_bram_0_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (14) of module 'weight1_bram_0' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights_bram.v:41]
+INFO: [Synth 8-6157] synthesizing module 'weight1_bram_1' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight1_bram_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'weight1_bram_1' (41#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight1_bram_1_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (14) of module 'weight1_bram_1' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights_bram.v:56]
+INFO: [Synth 8-6157] synthesizing module 'weight1_bram_2' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight1_bram_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'weight1_bram_2' (42#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight1_bram_2_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (14) of module 'weight1_bram_2' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights_bram.v:70]
+INFO: [Synth 8-6157] synthesizing module 'weight1_bram_3' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight1_bram_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'weight1_bram_3' (43#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight1_bram_3_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (14) of module 'weight1_bram_3' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights_bram.v:84]
+INFO: [Synth 8-6157] synthesizing module 'weight1_bram_4' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight1_bram_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'weight1_bram_4' (44#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight1_bram_4_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (14) of module 'weight1_bram_4' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights_bram.v:98]
+INFO: [Synth 8-6155] done synthesizing module 'neural_weights1_bram' (45#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights_bram.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MatrixMultiplier' (46#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/MatrixMultiplier.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Relu' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/Relu.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Relu' (47#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/Relu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MatrixMultiplier_100_10' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/MatrixMultiplier_100_10.v:2]
+	Parameter DATA_COUNT bound to: 100 - type: integer 
+	Parameter COLUMNS bound to: 10 - type: integer 
+	Parameter MAC_NUM bound to: 2 - type: integer 
+	Parameter MAC_COL bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'neural_weights2_bram' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights2_bram.v:1]
+INFO: [Synth 8-6157] synthesizing module 'weight2_bram_0' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight2_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'weight2_bram_0' (48#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight2_bram_0_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (9) of module 'weight2_bram_0' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights2_bram.v:13]
+INFO: [Synth 8-6157] synthesizing module 'weight2_bram_1' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight2_bram_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'weight2_bram_1' (49#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/weight2_bram_1_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (9) of module 'weight2_bram_1' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights2_bram.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'neural_weights2_bram' (50#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights2_bram.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MatrixMultiplier_100_10' (51#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/MatrixMultiplier_100_10.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Softmax' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/Softmax.v:6]
+INFO: [Synth 8-6157] synthesizing module 'fixed_to_float' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/fixed_to_float_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fixed_to_float' (52#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/fixed_to_float_stub.v:6]
+WARNING: [Synth 8-7023] instance 'fixed_to_float_inst' of module 'fixed_to_float' has 6 connections declared, but only 5 given [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/Softmax.v:21]
+INFO: [Synth 8-6157] synthesizing module 'exp' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/exp_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exp' (53#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/exp_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'float_accum' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/float_accum_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'float_accum' (54#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/float_accum_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'float_mult' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/float_mult_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'float_mult' (55#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/float_mult_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'float_to_int8' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/float_to_int8_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'float_to_int8' (56#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/.Xil/Vivado-27936-DESKTOP-I8GGJRG/realtime/float_to_int8_stub.v:6]
+WARNING: [Synth 8-6014] Unused sequential element buffer_ready_reg was removed.  [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/Softmax.v:61]
+WARNING: [Synth 8-5788] Register exp_buffer_reg in module Softmax is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-4767] Trying to implement RAM 'exp_buffer_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "exp_buffer_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'Softmax' (57#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/Softmax.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fcnn_top' (58#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/fcnn_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'max_prob_finder' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/max_prob_finder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'max_prob_finder' (59#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/max_prob_finder.v:1]
+INFO: [Synth 8-6157] synthesizing module 'seg_led' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/seg_led/seg_led.v:1]
+	Parameter SCAN_FREQ bound to: 1000 - type: integer 
+	Parameter CLK_FREQ bound to: 50000000 - type: integer 
+	Parameter SCAN_CYCLES bound to: 8333 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'bin_2_bcd' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/seg_led/bin_2_bcd.v:2]
+	Parameter W bound to: 20 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'bin_2_bcd' (60#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/seg_led/bin_2_bcd.v:2]
+WARNING: [Synth 8-689] width (24) of port connection 'bcd' does not match port width (26) of module 'bin_2_bcd' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/seg_led/seg_led.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'seg_led' (61#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/seg_led/seg_led.v:1]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'rgb2gray_inst'. This will prevent further optimization [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:212]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'strem_encode_inst'. This will prevent further optimization [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:245]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v-2.8 with 1st driver pin 'top:/eth_udp_send_inst/phy_rst_n' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:2]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v-2.8 with 2nd driver pin 'VCC' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:2]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v-2.8 is connected to at least one constant driver which has been preserved, other driver is ignored [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'top' (62#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:2]
+WARNING: [Synth 8-3917] design top has port led[0] driven by constant 0
+WARNING: [Synth 8-3917] design top has port phy_rst_n driven by constant 1
+WARNING: [Synth 8-3917] design top has port ov5640_pwdn driven by constant 0
+WARNING: [Synth 8-3917] design top has port ov5640_rst_n driven by constant 1
+WARNING: [Synth 8-3331] design neural_weights2_bram has unconnected port bram_addr[15]
+WARNING: [Synth 8-3331] design neural_weights2_bram has unconnected port bram_addr[14]
+WARNING: [Synth 8-3331] design neural_weights2_bram has unconnected port bram_addr[13]
+WARNING: [Synth 8-3331] design neural_weights2_bram has unconnected port bram_addr[12]
+WARNING: [Synth 8-3331] design neural_weights2_bram has unconnected port bram_addr[11]
+WARNING: [Synth 8-3331] design neural_weights2_bram has unconnected port bram_addr[10]
+WARNING: [Synth 8-3331] design neural_weights2_bram has unconnected port bram_addr[9]
+WARNING: [Synth 8-3331] design neural_weights1_bram has unconnected port bram_addr[15]
+WARNING: [Synth 8-3331] design neural_weights1_bram has unconnected port bram_addr[14]
+WARNING: [Synth 8-3331] design pretreatment has unconnected port rst_n
+WARNING: [Synth 8-3331] design pretreatment has unconnected port data_in[15]
+WARNING: [Synth 8-3331] design pretreatment has unconnected port data_in[14]
+WARNING: [Synth 8-3331] design pretreatment has unconnected port data_in[13]
+WARNING: [Synth 8-3331] design pretreatment has unconnected port data_in[12]
+WARNING: [Synth 8-3331] design pretreatment has unconnected port data_in[11]
+WARNING: [Synth 8-3331] design pretreatment has unconnected port data_in[10]
+WARNING: [Synth 8-3331] design pretreatment has unconnected port data_in[9]
+WARNING: [Synth 8-3331] design pretreatment has unconnected port data_in[8]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port M_AXI_RID[3]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port M_AXI_RID[2]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port M_AXI_RID[1]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port M_AXI_RID[0]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port M_AXI_RRESP[1]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port M_AXI_RRESP[0]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port RD_LEN[9]
+WARNING: [Synth 8-3331] design axi_master_read has unconnected port RD_LEN[8]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port M_AXI_BID[3]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port M_AXI_BID[2]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port M_AXI_BID[1]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port M_AXI_BID[0]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port M_AXI_BRESP[1]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port M_AXI_BRESP[0]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port WR_LEN[9]
+WARNING: [Synth 8-3331] design axi_master_write has unconnected port WR_LEN[8]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[63]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[62]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[61]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[60]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[59]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[58]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[57]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[56]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[55]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[54]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[53]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[52]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[51]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[50]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[49]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[48]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[47]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[46]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[45]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[44]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[43]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[42]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[41]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[40]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[39]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[38]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[37]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[36]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[35]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[34]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[33]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[32]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[31]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[30]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[29]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[28]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[27]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[26]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[25]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[24]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[23]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[22]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[21]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[20]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[19]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[18]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[17]
+WARNING: [Synth 8-3331] design axi_ctrl has unconnected port data_wr[16]
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port sys_clk
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[31]
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[30]
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[29]
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[28]
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[27]
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[26]
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[25]
+WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[24]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3498.277 ; gain = 80.859
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3518.180 ; gain = 100.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3518.180 ; gain = 100.762
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz_0_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.dcp' for cell 'clk_wiz_1_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr.dcp' for cell 'ddr_rw_inst/u_axi_ddr'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.dcp' for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.dcp' for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.dcp' for cell 'eth_udp_send_inst/eth_dcfifor_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo.dcp' for cell 'fcnn_top_inst/buf_fifo_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/uint32_to_float/uint32_to_float.dcp' for cell 'fcnn_top_inst/pretreatment_inst/uint32_to_float_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_div/float_div.dcp' for cell 'fcnn_top_inst/pretreatment_inst/float_div_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/float_to_q6_10/float_to_q6_10.dcp' for cell 'fcnn_top_inst/pretreatment_inst/float_to_q6_10_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo.dcp' for cell 'fcnn_top_inst/MatrixMultiplier_inst/fcnn_fifo_inst1'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.dcp' for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mult/mult.dcp' for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_q6_10_inst0/mult_inst_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_0/weight1_bram_0.dcp' for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_1/weight1_bram_1.dcp' for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_1'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_2/weight1_bram_2.dcp' for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_2'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_3/weight1_bram_3.dcp' for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_3'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/weight1_bram_4/weight1_bram_4.dcp' for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_4'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight2_bram_0/weight2_bram_0.dcp' for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/u_weights/weight2_bram_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight2_bram_1/weight2_bram_1.dcp' for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/u_weights/weight2_bram_1'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fixed_to_float/fixed_to_float.dcp' for cell 'fcnn_top_inst/Softmax_inst/fixed_to_float_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/exp/exp.dcp' for cell 'fcnn_top_inst/Softmax_inst/exp_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_accum/float_accum.dcp' for cell 'fcnn_top_inst/Softmax_inst/float_accum_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_mult/float_mult.dcp' for cell 'fcnn_top_inst/Softmax_inst/float_mult_inst'
+INFO: [Project 1-454] Reading design checkpoint 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_to_int8/float_to_int8.dcp' for cell 'fcnn_top_inst/Softmax_inst/float_to_int8_inst'
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.402 . Memory (MB): peak = 3539.188 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1877 Unisim elements for replacement
+WARNING: [Netlist 29-432] The IBUFG primitive 'IBUFG_inst' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
+WARNING: [Netlist 29-432] The IBUFG primitive 'IBUFG_inst1' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 13 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xdc] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xdc] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc:346]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc:353]
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_0_inst/inst'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz_0_inst/inst'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_0_inst/inst'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz_0_inst/inst'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1_board.xdc] for cell 'clk_wiz_1_inst/inst'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1_board.xdc] for cell 'clk_wiz_1_inst/inst'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc] for cell 'clk_wiz_1_inst/inst'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc] for cell 'clk_wiz_1_inst/inst'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/fcnn_fifo_inst1/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/fcnn_fifo_inst1/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/fcnn_fifo_inst2/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/fcnn_fifo_inst2/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/fcnn_fifo_inst1/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/fcnn_fifo_inst1/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/fcnn_fifo_inst2/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/fcnn_fifo_inst2/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/mac_res_fifo_inst0/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/mac_res_fifo_inst0/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/mac_res_fifo_inst1/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/mac_res_fifo_inst1/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst0/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst0/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst1/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst1/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst2/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst2/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst3/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst3/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst4/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst4/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo.xdc] for cell 'fcnn_top_inst/buf_fifo_inst/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo.xdc] for cell 'fcnn_top_inst/buf_fifo_inst/U0'
+Parsing XDC File [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
+Finished Parsing XDC File [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo_clocks.xdc] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo_clocks.xdc] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo_clocks.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'clk_wiz_0_inst/inst'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'clk_wiz_0_inst/inst'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1_late.xdc] for cell 'clk_wiz_1_inst/inst'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1_late.xdc] for cell 'clk_wiz_1_inst/inst'
+Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo_clocks.xdc] for cell 'fcnn_top_inst/buf_fifo_inst/U0'
+Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo_clocks.xdc] for cell 'fcnn_top_inst/buf_fifo_inst/U0'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'fcnn_top_inst/buf_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'fcnn_top_inst/buf_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'fcnn_top_inst/buf_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'fcnn_top_inst/buf_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Finished Sourcing Tcl File [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'eth_udp_send_inst/eth_dcfifor_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:15 . Memory (MB): peak = 3614.941 ; gain = 197.801
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xci' is already up-to-date
+[Mon May 12 22:27:45 2025] Launched synth_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/runme.log
+[Mon May 12 22:27:45 2025] Launched impl_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property -dict [list CONFIG.Fifo_Implementation {Independent_Clocks_Distributed_RAM} CONFIG.Performance_Options {First_Word_Fall_Through} CONFIG.Input_Data_Width {8} CONFIG.Output_Data_Width {8} CONFIG.Full_Threshold_Assert_Value {1023} CONFIG.Full_Threshold_Negate_Value {1022} CONFIG.Empty_Threshold_Assert_Value {4} CONFIG.Empty_Threshold_Negate_Value {5}] [get_ips buf_fifo]
+generate_target all [get_files  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'buf_fifo'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'buf_fifo'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'buf_fifo'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'buf_fifo'...
+catch { config_ip_cache -export [get_ips -all buf_fifo] }
+export_ip_user_files -of_objects [get_files D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo.xci] -no_script -sync -force -quiet
+reset_run buf_fifo_synth_1
+launch_runs -jobs 12 buf_fifo_synth_1
+[Mon May 12 22:36:20 2025] Launched buf_fifo_synth_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/buf_fifo_synth_1/runme.log
+export_simulation -of_objects [get_files D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo.xci] -directory D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.ip_user_files/sim_scripts -ip_user_files_dir D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.ip_user_files -ipstatic_source_dir D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.cache/compile_simlib/modelsim} {questa=D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.cache/compile_simlib/questa} {riviera=D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.cache/compile_simlib/riviera} {activehdl=D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xci' is already up-to-date
+[Mon May 12 22:42:53 2025] Launched synth_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/runme.log
+[Mon May 12 22:42:53 2025] Launched impl_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xci' is already up-to-date
+[Mon May 12 22:44:23 2025] Launched synth_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/runme.log
+[Mon May 12 22:44:23 2025] Launched impl_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property -dict [list CONFIG.Performance_Options {Standard_FIFO} CONFIG.Full_Threshold_Assert_Value {1021} CONFIG.Full_Threshold_Negate_Value {1020} CONFIG.Empty_Threshold_Assert_Value {2} CONFIG.Empty_Threshold_Negate_Value {3}] [get_ips buf_fifo]
+generate_target all [get_files  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'buf_fifo'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'buf_fifo'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'buf_fifo'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'buf_fifo'...
+catch { config_ip_cache -export [get_ips -all buf_fifo] }
+export_ip_user_files -of_objects [get_files D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo.xci] -no_script -sync -force -quiet
+reset_run buf_fifo_synth_1
+launch_runs -jobs 12 buf_fifo_synth_1
+[Mon May 12 22:50:13 2025] Launched buf_fifo_synth_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/buf_fifo_synth_1/runme.log
+export_simulation -of_objects [get_files D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo.xci] -directory D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.ip_user_files/sim_scripts -ip_user_files_dir D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.ip_user_files -ipstatic_source_dir D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.cache/compile_simlib/modelsim} {questa=D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.cache/compile_simlib/questa} {riviera=D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.cache/compile_simlib/riviera} {activehdl=D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xci' is already up-to-date
+[Mon May 12 22:50:27 2025] Launched buf_fifo_synth_1, synth_1...
+Run output will be captured here:
+buf_fifo_synth_1: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/buf_fifo_synth_1/runme.log
+synth_1: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/runme.log
+[Mon May 12 22:50:27 2025] Launched impl_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xci' is already up-to-date
+[Mon May 12 23:18:04 2025] Launched synth_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/runme.log
+[Mon May 12 23:18:04 2025] Launched impl_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xci' is already up-to-date
+[Mon May 12 23:46:55 2025] Launched synth_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/runme.log
+[Mon May 12 23:46:55 2025] Launched impl_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/runme.log
+add_files -norecurse D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/video_stream_process.v
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xci' is already up-to-date
+[Mon May 12 23:52:11 2025] Launched synth_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/runme.log
+[Mon May 12 23:52:11 2025] Launched impl_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xci' is already up-to-date
+[Tue May 13 00:19:51 2025] Launched synth_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/runme.log
+[Tue May 13 00:19:51 2025] Launched impl_1...
+Run output will be captured here: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210299847714
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299847714
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue May 13 15:32:41 2025...

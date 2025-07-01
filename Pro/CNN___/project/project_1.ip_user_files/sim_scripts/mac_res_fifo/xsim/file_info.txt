@@ -1,0 +1,2 @@
+mac_res_fifo.v,verilog,xil_defaultlib,../../../../../src/ip/mac_res_fifo/sim/mac_res_fifo.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

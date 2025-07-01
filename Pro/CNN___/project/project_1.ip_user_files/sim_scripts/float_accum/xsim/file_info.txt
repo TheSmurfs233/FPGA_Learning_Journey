@@ -1,0 +1,2 @@
+float_accum.vhd,vhdl,xil_defaultlib,../../../../../src/ip/float_accum/sim/float_accum.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

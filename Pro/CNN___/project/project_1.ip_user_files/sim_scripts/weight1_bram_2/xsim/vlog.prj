@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../../src/ip/weight1_bram_2/sim/weight1_bram_2.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
