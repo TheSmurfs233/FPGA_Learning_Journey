@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/SEG_LED___/src/bin_2_bcd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bin_2_bcd
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/SEG_LED___/src/seg_led.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seg_led
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/FPGA_Learning_Journey/Pro/SEG_LED___/src/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top

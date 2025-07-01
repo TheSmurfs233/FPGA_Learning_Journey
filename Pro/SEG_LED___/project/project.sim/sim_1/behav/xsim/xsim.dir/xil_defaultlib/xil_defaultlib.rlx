@@ -1,0 +1,8 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+D:/FPGA_Learning_Journey/Pro/SEG_LED___/project/project.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/SEG_LED___/src/bin_2_bcd.v,1745855580,verilog,,D:/FPGA_Learning_Journey/Pro/SEG_LED___/src/seg_led.v,,bin_2_bcd,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/SEG_LED___/src/seg_led.v,1745855631,verilog,,D:/FPGA_Learning_Journey/Pro/SEG_LED___/src/top.v,,seg_led,,,,,,,,
+D:/FPGA_Learning_Journey/Pro/SEG_LED___/src/top.v,1745855396,verilog,,,,top,,,,,,,,
