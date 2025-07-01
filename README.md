@@ -55,9 +55,7 @@ FPGA_Learning_Journey/Pro/HDMI
 
 #### 🌟 [明星项目：基于FPGA的实时图像处理系统设计与实现](./Pro/OV5640_DDR3_HDMI_UDP_sobel___)
 
-```
-[![实时边缘检测演示](Pro/HDMI/asset/edge_detection_demo.gif)](https://www.bilibili.com/video/)
-```
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114778068489091&bvid=BV1REgXzjESP&cid=30794909708&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 **🔥 技术亮点：**
 
