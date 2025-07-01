@@ -1,0 +1,199 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Apr 28 21:15:10 2025
+# Process ID: 2052
+# Current directory: D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24864 D:\FPGA_Learning_Journey\Pro\OV5640_DDR3_HDMI_UDP_sobel___v2\project\project_1.xpr
+# Log file: D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/vivado.log
+# Journal file: D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.xpr
+update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/project_1.runs/impl_1/ddr3_test.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+create_project project D:/FPGA_Learning_Journey/Pro/SEG_LED___/project -part xc7a35tfgg484-2
+set_property simulator_language Verilog [current_project]
+add_files -norecurse D:/FPGA_Learning_Journey/Pro/SEG_LED___/src/seg_led.v
+update_compile_order -fileset sources_1
+add_files -norecurse D:/FPGA_Learning_Journey/Pro/SEG_LED___/src/top.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+add_files -norecurse D:/FPGA_Learning_Journey/Pro/SEG_LED___/src/bin_2_bcd.v
+update_compile_order -fileset sources_1
+current_project project_1
+synth_design -rtl -name rtl_1
+current_project project
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list {seg_data[7]} {seg_data[6]} {seg_data[5]} {seg_data[4]} {seg_data[3]} {seg_data[2]} {seg_data[1]} {seg_data[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {seg_sel_n[5]} {seg_sel_n[4]} {seg_sel_n[3]} {seg_sel_n[2]} {seg_sel_n[1]} {seg_sel_n[0]}]]
+place_ports {seg_sel_n[0]} J15
+place_ports {seg_sel_n[1]} H17
+place_ports {seg_sel_n[2]} H13
+place_ports {seg_sel_n[3]} G17
+place_ports {seg_sel_n[4]} H18
+place_ports {seg_sel_n[5]} G18
+place_ports {seg_data[0]} H15
+place_ports {seg_data[1]} G16
+place_ports {seg_data[2]} L13
+place_ports {seg_data[3]} G15
+place_ports {seg_data[4]} K13
+place_ports {seg_data[5]} G13
+place_ports {seg_data[6]} H14
+place_ports {seg_data[7]} J14
+file mkdir D:/FPGA_Learning_Journey/Pro/SEG_LED___/project/project.srcs/constrs_1/new
+close [ open D:/FPGA_Learning_Journey/Pro/SEG_LED___/project/project.srcs/constrs_1/new/seg_led.xdc w ]
+add_files -fileset constrs_1 D:/FPGA_Learning_Journey/Pro/SEG_LED___/project/project.srcs/constrs_1/new/seg_led.xdc
+set_property target_constrs_file D:/FPGA_Learning_Journey/Pro/SEG_LED___/project/project.srcs/constrs_1/new/seg_led.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+launch_simulation
+source top.tcl
+current_wave_config {Untitled 1}
+add_wave {{/top/seg_led_inst}} 
+restart
+run all
+refresh_design
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+relaunch_sim
+current_project project_1
+close_project
+open_hw_manager
+relaunch_sim
+current_wave_config {Untitled 1}
+add_wave {{/top/seg_led_inst/bin_2_bcd_inst}} 
+current_wave_config {Untitled 1}
+add_wave {{/top/seg_led_inst/bin_2_bcd_inst}} 
+run all
+relaunch_sim
+close_sim
+launch_simulation
+reset_simulation
+launch_simulation
+close_hw_manager
+launch_simulation
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+launch_simulation
+source top.tcl
+current_wave_config {Untitled 5}
+add_wave {{/top/seg_led_inst/bin_2_bcd_inst}} 
+current_wave_config {Untitled 5}
+add_wave {{/top/seg_led_inst}} 
+run all
+restart
+run all
+relaunch_sim
+run all
+relaunch_sim
+run all
+relaunch_sim
+run all
+run all
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+refresh_design
+reset_run impl_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list clk]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list rst_n]]
+place_ports clk R4
+place_ports rst_n U2
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SEG_LED___/project/project.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SEG_LED___/project/project.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+add_files -norecurse D:/FPGA_Learning_Journey/Pro/SEG_LED___/src/key_debounce.v
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list key]]
+place_ports key T1
+save_constraints
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SEG_LED___/project/project.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SEG_LED___/project/project.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+reset_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+refresh_design
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA_Learning_Journey/Pro/SEG_LED___/project/project.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_sim

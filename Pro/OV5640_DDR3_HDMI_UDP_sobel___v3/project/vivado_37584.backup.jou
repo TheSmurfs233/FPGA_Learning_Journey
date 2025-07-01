@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Mon Jun 30 16:03:11 2025
+# Process ID         : 37584
+# Current directory  : D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent8268 D:\FPGA_Learning_Journey\Pro\OV5640_DDR3_HDMI_UDP_sobel___v2\project\project_1.xpr
+# Log file           : D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project/vivado.log
+# Journal file       : D:/FPGA_Learning_Journey/Pro/OV5640_DDR3_HDMI_UDP_sobel___v2/project\vivado.jou
+# Running On         : DESKTOP-I8GGJRG
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-12400F
+# CPU Frequency      : 2496 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 34179 MB
+# Swap memory        : 19327 MB
+# Total Virtual      : 53506 MB
+# Available Virtual  : 17998 MB
+#-----------------------------------------------------------
+start_gui
