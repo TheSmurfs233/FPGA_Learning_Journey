@@ -53,7 +53,7 @@ FPGA_Learning_Journey/Pro/HDMI
 
 ## 4.🚀快速导航
 
-#### 🌟 [明星项目：基于FPGA的实时图像处理系统设计与实现](./Pro/OV5640_DDR3_HDMI_UDP_sobel___v3)
+#### 🌟 [项目1：基于FPGA的实时图像处理系统设计与实现](./Pro/OV5640_DDR3_HDMI_UDP_sobel___v3)
 
 [![vedio_face](Pro/OV5640_DDR3_HDMI_UDP_sobel___v3/aseet/vedio_face.png)](https://www.bilibili.com/video/BV1REgXzjESP/?vd_source=e8f3da2949bc8fe3a5314746bc8d1f2d)
 
@@ -67,7 +67,7 @@ FPGA_Learning_Journey/Pro/HDMI
 > - 💡 **开发千兆以太网视频流传输协议**：基于UDP封装RGB565数据
 > - 📦 **上位机开发**：基于OpenCV构建跨平台视频处理终端，实时性能监控(带宽，帧率)
 
-#### 🌟 [明星项目：基于FPGA的MNIST手写数字识别硬件加速器设计与实现——卷积神经网络硬件并行化架构](./Pro/CNN___)
+#### 🌟 [项目2：基于FPGA的MNIST手写数字识别硬件加速器设计与实现——卷积神经网络硬件并行化架构](./Pro/CNN___)
 
 [![vedio_face](Pro/CNN___/aseet/vedio_face.png)](https://www.bilibili.com/video/BV1zS3szLEP7/?vd_source=e8f3da2949bc8fe3a5314746bc8d1f2d)
 
