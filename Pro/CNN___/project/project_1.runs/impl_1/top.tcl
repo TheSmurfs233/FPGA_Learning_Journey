@@ -70,38 +70,38 @@ set rc [catch {
   create_project -in_memory -part xc7a35tfgg484-2
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.cache/wt [current_project]
-  set_property parent.project_path D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.xpr [current_project]
-  set_property ip_output_repo D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.cache/wt [current_project]
+  set_property parent.project_path C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.xpr [current_project]
+  set_property ip_output_repo C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/top.dcp
-  read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xci
-  read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xci
-  read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xci
-  read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr.xci
-  read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-  read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci
-  read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_1/weight1_bram_1.xci
-  read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_2/weight1_bram_2.xci
-  read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_3/weight1_bram_3.xci
-  read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/weight1_bram_4/weight1_bram_4.xci
-  read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo.xci
-  read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fixed_to_float/fixed_to_float.xci
-  read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_div/float_div.xci
-  read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xci
-  read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_mult/float_mult.xci
-  read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_0/weight1_bram_0.xci
-  read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight2_bram_0/weight2_bram_0.xci
-  read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mult/mult.xci
-  read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight2_bram_1/weight2_bram_1.xci
-  read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_accum/float_accum.xci
-  read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/exp/exp.xci
-  read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_to_int8/float_to_int8.xci
-  read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/uint32_to_float/uint32_to_float.xci
-  read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/float_to_q6_10/float_to_q6_10.xci
-  read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo.xci
-  read_xdc D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/constrs_1/new/ddr3.xdc
+  add_files -quiet C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/top.dcp
+  read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr.xci
+  read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci
+  read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight1_bram_1/weight1_bram_1.xci
+  read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight1_bram_2/weight1_bram_2.xci
+  read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight1_bram_3/weight1_bram_3.xci
+  read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/weight1_bram_4/weight1_bram_4.xci
+  read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/fcnn_fifo/fcnn_fifo.xci
+  read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/fixed_to_float/fixed_to_float.xci
+  read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_div/float_div.xci
+  read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mac_res_fifo/mac_res_fifo.xci
+  read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_mult/float_mult.xci
+  read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight1_bram_0/weight1_bram_0.xci
+  read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight2_bram_0/weight2_bram_0.xci
+  read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mult/mult.xci
+  read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight2_bram_1/weight2_bram_1.xci
+  read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_accum/float_accum.xci
+  read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/exp/exp.xci
+  read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_to_int8/float_to_int8.xci
+  read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/uint32_to_float/uint32_to_float.xci
+  read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/float_to_q6_10/float_to_q6_10.xci
+  read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo.xci
+  read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xci
+  read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xci
+  read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xci
+  read_xdc C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/constrs_1/new/ddr3.xdc
   link_design -top top -part xc7a35tfgg484-2
   close_msg_db -file init_design.pb
 } RESULT]

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="fixed_to_float_synth_1" LaunchPart="xc7a35tfgg484-2" LaunchTime="1746376280">
+<GenRun Id="fixed_to_float_synth_1" LaunchPart="xc7a35tfgg484-2" LaunchTime="1751440531">
   <File Type="PA-TCL" Name="fixed_to_float.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="fixed_to_float_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="fixed_to_float_reports.tcl"/>
   <File Type="RDS-RDS" Name="fixed_to_float.vds"/>
   <File Type="RDS-UTIL" Name="fixed_to_float_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="fixed_to_float_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="fixed_to_float.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="fixed_to_float_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="fixed_to_float_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/fixed_to_float">
     <File Path="$PPRDIR/../src/ip/fixed_to_float/fixed_to_float.xci">
       <FileInfo>

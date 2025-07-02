@@ -2,12 +2,12 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Mon May  5 00:46:49 2025
-# Process ID: 21424
-# Current directory: D:/CNN/OV5640_DDR3_HDMI_UDP_gray___/project/project_1.runs/fcnn_fifo_synth_1
+# Start of session at: Wed Jul  2 15:15:37 2025
+# Process ID: 18852
+# Current directory: C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/fcnn_fifo_synth_1
 # Command line: vivado.exe -log fcnn_fifo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fcnn_fifo.tcl
-# Log file: D:/CNN/OV5640_DDR3_HDMI_UDP_gray___/project/project_1.runs/fcnn_fifo_synth_1/fcnn_fifo.vds
-# Journal file: D:/CNN/OV5640_DDR3_HDMI_UDP_gray___/project/project_1.runs/fcnn_fifo_synth_1\vivado.jou
+# Log file: C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/fcnn_fifo_synth_1/fcnn_fifo.vds
+# Journal file: C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/fcnn_fifo_synth_1\vivado.jou
 #-----------------------------------------------------------
 source fcnn_fifo.tcl -notrace
 Command: synth_design -top fcnn_fifo -part xc7a35tfgg484-2 -mode out_of_context
@@ -16,11 +16,11 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tfgg484-2
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 28360 
+INFO: Helper process launched with PID 1652 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 974.266 ; gain = 234.543
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 973.961 ; gain = 234.672
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'fcnn_fifo' [d:/CNN/OV5640_DDR3_HDMI_UDP_gray___/src/ip/fcnn_fifo/synth/fcnn_fifo.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'fcnn_fifo' [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/fcnn_fifo/synth/fcnn_fifo.vhd:72]
 	Parameter C_COMMON_CLOCK bound to: 1 - type: integer 
 	Parameter C_SELECT_XPM bound to: 0 - type: integer 
 	Parameter C_COUNT_TYPE bound to: 0 - type: integer 
@@ -223,8 +223,8 @@ INFO: [Synth 8-638] synthesizing module 'fcnn_fifo' [d:/CNN/OV5640_DDR3_HDMI_UDP
 	Parameter C_REG_SLICE_MODE_RACH bound to: 0 - type: integer 
 	Parameter C_REG_SLICE_MODE_RDCH bound to: 0 - type: integer 
 	Parameter C_REG_SLICE_MODE_AXIS bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'fifo_generator_v13_2_5' declared at 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray___/src/ip/fcnn_fifo/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd:38604' bound to instance 'U0' of component 'fifo_generator_v13_2_5' [d:/CNN/OV5640_DDR3_HDMI_UDP_gray___/src/ip/fcnn_fifo/synth/fcnn_fifo.vhd:540]
-INFO: [Synth 8-256] done synthesizing module 'fcnn_fifo' (19#1) [d:/CNN/OV5640_DDR3_HDMI_UDP_gray___/src/ip/fcnn_fifo/synth/fcnn_fifo.vhd:72]
+INFO: [Synth 8-3491] module 'fifo_generator_v13_2_5' declared at 'c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/fcnn_fifo/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd:38604' bound to instance 'U0' of component 'fifo_generator_v13_2_5' [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/fcnn_fifo/synth/fcnn_fifo.vhd:540]
+INFO: [Synth 8-256] done synthesizing module 'fcnn_fifo' (19#1) [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/fcnn_fifo/synth/fcnn_fifo.vhd:72]
 WARNING: [Synth 8-3331] design output_blk has unconnected port ALMOST_FULL_I
 WARNING: [Synth 8-3331] design output_blk has unconnected port PROG_FULL_I
 WARNING: [Synth 8-3331] design output_blk has unconnected port ALMOST_EMPTY_I
@@ -327,7 +327,7 @@ WARNING: [Synth 8-3331] design dc_ss has unconnected port WR_PNTR[9]
 WARNING: [Synth 8-3331] design dc_ss has unconnected port WR_PNTR[8]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1153.652 ; gain = 413.930
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1152.359 ; gain = 413.070
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -340,50 +340,50 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1153.652 ; gain = 413.930
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1152.359 ; gain = 413.070
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1153.652 ; gain = 413.930
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1152.359 ; gain = 413.070
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1153.652 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1152.359 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray___/src/ip/fcnn_fifo/fcnn_fifo_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray___/src/ip/fcnn_fifo/fcnn_fifo_ooc.xdc] for cell 'U0'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray___/src/ip/fcnn_fifo/fcnn_fifo.xdc] for cell 'U0'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray___/src/ip/fcnn_fifo/fcnn_fifo.xdc] for cell 'U0'
-Parsing XDC File [D:/CNN/OV5640_DDR3_HDMI_UDP_gray___/project/project_1.runs/fcnn_fifo_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [D:/CNN/OV5640_DDR3_HDMI_UDP_gray___/project/project_1.runs/fcnn_fifo_synth_1/dont_touch.xdc]
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/fcnn_fifo/fcnn_fifo_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/fcnn_fifo/fcnn_fifo_ooc.xdc] for cell 'U0'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/fcnn_fifo/fcnn_fifo.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/fcnn_fifo/fcnn_fifo.xdc] for cell 'U0'
+Parsing XDC File [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/fcnn_fifo_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/fcnn_fifo_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1153.652 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1232.137 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1153.652 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1232.164 ; gain = 0.027
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1153.652 ; gain = 413.930
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1232.164 ; gain = 492.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tfgg484-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1153.652 ; gain = 413.930
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1232.164 ; gain = 492.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for U0. (constraint file  D:/CNN/OV5640_DDR3_HDMI_UDP_gray___/project/project_1.runs/fcnn_fifo_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/fcnn_fifo_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1153.652 ; gain = 413.930
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1232.164 ; gain = 492.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1153.652 ; gain = 413.930
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 1232.164 ; gain = 492.875
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -465,7 +465,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1153.652 ; gain = 413.930
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 1232.164 ; gain = 492.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -492,13 +492,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1153.652 ; gain = 413.930
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 1232.164 ; gain = 492.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1153.652 ; gain = 413.930
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 1232.164 ; gain = 492.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -524,7 +524,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1153.652 ; gain = 413.930
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 1232.164 ; gain = 492.875
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -548,13 +548,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1154.797 ; gain = 415.074
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1232.164 ; gain = 492.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1154.797 ; gain = 415.074
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1232.164 ; gain = 492.875
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -573,25 +573,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1154.797 ; gain = 415.074
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1232.164 ; gain = 492.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1154.797 ; gain = 415.074
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1232.164 ; gain = 492.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1154.797 ; gain = 415.074
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1232.164 ; gain = 492.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1154.797 ; gain = 415.074
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1232.164 ; gain = 492.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -648,18 +648,18 @@ Report Instance Areas:
 |20    |          rstblk                     |reset_blk_ramfifo            |     1|
 +------+-------------------------------------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1154.797 ; gain = 415.074
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1232.164 ; gain = 492.875
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 476 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 1154.797 ; gain = 415.074
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1154.797 ; gain = 415.074
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:38 . Memory (MB): peak = 1232.164 ; gain = 413.070
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 1232.164 ; gain = 492.875
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1160.855 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1232.164 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 167 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1172.680 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1232.164 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 104 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 8 instances
@@ -669,19 +669,17 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 17 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1172.680 ; gain = 700.078
-INFO: [Common 17-600] The following parameters have non-default value.
-tcl.collectionResultDisplayLimit
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1172.680 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:48 . Memory (MB): peak = 1232.164 ; gain = 760.453
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1232.164 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray___/project/project_1.runs/fcnn_fifo_synth_1/fcnn_fifo.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/fcnn_fifo_synth_1/fcnn_fifo.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
 INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP fcnn_fifo, cache-ID = 08dba53743897678
 INFO: [Coretcl 2-1174] Renamed 19 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1172.680 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1232.164 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray___/project/project_1.runs/fcnn_fifo_synth_1/fcnn_fifo.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/fcnn_fifo_synth_1/fcnn_fifo.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file fcnn_fifo_utilization_synth.rpt -pb fcnn_fifo_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon May  5 00:47:22 2025...
+INFO: [Common 17-206] Exiting Vivado at Wed Jul  2 15:16:35 2025...

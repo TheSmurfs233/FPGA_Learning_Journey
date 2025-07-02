@@ -1,32 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tfgg484-2" LaunchTime="1747478549">
+<GenRun Id="impl_1" LaunchPart="xc7a35tfgg484-2" LaunchTime="1751441241">
+  <File Type="BITSTR-BMM" Name="top_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="top_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="top_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR" Name="top_power_routed.rpt"/>
   <File Type="PA-TCL" Name="top.tcl"/>
-  <File Type="BITSTR-BMM" Name="top_bd.bmm"/>
+  <File Type="OPT-TIMING" Name="top_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="top_opt.dcp"/>
   <File Type="ROUTE-PWR-SUM" Name="top_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
-  <File Type="OPT-DCP" Name="top_opt.dcp"/>
   <File Type="OPT-DRC" Name="top_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="top.hwdef"/>
   <File Type="PWROPT-DCP" Name="top_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="top_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="top_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="top_placed.dcp"/>
   <File Type="PLACE-IO" Name="top_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="top_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="top_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="top_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="top_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="top_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="top_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="top_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="top_postplace_pwropt.dcp"/>
   <File Type="BG-BIN" Name="top.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="top_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="top_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="top_drc_physopted.rpt"/>
   <File Type="BITSTR-MSK" Name="top.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="top_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="top_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="top_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="top_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="top_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="top_drc_routed.pb"/>
   <File Type="ROUTE-DRC-RPX" Name="top_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="top_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-MMI" Name="top.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="top_methodology_drc_routed.rpt"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="top_methodology_drc_routed.rpx"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="top_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="top_power_routed.rpx"/>
@@ -35,13 +46,20 @@
   <File Type="ROUTE-TIMINGSUMMARY" Name="top_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="top_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="top_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="top_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="top_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="top_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="top_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="top_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="top_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="top_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="top_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="top_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="top_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="top_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="top_bus_skew_postroute_physopted.pb"/>
   <File Type="BG-BIT" Name="top.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="top_bus_skew_postroute_physopted.rpx"/>
   <File Type="BITSTR-RBT" Name="top.rbt"/>
   <File Type="BITSTR-NKY" Name="top.nky"/>
   <File Type="PDI-FILE" Name="top.pdi"/>
@@ -50,6 +68,7 @@
   <File Type="RNPI_FILE" Name="top.rnpi"/>
   <File Type="NPI_FILE" Name="top.npi"/>
   <File Type="RBD_FILE" Name="top.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="top.ltx"/>
   <File Type="BITSTR-SYSDEF" Name="top.sysdef"/>
   <File Type="BG-BGN" Name="top.bgn"/>
@@ -58,27 +77,6 @@
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/ip/eth_dcfifo/eth_dcfifo.xci">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/ip/rd_fifo/rd_fifo.xci">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/ip/wr_fifo/wr_fifo.xci">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../src/reasoning/MatrixMultiplier.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -436,28 +434,30 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
-    <Step Id="write_device_image"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="axi_ddr"/>
+  <BlockFileSet Type="BlockSrcs" Name="weight1_bram_2"/>
   <BlockFileSet Type="BlockSrcs" Name="exp"/>
   <BlockFileSet Type="BlockSrcs" Name="clk_wiz_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="weight1_bram_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="axi_ddr"/>
   <BlockFileSet Type="BlockSrcs" Name="weight1_bram_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="weight1_bram_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
   <BlockFileSet Type="BlockSrcs" Name="fcnn_fifo"/>
+  <BlockFileSet Type="BlockSrcs" Name="weight1_bram_3"/>
   <BlockFileSet Type="BlockSrcs" Name="weight1_bram_4"/>
   <BlockFileSet Type="BlockSrcs" Name="fixed_to_float"/>
   <BlockFileSet Type="BlockSrcs" Name="float_div"/>
   <BlockFileSet Type="BlockSrcs" Name="mac_res_fifo"/>
   <BlockFileSet Type="BlockSrcs" Name="float_mult"/>
-  <BlockFileSet Type="BlockSrcs" Name="weight1_bram_0"/>
   <BlockFileSet Type="BlockSrcs" Name="weight2_bram_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="weight1_bram_0"/>
   <BlockFileSet Type="BlockSrcs" Name="weight2_bram_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mult"/>
   <BlockFileSet Type="BlockSrcs" Name="float_accum"/>
   <BlockFileSet Type="BlockSrcs" Name="float_to_int8"/>
   <BlockFileSet Type="BlockSrcs" Name="uint32_to_float"/>
-  <BlockFileSet Type="BlockSrcs" Name="float_to_q6_10"/>
   <BlockFileSet Type="BlockSrcs" Name="buf_fifo"/>
+  <BlockFileSet Type="BlockSrcs" Name="float_to_q6_10"/>
+  <BlockFileSet Type="BlockSrcs" Name="wr_fifo"/>
+  <BlockFileSet Type="BlockSrcs" Name="rd_fifo"/>
+  <BlockFileSet Type="BlockSrcs" Name="eth_dcfifo"/>
 </GenRun>

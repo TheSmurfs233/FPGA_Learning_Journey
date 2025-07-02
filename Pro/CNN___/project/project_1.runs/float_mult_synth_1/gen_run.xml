@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="float_mult_synth_1" LaunchPart="xc7a35tfgg484-2" LaunchTime="1746376280">
+<GenRun Id="float_mult_synth_1" LaunchPart="xc7a35tfgg484-2" LaunchTime="1751440531">
   <File Type="PA-TCL" Name="float_mult.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="float_mult_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="float_mult_reports.tcl"/>
   <File Type="RDS-RDS" Name="float_mult.vds"/>
   <File Type="RDS-UTIL" Name="float_mult_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="float_mult_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="float_mult.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="float_mult_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="float_mult_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/float_mult">
     <File Path="$PPRDIR/../src/ip/float_mult/float_mult.xci">
       <FileInfo>

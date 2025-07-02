@@ -2,11 +2,11 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Mon May  5 00:12:58 2025
-# Process ID: 6452
-# Current directory: D:/CNN/OV5640_DDR3_HDMI_UDP_gray___/project/project_1.runs/axi_ddr_synth_1
+# Start of session at: Wed Jul  2 15:15:37 2025
+# Process ID: 10108
+# Current directory: C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/axi_ddr_synth_1
 # Command line: vivado.exe -log axi_ddr.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source axi_ddr.tcl
-# Log file: D:/CNN/OV5640_DDR3_HDMI_UDP_gray___/project/project_1.runs/axi_ddr_synth_1/axi_ddr.vds
-# Journal file: D:/CNN/OV5640_DDR3_HDMI_UDP_gray___/project/project_1.runs/axi_ddr_synth_1\vivado.jou
+# Log file: C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/axi_ddr_synth_1/axi_ddr.vds
+# Journal file: C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/axi_ddr_synth_1\vivado.jou
 #-----------------------------------------------------------
 source axi_ddr.tcl -notrace

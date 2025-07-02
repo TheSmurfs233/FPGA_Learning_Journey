@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/CNN/OV5640_DDR3_HDMI_UDP_gray___/project/project_1.runs/float_to_q6_10_synth_1'
+HD_PWD='C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/float_to_q6_10_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

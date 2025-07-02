@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:d:/CNN/OV5640_DDR3_HDMI_UDP_gray___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc rfile:../../../project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc id:1 order:EARLY} [current_design]
+set_property SRC_FILE_INFO {cfile:c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc rfile:../../../project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc id:1 order:EARLY} [current_design]
 set_property src_info {type:XDC file:1 line:41 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN H4 [get_ports {ddr3_dq[0]}]
 set_property src_info {type:XDC file:1 line:47 export:INPUT save:INPUT read:READ} [current_design]

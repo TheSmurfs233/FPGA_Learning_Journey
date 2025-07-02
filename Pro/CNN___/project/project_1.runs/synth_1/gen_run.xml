@@ -1,34 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tfgg484-2" LaunchTime="1747478549">
+<GenRun Id="synth_1" LaunchPart="xc7a35tfgg484-2" LaunchTime="1751441241">
   <File Type="PA-TCL" Name="top.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
   <File Type="RDS-RDS" Name="top.vds"/>
   <File Type="RDS-UTIL" Name="top_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="top_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="top.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/ip/eth_dcfifo/eth_dcfifo.xci">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/ip/rd_fifo/rd_fifo.xci">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/ip/wr_fifo/wr_fifo.xci">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../src/reasoning/MatrixMultiplier.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -379,26 +361,29 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="axi_ddr"/>
+  <BlockFileSet Type="BlockSrcs" Name="weight1_bram_2"/>
   <BlockFileSet Type="BlockSrcs" Name="exp"/>
   <BlockFileSet Type="BlockSrcs" Name="clk_wiz_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="weight1_bram_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="axi_ddr"/>
   <BlockFileSet Type="BlockSrcs" Name="weight1_bram_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="weight1_bram_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
   <BlockFileSet Type="BlockSrcs" Name="fcnn_fifo"/>
+  <BlockFileSet Type="BlockSrcs" Name="weight1_bram_3"/>
   <BlockFileSet Type="BlockSrcs" Name="weight1_bram_4"/>
   <BlockFileSet Type="BlockSrcs" Name="fixed_to_float"/>
   <BlockFileSet Type="BlockSrcs" Name="float_div"/>
   <BlockFileSet Type="BlockSrcs" Name="mac_res_fifo"/>
   <BlockFileSet Type="BlockSrcs" Name="float_mult"/>
-  <BlockFileSet Type="BlockSrcs" Name="weight1_bram_0"/>
   <BlockFileSet Type="BlockSrcs" Name="weight2_bram_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="weight1_bram_0"/>
   <BlockFileSet Type="BlockSrcs" Name="weight2_bram_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mult"/>
   <BlockFileSet Type="BlockSrcs" Name="float_accum"/>
   <BlockFileSet Type="BlockSrcs" Name="float_to_int8"/>
   <BlockFileSet Type="BlockSrcs" Name="uint32_to_float"/>
-  <BlockFileSet Type="BlockSrcs" Name="float_to_q6_10"/>
   <BlockFileSet Type="BlockSrcs" Name="buf_fifo"/>
+  <BlockFileSet Type="BlockSrcs" Name="float_to_q6_10"/>
+  <BlockFileSet Type="BlockSrcs" Name="wr_fifo"/>
+  <BlockFileSet Type="BlockSrcs" Name="rd_fifo"/>
+  <BlockFileSet Type="BlockSrcs" Name="eth_dcfifo"/>
 </GenRun>

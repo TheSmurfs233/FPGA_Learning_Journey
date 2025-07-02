@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="float_to_q6_10_synth_1" LaunchPart="xc7a35tfgg484-2" LaunchTime="1746464405">
+<GenRun Id="float_to_q6_10_synth_1" LaunchPart="xc7a35tfgg484-2" LaunchTime="1751440533">
   <File Type="PA-TCL" Name="float_to_q6_10.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="float_to_q6_10_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="float_to_q6_10_reports.tcl"/>
   <File Type="RDS-RDS" Name="float_to_q6_10.vds"/>
   <File Type="RDS-UTIL" Name="float_to_q6_10_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="float_to_q6_10_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="float_to_q6_10.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="float_to_q6_10_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="float_to_q6_10_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/float_to_q6_10">
     <File Path="$PSRCDIR/sources_1/ip/float_to_q6_10/float_to_q6_10.xci">
       <FileInfo>

@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Sat May 10 17:15:35 2025
+// Date        : Wed Jul  2 15:16:21 2025
 // Host        : DESKTOP-I8GGJRG running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v2___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1_sim_netlist.v
+//               C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1_sim_netlist.v
 // Design      : clk_wiz_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.

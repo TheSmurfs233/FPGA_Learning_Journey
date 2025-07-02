@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Mon May  5 00:13:56 2025
+// Date        : Wed Jul  2 15:18:40 2025
 // Host        : DESKTOP-I8GGJRG running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top eth_dcfifo -prefix
-//               eth_dcfifo_ eth_dcfifo_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo_sim_netlist.v
 // Design      : eth_dcfifo
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -608,8 +608,8 @@ module eth_dcfifo
 endmodule
 
 (* DEF_VAL = "1'b0" *) (* DEST_SYNC_FF = "2" *) (* INIT_SYNC_FF = "0" *) 
-(* INV_DEF_VAL = "1'b1" *) (* RST_ACTIVE_HIGH = "1" *) (* VERSION = "0" *) 
-(* XPM_MODULE = "TRUE" *) (* xpm_cdc = "ASYNC_RST" *) 
+(* INV_DEF_VAL = "1'b1" *) (* ORIG_REF_NAME = "xpm_cdc_async_rst" *) (* RST_ACTIVE_HIGH = "1" *) 
+(* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) (* xpm_cdc = "ASYNC_RST" *) 
 module eth_dcfifo_xpm_cdc_async_rst
    (src_arst,
     dest_clk,
@@ -687,9 +687,10 @@ module eth_dcfifo_xpm_cdc_async_rst__1
         .Q(arststages_ff[1]));
 endmodule
 
-(* DEST_SYNC_FF = "2" *) (* INIT_SYNC_FF = "0" *) (* REG_OUTPUT = "1" *) 
-(* SIM_ASSERT_CHK = "0" *) (* SIM_LOSSLESS_GRAY_CHK = "0" *) (* VERSION = "0" *) 
-(* WIDTH = "12" *) (* XPM_MODULE = "TRUE" *) (* xpm_cdc = "GRAY" *) 
+(* DEST_SYNC_FF = "2" *) (* INIT_SYNC_FF = "0" *) (* ORIG_REF_NAME = "xpm_cdc_gray" *) 
+(* REG_OUTPUT = "1" *) (* SIM_ASSERT_CHK = "0" *) (* SIM_LOSSLESS_GRAY_CHK = "0" *) 
+(* VERSION = "0" *) (* WIDTH = "12" *) (* XPM_MODULE = "TRUE" *) 
+(* xpm_cdc = "GRAY" *) 
 module eth_dcfifo_xpm_cdc_gray
    (src_clk,
     src_in_bin,
@@ -1827,9 +1828,9 @@ module eth_dcfifo_xpm_cdc_gray__parameterized1
         .R(1'b0));
 endmodule
 
-(* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* SIM_ASSERT_CHK = "0" *) 
-(* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) 
-(* xpm_cdc = "SINGLE" *) 
+(* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* ORIG_REF_NAME = "xpm_cdc_single" *) 
+(* SIM_ASSERT_CHK = "0" *) (* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) 
+(* XPM_MODULE = "TRUE" *) (* xpm_cdc = "SINGLE" *) 
 module eth_dcfifo_xpm_cdc_single
    (src_clk,
     src_in,
@@ -1939,6 +1940,7 @@ module eth_dcfifo_xpm_cdc_single__2
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "bindec" *) 
 module eth_dcfifo_bindec
    (ena_array,
     Q,
@@ -2014,6 +2016,7 @@ module eth_dcfifo_bindec_0
         .O(enb_array[0]));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module eth_dcfifo_blk_mem_gen_generic_cstr
    (\no_softecc_sel_reg.ce_pri.sel_pipe_reg[0] ,
     D,
@@ -2200,6 +2203,7 @@ module eth_dcfifo_blk_mem_gen_mux__parameterized0
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module eth_dcfifo_blk_mem_gen_prim_width
    (doutb_array,
     wr_clk,
@@ -2293,6 +2297,7 @@ module eth_dcfifo_blk_mem_gen_prim_width__parameterized0
         .wr_clk(wr_clk));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
 module eth_dcfifo_blk_mem_gen_prim_wrapper
    (doutb_array,
     wr_clk,
@@ -2806,6 +2811,7 @@ module eth_dcfifo_blk_mem_gen_prim_wrapper__parameterized0
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module eth_dcfifo_blk_mem_gen_top
    (\no_softecc_sel_reg.ce_pri.sel_pipe_reg[0] ,
     D,
@@ -2872,6 +2878,7 @@ module eth_dcfifo_blk_mem_gen_top
         .wr_en(wr_en));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_v8_4_4" *) 
 module eth_dcfifo_blk_mem_gen_v8_4_4
    (\no_softecc_sel_reg.ce_pri.sel_pipe_reg[0] ,
     D,
@@ -2938,6 +2945,7 @@ module eth_dcfifo_blk_mem_gen_v8_4_4
         .wr_en(wr_en));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_v8_4_4_synth" *) 
 module eth_dcfifo_blk_mem_gen_v8_4_4_synth
    (\no_softecc_sel_reg.ce_pri.sel_pipe_reg[0] ,
     D,
@@ -3004,6 +3012,7 @@ module eth_dcfifo_blk_mem_gen_v8_4_4_synth
         .wr_en(wr_en));
 endmodule
 
+(* ORIG_REF_NAME = "clk_x_pntrs" *) 
 module eth_dcfifo_clk_x_pntrs
    (S,
     WR_PNTR_RD,
@@ -3146,6 +3155,7 @@ module eth_dcfifo_clk_x_pntrs
         .src_in_bin(\src_gray_ff_reg[11] ));
 endmodule
 
+(* ORIG_REF_NAME = "compare" *) 
 module eth_dcfifo_compare
    (comp0,
     ram_empty_fb_i_reg,
@@ -3530,6 +3540,7 @@ module eth_dcfifo_compare__parameterized0_1
         .O(v1_reg[5]));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_ramfifo" *) 
 module eth_dcfifo_fifo_generator_ramfifo
    (wr_rst_busy,
     \ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.sckt_rd_rst_ic_reg ,
@@ -3668,6 +3679,7 @@ module eth_dcfifo_fifo_generator_ramfifo
         .wr_rst_busy(wr_rst_busy));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_top" *) 
 module eth_dcfifo_fifo_generator_top
    (wr_rst_busy,
     \ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.sckt_rd_rst_ic_reg ,
@@ -3793,7 +3805,7 @@ endmodule
 (* C_WR_DEPTH_WRCH = "16" *) (* C_WR_FREQ = "1" *) (* C_WR_PNTR_WIDTH = "12" *) 
 (* C_WR_PNTR_WIDTH_AXIS = "10" *) (* C_WR_PNTR_WIDTH_RACH = "4" *) (* C_WR_PNTR_WIDTH_RDCH = "10" *) 
 (* C_WR_PNTR_WIDTH_WACH = "4" *) (* C_WR_PNTR_WIDTH_WDCH = "10" *) (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
-(* C_WR_RESPONSE_LATENCY = "1" *) 
+(* C_WR_RESPONSE_LATENCY = "1" *) (* ORIG_REF_NAME = "fifo_generator_v13_2_5" *) 
 module eth_dcfifo_fifo_generator_v13_2_5
    (backup,
     backup_marker,
@@ -4799,6 +4811,7 @@ module eth_dcfifo_fifo_generator_v13_2_5
         .wr_rst_busy(wr_rst_busy));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_v13_2_5_synth" *) 
 module eth_dcfifo_fifo_generator_v13_2_5_synth
    (wr_rst_busy,
     \ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.sckt_rd_rst_ic_reg ,
@@ -4857,6 +4870,7 @@ module eth_dcfifo_fifo_generator_v13_2_5_synth
         .wr_rst_busy(wr_rst_busy));
 endmodule
 
+(* ORIG_REF_NAME = "memory" *) 
 module eth_dcfifo_memory
    (sel_pipe,
     dout,
@@ -4991,6 +5005,7 @@ module eth_dcfifo_memory
         .R(\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram ));
 endmodule
 
+(* ORIG_REF_NAME = "rd_bin_cntr" *) 
 module eth_dcfifo_rd_bin_cntr
    (D,
     p_0_in,
@@ -5306,6 +5321,7 @@ module eth_dcfifo_rd_bin_cntr
         .O(\gc0.count_d1_reg[12]_0 ));
 endmodule
 
+(* ORIG_REF_NAME = "rd_dc_as" *) 
 module eth_dcfifo_rd_dc_as
    (rd_data_count,
     p_0_in,
@@ -5476,6 +5492,7 @@ module eth_dcfifo_rd_dc_as
         .Q(rd_data_count[9]));
 endmodule
 
+(* ORIG_REF_NAME = "rd_fwft" *) 
 module eth_dcfifo_rd_fwft
    (out,
     empty,
@@ -5659,6 +5676,7 @@ module eth_dcfifo_rd_fwft
         .Q(user_valid));
 endmodule
 
+(* ORIG_REF_NAME = "rd_logic" *) 
 module eth_dcfifo_rd_logic
    (out,
     \gpregsm1.curr_fwft_state_reg[1] ,
@@ -5754,6 +5772,7 @@ module eth_dcfifo_rd_logic
         .sel_pipe(sel_pipe));
 endmodule
 
+(* ORIG_REF_NAME = "rd_status_flags_as" *) 
 module eth_dcfifo_rd_status_flags_as
    (out,
     ram_empty_fb_i_reg_0,
@@ -5832,6 +5851,7 @@ module eth_dcfifo_rd_status_flags_as
         .Q(ram_empty_i));
 endmodule
 
+(* ORIG_REF_NAME = "reset_blk_ramfifo" *) 
 module eth_dcfifo_reset_blk_ramfifo
    (AR,
     \ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.sckt_rd_rst_ic_reg_0 ,
@@ -6129,6 +6149,7 @@ module eth_dcfifo_reset_blk_ramfifo
         .src_arst(rst));
 endmodule
 
+(* ORIG_REF_NAME = "wr_bin_cntr" *) 
 module eth_dcfifo_wr_bin_cntr
    (D,
     S,
@@ -6575,6 +6596,7 @@ module eth_dcfifo_wr_bin_cntr
         .O(S[0]));
 endmodule
 
+(* ORIG_REF_NAME = "wr_dc_as" *) 
 module eth_dcfifo_wr_dc_as
    (wr_data_count,
     Q,
@@ -6742,6 +6764,7 @@ module eth_dcfifo_wr_dc_as
         .Q(wr_data_count[9]));
 endmodule
 
+(* ORIG_REF_NAME = "wr_logic" *) 
 module eth_dcfifo_wr_logic
    (full,
     out,
@@ -6824,6 +6847,7 @@ module eth_dcfifo_wr_logic
         .wr_clk(wr_clk));
 endmodule
 
+(* ORIG_REF_NAME = "wr_status_flags_as" *) 
 module eth_dcfifo_wr_status_flags_as
    (full,
     out,

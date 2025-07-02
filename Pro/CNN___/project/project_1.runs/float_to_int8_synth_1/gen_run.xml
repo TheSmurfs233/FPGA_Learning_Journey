@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="float_to_int8_synth_1" LaunchPart="xc7a35tfgg484-2" LaunchTime="1746376280">
+<GenRun Id="float_to_int8_synth_1" LaunchPart="xc7a35tfgg484-2" LaunchTime="1751440533">
   <File Type="PA-TCL" Name="float_to_int8.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="float_to_int8_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="float_to_int8_reports.tcl"/>
   <File Type="RDS-RDS" Name="float_to_int8.vds"/>
   <File Type="RDS-UTIL" Name="float_to_int8_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="float_to_int8_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="float_to_int8.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="float_to_int8_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="float_to_int8_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/float_to_int8">
     <File Path="$PPRDIR/../src/ip/float_to_int8/float_to_int8.xci">
       <FileInfo>

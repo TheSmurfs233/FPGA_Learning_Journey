@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 3
 set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tfgg484-2
 
@@ -24,12 +25,12 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.cache/wt [current_project]
-set_property parent.project_path D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.xpr [current_project]
+set_property webtalk.parent_dir C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.cache/wt [current_project]
+set_property parent.project_path C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.cache/ip [current_project]
+set_property ip_output_repo c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 add_files D:/CNN/rtl/weight1_00.coe
 add_files D:/CNN/rtl/weight1_01.coe
@@ -40,133 +41,133 @@ add_files D:/CNN/rtl/weight2_00.coe
 add_files D:/CNN/rtl/weight2_01.coe
 add_files D:/CNN/rtl/num2.coe
 read_verilog -library xil_defaultlib {
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/MatrixMultiplier.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/MatrixMultiplier_100_10.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/Relu.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/Softmax.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ctrl.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ddr_top.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_master_read.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_master_write.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/seg_led/bin_2_bcd.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/crc32_d8.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/digit_rom_64x32.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/encode.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/eth_udp_send.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/eth_udp_tx_gmii.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/fcnn_top.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/front_show.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/gmii_to_rgmii.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/hdmi_ctrl.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/ip_checksum.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/mac_q6_10.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/max_prob_finder.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights2_bram.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights_bram.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/ov5640_cfg.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/ov5640_data.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/ov5640_top.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/par2ser.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/pretreatment.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/rgb2gray/rgb2gray.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/seg_led/seg_led.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/strem_encode.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/top_hdmi.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/vga_timing_ctrl.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/video_stream_process.v
-  D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/MatrixMultiplier.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/MatrixMultiplier_100_10.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/Relu.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/Softmax.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/axi_ddr3_rw/axi_ctrl.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/axi_ddr3_rw/axi_ddr_top.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/axi_ddr3_rw/axi_master_read.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/axi_ddr3_rw/axi_master_write.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/seg_led/bin_2_bcd.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/udp_tx/crc32_d8.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/digit_rom_64x32.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/encode.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/udp_tx/eth_udp_send.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/udp_tx/eth_udp_tx_gmii.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/fcnn_top.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/front_show.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/udp_tx/gmii_to_rgmii.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/hdmi_ctrl.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/ov5640/i2c_ctrl.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/udp_tx/ip_checksum.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/mac_q6_10.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/max_prob_finder.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/neural_weights2_bram.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/neural_weights_bram.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/ov5640/ov5640_cfg.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/ov5640/ov5640_data.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/ov5640/ov5640_top.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/par2ser.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/pretreatment.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/rgb2gray/rgb2gray.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/seg_led/seg_led.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/strem_encode.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/top_hdmi.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/vga_timing_ctrl.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/video_stream_process.v
+  C:/FPGA_Learning_Journey/Pro/CNN___/src/top.v
 }
-read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xci
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xdc]
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo_ooc.xdc]
+read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr.xci
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc]
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr_ooc.xdc]
 
-read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xci
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xdc]
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo_ooc.xdc]
+read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc]
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
 
-read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xci
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xdc]
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo_ooc.xdc]
+read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc]
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1_late.xdc]
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1_ooc.xdc]
 
-read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr.xci
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr.xdc]
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/user_design/constraints/axi_ddr_ooc.xdc]
+read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight1_bram_1/weight1_bram_1.xci
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight1_bram_1/weight1_bram_1_ooc.xdc]
 
-read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc]
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight1_bram_2/weight1_bram_2.xci
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight1_bram_2/weight1_bram_2_ooc.xdc]
 
-read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1_board.xdc]
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xdc]
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1_late.xdc]
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1_ooc.xdc]
+read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight1_bram_3/weight1_bram_3.xci
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight1_bram_3/weight1_bram_3_ooc.xdc]
 
-read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_1/weight1_bram_1.xci
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_1/weight1_bram_1_ooc.xdc]
+read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/weight1_bram_4/weight1_bram_4.xci
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/weight1_bram_4/weight1_bram_4_ooc.xdc]
 
-read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_2/weight1_bram_2.xci
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_2/weight1_bram_2_ooc.xdc]
+read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/fcnn_fifo/fcnn_fifo.xci
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/fcnn_fifo/fcnn_fifo.xdc]
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/fcnn_fifo/fcnn_fifo_ooc.xdc]
 
-read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_3/weight1_bram_3.xci
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_3/weight1_bram_3_ooc.xdc]
+read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/fixed_to_float/fixed_to_float.xci
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/fixed_to_float/fixed_to_float_ooc.xdc]
 
-read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/weight1_bram_4/weight1_bram_4.xci
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/weight1_bram_4/weight1_bram_4_ooc.xdc]
+read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_div/float_div.xci
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_div/float_div_ooc.xdc]
 
-read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo.xci
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo.xdc]
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo_ooc.xdc]
+read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mac_res_fifo/mac_res_fifo.xci
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mac_res_fifo/mac_res_fifo.xdc]
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mac_res_fifo/mac_res_fifo_ooc.xdc]
 
-read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fixed_to_float/fixed_to_float.xci
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fixed_to_float/fixed_to_float_ooc.xdc]
+read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_mult/float_mult.xci
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_mult/float_mult_ooc.xdc]
 
-read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_div/float_div.xci
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_div/float_div_ooc.xdc]
+read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight1_bram_0/weight1_bram_0.xci
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight1_bram_0/weight1_bram_0_ooc.xdc]
 
-read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xci
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo.xdc]
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo_ooc.xdc]
+read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight2_bram_0/weight2_bram_0.xci
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight2_bram_0/weight2_bram_0_ooc.xdc]
 
-read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_mult/float_mult.xci
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_mult/float_mult_ooc.xdc]
+read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mult/mult.xci
 
-read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_0/weight1_bram_0.xci
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_0/weight1_bram_0_ooc.xdc]
+read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight2_bram_1/weight2_bram_1.xci
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight2_bram_1/weight2_bram_1_ooc.xdc]
 
-read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight2_bram_0/weight2_bram_0.xci
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight2_bram_0/weight2_bram_0_ooc.xdc]
+read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_accum/float_accum.xci
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_accum/float_accum_ooc.xdc]
 
-read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mult/mult.xci
+read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/exp/exp.xci
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/exp/exp_ooc.xdc]
 
-read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight2_bram_1/weight2_bram_1.xci
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight2_bram_1/weight2_bram_1_ooc.xdc]
+read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_to_int8/float_to_int8.xci
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_to_int8/float_to_int8_ooc.xdc]
 
-read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_accum/float_accum.xci
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_accum/float_accum_ooc.xdc]
+read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/uint32_to_float/uint32_to_float.xci
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/uint32_to_float/uint32_to_float_ooc.xdc]
 
-read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/exp/exp.xci
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/exp/exp_ooc.xdc]
+read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/float_to_q6_10/float_to_q6_10.xci
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/float_to_q6_10/float_to_q6_10_ooc.xdc]
 
-read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_to_int8/float_to_int8.xci
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_to_int8/float_to_int8_ooc.xdc]
+read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo.xci
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo.xdc]
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo_ooc.xdc]
 
-read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/uint32_to_float/uint32_to_float.xci
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/uint32_to_float/uint32_to_float_ooc.xdc]
+read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xci
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo.xdc]
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo_ooc.xdc]
 
-read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/float_to_q6_10/float_to_q6_10.xci
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/float_to_q6_10/float_to_q6_10_ooc.xdc]
+read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xci
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo.xdc]
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo_ooc.xdc]
 
-read_ip -quiet D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo.xci
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo.xdc]
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo_ooc.xdc]
+read_ip -quiet C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xci
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo.xdc]
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -176,11 +177,9 @@ set_property used_in_implementation false [get_files -all d:/CNN/OV5640_DDR3_HDM
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/constrs_1/new/ddr3.xdc
-set_property used_in_implementation false [get_files D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
+read_xdc C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/constrs_1/new/ddr3.xdc
+set_property used_in_implementation false [get_files C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
 
-read_xdc dont_touch.xdc
-set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 

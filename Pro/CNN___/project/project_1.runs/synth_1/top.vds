@@ -2,12 +2,12 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sat May 17 18:42:32 2025
-# Process ID: 28184
-# Current directory: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1
+# Start of session at: Wed Jul  2 15:27:23 2025
+# Process ID: 11540
+# Current directory: C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
-# Log file: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/top.vds
-# Journal file: D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1\vivado.jou
+# Log file: C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/top.vds
+# Journal file: C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source top.tcl -notrace
 Command: synth_design -top top -part xc7a35tfgg484-2
@@ -16,15 +16,15 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tfgg484-2
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 24368 
-WARNING: [Synth 8-2507] parameter declaration becomes local in i2c_ctrl with formal parameter declaration list [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:30]
-WARNING: [Synth 8-2507] parameter declaration becomes local in i2c_ctrl with formal parameter declaration list [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:32]
-WARNING: [Synth 8-2507] parameter declaration becomes local in i2c_ctrl with formal parameter declaration list [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:49]
-WARNING: [Synth 8-2292] literal value truncated to fit in 15 bits [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/ov5640_cfg.v:30]
+INFO: Helper process launched with PID 19676 
+WARNING: [Synth 8-2507] parameter declaration becomes local in i2c_ctrl with formal parameter declaration list [C:/FPGA_Learning_Journey/Pro/CNN___/src/ov5640/i2c_ctrl.v:30]
+WARNING: [Synth 8-2507] parameter declaration becomes local in i2c_ctrl with formal parameter declaration list [C:/FPGA_Learning_Journey/Pro/CNN___/src/ov5640/i2c_ctrl.v:32]
+WARNING: [Synth 8-2507] parameter declaration becomes local in i2c_ctrl with formal parameter declaration list [C:/FPGA_Learning_Journey/Pro/CNN___/src/ov5640/i2c_ctrl.v:49]
+WARNING: [Synth 8-2292] literal value truncated to fit in 15 bits [C:/FPGA_Learning_Journey/Pro/CNN___/src/ov5640/ov5640_cfg.v:30]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1011.012 ; gain = 242.480
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1009.227 ; gain = 241.973
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'top' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:2]
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/FPGA_Learning_Journey/Pro/CNN___/src/top.v:2]
 	Parameter H_PIXEL bound to: 24'b000000000000001010000000 
 	Parameter V_PIXEL bound to: 24'b000000000000000111100000 
 INFO: [Synth 8-6157] synthesizing module 'IBUFG' [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:33402]
@@ -35,22 +35,22 @@ INFO: [Synth 8-6157] synthesizing module 'IBUFG' [D:/Xilinx/Vivado/2019.2/script
 INFO: [Synth 8-6155] done synthesizing module 'IBUFG' (1#1) [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:33402]
 INFO: [Synth 8-6157] synthesizing module 'BUFG' [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1075]
 INFO: [Synth 8-6155] done synthesizing module 'BUFG' (2#1) [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1075]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (3#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_1' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/clk_wiz_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_1' (4#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/clk_wiz_1_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'top_hdmi' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/top_hdmi.v:1]
-INFO: [Synth 8-6157] synthesizing module 'vga_timing_ctrl' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/vga_timing_ctrl.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'vga_timing_ctrl' (5#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/vga_timing_ctrl.v:3]
-WARNING: [Synth 8-689] width (32) of port connection 'pix_data' does not match port width (24) of module 'vga_timing_ctrl' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/top_hdmi.v:54]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_ctrl' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/hdmi_ctrl.v:1]
-INFO: [Synth 8-6157] synthesizing module 'encode' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/encode.v:3]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (3#1) [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_1' [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/clk_wiz_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_1' (4#1) [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/clk_wiz_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top_hdmi' [C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/top_hdmi.v:1]
+INFO: [Synth 8-6157] synthesizing module 'vga_timing_ctrl' [C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/vga_timing_ctrl.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'vga_timing_ctrl' (5#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/vga_timing_ctrl.v:3]
+WARNING: [Synth 8-689] width (32) of port connection 'pix_data' does not match port width (24) of module 'vga_timing_ctrl' [C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/top_hdmi.v:54]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_ctrl' [C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/hdmi_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'encode' [C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/encode.v:3]
 	Parameter CTRLTOKEN0 bound to: 10'b1101010100 
 	Parameter CTRLTOKEN1 bound to: 10'b0010101011 
 	Parameter CTRLTOKEN2 bound to: 10'b0101010100 
 	Parameter CTRLTOKEN3 bound to: 10'b1010101011 
-INFO: [Synth 8-6155] done synthesizing module 'encode' (6#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/encode.v:3]
-INFO: [Synth 8-6157] synthesizing module 'par2ser' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/par2ser.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'encode' (6#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/encode.v:3]
+INFO: [Synth 8-6157] synthesizing module 'par2ser' [C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/par2ser.v:1]
 INFO: [Synth 8-6157] synthesizing module 'ODDR' [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:49681]
 	Parameter DDR_CLK_EDGE bound to: SAME_EDGE - type: string 
 	Parameter INIT bound to: 1'b0 
@@ -64,15 +64,15 @@ INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [D:/Xilinx/Vivado/2019.2/scrip
 	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (8#1) [D:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:46225]
-INFO: [Synth 8-6155] done synthesizing module 'par2ser' (9#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/par2ser.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_ctrl' (10#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/hdmi_ctrl.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'top_hdmi' (11#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/top_hdmi.v:1]
-INFO: [Synth 8-6157] synthesizing module 'ov5640_top' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/ov5640_top.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'par2ser' (9#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/par2ser.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_ctrl' (10#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/hdmi_ctrl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'top_hdmi' (11#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/top_hdmi.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ov5640_top' [C:/FPGA_Learning_Journey/Pro/CNN___/src/ov5640/ov5640_top.v:3]
 	Parameter SLAVE_ADDR bound to: 7'b0111100 
 	Parameter BIT_CTRL bound to: 1'b1 
 	Parameter CLK_FREQ bound to: 26'b01011111010111100001000000 
 	Parameter I2C_FREQ bound to: 18'b111101000010010000 
-INFO: [Synth 8-6157] synthesizing module 'i2c_ctrl' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:3]
+INFO: [Synth 8-6157] synthesizing module 'i2c_ctrl' [C:/FPGA_Learning_Journey/Pro/CNN___/src/ov5640/i2c_ctrl.v:3]
 	Parameter DEVICE_ADDR bound to: 7'b0111100 
 	Parameter SYS_CLK_FREQ bound to: 26'b01011111010111100001000000 
 	Parameter SCL_FREQ bound to: 18'b111101000010010000 
@@ -94,11 +94,11 @@ INFO: [Synth 8-6157] synthesizing module 'i2c_ctrl' [D:/CNN/OV5640_DDR3_HDMI_UDP
 	Parameter RD_DATA bound to: 4'b1101 
 	Parameter N_ACK bound to: 4'b1110 
 	Parameter STOP bound to: 4'b1111 
-INFO: [Synth 8-226] default block is never used [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:117]
-INFO: [Synth 8-226] default block is never used [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:229]
-INFO: [Synth 8-226] default block is never used [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:253]
-INFO: [Synth 8-6155] done synthesizing module 'i2c_ctrl' (12#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:3]
-INFO: [Synth 8-6157] synthesizing module 'ov5640_cfg' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/ov5640_cfg.v:3]
+INFO: [Synth 8-226] default block is never used [C:/FPGA_Learning_Journey/Pro/CNN___/src/ov5640/i2c_ctrl.v:117]
+INFO: [Synth 8-226] default block is never used [C:/FPGA_Learning_Journey/Pro/CNN___/src/ov5640/i2c_ctrl.v:229]
+INFO: [Synth 8-226] default block is never used [C:/FPGA_Learning_Journey/Pro/CNN___/src/ov5640/i2c_ctrl.v:253]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_ctrl' (12#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/ov5640/i2c_ctrl.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ov5640_cfg' [C:/FPGA_Learning_Journey/Pro/CNN___/src/ov5640/ov5640_cfg.v:3]
 	Parameter IMAGE_WIDTH bound to: 16'b0000001010000000 
 	Parameter IMAGE_HEIGHT bound to: 16'b0000000111100000 
 	Parameter IMAGE_FLIP_EN bound to: 1'b0 
@@ -107,47 +107,47 @@ INFO: [Synth 8-6157] synthesizing module 'ov5640_cfg' [D:/CNN/OV5640_DDR3_HDMI_U
 	Parameter IMAGE_MIRROR_DAT bound to: 4'b0000 
 	Parameter REG_NUM bound to: 8'b11111011 
 	Parameter CNT_WAIT_MAX bound to: 15'b100001001000000 
-INFO: [Synth 8-6155] done synthesizing module 'ov5640_cfg' (13#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/ov5640_cfg.v:3]
-INFO: [Synth 8-6157] synthesizing module 'ov5640_data' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/ov5640_data.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ov5640_cfg' (13#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/ov5640/ov5640_cfg.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ov5640_data' [C:/FPGA_Learning_Journey/Pro/CNN___/src/ov5640/ov5640_data.v:3]
 	Parameter PIC_WAIT bound to: 4'b1010 
-INFO: [Synth 8-6155] done synthesizing module 'ov5640_data' (14#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/ov5640_data.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'ov5640_top' (15#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/ov5640_top.v:3]
-INFO: [Synth 8-6157] synthesizing module 'video_stream_process' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/video_stream_process.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ov5640_data' (14#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/ov5640/ov5640_data.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ov5640_top' (15#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/ov5640/ov5640_top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'video_stream_process' [C:/FPGA_Learning_Journey/Pro/CNN___/src/video_stream_process.v:4]
 	Parameter H_PIXEL bound to: 24'b000000000000001010000000 
 	Parameter V_PIXEL bound to: 24'b000000000000000111100000 
-INFO: [Synth 8-6157] synthesizing module 'rgb2gray' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/rgb2gray/rgb2gray.v:21]
+INFO: [Synth 8-6157] synthesizing module 'rgb2gray' [C:/FPGA_Learning_Journey/Pro/CNN___/src/rgb2gray/rgb2gray.v:21]
 	Parameter Pixel_Width bound to: 16 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'rgb2gray' (16#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/rgb2gray/rgb2gray.v:21]
-INFO: [Synth 8-6157] synthesizing module 'strem_encode' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/strem_encode.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'strem_encode' (17#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/strem_encode.v:5]
-INFO: [Synth 8-6157] synthesizing module 'front_show' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/front_show.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'rgb2gray' (16#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/rgb2gray/rgb2gray.v:21]
+INFO: [Synth 8-6157] synthesizing module 'strem_encode' [C:/FPGA_Learning_Journey/Pro/CNN___/src/strem_encode.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'strem_encode' (17#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/strem_encode.v:5]
+INFO: [Synth 8-6157] synthesizing module 'front_show' [C:/FPGA_Learning_Journey/Pro/CNN___/src/front_show.v:2]
 	Parameter FRONT_COLOUR bound to: 24'b000000000000000000000000 
 	Parameter BACK_COLOUR bound to: 24'b111111111111111111111111 
 	Parameter FRONT_WIDTH bound to: 8'b00100000 
 	Parameter FRONT_HIGH bound to: 8'b01000000 
 	Parameter FRONT_XSTART bound to: 597 - type: integer 
 	Parameter FRONT_YSTART bound to: 10 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'digit_rom_64x32' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/digit_rom_64x32.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'digit_rom_64x32' (18#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/digit_rom_64x32.v:1]
-WARNING: [Synth 8-689] width (10) of port connection 'row_addr' does not match port width (8) of module 'digit_rom_64x32' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/front_show.v:38]
-INFO: [Synth 8-6155] done synthesizing module 'front_show' (19#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/front_show.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'video_stream_process' (20#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/video_stream_process.v:4]
-INFO: [Synth 8-6157] synthesizing module 'axi_ddr_top' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ddr_top.v:8]
+INFO: [Synth 8-6157] synthesizing module 'digit_rom_64x32' [C:/FPGA_Learning_Journey/Pro/CNN___/src/digit_rom_64x32.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'digit_rom_64x32' (18#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/digit_rom_64x32.v:1]
+WARNING: [Synth 8-689] width (10) of port connection 'row_addr' does not match port width (8) of module 'digit_rom_64x32' [C:/FPGA_Learning_Journey/Pro/CNN___/src/front_show.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'front_show' (19#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/front_show.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'video_stream_process' (20#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/video_stream_process.v:4]
+INFO: [Synth 8-6157] synthesizing module 'axi_ddr_top' [C:/FPGA_Learning_Journey/Pro/CNN___/src/axi_ddr3_rw/axi_ddr_top.v:8]
 	Parameter DDR_WR_LEN bound to: 8 - type: integer 
 	Parameter DDR_RD_LEN bound to: 8 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_ctrl' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ctrl.v:3]
+INFO: [Synth 8-6157] synthesizing module 'axi_ctrl' [C:/FPGA_Learning_Journey/Pro/CNN___/src/axi_ddr3_rw/axi_ctrl.v:3]
 	Parameter DDR_WR_LEN bound to: 8 - type: integer 
 	Parameter DDR_RD_LEN bound to: 8 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'wr_fifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/wr_fifo_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'wr_fifo' (21#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/wr_fifo_stub.v:6]
-WARNING: [Synth 8-689] width (64) of port connection 'din' does not match port width (16) of module 'wr_fifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ctrl.v:295]
-INFO: [Synth 8-6157] synthesizing module 'rd_fifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/rd_fifo_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'rd_fifo' (22#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/rd_fifo_stub.v:6]
-WARNING: [Synth 8-689] width (64) of port connection 'dout' does not match port width (16) of module 'rd_fifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ctrl.v:317]
-WARNING: [Synth 8-5788] Register wr_burst_addr_reg_reg in module axi_ctrl is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ctrl.v:104]
-WARNING: [Synth 8-5788] Register rd_burst_addr_reg_reg in module axi_ctrl is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ctrl.v:108]
-INFO: [Synth 8-6155] done synthesizing module 'axi_ctrl' (23#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ctrl.v:3]
-INFO: [Synth 8-6157] synthesizing module 'axi_master_write' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_master_write.v:3]
+INFO: [Synth 8-6157] synthesizing module 'wr_fifo' [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/wr_fifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'wr_fifo' (21#1) [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/wr_fifo_stub.v:6]
+WARNING: [Synth 8-689] width (64) of port connection 'din' does not match port width (16) of module 'wr_fifo' [C:/FPGA_Learning_Journey/Pro/CNN___/src/axi_ddr3_rw/axi_ctrl.v:295]
+INFO: [Synth 8-6157] synthesizing module 'rd_fifo' [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/rd_fifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rd_fifo' (22#1) [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/rd_fifo_stub.v:6]
+WARNING: [Synth 8-689] width (64) of port connection 'dout' does not match port width (16) of module 'rd_fifo' [C:/FPGA_Learning_Journey/Pro/CNN___/src/axi_ddr3_rw/axi_ctrl.v:317]
+WARNING: [Synth 8-5788] Register wr_burst_addr_reg_reg in module axi_ctrl is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/FPGA_Learning_Journey/Pro/CNN___/src/axi_ddr3_rw/axi_ctrl.v:104]
+WARNING: [Synth 8-5788] Register rd_burst_addr_reg_reg in module axi_ctrl is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/FPGA_Learning_Journey/Pro/CNN___/src/axi_ddr3_rw/axi_ctrl.v:108]
+INFO: [Synth 8-6155] done synthesizing module 'axi_ctrl' (23#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/axi_ddr3_rw/axi_ctrl.v:3]
+INFO: [Synth 8-6157] synthesizing module 'axi_master_write' [C:/FPGA_Learning_Journey/Pro/CNN___/src/axi_ddr3_rw/axi_master_write.v:3]
 	Parameter S_WR_IDLE bound to: 3'b000 
 	Parameter S_WA_WAIT bound to: 3'b001 
 	Parameter S_WA_START bound to: 3'b010 
@@ -155,31 +155,31 @@ INFO: [Synth 8-6157] synthesizing module 'axi_master_write' [D:/CNN/OV5640_DDR3_
 	Parameter S_WD_PROC bound to: 3'b100 
 	Parameter S_WR_WAIT bound to: 3'b101 
 	Parameter S_WR_DONE bound to: 3'b110 
-WARNING: [Synth 8-6014] Unused sequential element reg_w_last_reg was removed.  [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_master_write.v:103]
-INFO: [Synth 8-6155] done synthesizing module 'axi_master_write' (24#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_master_write.v:3]
-INFO: [Synth 8-6157] synthesizing module 'axi_master_read' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_master_read.v:3]
+WARNING: [Synth 8-6014] Unused sequential element reg_w_last_reg was removed.  [C:/FPGA_Learning_Journey/Pro/CNN___/src/axi_ddr3_rw/axi_master_write.v:103]
+INFO: [Synth 8-6155] done synthesizing module 'axi_master_write' (24#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/axi_ddr3_rw/axi_master_write.v:3]
+INFO: [Synth 8-6157] synthesizing module 'axi_master_read' [C:/FPGA_Learning_Journey/Pro/CNN___/src/axi_ddr3_rw/axi_master_read.v:3]
 	Parameter S_RD_IDLE bound to: 3'b000 
 	Parameter S_RA_WAIT bound to: 3'b001 
 	Parameter S_RA_START bound to: 3'b010 
 	Parameter S_RD_WAIT bound to: 3'b011 
 	Parameter S_RD_PROC bound to: 3'b100 
 	Parameter S_RD_DONE bound to: 3'b101 
-INFO: [Synth 8-155] case statement is not full and has no default [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_master_read.v:82]
-WARNING: [Synth 8-6014] Unused sequential element reg_rd_len_reg was removed.  [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_master_read.v:79]
-INFO: [Synth 8-6155] done synthesizing module 'axi_master_read' (25#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_master_read.v:3]
-INFO: [Synth 8-6157] synthesizing module 'axi_ddr' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/axi_ddr_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'axi_ddr' (26#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/axi_ddr_stub.v:5]
-WARNING: [Synth 8-689] width (4) of port connection 'ddr3_dm' does not match port width (2) of module 'axi_ddr' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ddr_top.v:270]
-WARNING: [Synth 8-689] width (32) of port connection 's_axi_awaddr' does not match port width (28) of module 'axi_ddr' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ddr_top.v:287]
-WARNING: [Synth 8-689] width (32) of port connection 's_axi_araddr' does not match port width (28) of module 'axi_ddr' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ddr_top.v:310]
-WARNING: [Synth 8-689] width (2) of port connection 's_axi_arlock' does not match port width (1) of module 'axi_ddr' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ddr_top.v:314]
-WARNING: [Synth 8-7023] instance 'u_axi_ddr' of module 'axi_ddr' has 67 connections declared, but only 66 given [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ddr_top.v:255]
-INFO: [Synth 8-6155] done synthesizing module 'axi_ddr_top' (27#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/axi_ddr3_rw/axi_ddr_top.v:8]
-WARNING: [Synth 8-689] width (16) of port connection 'data_rd' does not match port width (64) of module 'axi_ddr_top' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:265]
-WARNING: [Synth 8-689] width (2) of port connection 'ddr3_dm' does not match port width (4) of module 'axi_ddr_top' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:290]
-INFO: [Synth 8-6157] synthesizing module 'eth_udp_send' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/eth_udp_send.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/FPGA_Learning_Journey/Pro/CNN___/src/axi_ddr3_rw/axi_master_read.v:82]
+WARNING: [Synth 8-6014] Unused sequential element reg_rd_len_reg was removed.  [C:/FPGA_Learning_Journey/Pro/CNN___/src/axi_ddr3_rw/axi_master_read.v:79]
+INFO: [Synth 8-6155] done synthesizing module 'axi_master_read' (25#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/axi_ddr3_rw/axi_master_read.v:3]
+INFO: [Synth 8-6157] synthesizing module 'axi_ddr' [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/axi_ddr_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'axi_ddr' (26#1) [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/axi_ddr_stub.v:5]
+WARNING: [Synth 8-689] width (4) of port connection 'ddr3_dm' does not match port width (2) of module 'axi_ddr' [C:/FPGA_Learning_Journey/Pro/CNN___/src/axi_ddr3_rw/axi_ddr_top.v:270]
+WARNING: [Synth 8-689] width (32) of port connection 's_axi_awaddr' does not match port width (28) of module 'axi_ddr' [C:/FPGA_Learning_Journey/Pro/CNN___/src/axi_ddr3_rw/axi_ddr_top.v:287]
+WARNING: [Synth 8-689] width (32) of port connection 's_axi_araddr' does not match port width (28) of module 'axi_ddr' [C:/FPGA_Learning_Journey/Pro/CNN___/src/axi_ddr3_rw/axi_ddr_top.v:310]
+WARNING: [Synth 8-689] width (2) of port connection 's_axi_arlock' does not match port width (1) of module 'axi_ddr' [C:/FPGA_Learning_Journey/Pro/CNN___/src/axi_ddr3_rw/axi_ddr_top.v:314]
+WARNING: [Synth 8-7023] instance 'u_axi_ddr' of module 'axi_ddr' has 67 connections declared, but only 66 given [C:/FPGA_Learning_Journey/Pro/CNN___/src/axi_ddr3_rw/axi_ddr_top.v:255]
+INFO: [Synth 8-6155] done synthesizing module 'axi_ddr_top' (27#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/axi_ddr3_rw/axi_ddr_top.v:8]
+WARNING: [Synth 8-689] width (16) of port connection 'data_rd' does not match port width (64) of module 'axi_ddr_top' [C:/FPGA_Learning_Journey/Pro/CNN___/src/top.v:265]
+WARNING: [Synth 8-689] width (2) of port connection 'ddr3_dm' does not match port width (4) of module 'axi_ddr_top' [C:/FPGA_Learning_Journey/Pro/CNN___/src/top.v:290]
+INFO: [Synth 8-6157] synthesizing module 'eth_udp_send' [C:/FPGA_Learning_Journey/Pro/CNN___/src/udp_tx/eth_udp_send.v:1]
 	Parameter data_length bound to: 15'b000010100000010 
-INFO: [Synth 8-6157] synthesizing module 'eth_udp_tx_gmii' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/eth_udp_tx_gmii.v:2]
+INFO: [Synth 8-6157] synthesizing module 'eth_udp_tx_gmii' [C:/FPGA_Learning_Journey/Pro/CNN___/src/udp_tx/eth_udp_tx_gmii.v:2]
 	Parameter ETH_type bound to: 16'b0000100000000000 
 	Parameter IP_ver bound to: 4'b0100 
 	Parameter IP_hdr_len bound to: 4'b0101 
@@ -200,110 +200,110 @@ INFO: [Synth 8-6157] synthesizing module 'eth_udp_tx_gmii' [D:/CNN/OV5640_DDR3_H
 	Parameter TX_FILL_DATA bound to: 9'b001000000 
 	Parameter TX_CRC bound to: 9'b010000000 
 	Parameter TX_DLY bound to: 9'b100000000 
-INFO: [Synth 8-6157] synthesizing module 'ip_checksum' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/ip_checksum.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'ip_checksum' (28#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/ip_checksum.v:2]
-INFO: [Synth 8-6157] synthesizing module 'CRC32_d8' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/crc32_d8.v:2]
+INFO: [Synth 8-6157] synthesizing module 'ip_checksum' [C:/FPGA_Learning_Journey/Pro/CNN___/src/udp_tx/ip_checksum.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'ip_checksum' (28#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/udp_tx/ip_checksum.v:2]
+INFO: [Synth 8-6157] synthesizing module 'CRC32_d8' [C:/FPGA_Learning_Journey/Pro/CNN___/src/udp_tx/crc32_d8.v:2]
 	Parameter Tp bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'CRC32_d8' (29#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/crc32_d8.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'eth_udp_tx_gmii' (30#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/eth_udp_tx_gmii.v:2]
-INFO: [Synth 8-6157] synthesizing module 'eth_dcfifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/eth_dcfifo_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'eth_dcfifo' (31#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/eth_dcfifo_stub.v:6]
-WARNING: [Synth 8-689] width (14) of port connection 'rd_data_count' does not match port width (13) of module 'eth_dcfifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/eth_udp_send.v:101]
-INFO: [Synth 8-6157] synthesizing module 'gmii_to_rgmii' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/gmii_to_rgmii.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'gmii_to_rgmii' (32#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/gmii_to_rgmii.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'eth_udp_send' (33#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/udp_tx/eth_udp_send.v:1]
-INFO: [Synth 8-6157] synthesizing module 'fcnn_top' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/fcnn_top.v:10]
-INFO: [Synth 8-6157] synthesizing module 'buf_fifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/buf_fifo_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'buf_fifo' (34#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/buf_fifo_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'pretreatment' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/pretreatment.v:3]
-INFO: [Synth 8-6157] synthesizing module 'uint32_to_float' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/uint32_to_float_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'uint32_to_float' (35#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/uint32_to_float_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'float_div' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/float_div_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'float_div' (36#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/float_div_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'float_to_q6_10' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/float_to_q6_10_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'float_to_q6_10' (37#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/float_to_q6_10_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'pretreatment' (38#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/pretreatment.v:3]
-INFO: [Synth 8-6157] synthesizing module 'MatrixMultiplier' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/MatrixMultiplier.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'CRC32_d8' (29#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/udp_tx/crc32_d8.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'eth_udp_tx_gmii' (30#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/udp_tx/eth_udp_tx_gmii.v:2]
+INFO: [Synth 8-6157] synthesizing module 'eth_dcfifo' [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/eth_dcfifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'eth_dcfifo' (31#1) [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/eth_dcfifo_stub.v:6]
+WARNING: [Synth 8-689] width (14) of port connection 'rd_data_count' does not match port width (13) of module 'eth_dcfifo' [C:/FPGA_Learning_Journey/Pro/CNN___/src/udp_tx/eth_udp_send.v:101]
+INFO: [Synth 8-6157] synthesizing module 'gmii_to_rgmii' [C:/FPGA_Learning_Journey/Pro/CNN___/src/udp_tx/gmii_to_rgmii.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'gmii_to_rgmii' (32#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/udp_tx/gmii_to_rgmii.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'eth_udp_send' (33#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/udp_tx/eth_udp_send.v:1]
+INFO: [Synth 8-6157] synthesizing module 'fcnn_top' [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/fcnn_top.v:10]
+INFO: [Synth 8-6157] synthesizing module 'buf_fifo' [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/buf_fifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'buf_fifo' (34#1) [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/buf_fifo_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pretreatment' [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/pretreatment.v:3]
+INFO: [Synth 8-6157] synthesizing module 'uint32_to_float' [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/uint32_to_float_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'uint32_to_float' (35#1) [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/uint32_to_float_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'float_div' [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/float_div_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'float_div' (36#1) [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/float_div_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'float_to_q6_10' [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/float_to_q6_10_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'float_to_q6_10' (37#1) [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/float_to_q6_10_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'pretreatment' (38#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/pretreatment.v:3]
+INFO: [Synth 8-6157] synthesizing module 'MatrixMultiplier' [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/MatrixMultiplier.v:1]
 	Parameter DATA_COUNT bound to: 785 - type: integer 
 	Parameter COLUMNS bound to: 20 - type: integer 
 	Parameter ROWS bound to: 785 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'fcnn_fifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/fcnn_fifo_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'fcnn_fifo' (39#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/fcnn_fifo_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'mac_q6_10' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/mac_q6_10.v:2]
-INFO: [Synth 8-6157] synthesizing module 'mult' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/mult_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mult' (40#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/mult_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mac_q6_10' (41#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/mac_q6_10.v:2]
-INFO: [Synth 8-6157] synthesizing module 'mac_res_fifo' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/mac_res_fifo_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mac_res_fifo' (42#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/mac_res_fifo_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'neural_weights1_bram' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights_bram.v:1]
-INFO: [Synth 8-6157] synthesizing module 'weight1_bram_0' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/weight1_bram_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'weight1_bram_0' (43#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/weight1_bram_0_stub.v:6]
-WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (14) of module 'weight1_bram_0' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights_bram.v:41]
-INFO: [Synth 8-6157] synthesizing module 'weight1_bram_1' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/weight1_bram_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'weight1_bram_1' (44#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/weight1_bram_1_stub.v:6]
-WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (14) of module 'weight1_bram_1' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights_bram.v:56]
-INFO: [Synth 8-6157] synthesizing module 'weight1_bram_2' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/weight1_bram_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'weight1_bram_2' (45#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/weight1_bram_2_stub.v:6]
-WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (14) of module 'weight1_bram_2' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights_bram.v:70]
-INFO: [Synth 8-6157] synthesizing module 'weight1_bram_3' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/weight1_bram_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'weight1_bram_3' (46#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/weight1_bram_3_stub.v:6]
-WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (14) of module 'weight1_bram_3' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights_bram.v:84]
-INFO: [Synth 8-6157] synthesizing module 'weight1_bram_4' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/weight1_bram_4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'weight1_bram_4' (47#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/weight1_bram_4_stub.v:6]
-WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (14) of module 'weight1_bram_4' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights_bram.v:98]
-INFO: [Synth 8-6155] done synthesizing module 'neural_weights1_bram' (48#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights_bram.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'MatrixMultiplier' (49#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/MatrixMultiplier.v:1]
-INFO: [Synth 8-6157] synthesizing module 'Relu' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/Relu.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'Relu' (50#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/Relu.v:1]
-INFO: [Synth 8-6157] synthesizing module 'MatrixMultiplier_100_10' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/MatrixMultiplier_100_10.v:2]
+INFO: [Synth 8-6157] synthesizing module 'fcnn_fifo' [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/fcnn_fifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fcnn_fifo' (39#1) [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/fcnn_fifo_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mac_q6_10' [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/mac_q6_10.v:2]
+INFO: [Synth 8-6157] synthesizing module 'mult' [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/mult_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mult' (40#1) [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/mult_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mac_q6_10' (41#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/mac_q6_10.v:2]
+INFO: [Synth 8-6157] synthesizing module 'mac_res_fifo' [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/mac_res_fifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mac_res_fifo' (42#1) [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/mac_res_fifo_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'neural_weights1_bram' [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/neural_weights_bram.v:1]
+INFO: [Synth 8-6157] synthesizing module 'weight1_bram_0' [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/weight1_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'weight1_bram_0' (43#1) [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/weight1_bram_0_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (14) of module 'weight1_bram_0' [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/neural_weights_bram.v:41]
+INFO: [Synth 8-6157] synthesizing module 'weight1_bram_1' [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/weight1_bram_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'weight1_bram_1' (44#1) [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/weight1_bram_1_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (14) of module 'weight1_bram_1' [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/neural_weights_bram.v:56]
+INFO: [Synth 8-6157] synthesizing module 'weight1_bram_2' [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/weight1_bram_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'weight1_bram_2' (45#1) [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/weight1_bram_2_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (14) of module 'weight1_bram_2' [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/neural_weights_bram.v:70]
+INFO: [Synth 8-6157] synthesizing module 'weight1_bram_3' [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/weight1_bram_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'weight1_bram_3' (46#1) [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/weight1_bram_3_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (14) of module 'weight1_bram_3' [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/neural_weights_bram.v:84]
+INFO: [Synth 8-6157] synthesizing module 'weight1_bram_4' [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/weight1_bram_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'weight1_bram_4' (47#1) [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/weight1_bram_4_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (14) of module 'weight1_bram_4' [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/neural_weights_bram.v:98]
+INFO: [Synth 8-6155] done synthesizing module 'neural_weights1_bram' (48#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/neural_weights_bram.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MatrixMultiplier' (49#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/MatrixMultiplier.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Relu' [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/Relu.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Relu' (50#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/Relu.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MatrixMultiplier_100_10' [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/MatrixMultiplier_100_10.v:2]
 	Parameter DATA_COUNT bound to: 100 - type: integer 
 	Parameter COLUMNS bound to: 10 - type: integer 
 	Parameter MAC_NUM bound to: 2 - type: integer 
 	Parameter MAC_COL bound to: 5 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'neural_weights2_bram' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights2_bram.v:1]
-INFO: [Synth 8-6157] synthesizing module 'weight2_bram_0' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/weight2_bram_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'weight2_bram_0' (51#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/weight2_bram_0_stub.v:6]
-WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (9) of module 'weight2_bram_0' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights2_bram.v:13]
-INFO: [Synth 8-6157] synthesizing module 'weight2_bram_1' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/weight2_bram_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'weight2_bram_1' (52#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/weight2_bram_1_stub.v:6]
-WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (9) of module 'weight2_bram_1' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights2_bram.v:28]
-INFO: [Synth 8-6155] done synthesizing module 'neural_weights2_bram' (53#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/neural_weights2_bram.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'MatrixMultiplier_100_10' (54#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/MatrixMultiplier_100_10.v:2]
-INFO: [Synth 8-6157] synthesizing module 'Softmax' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/Softmax.v:6]
-INFO: [Synth 8-6157] synthesizing module 'fixed_to_float' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/fixed_to_float_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'fixed_to_float' (55#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/fixed_to_float_stub.v:6]
-WARNING: [Synth 8-7023] instance 'fixed_to_float_inst' of module 'fixed_to_float' has 6 connections declared, but only 5 given [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/Softmax.v:21]
-INFO: [Synth 8-6157] synthesizing module 'exp' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/exp_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'exp' (56#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/exp_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'float_accum' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/float_accum_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'float_accum' (57#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/float_accum_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'float_mult' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/float_mult_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'float_mult' (58#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/float_mult_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'float_to_int8' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/float_to_int8_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'float_to_int8' (59#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/.Xil/Vivado-28184-DESKTOP-I8GGJRG/realtime/float_to_int8_stub.v:6]
-WARNING: [Synth 8-6014] Unused sequential element buffer_ready_reg was removed.  [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/Softmax.v:61]
+INFO: [Synth 8-6157] synthesizing module 'neural_weights2_bram' [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/neural_weights2_bram.v:1]
+INFO: [Synth 8-6157] synthesizing module 'weight2_bram_0' [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/weight2_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'weight2_bram_0' (51#1) [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/weight2_bram_0_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (9) of module 'weight2_bram_0' [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/neural_weights2_bram.v:13]
+INFO: [Synth 8-6157] synthesizing module 'weight2_bram_1' [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/weight2_bram_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'weight2_bram_1' (52#1) [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/weight2_bram_1_stub.v:6]
+WARNING: [Synth 8-689] width (16) of port connection 'addra' does not match port width (9) of module 'weight2_bram_1' [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/neural_weights2_bram.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'neural_weights2_bram' (53#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/neural_weights2_bram.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MatrixMultiplier_100_10' (54#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/MatrixMultiplier_100_10.v:2]
+INFO: [Synth 8-6157] synthesizing module 'Softmax' [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/Softmax.v:6]
+INFO: [Synth 8-6157] synthesizing module 'fixed_to_float' [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/fixed_to_float_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fixed_to_float' (55#1) [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/fixed_to_float_stub.v:6]
+WARNING: [Synth 8-7023] instance 'fixed_to_float_inst' of module 'fixed_to_float' has 6 connections declared, but only 5 given [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/Softmax.v:21]
+INFO: [Synth 8-6157] synthesizing module 'exp' [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/exp_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'exp' (56#1) [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/exp_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'float_accum' [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/float_accum_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'float_accum' (57#1) [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/float_accum_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'float_mult' [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/float_mult_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'float_mult' (58#1) [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/float_mult_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'float_to_int8' [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/float_to_int8_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'float_to_int8' (59#1) [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/.Xil/Vivado-11540-DESKTOP-I8GGJRG/realtime/float_to_int8_stub.v:6]
+WARNING: [Synth 8-6014] Unused sequential element buffer_ready_reg was removed.  [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/Softmax.v:61]
 WARNING: [Synth 8-5788] Register exp_buffer_reg in module Softmax is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
 WARNING: [Synth 8-4767] Trying to implement RAM 'exp_buffer_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
 Reason is one or more of the following :
 	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
 RAM "exp_buffer_reg" dissolved into registers
-INFO: [Synth 8-6155] done synthesizing module 'Softmax' (60#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/Softmax.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'fcnn_top' (61#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/fcnn_top.v:10]
-INFO: [Synth 8-6157] synthesizing module 'max_prob_finder' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/max_prob_finder.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'max_prob_finder' (62#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/max_prob_finder.v:1]
-INFO: [Synth 8-6157] synthesizing module 'seg_led' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/seg_led/seg_led.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Softmax' (60#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/Softmax.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fcnn_top' (61#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/fcnn_top.v:10]
+INFO: [Synth 8-6157] synthesizing module 'max_prob_finder' [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/max_prob_finder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'max_prob_finder' (62#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/max_prob_finder.v:1]
+INFO: [Synth 8-6157] synthesizing module 'seg_led' [C:/FPGA_Learning_Journey/Pro/CNN___/src/seg_led/seg_led.v:1]
 	Parameter SCAN_FREQ bound to: 1000 - type: integer 
 	Parameter CLK_FREQ bound to: 50000000 - type: integer 
 	Parameter SCAN_CYCLES bound to: 8333 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'bin_2_bcd' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/seg_led/bin_2_bcd.v:2]
+INFO: [Synth 8-6157] synthesizing module 'bin_2_bcd' [C:/FPGA_Learning_Journey/Pro/CNN___/src/seg_led/bin_2_bcd.v:2]
 	Parameter W bound to: 20 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'bin_2_bcd' (63#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/seg_led/bin_2_bcd.v:2]
-WARNING: [Synth 8-689] width (24) of port connection 'bcd' does not match port width (26) of module 'bin_2_bcd' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/seg_led/seg_led.v:50]
-INFO: [Synth 8-6155] done synthesizing module 'seg_led' (64#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/seg_led/seg_led.v:1]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v-2.8 with 1st driver pin 'top:/eth_udp_send_inst/phy_rst_n' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:2]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v-2.8 with 2nd driver pin 'VCC' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:2]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v-2.8 is connected to at least one constant driver which has been preserved, other driver is ignored [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'top' (65#1) [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/top.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'bin_2_bcd' (63#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/seg_led/bin_2_bcd.v:2]
+WARNING: [Synth 8-689] width (24) of port connection 'bcd' does not match port width (26) of module 'bin_2_bcd' [C:/FPGA_Learning_Journey/Pro/CNN___/src/seg_led/seg_led.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'seg_led' (64#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/seg_led/seg_led.v:1]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin C:/FPGA_Learning_Journey/Pro/CNN___/src/top.v-2.8 with 1st driver pin 'top:/eth_udp_send_inst/phy_rst_n' [C:/FPGA_Learning_Journey/Pro/CNN___/src/top.v:2]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin C:/FPGA_Learning_Journey/Pro/CNN___/src/top.v-2.8 with 2nd driver pin 'VCC' [C:/FPGA_Learning_Journey/Pro/CNN___/src/top.v:2]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net C:/FPGA_Learning_Journey/Pro/CNN___/src/top.v-2.8 is connected to at least one constant driver which has been preserved, other driver is ignored [C:/FPGA_Learning_Journey/Pro/CNN___/src/top.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'top' (65#1) [C:/FPGA_Learning_Journey/Pro/CNN___/src/top.v:2]
 WARNING: [Synth 8-3917] design top has port led[0] driven by constant 0
 WARNING: [Synth 8-3917] design top has port phy_rst_n driven by constant 1
 WARNING: [Synth 8-3917] design top has port ov5640_pwdn driven by constant 0
@@ -392,7 +392,7 @@ WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[26]
 WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[25]
 WARNING: [Synth 8-3331] design top_hdmi has unconnected port pix_data[24]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1082.828 ; gain = 314.297
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1081.301 ; gain = 314.047
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -405,12 +405,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1082.828 ; gain = 314.297
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1081.301 ; gain = 314.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1082.828 ; gain = 314.297
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1081.301 ; gain = 314.047
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 1082.828 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1081.301 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
 WARNING: [Netlist 29-432] The IBUFG primitive 'IBUFG_inst' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
 WARNING: [Netlist 29-432] The IBUFG primitive 'IBUFG_inst1' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
@@ -419,216 +419,211 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo/eth_dcfifo_in_context.xdc] for cell 'eth_udp_send_inst/eth_dcfifor_inst'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo/eth_dcfifo_in_context.xdc] for cell 'eth_udp_send_inst/eth_dcfifor_inst'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo/rd_fifo_in_context.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo/rd_fifo_in_context.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo/wr_fifo_in_context.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo/wr_fifo_in_context.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wiz_0_inst'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wiz_0_inst'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc] for cell 'clk_wiz_1_inst'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc] for cell 'clk_wiz_1_inst'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_1/weight1_bram_1/weight1_bram_1_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_1'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_1/weight1_bram_1/weight1_bram_1_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_1'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_2/weight1_bram_2/weight1_bram_2_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_2'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_2/weight1_bram_2/weight1_bram_2_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_2'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_3/weight1_bram_3/weight1_bram_3_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_3'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_3/weight1_bram_3/weight1_bram_3_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_3'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/weight1_bram_4/weight1_bram_4/weight1_bram_4_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_4'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/weight1_bram_4/weight1_bram_4/weight1_bram_4_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_4'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo/fcnn_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/fcnn_fifo_inst1'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo/fcnn_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/fcnn_fifo_inst1'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo/fcnn_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/fcnn_fifo_inst2'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo/fcnn_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/fcnn_fifo_inst2'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo/fcnn_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/fcnn_fifo_inst1'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo/fcnn_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/fcnn_fifo_inst1'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo/fcnn_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/fcnn_fifo_inst2'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fcnn_fifo/fcnn_fifo/fcnn_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/fcnn_fifo_inst2'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fixed_to_float/fixed_to_float/fixed_to_float_in_context.xdc] for cell 'fcnn_top_inst/Softmax_inst/fixed_to_float_inst'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/fixed_to_float/fixed_to_float/fixed_to_float_in_context.xdc] for cell 'fcnn_top_inst/Softmax_inst/fixed_to_float_inst'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_div/float_div/float_div_in_context.xdc] for cell 'fcnn_top_inst/pretreatment_inst/float_div_inst'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_div/float_div/float_div_in_context.xdc] for cell 'fcnn_top_inst/pretreatment_inst/float_div_inst'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_div/float_div/float_div_in_context.xdc] for cell 'fcnn_top_inst/Softmax_inst/float_div_inst'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_div/float_div/float_div_in_context.xdc] for cell 'fcnn_top_inst/Softmax_inst/float_div_inst'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst0'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst0'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst1'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst1'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst2'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst2'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst3'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst3'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst4'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst4'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/mac_res_fifo_inst0'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/mac_res_fifo_inst0'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/mac_res_fifo_inst1'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/mac_res_fifo_inst1'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_mult/float_mult/float_mult_in_context.xdc] for cell 'fcnn_top_inst/Softmax_inst/float_mult_inst'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_mult/float_mult/float_mult_in_context.xdc] for cell 'fcnn_top_inst/Softmax_inst/float_mult_inst'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_0/weight1_bram_0/weight1_bram_0_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_0'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight1_bram_0/weight1_bram_0/weight1_bram_0_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_0'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight2_bram_0/weight2_bram_0/weight2_bram_0_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/u_weights/weight2_bram_0'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight2_bram_0/weight2_bram_0/weight2_bram_0_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/u_weights/weight2_bram_0'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_q6_10_inst0/mult_inst_0'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_q6_10_inst0/mult_inst_0'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_q6_10_inst1/mult_inst_0'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_q6_10_inst1/mult_inst_0'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_q6_10_inst2/mult_inst_0'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_q6_10_inst2/mult_inst_0'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_q6_10_inst3/mult_inst_0'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_q6_10_inst3/mult_inst_0'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_q6_10_inst4/mult_inst_0'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_q6_10_inst4/mult_inst_0'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/mac_q6_10_inst0/mult_inst_0'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/mac_q6_10_inst0/mult_inst_0'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/mac_q6_10_inst1/mult_inst_0'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/mac_q6_10_inst1/mult_inst_0'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight2_bram_1/weight2_bram_1/weight2_bram_1_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/u_weights/weight2_bram_1'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/weight2_bram_1/weight2_bram_1/weight2_bram_1_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/u_weights/weight2_bram_1'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_accum/float_accum/float_accum_in_context.xdc] for cell 'fcnn_top_inst/Softmax_inst/float_accum_inst'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_accum/float_accum/float_accum_in_context.xdc] for cell 'fcnn_top_inst/Softmax_inst/float_accum_inst'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/exp/exp/exp_in_context.xdc] for cell 'fcnn_top_inst/Softmax_inst/exp_inst'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/exp/exp/exp_in_context.xdc] for cell 'fcnn_top_inst/Softmax_inst/exp_inst'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_to_int8/float_to_int8/float_to_int8_in_context.xdc] for cell 'fcnn_top_inst/Softmax_inst/float_to_int8_inst'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ip/float_to_int8/float_to_int8/float_to_int8_in_context.xdc] for cell 'fcnn_top_inst/Softmax_inst/float_to_int8_inst'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/uint32_to_float/uint32_to_float/uint32_to_float_in_context.xdc] for cell 'fcnn_top_inst/pretreatment_inst/uint32_to_float_inst'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/uint32_to_float/uint32_to_float/uint32_to_float_in_context.xdc] for cell 'fcnn_top_inst/pretreatment_inst/uint32_to_float_inst'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/float_to_q6_10/float_to_q6_10/float_to_q6_10_in_context.xdc] for cell 'fcnn_top_inst/pretreatment_inst/float_to_q6_10_inst'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/float_to_q6_10/float_to_q6_10/float_to_q6_10_in_context.xdc] for cell 'fcnn_top_inst/pretreatment_inst/float_to_q6_10_inst'
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo/buf_fifo_in_context.xdc] for cell 'fcnn_top_inst/buf_fifo_inst'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo/buf_fifo_in_context.xdc] for cell 'fcnn_top_inst/buf_fifo_inst'
-Parsing XDC File [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
-Finished Parsing XDC File [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/constrs_1/new/ddr3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc] for cell 'ddr_rw_inst/u_axi_ddr'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wiz_0_inst'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wiz_0_inst'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc] for cell 'clk_wiz_1_inst'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc] for cell 'clk_wiz_1_inst'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight1_bram_1/weight1_bram_1/weight1_bram_1_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_1'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight1_bram_1/weight1_bram_1/weight1_bram_1_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_1'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight1_bram_2/weight1_bram_2/weight1_bram_2_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_2'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight1_bram_2/weight1_bram_2/weight1_bram_2_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_2'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight1_bram_3/weight1_bram_3/weight1_bram_3_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_3'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight1_bram_3/weight1_bram_3/weight1_bram_3_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_3'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/weight1_bram_4/weight1_bram_4/weight1_bram_4_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_4'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/weight1_bram_4/weight1_bram_4/weight1_bram_4_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_4'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/fcnn_fifo/fcnn_fifo/fcnn_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/fcnn_fifo_inst1'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/fcnn_fifo/fcnn_fifo/fcnn_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/fcnn_fifo_inst1'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/fcnn_fifo/fcnn_fifo/fcnn_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/fcnn_fifo_inst2'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/fcnn_fifo/fcnn_fifo/fcnn_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/fcnn_fifo_inst2'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/fcnn_fifo/fcnn_fifo/fcnn_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/fcnn_fifo_inst1'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/fcnn_fifo/fcnn_fifo/fcnn_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/fcnn_fifo_inst1'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/fcnn_fifo/fcnn_fifo/fcnn_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/fcnn_fifo_inst2'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/fcnn_fifo/fcnn_fifo/fcnn_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/fcnn_fifo_inst2'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/fixed_to_float/fixed_to_float/fixed_to_float_in_context.xdc] for cell 'fcnn_top_inst/Softmax_inst/fixed_to_float_inst'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/fixed_to_float/fixed_to_float/fixed_to_float_in_context.xdc] for cell 'fcnn_top_inst/Softmax_inst/fixed_to_float_inst'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_div/float_div/float_div_in_context.xdc] for cell 'fcnn_top_inst/pretreatment_inst/float_div_inst'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_div/float_div/float_div_in_context.xdc] for cell 'fcnn_top_inst/pretreatment_inst/float_div_inst'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_div/float_div/float_div_in_context.xdc] for cell 'fcnn_top_inst/Softmax_inst/float_div_inst'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_div/float_div/float_div_in_context.xdc] for cell 'fcnn_top_inst/Softmax_inst/float_div_inst'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst0'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst0'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst1'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst1'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst2'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst2'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst3'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst3'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst4'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_res_fifo_inst4'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/mac_res_fifo_inst0'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/mac_res_fifo_inst0'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/mac_res_fifo_inst1'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mac_res_fifo/mac_res_fifo/mac_res_fifo_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/mac_res_fifo_inst1'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_mult/float_mult/float_mult_in_context.xdc] for cell 'fcnn_top_inst/Softmax_inst/float_mult_inst'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_mult/float_mult/float_mult_in_context.xdc] for cell 'fcnn_top_inst/Softmax_inst/float_mult_inst'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight1_bram_0/weight1_bram_0/weight1_bram_0_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_0'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight1_bram_0/weight1_bram_0/weight1_bram_0_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/u_weights/weight1_bram_0'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight2_bram_0/weight2_bram_0/weight2_bram_0_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/u_weights/weight2_bram_0'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight2_bram_0/weight2_bram_0/weight2_bram_0_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/u_weights/weight2_bram_0'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_q6_10_inst0/mult_inst_0'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_q6_10_inst0/mult_inst_0'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_q6_10_inst1/mult_inst_0'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_q6_10_inst1/mult_inst_0'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_q6_10_inst2/mult_inst_0'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_q6_10_inst2/mult_inst_0'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_q6_10_inst3/mult_inst_0'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_q6_10_inst3/mult_inst_0'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_q6_10_inst4/mult_inst_0'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_inst/mac_q6_10_inst4/mult_inst_0'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/mac_q6_10_inst0/mult_inst_0'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/mac_q6_10_inst0/mult_inst_0'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/mac_q6_10_inst1/mult_inst_0'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/mult/mult/mult_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/mac_q6_10_inst1/mult_inst_0'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight2_bram_1/weight2_bram_1/weight2_bram_1_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/u_weights/weight2_bram_1'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/weight2_bram_1/weight2_bram_1/weight2_bram_1_in_context.xdc] for cell 'fcnn_top_inst/MatrixMultiplier_100_10_inst/u_weights/weight2_bram_1'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_accum/float_accum/float_accum_in_context.xdc] for cell 'fcnn_top_inst/Softmax_inst/float_accum_inst'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_accum/float_accum/float_accum_in_context.xdc] for cell 'fcnn_top_inst/Softmax_inst/float_accum_inst'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/exp/exp/exp_in_context.xdc] for cell 'fcnn_top_inst/Softmax_inst/exp_inst'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/exp/exp/exp_in_context.xdc] for cell 'fcnn_top_inst/Softmax_inst/exp_inst'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_to_int8/float_to_int8/float_to_int8_in_context.xdc] for cell 'fcnn_top_inst/Softmax_inst/float_to_int8_inst'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_to_int8/float_to_int8/float_to_int8_in_context.xdc] for cell 'fcnn_top_inst/Softmax_inst/float_to_int8_inst'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/uint32_to_float/uint32_to_float/uint32_to_float_in_context.xdc] for cell 'fcnn_top_inst/pretreatment_inst/uint32_to_float_inst'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/uint32_to_float/uint32_to_float/uint32_to_float_in_context.xdc] for cell 'fcnn_top_inst/pretreatment_inst/uint32_to_float_inst'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/float_to_q6_10/float_to_q6_10/float_to_q6_10_in_context.xdc] for cell 'fcnn_top_inst/pretreatment_inst/float_to_q6_10_inst'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/float_to_q6_10/float_to_q6_10/float_to_q6_10_in_context.xdc] for cell 'fcnn_top_inst/pretreatment_inst/float_to_q6_10_inst'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo/buf_fifo_in_context.xdc] for cell 'fcnn_top_inst/buf_fifo_inst'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/buf_fifo/buf_fifo/buf_fifo_in_context.xdc] for cell 'fcnn_top_inst/buf_fifo_inst'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo/wr_fifo_in_context.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/wr_fifo/wr_fifo/wr_fifo_in_context.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo/rd_fifo_in_context.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/rd_fifo/rd_fifo/rd_fifo_in_context.xdc] for cell 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst'
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo/eth_dcfifo_in_context.xdc] for cell 'eth_udp_send_inst/eth_dcfifor_inst'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/eth_dcfifo/eth_dcfifo/eth_dcfifo_in_context.xdc] for cell 'eth_udp_send_inst/eth_dcfifor_inst'
+Parsing XDC File [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
+Finished Parsing XDC File [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/constrs_1/new/ddr3.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/constrs_1/new/ddr3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1211.355 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1210.645 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IBUFG => IBUF: 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1211.355 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1210.645 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst' at clock pin 'wr_clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst' at clock pin 'rd_clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1213.332 ; gain = 444.801
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1212.645 ; gain = 445.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tfgg484-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1213.332 ; gain = 444.801
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1212.645 ; gain = 445.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[0]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 2).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[0]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 3).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[10]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 4).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[10]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 5).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[11]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 6).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[11]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 7).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[12]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 8).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[12]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 9).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[13]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 10).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[13]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 11).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[1]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 12).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[1]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 13).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[2]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 14).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[2]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 15).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[3]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 16).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[3]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 17).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[4]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 18).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[4]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 19).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[5]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 20).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[5]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 21).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[6]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 22).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[6]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 23).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[7]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 24).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[7]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 25).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[8]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 26).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[8]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 27).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[9]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 28).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[9]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 29).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[0]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 30).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[0]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 31).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[1]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 32).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[1]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 33).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[2]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 34).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[2]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 35).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cas_n. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 36).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cas_n. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 37).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_n[0]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 38).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ck_n[0]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 39).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_p[0]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 40).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ck_p[0]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 41).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cke[0]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 42).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cke[0]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 43).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cs_n[0]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 44).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cs_n[0]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 45).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[0]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 46).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[0]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 47).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[1]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 48).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[1]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 49).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[0]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 50).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[0]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 51).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[10]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 52).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[10]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 53).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[11]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 54).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[11]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 55).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[12]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 56).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[12]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 57).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[13]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 58).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[13]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 59).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[14]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 60).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[14]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 61).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[15]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 62).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[15]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 63).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[1]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 64).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[1]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 65).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[2]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 66).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[2]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 67).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[3]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 68).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[3]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 69).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[4]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 70).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[4]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 71).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[5]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 72).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[5]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 73).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[6]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 74).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[6]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 75).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[7]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 76).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[7]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 77).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[8]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 78).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[8]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 79).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[9]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 80).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[9]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 81).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[0]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 82).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[0]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 83).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[1]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 84).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[1]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 85).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[0]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 86).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[0]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 87).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[1]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 88).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[1]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 89).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_odt[0]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 90).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_odt[0]. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 91).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ras_n. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 92).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ras_n. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 93).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_reset_n. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 94).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_reset_n. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 95).
-Applied set_property IO_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 96).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  d:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 97).
-Applied set_property DONT_TOUCH = true for eth_udp_send_inst/eth_dcfifor_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst. (constraint file  auto generated constraint, line ).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[0]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[0]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[10]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[10]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[11]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[11]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[12]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[12]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[13]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[13]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[1]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[1]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[2]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[2]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[3]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[3]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[4]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[4]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[5]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 20).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[5]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[6]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 22).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[6]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[7]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 24).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[7]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[8]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 26).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[8]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[9]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 28).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[9]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[0]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 30).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[0]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[1]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 32).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[1]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 33).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[2]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 34).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[2]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 35).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cas_n. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 36).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cas_n. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 37).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_n[0]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 38).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ck_n[0]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 39).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_p[0]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 40).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ck_p[0]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 41).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cke[0]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 42).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cke[0]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 43).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cs_n[0]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 44).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cs_n[0]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 45).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[0]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 46).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[0]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 47).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[1]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 48).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[1]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 49).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[0]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 50).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[0]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 51).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[10]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 52).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[10]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 53).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[11]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 54).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[11]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 55).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[12]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 56).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[12]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 57).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[13]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 58).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[13]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 59).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[14]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 60).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[14]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 61).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[15]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 62).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[15]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 63).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[1]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 64).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[1]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 65).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[2]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 66).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[2]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 67).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[3]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 68).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[3]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 69).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[4]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 70).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[4]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 71).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[5]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 72).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[5]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 73).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[6]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 74).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[6]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 75).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[7]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 76).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[7]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 77).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[8]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 78).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[8]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 79).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[9]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 80).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[9]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 81).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[0]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 82).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[0]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 83).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[1]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 84).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[1]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 85).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[0]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 86).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[0]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 87).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[1]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 88).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[1]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 89).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_odt[0]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 90).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_odt[0]. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 91).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ras_n. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 92).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ras_n. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 93).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_reset_n. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 94).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_reset_n. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 95).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 96).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  c:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.srcs/sources_1/ip/axi_ddr/axi_ddr/axi_ddr_in_context.xdc, line 97).
 Applied set_property DONT_TOUCH = true for ddr_rw_inst/u_axi_ddr. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for clk_wiz_0_inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for clk_wiz_1_inst. (constraint file  auto generated constraint, line ).
@@ -667,10 +662,13 @@ Applied set_property DONT_TOUCH = true for fcnn_top_inst/Softmax_inst/float_to_i
 Applied set_property DONT_TOUCH = true for fcnn_top_inst/pretreatment_inst/uint32_to_float_inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for fcnn_top_inst/pretreatment_inst/float_to_q6_10_inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for fcnn_top_inst/buf_fifo_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for ddr_rw_inst/axi_ctrl_inst/wr_fifo_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for ddr_rw_inst/axi_ctrl_inst/rd_fifo_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for eth_udp_send_inst/eth_dcfifor_inst. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1213.332 ; gain = 444.801
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1212.645 ; gain = 445.391
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/encode.v:119]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/encode.v:119]
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'i2c_ctrl'
 INFO: [Synth 8-5544] ROM "i2c_sda_reg" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "row_data" won't be mapped to RAM because it is too sparse
@@ -700,9 +698,9 @@ INFO: [Synth 8-5544] ROM "seg_decoder" won't be mapped to Block RAM because addr
                     STOP |                 1000000000000000 |                             1111
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'i2c_ctrl'
-WARNING: [Synth 8-327] inferring latch for variable 'ack_reg' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:218]
-WARNING: [Synth 8-327] inferring latch for variable 'rd_data_reg_reg' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:257]
-WARNING: [Synth 8-327] inferring latch for variable 'i2c_sda_reg_reg' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/ov5640/i2c_ctrl.v:256]
+WARNING: [Synth 8-327] inferring latch for variable 'ack_reg' [C:/FPGA_Learning_Journey/Pro/CNN___/src/ov5640/i2c_ctrl.v:218]
+WARNING: [Synth 8-327] inferring latch for variable 'rd_data_reg_reg' [C:/FPGA_Learning_Journey/Pro/CNN___/src/ov5640/i2c_ctrl.v:257]
+WARNING: [Synth 8-327] inferring latch for variable 'i2c_sda_reg_reg' [C:/FPGA_Learning_Journey/Pro/CNN___/src/ov5640/i2c_ctrl.v:256]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -741,10 +739,10 @@ INFO: [Synth 8-3354] encoded FSM with state register 'rd_state_reg' using encodi
                   TX_DLY |                        100000000 |                        100000000
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3898] No Re-encoding of one hot register 'curr_state_reg' in module 'eth_udp_tx_gmii'
-WARNING: [Synth 8-327] inferring latch for variable 'rd_mac_res_fifo_en_reg' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/MatrixMultiplier.v:145]
-WARNING: [Synth 8-327] inferring latch for variable 'rd_mac_res_fifo_en_reg' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/reasoning/MatrixMultiplier_100_10.v:143]
+WARNING: [Synth 8-327] inferring latch for variable 'rd_mac_res_fifo_en_reg' [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/MatrixMultiplier.v:145]
+WARNING: [Synth 8-327] inferring latch for variable 'rd_mac_res_fifo_en_reg' [C:/FPGA_Learning_Journey/Pro/CNN___/src/reasoning/MatrixMultiplier_100_10.v:143]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1213.332 ; gain = 444.801
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1212.645 ; gain = 445.391
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -820,7 +818,7 @@ Detailed RTL Component Info :
 	   5 Input     10 Bit        Muxes := 3     
 	  10 Input      9 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 2     
-	   2 Input      8 Bit        Muxes := 15    
+	   2 Input      8 Bit        Muxes := 16    
 	  16 Input      8 Bit        Muxes := 2     
 	   7 Input      8 Bit        Muxes := 1     
 	   9 Input      8 Bit        Muxes := 1     
@@ -979,6 +977,7 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     16 Bit        Muxes := 3     
 	   6 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 2     
 Module axi_ctrl 
@@ -1184,20 +1183,20 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-4471] merging register 'hdmi_ctrl_inst/encode_inst2/de_q_reg' into 'hdmi_ctrl_inst/encode_inst1/de_q_reg' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/encode.v:93]
-INFO: [Synth 8-4471] merging register 'hdmi_ctrl_inst/encode_inst2/de_reg_reg' into 'hdmi_ctrl_inst/encode_inst1/de_reg_reg' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/encode.v:94]
-INFO: [Synth 8-4471] merging register 'hdmi_ctrl_inst/encode_inst2/c0_q_reg' into 'hdmi_ctrl_inst/encode_inst1/c0_q_reg' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/encode.v:96]
-INFO: [Synth 8-4471] merging register 'hdmi_ctrl_inst/encode_inst2/c0_reg_reg' into 'hdmi_ctrl_inst/encode_inst1/c0_reg_reg' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/encode.v:97]
-INFO: [Synth 8-4471] merging register 'hdmi_ctrl_inst/encode_inst2/c1_q_reg' into 'hdmi_ctrl_inst/encode_inst1/c1_q_reg' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/encode.v:98]
-INFO: [Synth 8-4471] merging register 'hdmi_ctrl_inst/encode_inst2/c1_reg_reg' into 'hdmi_ctrl_inst/encode_inst1/c1_reg_reg' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/encode.v:99]
-INFO: [Synth 8-4471] merging register 'hdmi_ctrl_inst/encode_inst3/de_q_reg' into 'hdmi_ctrl_inst/encode_inst1/de_q_reg' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/encode.v:93]
-INFO: [Synth 8-4471] merging register 'hdmi_ctrl_inst/encode_inst3/de_reg_reg' into 'hdmi_ctrl_inst/encode_inst1/de_reg_reg' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/encode.v:94]
-INFO: [Synth 8-4471] merging register 'hdmi_ctrl_inst/encode_inst3/c0_q_reg' into 'hdmi_ctrl_inst/encode_inst1/c0_q_reg' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/encode.v:96]
-INFO: [Synth 8-4471] merging register 'hdmi_ctrl_inst/encode_inst3/c0_reg_reg' into 'hdmi_ctrl_inst/encode_inst1/c0_reg_reg' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/encode.v:97]
-INFO: [Synth 8-4471] merging register 'hdmi_ctrl_inst/encode_inst3/c1_q_reg' into 'hdmi_ctrl_inst/encode_inst1/c1_q_reg' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/encode.v:98]
-INFO: [Synth 8-4471] merging register 'hdmi_ctrl_inst/encode_inst3/c1_reg_reg' into 'hdmi_ctrl_inst/encode_inst1/c1_reg_reg' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/hdmi/encode.v:99]
-INFO: [Synth 8-4471] merging register 'ov5640_data_out_valid_r1_reg' into 'rgb2gray_inst/pixel_data_valid_d1_reg' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/video_stream_process.v:82]
-INFO: [Synth 8-4471] merging register 'ov5640_data_out_valid_r2_reg' into 'rgb2gray_inst/O_pixel_data_valid_reg' [D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/src/video_stream_process.v:83]
+INFO: [Synth 8-4471] merging register 'hdmi_ctrl_inst/encode_inst2/de_q_reg' into 'hdmi_ctrl_inst/encode_inst1/de_q_reg' [C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/encode.v:93]
+INFO: [Synth 8-4471] merging register 'hdmi_ctrl_inst/encode_inst2/de_reg_reg' into 'hdmi_ctrl_inst/encode_inst1/de_reg_reg' [C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/encode.v:94]
+INFO: [Synth 8-4471] merging register 'hdmi_ctrl_inst/encode_inst2/c0_q_reg' into 'hdmi_ctrl_inst/encode_inst1/c0_q_reg' [C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/encode.v:96]
+INFO: [Synth 8-4471] merging register 'hdmi_ctrl_inst/encode_inst2/c0_reg_reg' into 'hdmi_ctrl_inst/encode_inst1/c0_reg_reg' [C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/encode.v:97]
+INFO: [Synth 8-4471] merging register 'hdmi_ctrl_inst/encode_inst2/c1_q_reg' into 'hdmi_ctrl_inst/encode_inst1/c1_q_reg' [C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/encode.v:98]
+INFO: [Synth 8-4471] merging register 'hdmi_ctrl_inst/encode_inst2/c1_reg_reg' into 'hdmi_ctrl_inst/encode_inst1/c1_reg_reg' [C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/encode.v:99]
+INFO: [Synth 8-4471] merging register 'hdmi_ctrl_inst/encode_inst3/de_q_reg' into 'hdmi_ctrl_inst/encode_inst1/de_q_reg' [C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/encode.v:93]
+INFO: [Synth 8-4471] merging register 'hdmi_ctrl_inst/encode_inst3/de_reg_reg' into 'hdmi_ctrl_inst/encode_inst1/de_reg_reg' [C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/encode.v:94]
+INFO: [Synth 8-4471] merging register 'hdmi_ctrl_inst/encode_inst3/c0_q_reg' into 'hdmi_ctrl_inst/encode_inst1/c0_q_reg' [C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/encode.v:96]
+INFO: [Synth 8-4471] merging register 'hdmi_ctrl_inst/encode_inst3/c0_reg_reg' into 'hdmi_ctrl_inst/encode_inst1/c0_reg_reg' [C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/encode.v:97]
+INFO: [Synth 8-4471] merging register 'hdmi_ctrl_inst/encode_inst3/c1_q_reg' into 'hdmi_ctrl_inst/encode_inst1/c1_q_reg' [C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/encode.v:98]
+INFO: [Synth 8-4471] merging register 'hdmi_ctrl_inst/encode_inst3/c1_reg_reg' into 'hdmi_ctrl_inst/encode_inst1/c1_reg_reg' [C:/FPGA_Learning_Journey/Pro/CNN___/src/hdmi/encode.v:99]
+INFO: [Synth 8-4471] merging register 'ov5640_data_out_valid_r1_reg' into 'rgb2gray_inst/pixel_data_valid_d1_reg' [C:/FPGA_Learning_Journey/Pro/CNN___/src/video_stream_process.v:82]
+INFO: [Synth 8-4471] merging register 'ov5640_data_out_valid_r2_reg' into 'rgb2gray_inst/O_pixel_data_valid_reg' [C:/FPGA_Learning_Journey/Pro/CNN___/src/video_stream_process.v:83]
 INFO: [Synth 8-5546] ROM "front_show_inst/digit_rom_64x32_inst/row_data" won't be mapped to RAM because it is too sparse
 DSP Report: Generating DSP MatrixMultiplier_inst/rd_weight_bram_addr, operation Mode is: (C:0x311)+A*(B:0x311).
 DSP Report: operator MatrixMultiplier_inst/rd_weight_bram_addr is absorbed into DSP MatrixMultiplier_inst/rd_weight_bram_addr.
@@ -1349,7 +1348,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\eth_udp_
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (top_hdmi_inst/\hdmi_ctrl_inst/encode_inst1/n1q_m_reg[3] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (seg_led_inst/i_1/\scan_counter_reg[20] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1213.332 ; gain = 444.801
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1212.645 ; gain = 445.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1385,13 +1384,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1227.699 ; gain = 459.168
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1223.766 ; gain = 456.512
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1241.102 ; gain = 472.570
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1237.234 ; gain = 469.980
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1403,7 +1402,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:00:52 . Memory (MB): peak = 1290.891 ; gain = 522.359
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1287.086 ; gain = 519.832
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1427,13 +1426,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:00:55 . Memory (MB): peak = 1295.359 ; gain = 526.828
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1291.547 ; gain = 524.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:51 ; elapsed = 00:00:55 . Memory (MB): peak = 1295.359 ; gain = 526.828
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1291.547 ; gain = 524.293
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1452,25 +1451,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:51 ; elapsed = 00:00:56 . Memory (MB): peak = 1295.359 ; gain = 526.828
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1291.547 ; gain = 524.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:51 ; elapsed = 00:00:56 . Memory (MB): peak = 1295.359 ; gain = 526.828
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1291.547 ; gain = 524.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:00:56 . Memory (MB): peak = 1295.359 ; gain = 526.828
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1291.547 ; gain = 524.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:51 ; elapsed = 00:00:56 . Memory (MB): peak = 1295.359 ; gain = 526.828
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1291.547 ; gain = 524.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1625,20 +1624,20 @@ Report Instance Areas:
 |42    |    strem_encode_inst            |strem_encode            |   605|
 +------+---------------------------------+------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:00:56 . Memory (MB): peak = 1295.359 ; gain = 526.828
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1291.547 ; gain = 524.293
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 95 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:43 ; elapsed = 00:00:53 . Memory (MB): peak = 1295.359 ; gain = 396.324
-Synthesis Optimization Complete : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 1295.359 ; gain = 526.828
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 1291.547 ; gain = 392.949
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1291.547 ; gain = 524.293
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1303.418 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1299.641 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 241 Unisim elements for replacement
 WARNING: [Netlist 29-432] The IBUFG primitive 'IBUFG_inst' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
 WARNING: [Netlist 29-432] The IBUFG primitive 'IBUFG_inst1' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1303.477 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1299.652 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 12 instances were transformed.
   IBUFG => IBUF: 2 instances
@@ -1649,10 +1648,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 288 Infos, 164 Warnings, 3 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:01:02 . Memory (MB): peak = 1303.477 ; gain = 811.891
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1303.477 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1299.652 ; gain = 809.953
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1299.652 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray_v3___/project/project_1.runs/synth_1/top.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat May 17 18:43:44 2025...
+INFO: [Common 17-206] Exiting Vivado at Wed Jul  2 15:28:09 2025...

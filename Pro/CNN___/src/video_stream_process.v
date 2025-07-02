@@ -145,8 +145,8 @@ always @(*) begin
     if (v_index >= 306 && v_index <= 333 && h_index >= 226 &&h_index <= 253) begin
         red_box_pixel_data_out = {{8{fcnn_wr_data[7]}},fcnn_wr_data};
         red_box_de = gray_data_valid;
-        // 做了一下正向二值处理
-        fcnn_wr_data = (gray_data_8bit <=8'd127) ?8'hff:8'h00; 
+        // 做了一下二值处理
+        fcnn_wr_data = (gray_data_8bit <=8'd127) ?8'h00:8'hff; 
         fcnn_wr_data_valid = gray_data_valid;
     end
     // 红色边框

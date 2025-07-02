@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="buf_fifo_synth_1" LaunchPart="xc7a35tfgg484-2" LaunchTime="1747061413">
+<GenRun Id="buf_fifo_synth_1" LaunchPart="xc7a35tfgg484-2" LaunchTime="1751440533">
   <File Type="PA-TCL" Name="buf_fifo.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="buf_fifo_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="buf_fifo_reports.tcl"/>
   <File Type="RDS-RDS" Name="buf_fifo.vds"/>
   <File Type="RDS-UTIL" Name="buf_fifo_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="buf_fifo_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="buf_fifo.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="buf_fifo_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="buf_fifo_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/buf_fifo">
     <File Path="$PSRCDIR/sources_1/ip/buf_fifo/buf_fifo.xci">
       <FileInfo>

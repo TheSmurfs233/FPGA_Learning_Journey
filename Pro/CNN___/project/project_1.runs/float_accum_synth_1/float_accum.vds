@@ -2,12 +2,12 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Mon May  5 00:32:22 2025
-# Process ID: 6388
-# Current directory: D:/CNN/OV5640_DDR3_HDMI_UDP_gray___/project/project_1.runs/float_accum_synth_1
+# Start of session at: Wed Jul  2 15:16:39 2025
+# Process ID: 14156
+# Current directory: C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/float_accum_synth_1
 # Command line: vivado.exe -log float_accum.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source float_accum.tcl
-# Log file: D:/CNN/OV5640_DDR3_HDMI_UDP_gray___/project/project_1.runs/float_accum_synth_1/float_accum.vds
-# Journal file: D:/CNN/OV5640_DDR3_HDMI_UDP_gray___/project/project_1.runs/float_accum_synth_1\vivado.jou
+# Log file: C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/float_accum_synth_1/float_accum.vds
+# Journal file: C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/float_accum_synth_1\vivado.jou
 #-----------------------------------------------------------
 source float_accum.tcl -notrace
 Command: synth_design -top float_accum -part xc7a35tfgg484-2 -mode out_of_context
@@ -16,11 +16,11 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tfgg484-2
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 26652 
+INFO: Helper process launched with PID 13724 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 972.180 ; gain = 234.512
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 971.855 ; gain = 234.336
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'float_accum' [d:/CNN/OV5640_DDR3_HDMI_UDP_gray___/src/ip/float_accum/synth/float_accum.vhd:71]
+INFO: [Synth 8-638] synthesizing module 'float_accum' [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_accum/synth/float_accum.vhd:71]
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
 	Parameter C_HAS_ADD bound to: 0 - type: integer 
 	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
@@ -97,8 +97,8 @@ INFO: [Synth 8-638] synthesizing module 'float_accum' [d:/CNN/OV5640_DDR3_HDMI_U
 	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'floating_point_v7_1_9' declared at 'd:/CNN/OV5640_DDR3_HDMI_UDP_gray___/src/ip/float_accum/hdl/floating_point_v7_1_rfs.vhd:94207' bound to instance 'U0' of component 'floating_point_v7_1_9' [d:/CNN/OV5640_DDR3_HDMI_UDP_gray___/src/ip/float_accum/synth/float_accum.vhd:206]
-INFO: [Synth 8-256] done synthesizing module 'float_accum' (17#1) [d:/CNN/OV5640_DDR3_HDMI_UDP_gray___/src/ip/float_accum/synth/float_accum.vhd:71]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_9' declared at 'c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_accum/hdl/floating_point_v7_1_rfs.vhd:94207' bound to instance 'U0' of component 'floating_point_v7_1_9' [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_accum/synth/float_accum.vhd:206]
+INFO: [Synth 8-256] done synthesizing module 'float_accum' (17#1) [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_accum/synth/float_accum.vhd:71]
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized8 has unconnected port CLK
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized8 has unconnected port CE
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized8 has unconnected port SCLR
@@ -201,7 +201,7 @@ WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized26 has unconne
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized84 has unconnected port SCLR
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1114.590 ; gain = 376.922
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1114.344 ; gain = 376.824
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -214,49 +214,49 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1121.152 ; gain = 383.484
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1114.344 ; gain = 376.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1121.152 ; gain = 383.484
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1114.344 ; gain = 376.824
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 1133.191 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.091 . Memory (MB): peak = 1114.344 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 262 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray___/src/ip/float_accum/float_accum_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [d:/CNN/OV5640_DDR3_HDMI_UDP_gray___/src/ip/float_accum/float_accum_ooc.xdc] for cell 'U0'
-Parsing XDC File [D:/CNN/OV5640_DDR3_HDMI_UDP_gray___/project/project_1.runs/float_accum_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [D:/CNN/OV5640_DDR3_HDMI_UDP_gray___/project/project_1.runs/float_accum_synth_1/dont_touch.xdc]
+Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_accum/float_accum_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/FPGA_Learning_Journey/Pro/CNN___/src/ip/float_accum/float_accum_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/float_accum_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/float_accum_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1176.367 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1122.066 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 51 instances were transformed.
   FDE => FDRE: 51 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 1179.164 ; gain = 2.797
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 1133.770 ; gain = 11.703
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1179.164 ; gain = 441.496
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 1133.770 ; gain = 396.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tfgg484-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1179.164 ; gain = 441.496
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 1133.770 ; gain = 396.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for U0. (constraint file  D:/CNN/OV5640_DDR3_HDMI_UDP_gray___/project/project_1.runs/float_accum_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/float_accum_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1179.164 ; gain = 441.496
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 1133.770 ; gain = 396.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1179.164 ; gain = 441.496
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1133.770 ; gain = 396.250
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -353,7 +353,7 @@ INFO: [Synth 8-3332] Sequential element (ACCUM_OP.OP/g_accum_split[0].g_lsb_and_
 INFO: [Synth 8-3332] Sequential element (ACCUM_OP.OP/g_accum_split[0].g_lsb_and_msb_bit_detection.i_msb_detect_neg/i_all_zeros/CHAIN_GEN[2].CARRYS_DEL.NEED_DEL.CARRYS_FD) is unused and will be removed from module floating_point_v7_1_9_viv.
 INFO: [Synth 8-3332] Sequential element (ACCUM_OP.OP/i_lsb_detect_final/g_encode_in_out_lsb_det.i_all_zero_out/CHAIN_GEN[0].CARRYS_DEL.NEED_DEL.CARRYS_FD) is unused and will be removed from module floating_point_v7_1_9_viv.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1179.164 ; gain = 441.496
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1133.770 ; gain = 396.250
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -365,13 +365,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1188.191 ; gain = 450.523
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1181.152 ; gain = 443.633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1210.312 ; gain = 472.645
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1203.219 ; gain = 465.699
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -384,7 +384,7 @@ Start Technology Mapping
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-3886] merging instance 'U0/i_synth/ACCUM_OP.OP/g_accum_split[0].g_dsp_split.i_alumode/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'U0/i_synth/ACCUM_OP.OP/g_accum_split[0].g_dsp_split.i_cin/i_pipe/opt_has_pipe.first_q_reg[0]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1215.434 ; gain = 477.766
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 1208.812 ; gain = 471.293
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -408,13 +408,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1220.887 ; gain = 483.219
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 1213.316 ; gain = 475.797
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1220.887 ; gain = 483.219
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 1213.316 ; gain = 475.797
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -433,25 +433,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1220.887 ; gain = 483.219
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:47 . Memory (MB): peak = 1213.316 ; gain = 475.797
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1220.887 ; gain = 483.219
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:47 . Memory (MB): peak = 1213.316 ; gain = 475.797
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1220.887 ; gain = 483.219
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:47 . Memory (MB): peak = 1213.316 ; gain = 475.797
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1220.887 ; gain = 483.219
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:47 . Memory (MB): peak = 1213.316 ; gain = 475.797
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -482,18 +482,18 @@ Report Cell Usage:
 |13    |FDRE      |   771|
 +------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1220.887 ; gain = 483.219
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:47 . Memory (MB): peak = 1213.316 ; gain = 475.797
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 94 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 1220.887 ; gain = 425.207
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1220.887 ; gain = 483.219
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:44 . Memory (MB): peak = 1213.316 ; gain = 456.371
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:47 . Memory (MB): peak = 1213.316 ; gain = 475.797
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1220.887 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1213.316 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 246 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1235.918 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1229.234 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 111 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 64 instances
@@ -502,19 +502,17 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 81 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 1235.918 ; gain = 766.371
-INFO: [Common 17-600] The following parameters have non-default value.
-tcl.collectionResultDisplayLimit
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1235.918 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:54 . Memory (MB): peak = 1229.234 ; gain = 760.449
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1229.234 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray___/project/project_1.runs/float_accum_synth_1/float_accum.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/float_accum_synth_1/float_accum.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
 INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP float_accum, cache-ID = b02c19112bd3a1c6
 INFO: [Coretcl 2-1174] Renamed 282 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1235.918 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1229.234 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'D:/CNN/OV5640_DDR3_HDMI_UDP_gray___/project/project_1.runs/float_accum_synth_1/float_accum.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/FPGA_Learning_Journey/Pro/CNN___/project/project_1.runs/float_accum_synth_1/float_accum.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file float_accum_utilization_synth.rpt -pb float_accum_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon May  5 00:33:10 2025...
+INFO: [Common 17-206] Exiting Vivado at Wed Jul  2 15:17:43 2025...
