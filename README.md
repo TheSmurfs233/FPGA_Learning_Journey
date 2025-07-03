@@ -78,5 +78,13 @@ FPGA_Learning_Journey/Pro/HDMI
 > - 🌐 **端到端实时推理系统**：OV5640/以太网数据流 → FPGA推理加速 → HDMI/网络结果输出
 > - 🧮 **Q6.10精准量化**：自主实现浮点转定点模型部署，平衡精度与资源
 > - ⚡ **5PE并行计算核**：定制5并行单元神经网络加速架构 + 深度流水线，最大化硬件吞吐
-> - 🚀 **50MHz时钟实现30,000+ FPS推理**：MNIST实时推理性能远超传统CPU方案
+> - 🚀 **50MHz时钟实现10,000+ FPS推理**：MNIST实时推理性能远超传统CPU方案
 > - 💡 **AI全栈开发**：Python训练/量化工具链 + FPGA RTL设计 + 上位机验证终端
+
+🌟 [项目3：基于RISC-V指令集的嵌入式SoC设计与FPGA实现——含单周期/五级流水线处理器核心及多外设系统集成](https://github.com/TheSmurfs233/My-RISCV-Processor)
+
+仓库地址：[TheSmurfs233/My-RISCV-Processor](https://github.com/TheSmurfs233/My-RISCV-Processor)
+
+**整体架构**
+
+![arch](myriscv_pro/asset/arch.png)
