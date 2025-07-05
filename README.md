@@ -57,7 +57,7 @@ FPGA_Learning_Journey/Pro/HDMI
 
 [![vedio_face](Pro/OV5640_DDR3_HDMI_UDP_sobel___v3/aseet/vedio_face.png)](https://www.bilibili.com/video/BV1REgXzjESP/?vd_source=e8f3da2949bc8fe3a5314746bc8d1f2d)
 
-点击上面图片即可跳转播放视频
+点击上面图片即可跳转播放视频（视频链接：https://www.bilibili.com/video/BV1REgXzjESP/?vd_source=e8f3da2949bc8fe3a5314746bc8d1f2d ）
 
 **🔥 技术亮点：**
 
@@ -71,7 +71,7 @@ FPGA_Learning_Journey/Pro/HDMI
 
 [![vedio_face](Pro/CNN___/aseet/vedio_face.png)](https://www.bilibili.com/video/BV1zS3szLEP7/?vd_source=e8f3da2949bc8fe3a5314746bc8d1f2d)
 
-点击上面图片即可跳转播放视频
+点击上面图片即可跳转播放视频（视频链接：https://www.bilibili.com/video/BV1zS3szLEP7/?vd_source=e8f3da2949bc8fe3a5314746bc8d1f2d ）
 
 **🔥 技术亮点：**
 
