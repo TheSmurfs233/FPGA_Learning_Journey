@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun 24 15:26:47 2025" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jul  8 15:44:03 2025" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a35t" NAME="design_1" PACKAGE="fgg484" SPEEDGRADE="-2"/>
 
@@ -34,11 +34,6 @@
         <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio2_io_i"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="2" NAME="led_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio_io_o">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="I" LEFT="1" NAME="pcie_7x_mgt_rtl_0_rxn" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_rxn">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xdma_0" PORT="pci_exp_rxn"/>
@@ -57,6 +52,11 @@
     <PORT DIR="O" LEFT="1" NAME="pcie_7x_mgt_rtl_0_txp" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_txp">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xdma_0" PORT="pci_exp_txp"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="2" NAME="led_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio_io_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -1802,14 +1802,14 @@
         <PARAMETER NAME="TL_LEGACY_MODE_ENABLE" VALUE="false"/>
         <PARAMETER NAME="PCIE_BLK_LOCN" VALUE="0"/>
         <PARAMETER NAME="PL_LINK_CAP_MAX_LINK_WIDTH" VALUE="2"/>
-        <PARAMETER NAME="PL_LINK_CAP_MAX_LINK_SPEED" VALUE="1"/>
+        <PARAMETER NAME="PL_LINK_CAP_MAX_LINK_SPEED" VALUE="2"/>
         <PARAMETER NAME="REF_CLK_FREQ" VALUE="0"/>
         <PARAMETER NAME="DRP_CLK_SEL" VALUE="0"/>
         <PARAMETER NAME="FREE_RUN_FREQ" VALUE="0"/>
         <PARAMETER NAME="AXI_ADDR_WIDTH" VALUE="64"/>
         <PARAMETER NAME="AXI_DATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="CORE_CLK_FREQ" VALUE="2"/>
-        <PARAMETER NAME="PLL_TYPE" VALUE="0"/>
+        <PARAMETER NAME="PLL_TYPE" VALUE="2"/>
         <PARAMETER NAME="USER_CLK_FREQ" VALUE="2"/>
         <PARAMETER NAME="SILICON_REV" VALUE="Pre-Production"/>
         <PARAMETER NAME="PIPE_SIM" VALUE="false"/>
@@ -1820,7 +1820,7 @@
         <PARAMETER NAME="MCAP_ENABLEMENT" VALUE="NONE"/>
         <PARAMETER NAME="EXT_STARTUP_PRIMITIVE" VALUE="false"/>
         <PARAMETER NAME="PF0_VENDOR_ID" VALUE="0x10EE"/>
-        <PARAMETER NAME="PF0_DEVICE_ID" VALUE="0x7012"/>
+        <PARAMETER NAME="PF0_DEVICE_ID" VALUE="0x7022"/>
         <PARAMETER NAME="PF0_REVISION_ID" VALUE="0x00"/>
         <PARAMETER NAME="PF0_SUBSYSTEM_VENDOR_ID" VALUE="0x10EE"/>
         <PARAMETER NAME="PF0_SUBSYSTEM_ID" VALUE="0x0007"/>
@@ -2102,7 +2102,7 @@
         <PARAMETER NAME="device_port_type" VALUE="PCI_Express_Endpoint_device"/>
         <PARAMETER NAME="pcie_blk_locn" VALUE="X0Y0"/>
         <PARAMETER NAME="pl_link_cap_max_link_width" VALUE="X2"/>
-        <PARAMETER NAME="pl_link_cap_max_link_speed" VALUE="2.5_GT/s"/>
+        <PARAMETER NAME="pl_link_cap_max_link_speed" VALUE="5.0_GT/s"/>
         <PARAMETER NAME="ref_clk_freq" VALUE="100_MHz"/>
         <PARAMETER NAME="drp_clk_sel" VALUE="Internal"/>
         <PARAMETER NAME="free_run_freq" VALUE="100_MHz"/>
@@ -2121,7 +2121,7 @@
         <PARAMETER NAME="ext_startup_primitive" VALUE="false"/>
         <PARAMETER NAME="enable_code" VALUE="0000"/>
         <PARAMETER NAME="vendor_id" VALUE="10EE"/>
-        <PARAMETER NAME="pf0_device_id" VALUE="7012"/>
+        <PARAMETER NAME="pf0_device_id" VALUE="7022"/>
         <PARAMETER NAME="pf0_revision_id" VALUE="00"/>
         <PARAMETER NAME="pf0_subsystem_vendor_id" VALUE="10EE"/>
         <PARAMETER NAME="pf0_subsystem_id" VALUE="0007"/>
@@ -2175,7 +2175,7 @@
         <PARAMETER NAME="INS_LOSS_NYQ" VALUE="15"/>
         <PARAMETER NAME="PHY_LP_TXPRESET" VALUE="4"/>
         <PARAMETER NAME="coreclk_freq" VALUE="500"/>
-        <PARAMETER NAME="plltype" VALUE="CPLL"/>
+        <PARAMETER NAME="plltype" VALUE="QPLL1"/>
         <PARAMETER NAME="xdma_axi_intf_mm" VALUE="AXI_Memory_Mapped"/>
         <PARAMETER NAME="xdma_pcie_64bit_en" VALUE="true"/>
         <PARAMETER NAME="silicon_rev" VALUE="Pre-Production"/>
@@ -2797,10 +2797,10 @@
         <PARAMETER NAME="pf1_vendor_id_mqdma" VALUE="10EE"/>
         <PARAMETER NAME="pf2_vendor_id_mqdma" VALUE="10EE"/>
         <PARAMETER NAME="pf3_vendor_id_mqdma" VALUE="10EE"/>
-        <PARAMETER NAME="PF0_DEVICE_ID_mqdma" VALUE="9012"/>
+        <PARAMETER NAME="PF0_DEVICE_ID_mqdma" VALUE="9022"/>
         <PARAMETER NAME="PF1_DEVICE_ID_mqdma" VALUE="0007"/>
-        <PARAMETER NAME="PF2_DEVICE_ID_mqdma" VALUE="9012"/>
-        <PARAMETER NAME="PF3_DEVICE_ID_mqdma" VALUE="9012"/>
+        <PARAMETER NAME="PF2_DEVICE_ID_mqdma" VALUE="9022"/>
+        <PARAMETER NAME="PF3_DEVICE_ID_mqdma" VALUE="9022"/>
         <PARAMETER NAME="PF0_REVISION_ID_mqdma" VALUE="00"/>
         <PARAMETER NAME="PF1_REVISION_ID_mqdma" VALUE="00"/>
         <PARAMETER NAME="PF2_REVISION_ID_mqdma" VALUE="00"/>

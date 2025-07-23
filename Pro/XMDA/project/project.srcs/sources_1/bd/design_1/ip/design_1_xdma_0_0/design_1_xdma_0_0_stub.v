@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Tue Jun 24 15:30:35 2025
+// Date        : Tue Jun 24 14:10:27 2025
 // Host        : DESKTOP-I8GGJRG running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               D:/FPGA_Learning_Journey/Pro/XMDA/project/project.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top design_1_xdma_0_0 -prefix
+//               design_1_xdma_0_0_ design_1_xdma_0_0_stub.v
 // Design      : design_1_xdma_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tfgg484-2

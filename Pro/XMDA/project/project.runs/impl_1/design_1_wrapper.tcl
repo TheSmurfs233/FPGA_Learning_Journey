@@ -60,6 +60,7 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -69,17 +70,17 @@ set rc [catch {
   create_project -in_memory -part xc7a35tfgg484-2
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir D:/FPGA_Learning_Journey/Pro/XMDA/project/project.cache/wt [current_project]
-  set_property parent.project_path D:/FPGA_Learning_Journey/Pro/XMDA/project/project.xpr [current_project]
-  set_property ip_output_repo D:/FPGA_Learning_Journey/Pro/XMDA/project/project.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/FPGA_Learning_Journey/Pro/XMDA/project/project.cache/wt [current_project]
+  set_property parent.project_path C:/FPGA_Learning_Journey/Pro/XMDA/project/project.xpr [current_project]
+  set_property ip_output_repo C:/FPGA_Learning_Journey/Pro/XMDA/project/project.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet D:/FPGA_Learning_Journey/Pro/XMDA/project/project.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet C:/FPGA_Learning_Journey/Pro/XMDA/project/project.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files D:/FPGA_Learning_Journey/Pro/XMDA/project/project.srcs/sources_1/bd/design_1/design_1.bd
+  add_files C:/FPGA_Learning_Journey/Pro/XMDA/project/project.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
-  read_xdc D:/FPGA_Learning_Journey/Pro/XMDA/project/project.srcs/constrs_1/new/xdma.xdc
+  read_xdc C:/FPGA_Learning_Journey/Pro/XMDA/project/project.srcs/constrs_1/new/xdma.xdc
   set_param project.isImplRun true
   link_design -top design_1_wrapper -part xc7a35tfgg484-2
   set_param project.isImplRun false

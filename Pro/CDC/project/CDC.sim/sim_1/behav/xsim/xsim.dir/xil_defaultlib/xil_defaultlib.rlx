@@ -1,0 +1,9 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/FPGA_Learning_Journey/Pro/CDC/project/CDC.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+C:/FPGA_Learning_Journey/Pro/CDC/src/mult_bit/hand/data_driver.v,1723295299,verilog,,C:/FPGA_Learning_Journey/Pro/CDC/src/mult_bit/hand/data_receiver.v,,data_driver,,,,,,,,
+C:/FPGA_Learning_Journey/Pro/CDC/src/mult_bit/hand/data_receiver.v,1723294403,verilog,,C:/FPGA_Learning_Journey/Pro/CDC/src/mult_bit/hand/top.v,,data_receiver,,,,,,,,
+C:/FPGA_Learning_Journey/Pro/CDC/src/mult_bit/hand/tb_top.v,1752165621,verilog,,,,tb_top,,,,,,,,
+C:/FPGA_Learning_Journey/Pro/CDC/src/mult_bit/hand/top.v,1723294403,verilog,,C:/FPGA_Learning_Journey/Pro/CDC/src/mult_bit/hand/tb_top.v,,top,,,,,,,,

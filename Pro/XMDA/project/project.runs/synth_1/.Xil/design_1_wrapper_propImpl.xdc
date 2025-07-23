@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:D:/FPGA_Learning_Journey/Pro/XMDA/project/project.srcs/constrs_1/new/xdma.xdc rfile:../../../project.srcs/constrs_1/new/xdma.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/FPGA_Learning_Journey/Pro/XMDA/project/project.srcs/constrs_1/new/xdma.xdc rfile:../../../project.srcs/constrs_1/new/xdma.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN F6 [get_ports {pcie_ref_clk_p[0]}]
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]

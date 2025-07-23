@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FPGA_Learning_Journey/Pro/CDC/src/mult_bit/hand/data_driver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_driver
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FPGA_Learning_Journey/Pro/CDC/src/mult_bit/hand/data_receiver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_receiver
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FPGA_Learning_Journey/Pro/CDC/src/mult_bit/hand/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FPGA_Learning_Journey/Pro/CDC/src/mult_bit/hand/tb_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top

@@ -19665,20 +19665,20 @@
   <spirit:model>
     <spirit:views>
       <spirit:view>
-        <spirit:name>xilinx_elaboratesubcores</spirit:name>
-        <spirit:displayName>Elaborate Sub-Cores</spirit:displayName>
-        <spirit:envIdentifier>:vivado.xilinx.com:elaborate.subcores</spirit:envIdentifier>
+        <spirit:name>xilinx_externalfiles</spirit:name>
+        <spirit:displayName>External Files</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:external.files</spirit:envIdentifier>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_elaboratesubcores_view_fileset</spirit:localName>
+          <spirit:localName>xilinx_externalfiles_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jun 24 06:54:36 UTC 2025</spirit:value>
+            <spirit:value>Tue Jul 08 07:44:05 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3535abd9</spirit:value>
+            <spirit:value>9:4e84dc8b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -19694,11 +19694,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jun 24 07:26:41 UTC 2025</spirit:value>
+            <spirit:value>Tue Jul 08 07:43:57 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4e84dc8b</spirit:value>
+            <spirit:value>9:cc7693e5</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -19709,7 +19709,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4e84dc8b</spirit:value>
+            <spirit:value>9:cc7693e5</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -19725,11 +19725,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jun 24 07:26:41 UTC 2025</spirit:value>
+            <spirit:value>Tue Jul 08 07:43:57 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4e84dc8b</spirit:value>
+            <spirit:value>9:cc7693e5</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -19745,11 +19745,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jun 24 07:26:41 UTC 2025</spirit:value>
+            <spirit:value>Tue Jul 08 07:43:57 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7d2fa1d5</spirit:value>
+            <spirit:value>9:b61dd4bb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -19765,11 +19765,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jun 24 07:26:41 UTC 2025</spirit:value>
+            <spirit:value>Tue Jul 08 07:43:57 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7d2fa1d5</spirit:value>
+            <spirit:value>9:b61dd4bb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -19783,29 +19783,29 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jun 24 07:26:41 UTC 2025</spirit:value>
+            <spirit:value>Tue Jul 08 07:43:57 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4e84dc8b</spirit:value>
+            <spirit:value>9:cc7693e5</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
       <spirit:view>
-        <spirit:name>xilinx_externalfiles</spirit:name>
-        <spirit:displayName>External Files</spirit:displayName>
-        <spirit:envIdentifier>:vivado.xilinx.com:external.files</spirit:envIdentifier>
+        <spirit:name>xilinx_elaboratesubcores</spirit:name>
+        <spirit:displayName>Elaborate Sub-Cores</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:elaborate.subcores</spirit:envIdentifier>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_externalfiles_view_fileset</spirit:localName>
+          <spirit:localName>xilinx_elaboratesubcores_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jun 24 07:30:40 UTC 2025</spirit:value>
+            <spirit:value>Tue Jul 08 07:44:01 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4e84dc8b</spirit:value>
+            <spirit:value>9:cbdfc514</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -20126,7 +20126,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.PF0_DEVICE_ID&apos;))" spirit:bitStringLength="16">0x7012</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.PF0_DEVICE_ID&apos;))" spirit:bitStringLength="16">0x7022</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -20596,7 +20596,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.msi_enable" xilinx:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.MSI_ENABLED&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.PL_UPSTREAM_FACING&apos;)) = &quot;true&quot;) and (spirit:decode(id(&apos;MODELPARAM_VALUE.SPLIT_DMA&apos;)) != &quot;TRUE&quot;))">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.msi_enable" xilinx:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.MSI_ENABLED&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.PL_UPSTREAM_FACING&apos;)) = &quot;true&quot;) and (spirit:decode(id(&apos;MODELPARAM_VALUE.SPLIT_DMA&apos;)) != &quot;TRUE&quot;))">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -20640,7 +20640,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.msi_vector_width" xilinx:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.MSI_ENABLED&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.PL_UPSTREAM_FACING&apos;)) = &quot;true&quot;) and (spirit:decode(id(&apos;MODELPARAM_VALUE.SPLIT_DMA&apos;)) != &quot;TRUE&quot;))">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.msi_vector_width" xilinx:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.MSI_ENABLED&apos;)) = &quot;TRUE&quot; and spirit:decode(id(&apos;MODELPARAM_VALUE.PL_UPSTREAM_FACING&apos;)) = &quot;true&quot;) and (spirit:decode(id(&apos;MODELPARAM_VALUE.SPLIT_DMA&apos;)) != &quot;TRUE&quot;))">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -50716,7 +50716,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>PL_LINK_CAP_MAX_LINK_SPEED</spirit:name>
         <spirit:displayName>Pl Link Cap Max Link Speed</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.PL_LINK_CAP_MAX_LINK_SPEED">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.PL_LINK_CAP_MAX_LINK_SPEED">2</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>REF_CLK_FREQ</spirit:name>
@@ -50751,7 +50751,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>PLL_TYPE</spirit:name>
         <spirit:displayName>PLL Type</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.PLL_TYPE">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.PLL_TYPE">2</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>USER_CLK_FREQ</spirit:name>
@@ -50801,7 +50801,7 @@
       <spirit:modelParameter spirit:dataType="std_logic_vector">
         <spirit:name>PF0_DEVICE_ID</spirit:name>
         <spirit:displayName>Pf0 Device Id</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.PF0_DEVICE_ID" spirit:bitStringLength="16">0x7012</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.PF0_DEVICE_ID" spirit:bitStringLength="16">0x7022</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="std_logic_vector">
         <spirit:name>PF0_REVISION_ID</spirit:name>
@@ -51003,7 +51003,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>MSI_ENABLED</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MSI_ENABLED">TRUE</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MSI_ENABLED">FALSE</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>DEV_PORT_TYPE</spirit:name>
@@ -52261,10 +52261,6 @@
       <spirit:enumeration>32</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_822b7946</spirit:name>
-      <spirit:enumeration>CPLL</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_847d868a</spirit:name>
       <spirit:enumeration>1</spirit:enumeration>
       <spirit:enumeration>2</spirit:enumeration>
@@ -52326,6 +52322,11 @@
       <spirit:enumeration>X1</spirit:enumeration>
       <spirit:enumeration>X2</spirit:enumeration>
       <spirit:enumeration>X4</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_94684ae0</spirit:name>
+      <spirit:enumeration>CPLL</spirit:enumeration>
+      <spirit:enumeration>QPLL1</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_949abb3f</spirit:name>
@@ -52406,6 +52407,11 @@
       <spirit:enumeration>7</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
+      <spirit:name>choice_list_b5190c01</spirit:name>
+      <spirit:enumeration>125</spirit:enumeration>
+      <spirit:enumeration>250</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
       <spirit:name>choice_list_bdd7203f</spirit:name>
       <spirit:enumeration>True</spirit:enumeration>
       <spirit:enumeration>False</spirit:enumeration>
@@ -52455,12 +52461,6 @@
       <spirit:enumeration>8</spirit:enumeration>
       <spirit:enumeration>16</spirit:enumeration>
       <spirit:enumeration>32</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_ce4d0c9f</spirit:name>
-      <spirit:enumeration>62.5</spirit:enumeration>
-      <spirit:enumeration>125</spirit:enumeration>
-      <spirit:enumeration>250</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_d123c74c</spirit:name>
@@ -52607,46 +52607,39 @@
   </spirit:choices>
   <spirit:fileSets>
     <spirit:fileSet>
-      <spirit:name>xilinx_elaboratesubcores_view_fileset</spirit:name>
+      <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>ip_0/design_1_xdma_0_0_pcie2_ip.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:name>design_1_xdma_0_0.dcp</spirit:name>
+        <spirit:userFileType>dcp</spirit:userFileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>ip_0/design_1_xdma_0_0_pcie2_ip.xml</spirit:name>
-        <spirit:userFileType>xml</spirit:userFileType>
+        <spirit:name>design_1_xdma_0_0_stub.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>ip_1/xdma_v4_1_4_blk_mem_64_reg_be.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:name>design_1_xdma_0_0_stub.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>ip_1/xdma_v4_1_4_blk_mem_64_reg_be.xml</spirit:name>
-        <spirit:userFileType>xml</spirit:userFileType>
+        <spirit:name>design_1_xdma_0_0_sim_netlist.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>ip_2/xdma_v4_1_4_blk_mem_64_noreg_be.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>ip_2/xdma_v4_1_4_blk_mem_64_noreg_be.xml</spirit:name>
-        <spirit:userFileType>xml</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>ip_3/pcie2_fifo_generator_dma_cpl.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>ip_3/pcie2_fifo_generator_dma_cpl.xml</spirit:name>
-        <spirit:userFileType>xml</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>ip_4/pcie2_fifo_generator_tgt_brdg.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>ip_4/pcie2_fifo_generator_tgt_brdg.xml</spirit:name>
-        <spirit:userFileType>xml</spirit:userFileType>
+        <spirit:name>design_1_xdma_0_0_sim_netlist.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -53239,39 +53232,46 @@
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
-      <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
+      <spirit:name>xilinx_elaboratesubcores_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>design_1_xdma_0_0.dcp</spirit:name>
-        <spirit:userFileType>dcp</spirit:userFileType>
-        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+        <spirit:name>ip_0/design_1_xdma_0_0_pcie2_ip.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>design_1_xdma_0_0_stub.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+        <spirit:name>ip_0/design_1_xdma_0_0_pcie2_ip.xml</spirit:name>
+        <spirit:userFileType>xml</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>design_1_xdma_0_0_stub.vhdl</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+        <spirit:name>ip_1/xdma_v4_1_4_blk_mem_64_reg_be.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>design_1_xdma_0_0_sim_netlist.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+        <spirit:name>ip_1/xdma_v4_1_4_blk_mem_64_reg_be.xml</spirit:name>
+        <spirit:userFileType>xml</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>design_1_xdma_0_0_sim_netlist.vhdl</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+        <spirit:name>ip_2/xdma_v4_1_4_blk_mem_64_noreg_be.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_2/xdma_v4_1_4_blk_mem_64_noreg_be.xml</spirit:name>
+        <spirit:userFileType>xml</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_3/pcie2_fifo_generator_dma_cpl.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_3/pcie2_fifo_generator_dma_cpl.xml</spirit:name>
+        <spirit:userFileType>xml</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_4/pcie2_fifo_generator_tgt_brdg.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_4/pcie2_fifo_generator_tgt_brdg.xml</spirit:name>
+        <spirit:userFileType>xml</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
@@ -53344,7 +53344,7 @@
     <spirit:parameter>
       <spirit:name>pl_link_cap_max_link_speed</spirit:name>
       <spirit:displayName>Pl Link Cap Max Link Speed</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.pl_link_cap_max_link_speed" spirit:choiceRef="choice_list_65982d75" spirit:order="6">2.5_GT/s</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.pl_link_cap_max_link_speed" spirit:choiceRef="choice_list_65982d75" spirit:order="6">5.0_GT/s</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -53413,7 +53413,7 @@
     <spirit:parameter>
       <spirit:name>axisten_freq</spirit:name>
       <spirit:displayName>AXIsten if freq</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.axisten_freq" spirit:choiceRef="choice_list_ce4d0c9f" spirit:order="10">125</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.axisten_freq" spirit:choiceRef="choice_list_b5190c01" spirit:order="10">125</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -53555,7 +53555,7 @@
     <spirit:parameter>
       <spirit:name>pf0_device_id</spirit:name>
       <spirit:displayName>PF0 Device Id</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.pf0_device_id" spirit:order="21">7012</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.pf0_device_id" spirit:order="21">7022</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -53830,7 +53830,7 @@
     <spirit:parameter>
       <spirit:name>pf0_msi_enabled</spirit:name>
       <spirit:displayName>pf0 Msi Enabled</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.pf0_msi_enabled" spirit:choiceRef="choice_list_7a7dde49" spirit:order="46">true</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.pf0_msi_enabled" spirit:choiceRef="choice_list_7a7dde49" spirit:order="46">false</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -53846,7 +53846,7 @@
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.pf0_msi_cap_multimsgcap">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.pf0_msi_cap_multimsgcap">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -53905,7 +53905,7 @@
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.Shared_Logic">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="generated" xilinx:id="PARAM_ENABLEMENT.Shared_Logic">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -54055,14 +54055,7 @@
     <spirit:parameter>
       <spirit:name>plltype</spirit:name>
       <spirit:displayName>PLL TYPE</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.plltype" spirit:choiceRef="choice_list_822b7946" spirit:order="67">CPLL</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.plltype">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.plltype" spirit:choiceRef="choice_list_94684ae0" spirit:order="67">QPLL1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>xdma_axi_intf_mm</spirit:name>
@@ -56586,13 +56579,6 @@
     <spirit:parameter>
       <spirit:name>gtcom_in_core_usp</spirit:name>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.gtcom_in_core_usp" spirit:choiceRef="choice_pairs_6f00a734" spirit:order="361">2</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.gtcom_in_core_usp">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>en_mqdma</spirit:name>
@@ -60005,7 +59991,7 @@
     <spirit:parameter>
       <spirit:name>PF0_DEVICE_ID_mqdma</spirit:name>
       <spirit:displayName>Pf2 Device Id</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PF0_DEVICE_ID_mqdma" spirit:order="25.2">9012</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PF0_DEVICE_ID_mqdma" spirit:order="25.2">9022</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PF1_DEVICE_ID_mqdma</spirit:name>
@@ -60015,12 +60001,12 @@
     <spirit:parameter>
       <spirit:name>PF2_DEVICE_ID_mqdma</spirit:name>
       <spirit:displayName>Pf2 Device Id</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PF2_DEVICE_ID_mqdma" spirit:order="25.2">9012</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PF2_DEVICE_ID_mqdma" spirit:order="25.2">9022</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PF3_DEVICE_ID_mqdma</spirit:name>
       <spirit:displayName>Pf3 Device Id</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PF3_DEVICE_ID_mqdma" spirit:order="25.3">9012</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PF3_DEVICE_ID_mqdma" spirit:order="25.3">9022</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PF0_REVISION_ID_mqdma</spirit:name>
@@ -61437,6 +61423,7 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.pciebar2axibar_axil_master" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.pf0_device_id" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.pf0_interrupt_pin" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.pf0_msi_enabled" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.pf0_msix_cap_pba_bir" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.pf0_msix_cap_pba_offset" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.pf0_msix_cap_table_bir" xilinx:valueSource="user"/>

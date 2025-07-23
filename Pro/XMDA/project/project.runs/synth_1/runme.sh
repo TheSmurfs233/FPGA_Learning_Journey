@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/FPGA_Learning_Journey/Pro/XMDA/project/project.runs/synth_1'
+HD_PWD='C:/FPGA_Learning_Journey/Pro/XMDA/project/project.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

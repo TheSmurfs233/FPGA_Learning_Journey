@@ -60,7 +60,7 @@ always@(posedge ov5640_pclk or negedge sys_rst_n)
 always@(posedge ov5640_pclk or negedge sys_rst_n)
     if(sys_rst_n == 1'b0)
         pic_valid   <=  1'b0;
-    else    if((cnt_pic == PIC_WAIT) && (pic_flag == 1'b1))
+    else if((cnt_pic == PIC_WAIT) && (pic_flag == 1'b1))
         pic_valid   <=  1'b1;
     else
         pic_valid   <=  pic_valid;
@@ -68,28 +68,25 @@ always@(posedge ov5640_pclk or negedge sys_rst_n)
 //data_out_reg,pic_data_reg,data_flag:输出16位图像数据缓冲
 //输入8位图像数据缓存输入8位,图像数据缓存
 always@(posedge ov5640_pclk or negedge sys_rst_n)
-    if(sys_rst_n == 1'b0)
-        begin
-            data_out_reg    <=  16'd0;
-            pic_data_reg    <=  8'd0;
-            data_flag       <=  1'b0;
-        end
-    else    if(ov5640_href == 1'b1)
-        begin
-            data_flag       <=  ~data_flag;
-            pic_data_reg    <=  ov5640_data;
-            data_out_reg    <=  data_out_reg;
+    if(sys_rst_n == 1'b0)begin
+        data_out_reg    <=  16'd0;
+        pic_data_reg    <=  8'd0;
+        data_flag       <=  1'b0;
+    end
+    else if(ov5640_href == 1'b1)begin
+        data_flag       <=  ~data_flag;
+        pic_data_reg    <=  ov5640_data;
+        data_out_reg    <=  data_out_reg;
         if(data_flag == 1'b1)
             data_out_reg    <=  {pic_data_reg,ov5640_data};
         else
             data_out_reg    <=  data_out_reg;
         end
-    else
-        begin
-            data_flag       <=  1'b0;
-            pic_data_reg    <=  8'd0;
-            data_out_reg    <=  data_out_reg;
-        end
+    else begin
+        data_flag       <=  1'b0;
+        pic_data_reg    <=  8'd0;
+        data_out_reg    <=  data_out_reg;
+    end
 
 //data_flag_dly1:图像数据缓存打拍
 always@(posedge ov5640_pclk or negedge sys_rst_n)

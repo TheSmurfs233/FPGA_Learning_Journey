@@ -32,6 +32,7 @@ reg     [7:0]   reg_num     ;   //配置寄存器个数
 //********************************************************************//
 
 //cnt_wait:寄存器配置等待计数器
+/* 上电后等待20,000个时钟周期（约20ms @1MHz），确保传感器完成上电复位*/
 always@(posedge sys_clk or negedge sys_rst_n)
     if(sys_rst_n == 1'b0)
         cnt_wait    <=  15'd0;
@@ -42,16 +43,16 @@ always@(posedge sys_clk or negedge sys_rst_n)
 always@(posedge sys_clk or negedge sys_rst_n)
     if(sys_rst_n == 1'b0)
         reg_num <=  8'd0;
-    else    if(cfg_end == 1'b1)
+    else if(cfg_end == 1'b1)
         reg_num <=  reg_num + 1'b1;
 
 //cfg_start:单个寄存器配置触发信号
 always@(posedge sys_clk or negedge sys_rst_n)
     if(sys_rst_n == 1'b0)
         cfg_start   <=  1'b0;
-    else    if(cnt_wait == (CNT_WAIT_MAX - 1'b1))
+    else if(cnt_wait == (CNT_WAIT_MAX - 1'b1))
         cfg_start   <=  1'b1;
-    else    if((cfg_end == 1'b1) && (reg_num < REG_NUM))
+    else if((cfg_end == 1'b1) && (reg_num < REG_NUM))
         cfg_start   <=  1'b1;
     else
         cfg_start   <=  1'b0;
@@ -296,7 +297,7 @@ assign  cfg_data_reg[204]  =       {16'h530b, 8'h04};
 assign  cfg_data_reg[205]  =       {16'h530c, 8'h06};
 assign  cfg_data_reg[206]  =       {16'h5025, 8'h00};
 assign  cfg_data_reg[207]  =       {16'h3008, 8'h02};
-assign  cfg_data_reg[208]  =       {16'h3035, 8'h11};
+assign  cfg_data_reg[208]  =       {16'h3035, 8'h11}; // 0x11:60fps, 0x21:30fps, 0x41:15fps, 0x81:7.5fps
 assign  cfg_data_reg[209]  =       {16'h3036, 8'h46};
 
 assign  cfg_data_reg[210]  =       {16'h3c07, 8'h08};

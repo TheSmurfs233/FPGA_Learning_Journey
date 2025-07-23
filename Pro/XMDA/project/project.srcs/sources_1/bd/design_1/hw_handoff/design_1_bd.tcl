@@ -221,14 +221,14 @@ proc create_root_design { parentCell } {
   # Create instance: xdma_0, and set properties
   set xdma_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xdma:4.1 xdma_0 ]
   set_property -dict [ list \
-   CONFIG.PF0_DEVICE_ID_mqdma {9012} \
-   CONFIG.PF2_DEVICE_ID_mqdma {9012} \
-   CONFIG.PF3_DEVICE_ID_mqdma {9012} \
+   CONFIG.PF0_DEVICE_ID_mqdma {9022} \
+   CONFIG.PF2_DEVICE_ID_mqdma {9022} \
+   CONFIG.PF3_DEVICE_ID_mqdma {9022} \
    CONFIG.axilite_master_en {true} \
    CONFIG.axisten_freq {125} \
    CONFIG.cfg_mgmt_if {false} \
    CONFIG.pciebar2axibar_axil_master {0x40000000} \
-   CONFIG.pf0_device_id {7012} \
+   CONFIG.pf0_device_id {7022} \
    CONFIG.pf0_interrupt_pin {NONE} \
    CONFIG.pf0_msix_cap_pba_bir {BAR_3:2} \
    CONFIG.pf0_msix_cap_pba_offset {00008FE0} \
@@ -236,9 +236,9 @@ proc create_root_design { parentCell } {
    CONFIG.pf0_msix_cap_table_offset {00008000} \
    CONFIG.pf0_msix_cap_table_size {01F} \
    CONFIG.pf0_msix_enabled {true} \
-   CONFIG.pl_link_cap_max_link_speed {2.5_GT/s} \
+   CONFIG.pl_link_cap_max_link_speed {5.0_GT/s} \
    CONFIG.pl_link_cap_max_link_width {X2} \
-   CONFIG.plltype {CPLL} \
+   CONFIG.plltype {QPLL1} \
    CONFIG.xdma_pcie_64bit_en {true} \
    CONFIG.xdma_rnum_chnl {2} \
    CONFIG.xdma_wnum_chnl {2} \

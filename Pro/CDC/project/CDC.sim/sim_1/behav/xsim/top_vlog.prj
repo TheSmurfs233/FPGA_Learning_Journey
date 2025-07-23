@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../src/mult_bit/hand/data_driver.v" \
+"../../../../../src/mult_bit/hand/data_receiver.v" \
+"../../../../../src/mult_bit/hand/top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
