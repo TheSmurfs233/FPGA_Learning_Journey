@@ -44,7 +44,7 @@ assign matrix_frame_vsync = pre_frame_vsync_r[1];
 assign matrix_frame_href  = pre_frame_href_r[1] ;
 assign matrix_frame_clken = pre_frame_clken_r[1];
 
-//µ±Ç°Êı¾İ·ÅÔÚµÚ3ĞĞ
+//å½“å‰æ•°æ®æ”¾åœ¨ç¬¬3è¡Œ
 always@(posedge clk or negedge rst_n) begin
     if(!rst_n)
         row3_data <= 0;
@@ -56,7 +56,7 @@ always@(posedge clk or negedge rst_n) begin
     end
 end
 
-//ÓÃÓÚ´æ´¢ÁĞÊı¾İµÄRAM
+//ç”¨äºå­˜å‚¨åˆ—æ•°æ®çš„RAM
 line_shift_ram_8bit  u_line_shift_ram_8bit
 (
     .clock          (clk),
@@ -68,7 +68,7 @@ line_shift_ram_8bit  u_line_shift_ram_8bit
     .taps1x         (row1_data)    
 );
 
-//½«Í¬²½ĞÅºÅÑÓ³ÙÁ½ÅÄ£¬ÓÃÓÚÍ¬²½»¯´¦Àí
+//å°†åŒæ­¥ä¿¡å·å»¶è¿Ÿä¸¤æ‹ï¼Œç”¨äºåŒæ­¥åŒ–å¤„ç†
 always@(posedge clk or negedge rst_n) begin
     if(!rst_n) begin
         pre_frame_vsync_r <= 0;
@@ -82,7 +82,7 @@ always@(posedge clk or negedge rst_n) begin
     end
 end
 
-//ÔÚÍ¬²½´¦ÀíºóµÄ¿ØÖÆĞÅºÅÏÂ£¬Êä³öÍ¼Ïñ¾ØÕó
+//åœ¨åŒæ­¥å¤„ç†åçš„æ§åˆ¶ä¿¡å·ä¸‹ï¼Œè¾“å‡ºå›¾åƒçŸ©é˜µ
 always@(posedge clk or negedge rst_n) begin
     if(!rst_n) begin
         {matrix_p11, matrix_p12, matrix_p13} <= 24'h0;

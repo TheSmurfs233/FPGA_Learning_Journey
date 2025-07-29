@@ -6,15 +6,15 @@
 
 module rgb2gray
 #(
-                       parameter  Pixel_Width = 16
+    parameter  Pixel_Width = 16
 )
 (
-                        input                         I_clk,
-                        input                         I_reset_p,
-                        input                         I_pixel_data_valid,
-                        input  [Pixel_Width-1:0]      I_pixel_data_RGB,//RGB 888 [23-16,15-8,7-0]
-                        output reg                    O_pixel_data_valid,
-                        output [7:0]                  O_pixel_data_Gray
+    input                         I_clk,
+    input                         I_reset_p,
+    input                         I_pixel_data_valid,
+    input  [Pixel_Width-1:0]      I_pixel_data_RGB,//RGB 888 [23-16,15-8,7-0]
+    output reg                    O_pixel_data_valid,
+    output [7:0]                  O_pixel_data_Gray
 
 );
 

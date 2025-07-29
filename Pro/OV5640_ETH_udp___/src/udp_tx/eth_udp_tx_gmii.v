@@ -25,19 +25,19 @@ module eth_udp_tx_gmii(
 
   
     //parameter define
-    parameter ETH_type       = 16'h0800   ; //mac   ÒÔÌ«ÍøÀàĞÍ  0x0800:IPĞ­Òé(IP¡¢ARP¡¢RARP)      
-    parameter IP_ver         = 4'h4       ; //ip    ip°æ±¾ºÅ    0x4:ipv4
-    parameter IP_hdr_len     = 4'h5       ; //ip    IPÊ×²¿³¤¶È   0x5:20×Ö½Ú   ÒÔ4×Ö½ÚÎªµ¥Î»µÄ£¬×îĞ¡ÖµÎª5
-    parameter IP_tos         = 8'h00      ; //ip    ·şÎñÖÊÁ¿    ·şÎñÀàĞÍ£¨TOS£©	0x00  
-    parameter IP_id          = 16'h0000   ; //ip    ·ÖÆ¬±êÊ¶·û    
-    parameter IP_rsv         = 1'b0       ; //ip    ±£ÁôÎ»£¨±ØĞëÎª0£©
-    parameter IP_df          = 1'b0       ; //ip    ²»·ÖÆ¬±êÖ¾£¨0=ÔÊĞí·ÖÆ¬£©
-    parameter IP_mf          = 1'b0       ; //ip    ¸ü¶à·ÖÆ¬±êÖ¾£¨0=×îºó·ÖÆ¬£©
-    parameter IP_frag_offset = 13'h0000   ; //ip    ·ÖÆ¬Æ«ÒÆÁ¿
-    parameter IP_ttl         = 8'h40      ; //ip    Êı¾İ°üÉú´æÊ±¼ä 	0x40:64Ìø
-    parameter IP_protocol    = 8'h11      ; //ip    ±êÊ¶ÉÏ²ãĞ­ÒéÎª 0x11:UDP
+    parameter ETH_type       = 16'h0800   ; //mac   ä»¥å¤ªç½‘ç±»å‹  0x0800:IPåè®®(IPã€ARPã€RARP)      
+    parameter IP_ver         = 4'h4       ; //ip    ipç‰ˆæœ¬å·    0x4:ipv4
+    parameter IP_hdr_len     = 4'h5       ; //ip    IPé¦–éƒ¨é•¿åº¦   0x5:20å­—èŠ‚   ä»¥4å­—èŠ‚ä¸ºå•ä½çš„ï¼Œæœ€å°å€¼ä¸º5
+    parameter IP_tos         = 8'h00      ; //ip    æœåŠ¡è´¨é‡    æœåŠ¡ç±»å‹ï¼ˆTOSï¼‰	0x00  
+    parameter IP_id          = 16'h0000   ; //ip    åˆ†ç‰‡æ ‡è¯†ç¬¦    
+    parameter IP_rsv         = 1'b0       ; //ip    ä¿ç•™ä½ï¼ˆå¿…é¡»ä¸º0ï¼‰
+    parameter IP_df          = 1'b0       ; //ip    ä¸åˆ†ç‰‡æ ‡å¿—ï¼ˆ0=å…è®¸åˆ†ç‰‡ï¼‰
+    parameter IP_mf          = 1'b0       ; //ip    æ›´å¤šåˆ†ç‰‡æ ‡å¿—ï¼ˆ0=æœ€ååˆ†ç‰‡ï¼‰
+    parameter IP_frag_offset = 13'h0000   ; //ip    åˆ†ç‰‡åç§»é‡
+    parameter IP_ttl         = 8'h40      ; //ip    æ•°æ®åŒ…ç”Ÿå­˜æ—¶é—´ 	0x40:64è·³
+    parameter IP_protocol    = 8'h11      ; //ip    æ ‡è¯†ä¸Šå±‚åè®®ä¸º 0x11:UDP
 
-    //×´Ì¬»ú¶¨Òå
+    //çŠ¶æ€æœºå®šä¹‰
     localparam
       IDLE          = 9'b000000001,
       TX_PREAMBLE   = 9'b000000010,
@@ -122,7 +122,7 @@ module eth_udp_tx_gmii(
     .checksum       (IP_check_sum   )
   );
   
-  //½«ÒÔÌ«Íø±¨ÎÄÔ´/Ä¿µÄ²ÎÊı¼Ä´æ
+  //å°†ä»¥å¤ªç½‘æŠ¥æ–‡æº/ç›®çš„å‚æ•°å¯„å­˜
   always@(posedge clk_125m or negedge rst_n)
   if(!rst_n)
   begin
@@ -143,7 +143,7 @@ module eth_udp_tx_gmii(
     src_ip_reg   <= src_ip;
   end
 
-    //½«ÒÔÌ«Íø±¨ÎÄÊı¾İ²¿·Ö³¤¶È²ÎÊı¼Ä´æ
+    //å°†ä»¥å¤ªç½‘æŠ¥æ–‡æ•°æ®éƒ¨åˆ†é•¿åº¦å‚æ•°å¯„å­˜
   always@(posedge clk_125m or negedge rst_n)
   if(!rst_n)
   begin
